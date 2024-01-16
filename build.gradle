@@ -1,0 +1,30 @@
+plugins {
+ id 'java'
+ id 'groovy'
+}
+
+allprojects {
+ apply plugin: "groovy"
+ repositories {
+  mavenLocal() {
+   url = uri("http://maven.apache.org")
+   allowInsecureProtocol = true
+  }
+
+  mavenCentral()
+  google()
+  jcenter()
+ }
+
+ dependencies {
+  implementation 'org.codehaus.groovy:groovy:3.0.5'
+  implementation 'org.yaml:snakeyaml:1.5'
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+  testRuntimeOnly'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+ }
+ compileJava {
+  sourceCompatibility = 15
+  targetCompatibility = 15
+  options.encoding = "UTF-8"
+ }
+}
