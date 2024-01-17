@@ -3,9 +3,11 @@ pipeline {
 
     stages{
         stage{
-            library identifier: 'custom-lib@master', retriever: modernSCM(
-              [$class: 'GitSCMSource',
-               remote: 'https://github.com/Aleksandr13579/ayml-parse.git'])
+            steps {
+                library identifier: 'custom-lib@master', retriever: modernSCM(
+                  [$class: 'GitSCMSource',
+                   remote: 'https://github.com/Aleksandr13579/ayml-parse.git'])
+            }
         }
         stage('first'){
             steps {
