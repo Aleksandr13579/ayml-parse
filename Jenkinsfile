@@ -9,7 +9,7 @@ pipeline {
                     sh 'pwd && ls -alrt'
                     sh 'ls -alrt ./yaml-parse'
                     sh 'ls -alrt ./yaml-parse/vars'
-                    def example = load "${env.WORKSPACE}/vars/HelloWorld.groovy"
+                    def example = load "./yaml-parse/vars/HelloWorld.groovy"
                     example.HelloWorld()
                 }
             }
