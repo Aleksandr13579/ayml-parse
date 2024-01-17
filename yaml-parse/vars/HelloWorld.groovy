@@ -1,3 +1,3 @@
 def call() {
-    echo "hello World!!"
+    println("hello World!!")
 }
