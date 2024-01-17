@@ -1,12 +1,12 @@
-@Library('yaml')
+def example = load "${WORKSPACE}/var/HelloWorld.groovy"
 
 pipeline {
     agent any
 
     stages{
         stage('first'){
-            step {
-                HelloWorld()
+            steps {
+                example.HelloWorld()
             }
         }
     }
