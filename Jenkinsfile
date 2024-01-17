@@ -10,7 +10,7 @@ pipeline {
                     sh 'ls -alrt ./yaml-parse'
                     sh 'ls -alrt ./yaml-parse/vars'
                     def example = load "./yaml-parse/vars/HelloWorld.groovy"
-                    example.HelloWorld()
+                    example.HelloWorld(this)
                 }
             }
         }
