@@ -2,7 +2,7 @@ library(
     identifier: 'yaml-parse@master',
     retriever: modernSCM(
         [$class: 'GitSCMSource',
-         remote: 'https://github.com/Aleksandr13579/ayml-parse.git'])
+         remote: 'https://github.com/Aleksandr13579/ayml-parse.git']))
 }
 
 pipeline {
