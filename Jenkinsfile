@@ -1,3 +1,4 @@
+@SharedLibrary('yaml-parse/vars') _
 
 pipeline {
     agent any
@@ -9,8 +10,7 @@ pipeline {
                     sh 'pwd && ls -alrt'
                     sh 'ls -alrt ./yaml-parse'
                     sh 'ls -alrt ./yaml-parse/vars'
-                    def example = load "./yaml-parse/vars/HelloWorld.groovy"
-                    example.HelloWorld(this)
+
                 }
             }
         }
