@@ -1,11 +1,13 @@
 @Library('yaml')
 
 pipeline {
-    agent any;
+    agent any
 
     stages{
-        stage{
-            HelloWorld()
+        stage('first'){
+            step {
+                HelloWorld()
+            }
         }
     }
 }
