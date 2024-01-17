@@ -1,4 +1,4 @@
-def example = load "${WORKSPACE}/var/HelloWorld.groovy"
+def example = load "${env.WORKSPACE}/var/HelloWorld.groovy"
 
 pipeline {
     agent any
