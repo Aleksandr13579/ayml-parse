@@ -6,7 +6,9 @@ pipeline {
     stages{
         stage('first'){
             steps {
-                example.HelloWorld()
+                script {
+                    example.HelloWorld()
+                }
             }
         }
     }
