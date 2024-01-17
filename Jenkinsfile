@@ -1,14 +1,14 @@
+library(
+    identifier: 'yaml-parse@master',
+    retriever: modernSCM(
+        [$class: 'GitSCMSource',
+         remote: 'https://github.com/Aleksandr13579/ayml-parse.git'])
+}
+
 pipeline {
     agent any
 
     stages{
-        stage('first'){
-            steps {
-                library identifier: 'custom-lib', retriever: modernSCM(
-                  [$class: 'GitSCMSource',
-                   remote: 'https://github.com/Aleksandr13579/ayml-parse.git'])
-            }
-        }
         stage('second'){
             steps {
                 script {
