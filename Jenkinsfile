@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages{
-        stage{
+        stage('first'){
             steps {
                 library identifier: 'custom-lib@master', retriever: modernSCM(
                   [$class: 'GitSCMSource',
                    remote: 'https://github.com/Aleksandr13579/ayml-parse.git'])
             }
         }
-        stage('first'){
+        stage('second'){
             steps {
                 script {
                     sh 'pwd && ls -alrt'
