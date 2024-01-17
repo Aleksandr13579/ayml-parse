@@ -1,9 +1,12 @@
-@SharedLibrary('yaml-parse/vars') _
-
 pipeline {
     agent any
 
     stages{
+        stage{
+            library identifier: 'custom-lib@master', retriever: modernSCM(
+              [$class: 'GitSCMSource',
+               remote: 'https://github.com/Aleksandr13579/ayml-parse.git'])
+        }
         stage('first'){
             steps {
                 script {
