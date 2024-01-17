@@ -10,7 +10,7 @@ pipeline {
                     sh 'pwd && ls -alrt'
                     sh 'ls -alrt ./yaml-parse'
                     sh 'ls -alrt ./yaml-parse/vars'
-
+                    HelloWorld()
                 }
             }
         }
