@@ -1,4 +1,3 @@
-def example = load "${env.WORKSPACE}/var/HelloWorld.groovy"
 
 pipeline {
     agent any
@@ -7,6 +6,7 @@ pipeline {
         stage('first'){
             steps {
                 script {
+                    def example = load "${env.WORKSPACE}/var/HelloWorld.groovy"
                     example.HelloWorld()
                 }
             }
