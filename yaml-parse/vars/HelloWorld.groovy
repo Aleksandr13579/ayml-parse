@@ -1,5 +1,3 @@
-def hello = "hello World!!"
-
 def call() {
-    echo "${hello}"
+    echo "hello World!!"
 }
