@@ -1,12 +1,21 @@
-@Library('yaml') _
+//@Library('yaml') _
 
 pipeline {
     agent any
+
+    options {
+        timestamp()
+    }
+
+    parameters {
+        STRING(name: ARCHIVE_NAME_1, description: the name of the first archive)
+    }
 
     stages{
         stage('second'){
             steps {
                 script {
+
                     HelloWorld(this)
                 }
             }
