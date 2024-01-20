@@ -27,6 +27,7 @@ class YamlFile {
             //InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
             this.yamlData = yamlFile.load(this.file.text)
+            println(yamlData)
         }
         catch (FileNotFoundException e) {
             println("File not found Exeption: " + e)
