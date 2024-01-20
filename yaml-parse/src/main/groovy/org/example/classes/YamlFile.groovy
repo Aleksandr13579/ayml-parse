@@ -2,9 +2,9 @@ package org.example.classes
 
 import org.yaml.snakeyaml.Yaml
 
-class ParseYaml {
+class YamlFile {
 
-    ParseYaml(File yourFile) {
+    YamlFile(File yourFile) {
         this.file = yourFile
         this.fileName = "undefind"
 
@@ -18,7 +18,7 @@ class ParseYaml {
         }
     }
 
-    ParseYaml(String nameFile) {
+    YamlFile(String nameFile) {
         try {
             this.file = new File(nameFile)
             this.fileName = nameFile
@@ -35,7 +35,7 @@ class ParseYaml {
         return this.data
     }
 
-    boolean equals(ParseYaml ya) {
+    boolean equals(YamlFile ya) {
         return this.data == ya.getData()
     }
 

@@ -4,8 +4,8 @@ import org.example.classes.*
 import static org.example.classes.Constants.*
 
 
-ParseYaml yamlFileFirst = new ParseYaml(PATH_TO_FILE_1)
-ParseYaml yamlFileSecond = new ParseYaml(PATH_TO_FILE_2)
+YamlFile yamlFileFirst = new YamlFile(${params.ARCHIVE_1})
+YamlFile yamlFileSecond = new YamlFile(${params.ARCHIVE_2})
 def tttt = new Yaml().l
 if (yamlFileFirst.getData() == yamlFileSecond.getData()) {
 }
