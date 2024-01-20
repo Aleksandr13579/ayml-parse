@@ -7,7 +7,8 @@ class YamlFile {
     YamlFile(File yourFile) {
         this.file = yourFile
         this.fileName = "undefind"
-
+        this.data = yamlFile.load(this.file)
+        /**
         try {
             InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
@@ -16,15 +17,16 @@ class YamlFile {
         catch (Exception e) {
             println(e)
         }
+         */
     }
 
     YamlFile(String nameFile) {
         try {
             this.file = new File(nameFile)
-            this.fileName = nameFile
+           /** this.fileName = nameFile
             InputStream input = new FileInputStream(this.file)
-            this.yamlFile = new Yaml()
-            this.data = yamlFile.loadAll(input).split(", ")
+            this.yamlFile = new Yaml()*/
+            this.data = yamlFile.load(this.file)
         }
         catch (FileNotFoundException e) {
             println("File not found Exeption: " + e)
