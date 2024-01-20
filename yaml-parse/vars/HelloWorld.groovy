@@ -9,4 +9,8 @@ def call(def jenkins) {
 
     YamlFile yamlFileFirst = new YamlFile("${params.ARCHIVE_1}")
     YamlFile yamlFileSecond = new YamlFile("${params.ARCHIVE_2}")
+    jenkins.echo "yamlFileFirst"
+    yamlFileFirst.getData()
+    jenkins.echo "yamlFileSecond"
+    yamlFileSecond.getData()
 }
