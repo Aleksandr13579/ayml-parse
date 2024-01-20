@@ -1,6 +1,6 @@
 def call(def jenkins) {
     jenkins.echo "Hello world"
-    jenkins.pwd
-    jenkins.ls
+    jenkins.sh "pwd"
+    jenkins.sh "ls -alrt"
     println("hello World!!")
 }
