@@ -12,7 +12,6 @@ class YamlFile {
             InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
             this.data = yamlFile.loadAll(input) as LinkedHashMap<String, String>
-        }
         catch (Exception e) {
             println(e)
         }
@@ -24,7 +23,7 @@ class YamlFile {
             this.fileName = nameFile
             InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
-            this.data = yamlFile.loadAll(input) as LinkedHashMap<String, String>
+            this.data = yamlFile.loadAll(input)
         }
         catch (FileNotFoundException e) {
             println("File not found Exeption: " + e)
@@ -42,5 +41,5 @@ class YamlFile {
     private File file
     private String fileName
     private Yaml yamlFile
-    private LinkedHashMap<String, String> data
+    private def data
 }
