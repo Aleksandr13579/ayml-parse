@@ -1,5 +1,5 @@
 
-import org.example.classes.YamlFile.*
+import org.example.classes.YamlFile
 
 def call(def jenkins) {
     jenkins.sh "unzip ${ARCHIVE_NAME_1}"
