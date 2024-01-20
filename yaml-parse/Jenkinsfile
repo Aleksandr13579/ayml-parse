@@ -1,4 +1,5 @@
 @Library('yaml') _
+import org.example.classes.*
 
 pipeline {
     agent any
