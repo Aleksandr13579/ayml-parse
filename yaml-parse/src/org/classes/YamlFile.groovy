@@ -1,5 +1,3 @@
-package org.example.classes
-
 import org.yaml.snakeyaml.Yaml
 
 class YamlFile {
