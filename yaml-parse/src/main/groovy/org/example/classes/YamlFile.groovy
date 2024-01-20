@@ -31,7 +31,7 @@ class YamlFile {
         }
     }
 
-     LinkedHashMap<String, String> getData() {
+     def getData() {
         return this.data
     }
 
