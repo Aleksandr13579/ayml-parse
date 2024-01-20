@@ -1,2 +1,6 @@
 include 'yaml-parse'
+include 'yaml-parse:org'
+findProject(':yaml-parse:org')?.name = 'org'
+include 'yaml-parse:untitled'
+findProject(':yaml-parse:untitled')?.name = 'untitled'
 
