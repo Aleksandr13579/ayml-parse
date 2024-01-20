@@ -7,7 +7,7 @@ class YamlFile {
     YamlFile(File yourFile) {
         this.file = yourFile
         this.fileName = "undefind"
-        this.yamlData = yamlFile.load(this.file.text)
+        this.yamlData = yamlFile.load(this.file.text) as LinkedHashMap<String, String>
         /**
         try {
             InputStream input = new FileInputStream(this.file)
@@ -26,8 +26,7 @@ class YamlFile {
             this.fileName = nameFile
             //InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
-            this.yamlData = yamlFile.load(this.file.text)
-            println(yamlData)
+            this.yamlData = yamlFile.load(this.file.text) as LinkedHashMap<String, String>
         }
         catch (FileNotFoundException e) {
             println("File not found Exeption: " + e)
