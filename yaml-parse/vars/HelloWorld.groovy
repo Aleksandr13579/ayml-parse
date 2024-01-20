@@ -18,4 +18,7 @@ def call(def jenkins) {
     yamlFileSecond.getData().each {
         println(it.getValue())
     }
+
+    println("============")
+    println(yamlFileFirst.equals(yamlFileSecond))
 }
