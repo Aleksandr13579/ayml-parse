@@ -5,9 +5,9 @@ import org.yaml.snakeyaml.Yaml
 class YamlFile {
 
     YamlFile(File yourFile) {
-        this.file = yourFile.text
+        this.file = yourFile
         this.fileName = "undefind"
-        this.yamlData = yamlFile.load(this.file as InputStream)
+        this.yamlData = yamlFile.load(this.file.text)
         /**
         try {
             InputStream input = new FileInputStream(this.file)
@@ -22,11 +22,11 @@ class YamlFile {
 
     YamlFile(String nameFile) {
         try {
-            this.file = new File(nameFile).text
+            this.file = new File(nameFile)
             this.fileName = nameFile
             //InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
-            this.yamlData = yamlFile.load(this.file as InputStream)
+            this.yamlData = yamlFile.load(this.file.text)
             println(yamlData)
         }
         catch (FileNotFoundException e) {
