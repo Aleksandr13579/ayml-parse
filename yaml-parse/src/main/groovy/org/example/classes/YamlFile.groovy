@@ -23,9 +23,9 @@ class YamlFile {
     YamlFile(String nameFile) {
         try {
             this.file = new File(nameFile)
-           /** this.fileName = nameFile
-            InputStream input = new FileInputStream(this.file)
-            this.yamlFile = new Yaml()*/
+            this.fileName = nameFile
+            //InputStream input = new FileInputStream(this.file)
+            this.yamlFile = new Yaml()
             this.data = yamlFile.load(this.file)
         }
         catch (FileNotFoundException e) {
