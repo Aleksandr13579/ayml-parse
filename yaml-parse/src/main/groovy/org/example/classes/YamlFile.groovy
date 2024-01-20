@@ -11,7 +11,8 @@ class YamlFile {
         try {
             InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
-            this.data = yamlFile.loadAll(input) as LinkedHashMap<String, String>
+            this.data = yamlFile.loadAll(input)
+        }
         catch (Exception e) {
             println(e)
         }
