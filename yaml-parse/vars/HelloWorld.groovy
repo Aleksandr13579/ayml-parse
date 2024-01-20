@@ -9,7 +9,12 @@ def call(def jenkins) {
     YamlFile yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
     YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
     jenkins.echo "yamlFileFirst"
-    println(yamlFileFirst.getData())
+
+    yamlFileFirst.getData() {
+        println(it)
+    }
     jenkins.echo "yamlFileSecond"
-    println(yamlFileSecond.getData())
+    yamlFileSecond.getData() {
+        println(it)
+    }
 }
