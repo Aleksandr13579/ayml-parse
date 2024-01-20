@@ -1,3 +1,6 @@
+
+import main.groovy.org.example.classes.*
+
 def call(def jenkins) {
     jenkins.sh "unzip ${ARCHIVE_NAME_1}"
     jenkins.echo "Hello world"
