@@ -34,12 +34,13 @@ class YamlFile {
         }
     }
 
+     @NonCPS
      def getData() {
         return this.yamlData
     }
 
     boolean equals(YamlFile ya) {
-        return this.data == ya.getData()
+        return this.yamlData == ya.getData()
     }
 
     private File file
