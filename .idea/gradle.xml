@@ -9,6 +9,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/yaml-parse" />
+            <option value="$PROJECT_DIR$/yaml-parse/org" />
+            <option value="$PROJECT_DIR$/yaml-parse/untitled" />
           </set>
         </option>
       </GradleProjectSettings>
