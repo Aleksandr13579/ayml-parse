@@ -1,11 +1,11 @@
 @Library('yaml') _
-import main.groovy.org.example.classes.*
+import org.example.classes.*
 
 pipeline {
     agent any
 
     options {
-        timestamps()
+        timestamps ()
     }
 
     parameters {
