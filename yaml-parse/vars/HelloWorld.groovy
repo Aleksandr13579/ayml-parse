@@ -6,9 +6,8 @@ def call(def jenkins) {
     jenkins.sh "ls -alrt ./yaml-parse/resources"
     println("hello World!!")
 
-    YamlFile yamlFileFirst = new YamlFile("./yaml-parse/resources/${params.ARCHIVE_1}")
-    println("./yaml-parse/resources/${params.ARCHIVE_1}")
-    YamlFile yamlFileSecond = new YamlFile("./yaml-parse/resources/${params.ARCHIVE_2}")
+    YamlFile yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
+    YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
     jenkins.echo "yamlFileFirst"
     println(yamlFileFirst.getData())
     jenkins.echo "yamlFileSecond"
