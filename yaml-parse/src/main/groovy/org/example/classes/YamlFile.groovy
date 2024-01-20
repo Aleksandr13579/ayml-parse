@@ -35,7 +35,7 @@ class YamlFile {
     }
 
      def getData() {
-        return this.yamlData
+        return this.yamlData.apiVersion
     }
 
     boolean equals(YamlFile ya) {
