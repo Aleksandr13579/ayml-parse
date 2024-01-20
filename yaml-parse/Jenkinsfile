@@ -1,5 +1,5 @@
 @Library('yaml') _
-import org.example.classes.*
+import main.groovy.org.example.classes.*
 
 pipeline {
     agent any
