@@ -11,7 +11,7 @@ class YamlFile {
         try {
             InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
-            this.data = yamlFile.loadAll(input)
+            this.data = yamlFile.loadAll(input).split(", ")
         }
         catch (Exception e) {
             println(e)
@@ -24,7 +24,7 @@ class YamlFile {
             this.fileName = nameFile
             InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
-            this.data = yamlFile.loadAll(input)
+            this.data = yamlFile.loadAll(input).split(", ")
         }
         catch (FileNotFoundException e) {
             println("File not found Exeption: " + e)
