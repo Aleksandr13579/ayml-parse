@@ -10,10 +10,13 @@ def call(def jenkins) {
     YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
     jenkins.echo "yamlFileFirst"
 
+    @NonCPS
     yamlFileFirst.data().each {
         println(it)
     }
+
     jenkins.echo "yamlFileSecond"
+    @NonCPS
     yamlFileSecond.data().each {
         println(it)
     }
