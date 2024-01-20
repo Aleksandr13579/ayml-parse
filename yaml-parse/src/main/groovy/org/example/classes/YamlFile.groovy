@@ -1,4 +1,4 @@
-package main.groovy.org.example.classes.YamlFile
+package main.groovy.org.example.classes
 
 import org.yaml.snakeyaml.Yaml
 
