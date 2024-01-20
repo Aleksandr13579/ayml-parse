@@ -9,8 +9,8 @@ pipeline {
     }
 
     parameters {
-        string(name: 'ARCHIVE_1', description: 'the name of the first archive')
-        string(name: 'ARCHIVE_2', description: 'the name of the second archive')
+        string(name: 'ARCHIVE_1', defaultValue: 'batch.yaml', description: 'the name of the first archive')
+        string(name: 'ARCHIVE_2', defaultValue: 'curl.yaml', description: 'the name of the second archive')
     }
 
     stages{
