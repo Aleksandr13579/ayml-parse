@@ -11,11 +11,11 @@ def call(def jenkins) {
     jenkins.echo "yamlFileFirst"
 
     yamlFileFirst.getData().each {
-        println(it.values())
+        println(it.getValue())
     }
 
     jenkins.echo "yamlFileSecond"
     yamlFileSecond.getData().each {
-        println(it.values())
+        println(it.getValue())
     }
 }
