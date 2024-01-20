@@ -27,6 +27,7 @@ class YamlFile {
             //InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
             this.data = yamlFile.load(this.file.text)
+            def ttt = this.da
         }
         catch (FileNotFoundException e) {
             println("File not found Exeption: " + e)
@@ -34,7 +35,7 @@ class YamlFile {
     }
 
      def getData() {
-        return this.data
+        return this.data.apiVersion
     }
 
     boolean equals(YamlFile ya) {
