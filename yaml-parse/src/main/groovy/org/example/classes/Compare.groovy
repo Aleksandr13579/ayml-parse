@@ -56,6 +56,7 @@ class Compare {
         }
     }
 
+    @NonCPS
     private void getDataFromYaml(def firstYamlTMP, def secondYamlTMP) {
         this.dataFromFirstFile = firstYamlTMP.getData() as LinkedHashMap<String, String>
         this.dataFromSecondFile = secondYamlTMP.getData() as LinkedHashMap<String, String>
