@@ -1,26 +1,3 @@
 @Library('yaml') _
-import main.groovy.org.example.classes.YamlFile
 
-pipeline {
-    agent any
-
-    options {
-        timestamps ()
-    }
-
-    parameters {
-        string(name: 'ARCHIVE_1', defaultValue: 'batch.yaml', description: 'the name of the first archive')
-        string(name: 'ARCHIVE_2', defaultValue: 'curl.yaml', description: 'the name of the second archive')
-    }
-
-    stages{
-        stage('second'){
-            steps {
-                script {
-
-                    HelloWorld(this)
-                }
-            }
-        }
-    }
-}
+HelloWorld(this)
