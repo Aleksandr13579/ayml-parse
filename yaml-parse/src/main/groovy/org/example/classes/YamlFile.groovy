@@ -8,19 +8,9 @@ class YamlFile {
         this.file = yourFile
         this.fileName = "undefind"
         this.yamlData = yamlFile.load(this.file.text) as LinkedHashMap<String, String>
-        /**
-        try {
-            InputStream input = new FileInputStream(this.file)
-            this.yamlFile = new Yaml()
-            this.data = yamlFile.loadAll(input).split(", ")
-        }
-        catch (Exception e) {
-            println(e)
-        }
-         */
     }
 
-    YamlFile(String nameFile, def script) {
+    YamlFile(String nameFile) {
         try {
             this.file = new File(nameFile)
             this.fileName = nameFile
@@ -31,7 +21,6 @@ class YamlFile {
         catch (FileNotFoundException e) {
             println("File not found Exeption: " + e)
         }
-        script.echo "pvhjeriuhvjpreihjuveorijhvepriouvhjerpiovjerpjoerpio"
     }
 
      @NonCPS

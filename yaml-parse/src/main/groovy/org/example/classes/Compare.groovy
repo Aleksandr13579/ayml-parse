@@ -42,8 +42,9 @@ class Compare {
     /**
      * сроавнгиваем информацию из двух ямл файлов
      */
-    LinkedHashMap<String, String> comprasion(def script) {
+    String comprasion(def script) {
         StringBuilder returnString
+        script.echo "Тренировки оккупились 0 "
         if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
             dataFromFirstFile.each { key, value ->
                 if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
@@ -62,7 +63,7 @@ class Compare {
                 }
                 return returnString.toString()
         } else if (dataFromFirstFile == dataFromSecondFile) {
-            println("The first file is equivalent to the second")
+            return "The first file is equivalent to the second"
         }
     }
 
