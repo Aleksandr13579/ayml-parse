@@ -15,14 +15,6 @@ def call(def jenkins) {
 
     println(compare.comprasion())
 
-    yamlFileFirst.getData().each {
-        println(it.getValue())
-    }
-
-    jenkins.echo "yamlFileSecond"
-    yamlFileSecond.getData().each {
-        println(it.getValue())
-    }
 
     println("============")
     println(yamlFileFirst.equals(yamlFileSecond))
