@@ -46,10 +46,12 @@ class Compare {
         if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
             dataFromFirstFile.each { key, value ->
                 if (!dataFromSecondFile.containsKey(key) || value != sedataFromSecondFile.get(key)) {
+                    println("Тренировки оккупились")
                     unComprasionString.append(key + " " + value + "\n")
                 }
             }
-            return unComprasionString
+            return unComprasionString.toString()
+
         }
         else if (dataFromFirstFile == dataFromSecondFile) {
             return "The first file is equivalent to the second"
