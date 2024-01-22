@@ -45,7 +45,7 @@ class Compare {
         StringBuilder unComprasionString
         if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
             dataFromFirstFile.each { key, value ->
-                if (!dataFromSecondFile.containsKey(key) || value != sedataFromSecondFile.get(key)) {
+                if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
                     println("Тренировки оккупились")
                     unComprasionString.append(key + " " + value + "\n")
                 }
