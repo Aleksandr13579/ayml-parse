@@ -42,27 +42,25 @@ class Compare {
     /**
      * сроавнгиваем информацию из двух ямл файлов
      */
-    LinkedHashMap<String, String> comprasion() {
-        println("vzzzzvvvvv")
+    LinkedHashMap<String, String> comprasion(def script) {
+        StringBuilder returnString
         if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
-            println("1")
             dataFromFirstFile.each { key, value ->
                 if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
-                    println("Тренировки оккупились")
-                    mismatchedFields.put(key, value)
+                    script.echo "Тренировки оккупились 1 "
+                    returnString.append(key + " " + value + "\n")
                 }
             }
-            return mismatchedFields
+            return returnString.toString()
 
         } else if (dataFromFirstFile.size() < dataFromSecondFile.size()) {
-                println("2")
                 dataFromFirstFile.each { key, value ->
                     if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
-                        println("Тренировки оккупились")
-                        mismatchedFields.put(key, value)
+                        script.echo "Тренировки оккупились 2 "
+                        returnString.append(key + " " + value + "\n")
                     }
                 }
-                return mismatchedFields
+                return returnString.toString()
         } else if (dataFromFirstFile == dataFromSecondFile) {
             println("The first file is equivalent to the second")
         }
