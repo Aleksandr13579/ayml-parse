@@ -44,6 +44,7 @@ class Compare {
     private String comprasiion() {
         StringBuilder unComprasionString
         if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
+            println("1")
             dataFromFirstFile.each { key, value ->
                 if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
                     println("Тренировки оккупились")
@@ -52,8 +53,16 @@ class Compare {
             }
             return unComprasionString.toString()
 
-        }
-        else if (dataFromFirstFile == dataFromSecondFile) {
+        } else if (dataFromFirstFile.size() < dataFromSecondFile.size()) {
+                println("2")
+                dataFromFirstFile.each { key, value ->
+                    if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
+                        println("Тренировки оккупились")
+                        unComprasionString.append(key + " " + value + "\n")
+                    }
+                }
+                return unComprasionString.toString()
+        } else if (dataFromFirstFile == dataFromSecondFile) {
             return "The first file is equivalent to the second"
         }
     }
