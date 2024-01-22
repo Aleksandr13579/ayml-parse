@@ -8,7 +8,6 @@ class Compare {
     Compare(YamlFile first, YamlFile second) {
         this.firstYaml = first
         this.secondYaml = second
-        this.mismatchedFields = new ArrayList<>()
         this.dataFromFirstFile = new LinkedHashMap<>()
         this.dataFromSecondFile = new LinkedHashMap<>()
 
@@ -18,10 +17,10 @@ class Compare {
     Compare(File first, File second) {
         this.firstYaml = new YamlFile(first)
         this.secondYaml = new YamlFile(second)
-        this.mismatchedFields = new ArrayList<>()
         this.dataFromFirstFile = new LinkedHashMap<>()
         this.dataFromSecondFile = new LinkedHashMap<>()
 
+        println("uuuuuu")
         getDataFromYaml(firstYaml, secondYaml)
     }
 
@@ -33,10 +32,10 @@ class Compare {
         catch (FileNotFoundException e) {
             println("File not found: \n" + e)
         }
-        this.mismatchedFields = new ArrayList<>()
         this.dataFromFirstFile = new LinkedHashMap<>()
         this.dataFromSecondFile = new LinkedHashMap<>()
 
+        println("uuuuuu")
         getDataFromYaml(firstYaml, secondYaml)
     }
 
