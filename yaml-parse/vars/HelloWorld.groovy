@@ -13,7 +13,7 @@ def call(def jenkins) {
     Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
     jenkins.echo "Compare initialisation"
 
-    println(compare.comprasion())
+    println(compare.getMismatchedFields)
 
 
     println("============")

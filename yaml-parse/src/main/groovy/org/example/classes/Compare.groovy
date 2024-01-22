@@ -3,6 +3,8 @@ package main.groovy.org.example.classes
 
 class Compare {
 
+    LinkedHashMap<String, String> mismatchedFields
+
     Compare(YamlFile first, YamlFile second) {
         this.firstYaml = first
         this.secondYaml = second
@@ -41,30 +43,29 @@ class Compare {
     /**
      * сроавнгиваем информацию из двух ямл файлов
      */
-    String comprasion() {
-        StringBuilder unComprasionString
+    LinkedHashMap<String, String> comprasion() {
         println("vzzzzvvvvv")
         if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
             println("1")
             dataFromFirstFile.each { key, value ->
                 if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
                     println("Тренировки оккупились")
-                    unComprasionString.append(key + " " + value + "\n")
+                    mismatchedFields.put(key, value)
                 }
             }
-            return unComprasionString.toString()
+            return mismatchedFields
 
         } else if (dataFromFirstFile.size() < dataFromSecondFile.size()) {
                 println("2")
                 dataFromFirstFile.each { key, value ->
                     if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
                         println("Тренировки оккупились")
-                        unComprasionString.append(key + " " + value + "\n")
+                        mismatchedFields.put(key, value)
                     }
                 }
-                return unComprasionString.toString()
+                return mismatchedFields
         } else if (dataFromFirstFile == dataFromSecondFile) {
-            return "The first file is equivalent to the second"
+            println("The first file is equivalent to the second")
         }
     }
 
@@ -82,7 +83,6 @@ class Compare {
 
     private YamlFile firstYaml
     private YamlFile secondYaml
-    private ArrayList<String>mismatchedFields
     private LinkedHashMap<String, String> dataFromFirstFile
     private LinkedHashMap<String, String> dataFromSecondFile
 }
