@@ -20,7 +20,6 @@ class Compare {
         this.dataFromFirstFile = new LinkedHashMap<>()
         this.dataFromSecondFile = new LinkedHashMap<>()
 
-        println("uuuuuu")
         getDataFromYaml(firstYaml, secondYaml)
     }
 
@@ -35,7 +34,6 @@ class Compare {
         this.dataFromFirstFile = new LinkedHashMap<>()
         this.dataFromSecondFile = new LinkedHashMap<>()
 
-        println("uuuuuu")
         getDataFromYaml(firstYaml, secondYaml)
     }
 
