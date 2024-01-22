@@ -1,4 +1,5 @@
 import main.groovy.org.example.classes.YamlFile
+import main.groovy.org.example.classes.Compare
 
 def call(def jenkins) {
     jenkins.echo "Hello world"
