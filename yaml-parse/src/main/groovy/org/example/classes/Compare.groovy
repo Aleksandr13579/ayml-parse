@@ -41,7 +41,7 @@ class Compare {
     /**
      * сроавнгиваем информацию из двух ямл файлов
      */
-    private String comprasion() {
+    String comprasion() {
         StringBuilder unComprasionString
         println("vzzzzvvvvv")
         if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
