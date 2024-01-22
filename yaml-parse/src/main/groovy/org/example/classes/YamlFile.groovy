@@ -20,7 +20,7 @@ class YamlFile {
          */
     }
 
-    YamlFile(String nameFile) {
+    YamlFile(String nameFile, def script) {
         try {
             this.file = new File(nameFile)
             this.fileName = nameFile
@@ -31,7 +31,7 @@ class YamlFile {
         catch (FileNotFoundException e) {
             println("File not found Exeption: " + e)
         }
-        println("pvhjeriuhvjpreihjuveorijhvepriouvhjerpiovjerpjoerpio")
+        script.echo "pvhjeriuhvjpreihjuveorijhvepriouvhjerpiovjerpjoerpio"
     }
 
      @NonCPS

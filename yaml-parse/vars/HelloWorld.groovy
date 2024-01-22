@@ -6,8 +6,8 @@ def call(def jenkins) {
         timestamps {
             stage('Exapmle') {
 
-                YamlFile yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
-                YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
+                YamlFile yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}", this)
+                YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}", this)
 
                 Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
                 jenkins.echo "Compare initialisation"
