@@ -8,7 +8,12 @@ def call(def jenkins) {
 
     YamlFile yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
     YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
-    jenkins.echo "yamlFileFirst"
+
+    Compare compare = new Compare(new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}"),
+            new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}"))
+    jenkins.echo "Compare initialisation"
+
+    println(compare.comprasiion())
 
     yamlFileFirst.getData().each {
         println(it.getValue())

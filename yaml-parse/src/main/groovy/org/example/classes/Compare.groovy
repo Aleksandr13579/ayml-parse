@@ -1,4 +1,5 @@
-package org.example.classes
+//package org.example.classes
+package main.groovy.org.example.classes
 
 class Compare {
 
@@ -8,6 +9,8 @@ class Compare {
         this.mismatchedFields = new ArrayList<>()
         this.dataFromFirstFile = new LinkedHashMap<>()
         this.dataFromSecondFile = new LinkedHashMap<>()
+
+        getDataFromYaml(firstYaml, secondYaml)
     }
 
     Compare(File first, File second) {
@@ -16,20 +19,51 @@ class Compare {
         this.mismatchedFields = new ArrayList<>()
         this.dataFromFirstFile = new LinkedHashMap<>()
         this.dataFromSecondFile = new LinkedHashMap<>()
+
+        getDataFromYaml(firstYaml, secondYaml)
     }
 
     Compare(String first, String second) {
-        this.firstYaml = new YamlFile(first)
-        this.secondYaml = new YamlFile(second)
+        try {
+            this.firstYaml = new YamlFile(first)
+            this.secondYaml = new YamlFile(second)
+        }
+        catch (FileNotFoundException e) {
+            println("File not found: \n" + e)
+        }
         this.mismatchedFields = new ArrayList<>()
         this.dataFromFirstFile = new LinkedHashMap<>()
         this.dataFromSecondFile = new LinkedHashMap<>()
+
+        getDataFromYaml(firstYaml, secondYaml)
     }
 
+    /**
+     * сроавнгиваем информацию из двух ямл файлов
+     */
+    private String comprasiion() {
+        StringBuilder unComprasionString
+        if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
+            dataFromFirstFile.each { key, value ->
+                if (!dataFromSecondFile.containsKey(key)) {
+                    unComprasionString.append(key + " " + value + "\n")
+                }
+            }
+            return unComprasionString
+        }
+        else if (dataFromFirstFile == dataFromSecondFile) {
+            return "The first file is equivalent to the second"
+        }
+    }
 
-    private firstYaml
-    private secondYaml
-    private mismatchedFields
-    private dataFromFirstFile
-    private dataFromSecondFile
+    private void getDataFromYaml(def firstYamlTMP, def secondYamlTMP) {
+        this.dataFromFirstFile = firstYamlTMP.getData() as LinkedHashMap<String, String>
+        this.dataFromSecondFile = secondYamlTMP.getData() as LinkedHashMap<String, String>
+    }
+
+    private YamlFile firstYaml
+    private YamlFile secondYaml
+    private ArrayList<String>mismatchedFields
+    private LinkedHashMap<String, String> dataFromFirstFile
+    private LinkedHashMap<String, String> dataFromSecondFile
 }
