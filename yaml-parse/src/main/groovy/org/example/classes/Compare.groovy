@@ -43,8 +43,8 @@ class Compare {
     String comprasion(def script) {
         StringBuilder returnString
         script.echo "Тренировки оккупились 0 "
-        script.echo ${dataFromFirstFile.size())
-        script.echo ${dataFromSecondFile.size())
+        script.echo "${dataFromFirstFile.size())"
+        script.echo "${dataFromSecondFile.size())"
         if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
             dataFromFirstFile.each { key, value ->
                 if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
