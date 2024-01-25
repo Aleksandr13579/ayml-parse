@@ -43,18 +43,18 @@ class Compare {
     String comprasion(def script) {
         StringBuilder returnString
         script.echo "Тренировки оккупились 0 "
-        script.echo "${dataFromFirstFile.size())"
-        script.echo "${dataFromSecondFile.size())"
-        if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
-            dataFromFirstFile.each { key, value ->
-                if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
-                    script.echo "Тренировки оккупились 1 "
-                    returnString.append(key + " " + value + "\n")
+        script.echo dataFromFirstFile.size()
+        script.echo dataFromSecondFile.size()
+            if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
+                dataFromFirstFile.each { key, value ->
+                    if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
+                        script.echo "Тренировки оккупились 1 "
+                        returnString.append(key + " " + value + "\n")
+                    }
                 }
-            }
-            return returnString.toString()
+                return returnString.toString()
 
-        } else if (dataFromFirstFile.size() < dataFromSecondFile.size()) {
+            } else if (dataFromFirstFile.size() < dataFromSecondFile.size()) {
                 dataFromFirstFile.each { key, value ->
                     if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
                         script.echo "Тренировки оккупились 2 "
@@ -62,10 +62,10 @@ class Compare {
                     }
                 }
                 return returnString.toString()
-        } else if (dataFromFirstFile == dataFromSecondFile) {
-            return "The first file is equivalent to the second"
+            } else if (dataFromFirstFile == dataFromSecondFile) {
+                return "The first file is equivalent to the second"
+            }
         }
-    }
 
     @NonCPS
     private void getDataFromYaml(def firstYamlTMP, def secondYamlTMP) {
