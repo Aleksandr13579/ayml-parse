@@ -64,7 +64,7 @@ class Compare {
      * в key1.key2.key3: value
      *
      * @param yam
-     * @param oldKey - сохрянем значения ключей пердыдущих итераций
+     * @param oldKey  сохрянем значения ключей предыдущих итераций
      * @return
      */
     @NonCPS

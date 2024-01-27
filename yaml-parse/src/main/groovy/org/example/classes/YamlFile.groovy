@@ -10,17 +10,17 @@ class YamlFile {
         this.yamlData = yamlFile.load(this.file.text) as Map<String, ?>
     }
 
-    YamlFile(String nameFile) {
+    YamlFile(String nameFile, def jenkins) {
         try {
             this.file = new File(nameFile)
             this.fileName = nameFile
             //InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
             this.yamlData = yamlFile.load(this.file.text) as Map<String, ?>
-            getYamlData().each { println(it)}
+
         }
         catch (FileNotFoundException e) {
-            println("File not found Exeption: " + e)
+            jenkins.echo "File not found Exeption: " + ${e}
         }
     }
 

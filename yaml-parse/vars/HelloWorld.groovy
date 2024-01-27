@@ -7,8 +7,8 @@ def call(def jenkins) {
             stage('Example') {
 
                 jenkins.sh "ls -alrt ${env.WORKSPACE}/yaml-parse/resources"
-                YamlFile yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
-                YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
+                YamlFile yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}", jenkins)
+                YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}", jenkins)
                 Compare compare = new Compare(yamlFileFirst, yamlFileSecond, jenkins)
 
                 compare.getDataFromFirstFile().each { key, value ->
