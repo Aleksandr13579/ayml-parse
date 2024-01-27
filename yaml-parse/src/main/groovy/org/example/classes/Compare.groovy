@@ -5,7 +5,7 @@ class Compare {
 
     LinkedHashMap<String, String> mismatchedFields
 
-    Compare(YamlFile first, YamlFile second,def jenkins ) {
+    Compare(YamlFile first, YamlFile second) {
         this.firstYaml = first
         this.secondYaml = second
 
@@ -15,7 +15,7 @@ class Compare {
         this.dataFromSecondFile = new LinkedHashMap<>()
         converter(secondYaml.getYamlData(), this.dataFromSecondFile)
     }
-/**
+
     Compare(File first, File second) {
         this.firstYaml = new YamlFile(first)
         this.secondYaml = new YamlFile(second)
@@ -26,15 +26,11 @@ class Compare {
         this.dataFromSecondFile = new LinkedHashMap<>()
         dataFromSecondFile = converter(secondYaml.getYamlData())
     }
-*/
+
     Compare(String first, String second) {
-        try {
-            this.firstYaml = new YamlFile(first)
-            this.secondYaml = new YamlFile(second)
-        }
-        catch (FileNotFoundException e) {
-            println("File not found: \n" + e)
-        }
+
+        this.firstYaml = new YamlFile(first)
+        this.secondYaml = new YamlFile(second)
 
         this.dataFromFirstFile = new LinkedHashMap<>()
         converter(firstYaml.getYamlData(), this.dataFromFirstFile)
@@ -60,11 +56,11 @@ class Compare {
      * в key1.key2.key3: value
      *
      * @param yam
-     * @param oldKey  сохрянем значения ключей предыдущих итераций
+     * @param oldKey сохрянем значения ключей предыдущих итераций
      * @return
      */
     @NonCPS
-    private void converter(Map<String, ?> yam, Map<String,String> data, String oldKey = "") {
+    private void converter(Map<String, ?> yam, Map<String, String> data, String oldKey = "") {
         yam.each { key, value ->
             if (value instanceof Map) {
                 if (oldKey != "") {
@@ -77,7 +73,7 @@ class Compare {
                     if (it instanceof String) {
                         data.put(oldKey + "." + key, it.toString())
                     } else {
-                        converter(it, data,"${oldKey}.${key}")
+                        converter(it, data, "${oldKey}.${key}")
                     }
                 }
             } else {
@@ -89,7 +85,6 @@ class Compare {
             }
         }
     }
-
 
 
     private YamlFile firstYaml

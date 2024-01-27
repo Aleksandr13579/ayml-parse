@@ -1,4 +1,7 @@
 package main.groovy.org.example.classes
+
+import org.example.classes.Echo
+
 //package org.example.classes
 import org.yaml.snakeyaml.Yaml
 
@@ -10,7 +13,7 @@ class YamlFile {
         this.yamlData = yamlFile.load(this.file.text) as Map<String, ?>
     }
 
-    YamlFile(String nameFile, def jenkins) {
+    YamlFile(String nameFile) {
         try {
             this.file = new File(nameFile)
             this.fileName = nameFile
@@ -20,7 +23,7 @@ class YamlFile {
 
         }
         catch (FileNotFoundException e) {
-            jenkins.echo "File not found Exeption: " + ${e}
+            Echo.echo("File not found Exeption: " + e)
         }
     }
 
