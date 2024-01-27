@@ -23,10 +23,6 @@ class YamlFile {
         }
     }
 
-     @NonCPS
-     def getData() {
-        return this.yamlData
-    }
 
     boolean equals(YamlFile ya) {
         return this.yamlData == ya.getData()

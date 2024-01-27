@@ -12,10 +12,10 @@ class Compare {
         this.dataFromSecondFile = new LinkedHashMap<>()
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(firstYaml)
+        dataFromSecondFile = converter(firstYaml.getYamlData())
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(secondYaml)
+        dataFromSecondFile = converter(secondYaml.getYamlData())
     }
 
     Compare(File first, File second) {
@@ -25,10 +25,10 @@ class Compare {
         this.dataFromSecondFile = new LinkedHashMap<>()
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(firstYaml)
+        dataFromSecondFile = converter(firstYaml.getYamlData())
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(secondYaml)
+        dataFromSecondFile = converter(secondYaml.getYamlData())
     }
 
     Compare(String first, String second) {
@@ -41,10 +41,10 @@ class Compare {
         }
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(firstYaml)
+        dataFromSecondFile = converter(firstYaml.getYamlData())
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(secondYaml)
+        dataFromSecondFile = converter(secondYaml.getYamlData())
 
     }
 
