@@ -10,14 +10,10 @@ class Compare {
         this.secondYaml = second
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(firstYaml.getYamlData())
+        converter(firstYaml.getYamlData(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(secondYaml.getYamlData())
-
-        dataFromFirstFile.each {key, value -> jenkins.echo "${key} : ${value}"}
-        jenkins.echo "+++++++++++++++++++++++++++++++++++++++++++"
-        dataFromSecondFile.each {key, value -> jenkins.echo "${key} : ${value}"}
+        converter(secondYaml.getYamlData(), this.dataFromSecondFile)
     }
 /**
     Compare(File first, File second) {
@@ -41,10 +37,10 @@ class Compare {
         }
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(firstYaml.getYamlData())
+        converter(firstYaml.getYamlData(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(secondYaml.getYamlData())
+        converter(secondYaml.getYamlData(), this.dataFromSecondFile)
 
     }
 
@@ -68,21 +64,20 @@ class Compare {
      * @return
      */
     @NonCPS
-    private LinkedHashMap<String, String> converter(Map<String, ?> yam, String oldKey = "") {
-        Map<String, String> data = new LinkedHashMap<>()
+    private void converter(Map<String, ?> yam, Map<String,String> data, String oldKey = "") {
         yam.each { key, value ->
             if (value instanceof Map) {
                 if (oldKey != "") {
-                    converter(value, "${oldKey}.${key}")
+                    converter(value, data, "${oldKey}.${key}")
                 } else {
-                    converter(value, "${key}")
+                    converter(value, data, "${key}")
                 }
             } else if (value instanceof ArrayList<?>) {
                 value.each {
                     if (it instanceof String) {
                         data.put(oldKey + "." + key, it.toString())
                     } else {
-                        converter(it, "${oldKey}.${key}")
+                        converter(it, data,"${oldKey}.${key}")
                     }
                 }
             } else {
@@ -93,7 +88,6 @@ class Compare {
                 }
             }
         }
-        return data
     }
 
 
