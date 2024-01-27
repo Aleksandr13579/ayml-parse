@@ -5,7 +5,7 @@ class Compare {
 
     LinkedHashMap<String, String> mismatchedFields
 
-    Compare(YamlFile first, YamlFile second) {
+    Compare(YamlFile first, YamlFile second,def jenkins ) {
         this.firstYaml = first
         this.secondYaml = second
 
@@ -14,6 +14,10 @@ class Compare {
 
         this.dataFromSecondFile = new LinkedHashMap<>()
         dataFromSecondFile = converter(secondYaml.getYamlData())
+
+        dataFromFirstFile.each {key, value -> jenkins.echo "${key} : ${value}"}
+        jenkins.echo "+++++++++++++++++++++++++++++++++++++++++++"
+        dataFromSecondFile.each {key, value -> jenkins.echo "${key} : ${value}"}
     }
 /**
     Compare(File first, File second) {
@@ -65,7 +69,7 @@ class Compare {
      */
     @NonCPS
     private LinkedHashMap<String, String> converter(Map<String, ?> yam, String oldKey = "") {
-        LinkedHashMap<String, String> data = new LinkedHashMap<>()
+        Map<String, String> data = new LinkedHashMap<>()
         yam.each { key, value ->
             if (value instanceof Map) {
                 if (oldKey != "") {

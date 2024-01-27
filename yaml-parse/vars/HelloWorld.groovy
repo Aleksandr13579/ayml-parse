@@ -8,7 +8,7 @@ def call(def jenkins) {
 
                 YamlFile yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
                 YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
-                Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
+                Compare compare = new Compare(yamlFileFirst, yamlFileSecond, jenkins)
 
                 compare.getDataFromFirstFile().each { key, value ->
                     jenkins.echo "${key} : ${value}"
