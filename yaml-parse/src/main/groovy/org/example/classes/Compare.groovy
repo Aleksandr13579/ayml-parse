@@ -64,6 +64,7 @@ class Compare {
      * @param oldKey - сохрянем значения ключей пердыдущих итераций
      * @return
      */
+    @NonCPS
     private LinkedHashMap<String, String> converter(Map<String, ?> yam, String oldKey = "") {
         LinkedHashMap<String, String> data
         yam.each { key, value ->
