@@ -6,7 +6,7 @@ class Echo {
         this.jenkins = jenkins
     }
 
-   static echo(String info) {
+   echo(String info) {
         this.jenkins.echo "${info}"
     }
 
