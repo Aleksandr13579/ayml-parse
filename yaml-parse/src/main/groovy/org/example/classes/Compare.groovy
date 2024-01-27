@@ -5,17 +5,17 @@ class Compare {
 
     LinkedHashMap<String, String> mismatchedFields
 
-    Compare(YamlFile first, YamlFile second) {
+    Compare(YamlFile first, YamlFile second, def jenkins) {
         this.firstYaml = first
         this.secondYaml = second
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(firstYaml.getYamlData())
+        dataFromSecondFile = converter(firstYaml.getYamlData(), jenkins)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(secondYaml.getYamlData())
+        dataFromSecondFile = converter(secondYaml.getYamlData(), jenkins)
     }
-
+/**
     Compare(File first, File second) {
         this.firstYaml = new YamlFile(first)
         this.secondYaml = new YamlFile(second)
@@ -26,8 +26,8 @@ class Compare {
         this.dataFromSecondFile = new LinkedHashMap<>()
         dataFromSecondFile = converter(secondYaml.getYamlData())
     }
-
-    Compare(String first, String second) {
+*/
+    Compare(String first, String second, def jenkins) {
         try {
             this.firstYaml = new YamlFile(first)
             this.secondYaml = new YamlFile(second)
@@ -37,10 +37,10 @@ class Compare {
         }
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(firstYaml.getYamlData())
+        dataFromSecondFile = converter(firstYaml.getYamlData(), jenkins)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(secondYaml.getYamlData())
+        dataFromSecondFile = converter(secondYaml.getYamlData(), jenkins)
 
     }
 
@@ -61,9 +61,9 @@ class Compare {
      * @return
      */
     @NonCPS
-    private LinkedHashMap<String, String> converter(Map<String, ?> yam, String oldKey = "") {
+    private LinkedHashMap<String, String> converter(Map<String, ?> yam, def jenkins, String oldKey = "") {
         LinkedHashMap<String, String> data
-        println "vsdvdsvsdvsdvsdvsdvsdvsdvsd"
+        jenkins.echo "vsdvdsvsdvsdvsdvsdvsdvsdvsd"
         yam.each { key, value ->
             if (value instanceof Map) {
                 if (oldKey != "") {
@@ -74,7 +74,7 @@ class Compare {
             } else if (value instanceof ArrayList<?>) {
                 value.each {
                     if (it instanceof String) {
-                        println(oldKey + "." + key + " : " + it.toString())
+                        jenkins.echo "${oldKey}.${key} : ${value.toString()}"
                         data.put(oldKey + "." + key, it.toString())
                     } else {
                         converter(it, "${oldKey}.${key}")
@@ -82,10 +82,10 @@ class Compare {
                 }
             } else {
                 if (oldKey != "") {
-                    println(oldKey + "." + key + " : " + value.toString())
+                    jenkins.echo "${oldKey}.${key} : ${value.toString()}"
                     data.put(oldKey + "." + key, value.toString())
                 } else {
-                    println(key + " : " + value.toString())
+                    jenkins.echo(${key} : ${value.toString()})
                     data.put(key, value.toString())
                 }
             }
