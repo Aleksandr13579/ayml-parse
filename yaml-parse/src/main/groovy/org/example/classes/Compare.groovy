@@ -11,7 +11,11 @@ class Compare {
         this.dataFromFirstFile = new LinkedHashMap<>()
         this.dataFromSecondFile = new LinkedHashMap<>()
 
-        getDataFromYaml(firstYaml, secondYaml)
+        this.dataFromFirstFile = new LinkedHashMap<>()
+        dataFromSecondFile = converter(firstYaml)
+
+        this.dataFromSecondFile = new LinkedHashMap<>()
+        dataFromSecondFile = converter(secondYaml)
     }
 
     Compare(File first, File second) {
@@ -20,7 +24,11 @@ class Compare {
         this.dataFromFirstFile = new LinkedHashMap<>()
         this.dataFromSecondFile = new LinkedHashMap<>()
 
-        getDataFromYaml(firstYaml, secondYaml)
+        this.dataFromFirstFile = new LinkedHashMap<>()
+        dataFromSecondFile = converter(firstYaml)
+
+        this.dataFromSecondFile = new LinkedHashMap<>()
+        dataFromSecondFile = converter(secondYaml)
     }
 
     Compare(String first, String second) {
@@ -31,53 +39,60 @@ class Compare {
         catch (FileNotFoundException e) {
             println("File not found: \n" + e)
         }
-        this.dataFromFirstFile = new LinkedHashMap<>()
-        this.dataFromSecondFile = new LinkedHashMap<>()
 
-        getDataFromYaml(firstYaml, secondYaml)
+        this.dataFromFirstFile = new LinkedHashMap<>()
+        dataFromSecondFile = converter(firstYaml)
+
+        this.dataFromSecondFile = new LinkedHashMap<>()
+        dataFromSecondFile = converter(secondYaml)
+
     }
 
     /**
      * сроавнгиваем информацию из двух ямл файлов
      */
-    String comprasion(def script) {
-        StringBuilder returnString
-        script.echo "Тренировки оккупились 0 "
-        script.echo firstYaml.size().toString()
-        script.echo secondYaml.size().toString()
-            if (dataFromFirstFile.size() > dataFromSecondFile.size()) {
-                dataFromFirstFile.each { key, value ->
-                    if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
-                        script.echo "Тренировки оккупились 1 "
-                        returnString.append(key + " " + value + "\n")
-                    }
-                }
-                return returnString.toString()
 
-            } else if (dataFromFirstFile.size() < dataFromSecondFile.size()) {
-                dataFromFirstFile.each { key, value ->
-                    if (!dataFromSecondFile.containsKey(key) || value != dataFromSecondFile.get(key)) {
-                        script.echo "Тренировки оккупились 2 "
-                        returnString.append(key + " " + value + "\n")
+    /**
+     * метод для преобразования загруженного yaml файла в LinkedHashMap вида
+     * key1:
+     *   key2:
+     *     key3: value
+     *
+     * в key1.key2.key3: value
+     *
+     * @param yam
+     * @param oldKey - сохрянем значения ключей пердыдущих итераций
+     * @return
+     */
+    private LinkedHashMap<String, String> converter(Map<String, ?> yam, String oldKey = "") {
+        LinkedHashMap<String, String> data
+        yam.each { key, value ->
+            if (value instanceof Map) {
+                if (oldKey != "") {
+                    converter(value, "${oldKey}.${key}")
+                } else {
+                    converter(value, "${key}")
+                }
+            } else if (value instanceof ArrayList<?>) {
+                value.each {
+                    if (it instanceof String) {
+                        data.put(oldKey + "." + key, it.toString())
+                    } else {
+                        converter(it, "${oldKey}.${key}")
                     }
                 }
-                return returnString.toString()
-            } else if (dataFromFirstFile == dataFromSecondFile) {
-                return "The first file is equivalent to the second"
+            } else {
+                if (oldKey != "") {
+                    data.put(oldKey + "." + key, value.toString())
+                } else {
+                    data.put(key, value.toString())
+                }
             }
         }
-
-    @NonCPS
-    private void getDataFromYaml(def firstYamlTMP, def secondYamlTMP) {
-        this.dataFromFirstFile = firstYamlTMP.getData() as LinkedHashMap<String, String>
-        this.dataFromSecondFile = secondYamlTMP.getData() as LinkedHashMap<String, String>
-
-        dataFromFirstFile.each {println(it)}
-
-        println("==============================")
-
-        dataFromSecondFile.each {println(it)}
+        return data
     }
+
+
 
     private YamlFile firstYaml
     private YamlFile secondYaml

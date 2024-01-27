@@ -4,23 +4,22 @@ import main.groovy.org.example.classes.Compare
 def call(def jenkins) {
     node {
         timestamps {
-            stage('Exapmle') {
+            stage('Example') {
 
                 YamlFile yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
                 YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
 
                 yamlFileFirst.getData().each { println(it)}
-                println("+++++++++++++++++++++++++++++")
                 yamlFileSecond.getData().each { println(it) }
 
                 Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
-                jenkins.echo "Compare initialisation"
+                compare.getDataFromFirstFile.each {
+                    println (it)
+                }
 
-                println(compare.comprasion(this))
-
-
-                echo "============"
-                println(yamlFileFirst.equals(yamlFileSecond))
+                compare.getDataFromSecondFile.each {
+                    println (it)
+                }
             }
         }
     }
