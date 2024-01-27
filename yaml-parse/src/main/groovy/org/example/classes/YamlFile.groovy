@@ -1,7 +1,5 @@
 package main.groovy.org.example.classes
 
-import org.example.classes.Echo
-
 //package org.example.classes
 import org.yaml.snakeyaml.Yaml
 
