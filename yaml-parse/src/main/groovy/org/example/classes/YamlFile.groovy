@@ -24,10 +24,6 @@ class YamlFile {
     }
 
 
-    boolean equals(YamlFile ya) {
-        return this.yamlData == ya.getData()
-    }
-
     private File file
     private String fileName
     private Yaml yamlFile
