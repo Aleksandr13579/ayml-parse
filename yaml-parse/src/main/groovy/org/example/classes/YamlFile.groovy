@@ -23,9 +23,10 @@ class YamlFile {
         }
     }
 
+    Map yamlData
 
     private File file
     private String fileName
     private Yaml yamlFile
-    private Map yamlData
+
 }
