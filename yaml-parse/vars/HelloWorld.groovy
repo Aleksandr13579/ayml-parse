@@ -10,7 +10,7 @@ def call(def jenkins) {
                 jenkins.echo ("dddddd")
                 YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
                 jenkins.echo ("ddqwqqwqwqwqw")
-                Compare compare = new Compare(yamlFileFirst, yamlFileSecond, this)
+                Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
             }
         }
     }
