@@ -44,6 +44,9 @@ class Compare {
 
     }
 
+    LinkedHashMap<String, String> dataFromFirstFile
+    LinkedHashMap<String, String> dataFromSecondFile
+
     /**
      * сроавнгиваем информацию из двух ямл файлов
      */
@@ -93,6 +96,4 @@ class Compare {
 
     private YamlFile firstYaml
     private YamlFile secondYaml
-    private LinkedHashMap<String, String> dataFromFirstFile
-    private LinkedHashMap<String, String> dataFromSecondFile
 }
