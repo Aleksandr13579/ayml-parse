@@ -4,17 +4,17 @@ import main.groovy.org.example.classes.Echo
 
 def call(def jenkins) {
     new Echo(jenkins)
-    YamlFile yamlFileFirst = new YamlFile()
-    YamlFile yamlFileSecond = new YamlFile()
-    Compare compare = new Compare()
+    YamlFile yamlFileFirst
+    YamlFile yamlFileSecond
+    Compare compare
 
     node {
         timestamps {
             stage('Load filed') {
 
-                yamlFileFirst("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
-                yamlFileSecond("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
-                compare(yamlFileFirst, yamlFileSecond, jenkins)
+                yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
+                yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
+                compare = new Compare(yamlFileFirst, yamlFileSecond, jenkins)
 
                 compare.getDataFromFirstFile().each { key, value ->
                     jenkins.echo "${key} : ${value}"
