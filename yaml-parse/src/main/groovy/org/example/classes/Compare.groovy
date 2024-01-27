@@ -5,15 +5,15 @@ class Compare {
 
     LinkedHashMap<String, String> mismatchedFields
 
-    Compare(YamlFile first, YamlFile second, def jenkins) {
+    Compare(YamlFile first, YamlFile second) {
         this.firstYaml = first
         this.secondYaml = second
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(firstYaml.getYamlData(), jenkins)
+        dataFromSecondFile = converter(firstYaml.getYamlData())
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(secondYaml.getYamlData(), jenkins)
+        dataFromSecondFile = converter(secondYaml.getYamlData())
     }
 /**
     Compare(File first, File second) {
@@ -27,7 +27,7 @@ class Compare {
         dataFromSecondFile = converter(secondYaml.getYamlData())
     }
 */
-    Compare(String first, String second, def jenkins) {
+    Compare(String first, String second) {
         try {
             this.firstYaml = new YamlFile(first)
             this.secondYaml = new YamlFile(second)
@@ -37,10 +37,10 @@ class Compare {
         }
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(firstYaml.getYamlData(), jenkins)
+        dataFromSecondFile = converter(firstYaml.getYamlData())
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(secondYaml.getYamlData(), jenkins)
+        dataFromSecondFile = converter(secondYaml.getYamlData())
 
     }
 
@@ -61,7 +61,7 @@ class Compare {
      * @return
      */
     @NonCPS
-    private LinkedHashMap<String, String> converter(Map<String, ?> yam, def jenkins, String oldKey = "") {
+    private LinkedHashMap<String, String> converter(Map<String, ?> yam, String oldKey = "") {
         LinkedHashMap<String, String> data = new LinkedHashMap<>()
         jenkins.echo "vsdvdsvsdvsdvsdvsdvsdvsdvsd"
         yam.each { key, value ->
@@ -74,7 +74,6 @@ class Compare {
             } else if (value instanceof ArrayList<?>) {
                 value.each {
                     if (it instanceof String) {
-                        jenkins.echo "${oldKey}.${key} : ${value.toString()}"
                         data.put(oldKey + "." + key, it.toString())
                     } else {
                         converter(it, "${oldKey}.${key}")
@@ -82,10 +81,8 @@ class Compare {
                 }
             } else {
                 if (oldKey != "") {
-                    jenkins.echo "${oldKey}.${key} : ${value.toString()}"
                     data.put(oldKey + "." + key, value.toString())
                 } else {
-                    jenkins.echo "${key} : ${value.toString()}"
                     data.put(key, value.toString())
                 }
             }
