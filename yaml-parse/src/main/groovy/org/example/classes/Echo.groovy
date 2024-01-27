@@ -6,7 +6,7 @@ class Echo {
         this.jenkins = jenkins
     }
 
-   echo(String info) {
+   jenkEcho(String info) {
         this.jenkins.echo "${info}"
     }
 

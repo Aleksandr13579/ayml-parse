@@ -21,7 +21,7 @@ class YamlFile {
 
         }
         catch (FileNotFoundException e) {
-            Echo.echo("File not found Exeption: " + e)
+            Echo.jenkEcho("File not found Exeption: " + e)
         }
     }
 
