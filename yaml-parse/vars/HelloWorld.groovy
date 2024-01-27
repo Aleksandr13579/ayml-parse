@@ -1,7 +1,9 @@
 import main.groovy.org.example.classes.YamlFile
 import main.groovy.org.example.classes.Compare
+import main.groovy.org.example.classes.Echo
 
 def call(def jenkins) {
+    new Echo(jenkins)
     YamlFile yamlFileFirst = new YamlFile()
     YamlFile yamlFileSecond = new YamlFile()
     Compare compare = new Compare()

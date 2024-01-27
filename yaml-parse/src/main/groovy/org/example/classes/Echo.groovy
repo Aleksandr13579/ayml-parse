@@ -1,4 +1,4 @@
-package org.example.classes
+package main.groovy.org.example.classes
 
 class Echo {
 
