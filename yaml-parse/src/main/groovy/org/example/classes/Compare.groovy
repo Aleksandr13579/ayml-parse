@@ -62,7 +62,7 @@ class Compare {
      */
     @NonCPS
     private LinkedHashMap<String, String> converter(Map<String, ?> yam, def jenkins, String oldKey = "") {
-        LinkedHashMap<String, String> data
+        LinkedHashMap<String, String> data = new LinkedHashMap<>()
         jenkins.echo "vsdvdsvsdvsdvsdvsdvsdvsdvsd"
         yam.each { key, value ->
             if (value instanceof Map) {
