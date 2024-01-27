@@ -65,7 +65,7 @@ class Compare {
      */
     @NonCPS
     private LinkedHashMap<String, String> converter(Map<String, ?> yam, String oldKey = "") {
-        Map<String, String> data = new LinkedHashMap<>()
+        LinkedHashMap<String, String> data = new LinkedHashMap<>()
         yam.each { key, value ->
             if (value instanceof Map) {
                 if (oldKey != "") {
