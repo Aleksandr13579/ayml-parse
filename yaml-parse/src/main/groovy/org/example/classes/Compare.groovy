@@ -85,7 +85,7 @@ class Compare {
                     jenkins.echo "${oldKey}.${key} : ${value.toString()}"
                     data.put(oldKey + "." + key, value.toString())
                 } else {
-                    jenkins.echo(${key} : ${value.toString()})
+                    jenkins.echo "${key} : ${value.toString()}"
                     data.put(key, value.toString())
                 }
             }
