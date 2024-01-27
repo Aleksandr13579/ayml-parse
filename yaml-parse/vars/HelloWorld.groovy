@@ -7,8 +7,9 @@ def call(def jenkins) {
             stage('Example') {
 
                 YamlFile yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
+                jenkins.echo ("dddddd")
                 YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
-
+                jenkins.echo ("ddqwqqwqwqwqw")
                 Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
             }
         }
