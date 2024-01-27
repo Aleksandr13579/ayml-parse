@@ -6,6 +6,7 @@ def call(def jenkins) {
         timestamps {
             stage('Example') {
 
+                jenkins.sh "ls -alrt ${env.WORKSPACE}/yaml-parse/resources"
                 YamlFile yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
                 YamlFile yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
                 Compare compare = new Compare(yamlFileFirst, yamlFileSecond, jenkins)
