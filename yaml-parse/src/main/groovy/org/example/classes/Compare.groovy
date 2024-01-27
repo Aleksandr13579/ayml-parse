@@ -8,8 +8,6 @@ class Compare {
     Compare(YamlFile first, YamlFile second) {
         this.firstYaml = first
         this.secondYaml = second
-        this.dataFromFirstFile = new LinkedHashMap<>()
-        this.dataFromSecondFile = new LinkedHashMap<>()
 
         this.dataFromFirstFile = new LinkedHashMap<>()
         dataFromSecondFile = converter(firstYaml.getYamlData())
@@ -21,8 +19,6 @@ class Compare {
     Compare(File first, File second) {
         this.firstYaml = new YamlFile(first)
         this.secondYaml = new YamlFile(second)
-        this.dataFromFirstFile = new LinkedHashMap<>()
-        this.dataFromSecondFile = new LinkedHashMap<>()
 
         this.dataFromFirstFile = new LinkedHashMap<>()
         dataFromSecondFile = converter(firstYaml.getYamlData())
@@ -64,6 +60,7 @@ class Compare {
      * @param oldKey - сохрянем значения ключей пердыдущих итераций
      * @return
      */
+    @NonCPS
     private LinkedHashMap<String, String> converter(Map<String, ?> yam, String oldKey = "") {
         LinkedHashMap<String, String> data
         yam.each { key, value ->
