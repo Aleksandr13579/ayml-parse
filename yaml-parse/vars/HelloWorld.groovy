@@ -6,45 +6,36 @@ LinkedHashSet<String> filesInSecondArchive = new LinkedHashSet<>()
 
 def call(def jenkins) {
 
-    pipeline {
+    stage('Chekout') {
+        git(
+                url: 'https://github.com/Aleksandr13579/ayml-parse.git',
+                branch: "main"
+        )
+    }
+    stage('Unzip files') {
+        sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/first"
+        sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/second"
+        sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first"
+        sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second"
 
-        agent any
+        sh "ls -alrt ${env.WORKSPACE}/yaml-parse/resources"
+    }
+    stage('Load filed') {
+        script {
+            YamlFile yamlFileFirst = new YamlFile()
+            yamlFileFirst.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
 
-        options {
-            timestamps()
+            YamlFile yamlFileSecond = new YamlFile()
+            yamlFileSecond.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
+
+            Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
+            def changes = compare.whatHasBeenAdded()
+            jenkins.echo "${changes}"
         }
-
-        stage('Chekout') {
-            git(
-                    url: 'https://github.com/Aleksandr13579/ayml-parse.git',
-                    branch: "main"
-            )
-        }
-        stage('Unzip files') {
-            sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/first"
-            sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/second"
-            sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first"
-            sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second"
-
-            sh "ls -alrt ${env.WORKSPACE}/yaml-parse/resources"
-        }
-        stage('Load filed') {
-            script {
-                YamlFile yamlFileFirst = new YamlFile()
-                yamlFileFirst.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
-
-                YamlFile yamlFileSecond = new YamlFile()
-                yamlFileSecond.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
-
-                Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
-                def changes = compare.whatHasBeenAdded()
-                jenkins.echo "${changes}"
-            }
-        }
-        post {
-            always {
-                deleteDir()
-            }
+    }
+    post {
+        always {
+            deleteDir()
         }
     }
 }

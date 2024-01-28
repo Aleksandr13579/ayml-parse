@@ -1,3 +1,13 @@
 @Library('yaml') _
 
-HelloWorld(this)
+
+pipeline {
+
+    agent any
+
+    options {
+        timestamps()
+    }
+
+    HelloWorld(this)
+}
