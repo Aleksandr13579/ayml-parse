@@ -95,7 +95,7 @@ class Compare {
     @NonCPS
     String whatHasBeenAdded(def jenkins) {
         LinkedHashMap<String, String> differentValue = new LinkedHashMap<>()
-        StringBuilder differentKey
+        StringBuilder differentKey = new StringBuilder()
         StringBuilder allChanges
         this.dataFromFirstFile.each {key,value ->
             if (this.dataFromSecondFile.containsKey(key)) {
@@ -111,12 +111,10 @@ class Compare {
                 differentKey.append(key + ', ')
             }
         }
-        jenkins.echo "fefefefefefefef"
         allChanges.append("Различия по ключам: ${differentKey.length() != 0 ? differentKey : "Различий нет"} \n")
                 .append("Отличия по значениям \n")
         if (!differentValue.isEmpty()) {
             differentValue.each {key, value ->
-                jenkins.echo "tttttttttttt"
                 allChanges.append(key + " : " + value + '\n')
             }
         }
