@@ -13,10 +13,10 @@ class Compare {
 
         jenkins.echo "vsdvsdvsdvsdvsdv"
         this.dataFromFirstFile = new LinkedHashMap<>()
-        converter(firstYaml.getData(), this.dataFromFirstFile, jenkins)
+        converter(jenkins,firstYaml.getData(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        converter(secondYaml.getData(), this.dataFromSecondFile, jenkins)
+        converter(jenkins, secondYaml.getData(), this.dataFromSecondFile)
 
     }
 
@@ -27,10 +27,10 @@ class Compare {
         secondYaml.load(second)
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        converter(firstYaml.getData(), this.dataFromFirstFile, jenkins)
+        converter(jenkins,firstYaml.getData(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        converter(secondYaml.getData(), this.dataFromSecondFile, jenkins)
+        converter(jenkins, secondYaml.getData(), this.dataFromSecondFile)
 
     }
 
@@ -41,10 +41,10 @@ class Compare {
         secondYaml.load(second)
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        converter(firstYaml.getData(), this.dataFromFirstFile, jenkins)
+        converter(jenkins,firstYaml.getData(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        converter(secondYaml.getData(), this.dataFromSecondFile, jenkins)
+        converter(jenkins, secondYaml.getData(), this.dataFromSecondFile)
 
     }
 
@@ -61,14 +61,14 @@ class Compare {
      * @return
      */
     @NonCPS
-    private void converter(Map<String, ?> yam, Map<String, String> data, def jenkins, String oldKey = "") {
+    private void converter(def jenkins, Map<String, ?> yam, Map<String, String> data, String oldKey = "") {
         yam.each { key, value ->
             jenkins.echo "vsdvdsvsdvsdvsdvsdvsdvsdvsd"
             if (value instanceof Map) {
                 if (oldKey != "") {
-                    converter(value, data, "${oldKey}.${key}")
+                    converter(jenkins,value, data, "${oldKey}.${key}")
                 } else {
-                    converter(value, data, "${key}")
+                    converter(jenkins, value, data, "${key}")
                 }
             } else if (value instanceof ArrayList) {
                 value.each {
@@ -76,7 +76,7 @@ class Compare {
                         jenkins.echo "${oldKey}.${key} : ${value.toString()}"
                         data.put(oldKey + "." + key, value.toString())
                     } else {
-                        converter(it, data, "${oldKey}.${key}")
+                        converter(jenkins, it, data, "${oldKey}.${key}")
                     }
                 }
             } else {
