@@ -108,14 +108,14 @@ class Compare {
 
             } else {
                 jenkins.echo "${key}"
-                differentKey.append("${key}" + ", ")
+                differentKey.append(key + ', ')
             }
         }
         allChanges.append("Различия по ключам: ${differentKey.length() != 0 ? differentKey : "Различий нет"} \n")
                 .append("Отличия по значениям \n")
         if (!differentValue.isEmpty()) {
             differentValue.each {key, value ->
-                allChanges.append(key + " : " + value + "\n")
+                allChanges.append(key + " : " + value + '\n')
             }
         }
         return allChanges
