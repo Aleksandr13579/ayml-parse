@@ -115,7 +115,7 @@ class Compare {
                 .append("Изменения в парметрах значениям \n")
         if (!differentValue.isEmpty()) {
             differentValue.each {key, value ->
-                allChanges.append("В параметре " + key + " было " + "${this.dataFromSecondFile.get(key)}" + " стало " + value + '\n')
+                allChanges.append("В параметре " + key + " было " + "${this.dataFromFirstFile.get(key)}" + " стало " + value + '\n')
             }
         }
         return allChanges
