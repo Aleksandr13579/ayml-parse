@@ -9,7 +9,7 @@ class Compare {
         this.firstYaml = first
         this.secondYaml = second
 
-        println("veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+        echo "veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
 
         echo "vsdvsdvsdvsdvsdv"
         this.dataFromFirstFile = new LinkedHashMap<>()
