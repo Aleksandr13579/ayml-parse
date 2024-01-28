@@ -43,6 +43,16 @@ class Compare {
     LinkedHashMap<String, String> dataFromFirstFile
     LinkedHashMap<String, String> dataFromSecondFile
 
+    @NonSCP
+    getDataFromFirstFile() {
+        return this.dataFromFirstFile
+    }
+
+    @NonSCP
+    getDataFromSecondFile() {
+        return this.dataFromSecondFile
+    }
+
     /**
      * сроавнгиваем информацию из двух ямл файлов
      */
