@@ -11,6 +11,7 @@ class Compare {
 
         println("veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
 
+        echo "vsdvsdvsdvsdvsdv"
         this.dataFromFirstFile = new LinkedHashMap<>()
         converter(firstYaml.getData(), this.dataFromFirstFile, jenkins)
 
