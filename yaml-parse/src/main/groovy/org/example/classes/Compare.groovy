@@ -44,7 +44,8 @@ class Compare {
 
     @NonCPS
     String getAdded() {
-        return this.whatHasBeenAdded()
+        Compare compare = new Compare()
+        return compare.whatHasBeenAdded()
     }
 
     /**
@@ -103,7 +104,7 @@ class Compare {
             }
         }
         allChanges.append("Различия по ключам: ${differentKey.length() != 0 ? differentKey : "Различий нет"} \n")
-        allChanges.append("Отличия по значениям \n")
+                .append("Отличия по значениям \n")
         if (!differentValue.isEmpty()) {
             differentValue.each {key, value ->
                 allChanges.append(key + " : " + value + "\n")
