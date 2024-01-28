@@ -113,7 +113,7 @@ class Compare {
                 allChanges.append("В параметре " + key + " было " + "${this.dataFromFirstFile.get(key)}" + " стало " + value + '\n')
             }
         }
-        allChanges.append("Удалены значения: \n").append(oldKey)
+        allChanges.append("Удалены параметры:").append(oldKey)
         return allChanges
     }
 
