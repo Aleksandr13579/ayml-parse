@@ -8,10 +8,10 @@ class Compare {
     Compare(YamlFile first, YamlFile second, def jenkins) {
         this.firstYaml = first
         this.secondYaml = second
+        jenkins.getClass().getSimpleName();
+        jenkins.echo "veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
 
-        echo "veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
-
-        echo "vsdvsdvsdvsdvsdv"
+        jenkins.echo "vsdvsdvsdvsdvsdv"
         this.dataFromFirstFile = new LinkedHashMap<>()
         converter(firstYaml.getData(), this.dataFromFirstFile, jenkins)
 
@@ -20,7 +20,7 @@ class Compare {
 
     }
 
-    Compare(File first, File second) {
+    Compare(File first, File second, def jenkins) {
         this.firstYaml = new YamlFile()
         firstYaml.load(first)
         this.secondYaml = new YamlFile()
