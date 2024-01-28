@@ -69,16 +69,16 @@ class Compare {
             } else if (value instanceof ArrayList<?>) {
                 value.each {
                     if (it instanceof String) {
-                        data.put(oldKey + "." + key, it.toString())
+                        data.put(oldKey + "." + key, "${value.toString()}")
                     } else {
                         converter(it, data, "${oldKey}.${key}")
                     }
                 }
             } else {
                 if (oldKey != "") {
-                    data.put(oldKey + "." + key, value.toString())
+                    data.put(oldKey + "." + key, "${value.toString()}")
                 } else {
-                    data.put(key, value.toString())
+                    data.put(key, "${value.toString()}")
                 }
             }
         }
