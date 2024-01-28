@@ -1,8 +1,6 @@
 //package org.example.classes
 package main.groovy.org.example.classes
 
-import groovyjarjarantlr.preprocessor.Option
-
 class Compare {
 
     LinkedHashMap<String, String> mismatchedFields
@@ -60,7 +58,7 @@ class Compare {
      * @return
      */
     @NonCPS
-    private void converter(def jenkins, Map<Option, Option> yam, Map<String, String> data, String oldKey = "") {
+    private void converter(def jenkins, Map<String, ?> yam, Map<String, String> data, String oldKey = "") {
         yam.each { key, value ->
             if (key == null) key = "2222222222"
             if (value == null) value = "2222222222"
