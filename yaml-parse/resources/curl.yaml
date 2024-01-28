@@ -1,35 +1,19 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: batch/v1
+kind: Deployment
 metadata:
-  name: ingress-test
+  name: batch
+  labels:
+    type: cuatc
 spec:
-  rules:
-    - host: kubia.example.com
-      http:
-        paths:
-          - backend:
-              service:
-                name: kubia
-                port:
-                  number: 80
-            path: /
-            pathType: Prefix
-    - host: fortune.example.com
-      http:
-        paths:
-          - backend:
-              service:
-                name: fortune
-                port:
-                  number: 80
-            path: /
-            pathType: Prefix
-  tls:
-    - hosts:
-        - kubia.example.com
-        - fortune.example.com
-      secretName: tls-secret
-
-
-
-
+  completions: 5
+  parallelism: 5
+  template:
+    metadata:
+      labels:
+        app: batch-job
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: main
+          image: luksa/batch-job
+          args: 222
