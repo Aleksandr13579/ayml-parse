@@ -87,7 +87,6 @@ class Compare {
         }
     }
 
-    @NonCPS
     String whatHasBeenAdded() {
         LinkedHashMap<String, String> differentValue
         StringBuilder differentKey
