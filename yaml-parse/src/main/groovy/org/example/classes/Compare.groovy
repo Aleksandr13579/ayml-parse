@@ -88,9 +88,9 @@ class Compare {
 
     @NonCPS
     String whatHasBeenAdded() {
-        LinkedHashMap<String, String> differentValue = new LinkedHashMap<>()
-        StringBuilder differentKey = new StringBuilder()
-        StringBuilder allChanges = new StringBuilder()
+        LinkedHashMap<String, String> differentValue
+        StringBuilder differentKey
+        StringBuilder allChanges
         dataFromFirstFile.each {key,value ->
             if (dataFromSecondFile.containsKey(key)) {
 
