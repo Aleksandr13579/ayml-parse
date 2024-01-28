@@ -94,7 +94,11 @@ class Compare {
     }
 
     @NonCPS
-    String whatHasBeenAdded() {
+    getWhatHasBeenAdded() {
+        return whatHasBeenAdded(this.dataFromFirstFile, this.dataFromSecondFile)
+    }
+
+    private String whatHasBeenAdded(def dataFromFirstFile, def dataFromSecondFile) {
         LinkedHashMap<String, String> differentValue
         StringBuilder differentKey
         StringBuilder allChanges
