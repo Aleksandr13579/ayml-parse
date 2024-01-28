@@ -5,6 +5,12 @@ def call(def jenkins) {
 
     node {
         timestamps {
+            stage('chekout') {
+                git(
+                        url: 'https://github.com/Aleksandr13579/ayml-parse.git',
+                        branch: "main"
+                )
+            }
             stage('Load filed') {
 
                 YamlFile yamlFileFirst = new YamlFile()
