@@ -25,11 +25,7 @@ def call(def jenkins) {
 
 
             }
-            post {
-                always {
-                    deleteDir()
-                }
-            }
+            deleteDir()
         }
     }
 }
