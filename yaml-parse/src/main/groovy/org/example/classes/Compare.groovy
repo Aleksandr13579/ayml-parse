@@ -42,7 +42,6 @@ class Compare {
 
     }
 
-    @NonCPS
     String getAdded() {
         String returnValue = whatHasBeenAdded()
         return returnValue
@@ -87,6 +86,7 @@ class Compare {
         }
     }
 
+    @NonCPS
     String whatHasBeenAdded() {
         LinkedHashMap<String, String> differentValue
         StringBuilder differentKey
