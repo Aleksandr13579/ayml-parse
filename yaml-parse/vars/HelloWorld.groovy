@@ -16,8 +16,6 @@ def call(def jenkins) {
                 yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
                 compare = new Compare(yamlFileFirst, yamlFileSecond)
 
-                jenkins.echo "${compare.getDataFromFirstFile()}"
-
                 def changes = compare.whatHasBeenAdded()
                 jenkins.echo "${changes}"
 
