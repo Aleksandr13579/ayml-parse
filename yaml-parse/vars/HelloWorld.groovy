@@ -21,7 +21,12 @@ def call(def jenkins) {
                     sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first"
                     sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second"
 
-                    sh "ls -alrt ${env.WORKSPACE}/yaml-parse/resources"
+                    filesInFirstArchive = sh "find ${env.WORKSPACE}/yaml-parse/resources/first - name '*.yaml'"
+                    filesInSecondArchive = sh "find ${env.WORKSPACE}/yaml-parse/resources/second - name '*.yaml'"
+
+                    echo "${filesInFirstArchive}"
+                    echo "+++++++++++++++++++++"
+                    echo "${filesInSecondArchive}"
                 }
                 stage('Load filed') {
 
