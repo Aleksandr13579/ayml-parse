@@ -69,7 +69,7 @@ class Compare {
             } else if (value instanceof ArrayList) {
                 value.each {
                     if (it instanceof String) {
-                        jenkins.echo "${oldKey}.${key} : ${value.toString()}"
+                        jenkins.echo "${oldKey}.${key} : ${it.toString()}"
                         data.put(oldKey + "." + key, value.toString())
                     } else {
                         converter(jenkins, it, data, "${oldKey}.${key}")
