@@ -13,7 +13,7 @@ def call(def jenkins) {
                 YamlFile yamlFileSecond = new YamlFile()
                 yamlFileSecond.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
 
-                Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
+                Compare compare = new Compare(yamlFileFirst, yamlFileSecond, jenkins)
                 def changes = compare.whatHasBeenAdded()
                 jenkins.echo "${changes}"
 
