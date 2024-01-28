@@ -44,12 +44,12 @@ class Compare {
     LinkedHashMap<String, String> dataFromSecondFile
 
     @NonCPS
-    getDataFromFirstFile() {
+    getDataFromFirstFile() throws IOException {
         return this.dataFromFirstFile
     }
 
     @NonCPS
-    getDataFromSecondFile() {
+    getDataFromSecondFile() throws IOException {
         return this.dataFromSecondFile
     }
 
