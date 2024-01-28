@@ -41,12 +41,12 @@ class Compare {
         converter(secondYaml.getDataFromYaml(), this.dataFromSecondFile)
 
     }
-
+/**
     String getAdded() {
         String returnValue = whatHasBeenAdded()
         return returnValue
     }
-
+*/
     /**
      * метод для преобразования загруженного yaml файла в LinkedHashMap вида
      * key1:
@@ -85,7 +85,7 @@ class Compare {
             }
         }
     }
-
+/**
     @NonCPS
     String whatHasBeenAdded() {
         LinkedHashMap<String, String> differentValue
@@ -111,7 +111,7 @@ class Compare {
         }
         return allChanges
     }
-
+*/
     private YamlFile firstYaml
     private YamlFile secondYaml
     private LinkedHashMap<String, String> dataFromFirstFile

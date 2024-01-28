@@ -24,7 +24,7 @@ class YamlFile {
 
     @NonCPS
     load(File file ) {
-        this.yamlData = yamlFile.load(this.file.text) as Map<String, ?>
+        this.yamlData = yamlFile.load(this.file.text)
     }
 
     private Map yamlData
