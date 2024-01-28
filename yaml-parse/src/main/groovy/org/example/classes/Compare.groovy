@@ -94,7 +94,7 @@ class Compare {
 
     @NonCPS
     String whatHasBeenAdded(def jenkins) {
-        LinkedHashMap<String, String> differentValue
+        LinkedHashMap<String, String> differentValue = new LinkedHashMap<>()
         StringBuilder differentKey
         StringBuilder allChanges
         this.dataFromFirstFile.each {key,value ->
