@@ -97,8 +97,8 @@ class Compare {
         LinkedHashMap<String, String> differentValue = new LinkedHashMap<>()
         StringBuilder differentKey = new StringBuilder()
         StringBuilder allChanges = new StringBuilder()
-        this.dataFromFirstFile.each {key,value ->
-            if (this.dataFromSecondFile.containsKey(key)) {
+        this.dataFromSecondFile.each {key,value ->
+            if (this.dataFromFirstFile.containsKey(key)) {
                 jenkins.echo "2222222222"
                 if (value != this.dataFromSecondFile.get(key)) {
                     jenkins.echo "${key} : ${value.toString()}"
