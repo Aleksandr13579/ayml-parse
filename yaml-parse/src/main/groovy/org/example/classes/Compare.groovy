@@ -102,8 +102,8 @@ class Compare {
                 jenkins.echo "2222222222"
                 if (value != this.dataFromFirstFile.get(key)) {
                     jenkins.echo "${key} : ${value.toString()}"
-                    jenkins.echo "${this.dataFromFirstFile.get(key)}"
-                    differentValue.put(key, this.dataFromFirstFile.get(key))
+                    jenkins.echo "${this.dataFromSecondFile.get(key)}"
+                    differentValue.put(key, this.dataFromSecondFile.get(key))
                 }
 
             } else {
@@ -111,11 +111,11 @@ class Compare {
                 differentKey.append(key + '\n')
             }
         }
-        allChanges.append("Различия по ключам: ${differentKey.length() != 0 ? differentKey : "Различий нет"} \n")
-                .append("Отличия по значениям \n")
+        allChanges.append("Добавлен параметр: ${differentKey.length() != 0 ? differentKey : "Различий нет"} \n")
+                .append("Изменения в парметрах значениям \n")
         if (!differentValue.isEmpty()) {
             differentValue.each {key, value ->
-                allChanges.append(key + " : " + value + '\n')
+                allChanges.append("В параметре" key + " было " + "${this.dataFromSecondFile.get(key)}" + " стало " + value + '\n')
             }
         }
         return allChanges
