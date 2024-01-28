@@ -68,7 +68,9 @@ class Compare {
                 }
             } else if (value instanceof ArrayList) {
                 value.each {
+                    jenkins.echo "${it.getClass().getSimpleName();}"
                     if (it instanceof String) {
+
                         jenkins.echo "${oldKey}.${key} : ${value.toString()}"
                         data.put(oldKey + "." + key, value.toString())
                     } else {
