@@ -94,7 +94,7 @@ class Compare {
     }
 
     @NonCPS
-    getWhatHasBeenAdded() {
+    getMeWhatHasBeenAdded() {
         return whatHasBeenAdded(this.dataFromFirstFile, this.dataFromSecondFile)
     }
 
