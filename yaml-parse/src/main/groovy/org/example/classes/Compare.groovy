@@ -108,7 +108,7 @@ class Compare {
 
             } else {
                 jenkins.echo "${key}"
-                differentKey.append(key + ", ")
+                differentKey.append("${key}" + ", ")
             }
         }
         allChanges.append("Различия по ключам: ${differentKey.length() != 0 ? differentKey : "Различий нет"} \n")
