@@ -107,6 +107,7 @@ class Compare {
                 }
 
             } else {
+                jenkins.echo "${key}"
                 differentKey.append(key + ", ")
             }
         }
