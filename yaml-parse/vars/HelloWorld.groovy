@@ -2,7 +2,7 @@ import main.groovy.org.example.classes.YamlFile
 import main.groovy.org.example.classes.Compare
 import main.groovy.org.example.classes.Echo
 
-LinkedHashSetSet<String> filesInFirstArchive =  new LinkedHashSet<>()
+LinkedHashSet<String> filesInFirstArchive =  new LinkedHashSet<>()
 LinkedHashSet<String> filesInSecondArchive = new LinkedHashSet<>()
 
 def call(def jenkins) {
