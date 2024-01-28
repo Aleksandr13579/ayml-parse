@@ -25,7 +25,7 @@ class YamlFile {
     }
 
     @NonCPS
-    getYamlData() {
+    getYamlData() throws  NotSerializableException {
         return this.yamlData
     }
 
