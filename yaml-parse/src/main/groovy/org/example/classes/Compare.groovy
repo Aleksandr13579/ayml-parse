@@ -99,7 +99,7 @@ class Compare {
         StringBuilder allChanges
         this.dataFromFirstFile.each {key,value ->
             if (this.dataFromSecondFile.containsKey(key)) {
-
+                jenkins.echo "2222222222"
                 if (value != this.dataFromSecondFile.get(key)) {
                     jenkins.echo "${key} : ${value.toString()}"
                     differentValue.put(key, this.dataFromSecondFile.get(key))
