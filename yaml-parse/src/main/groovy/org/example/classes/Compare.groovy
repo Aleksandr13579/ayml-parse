@@ -86,6 +86,31 @@ class Compare {
         }
     }
 
+    @NonCPS
+    String whatHasBeenAdded() {
+        LinkedHashMap<String, String> differentValue = new LinkedHashMap<>()
+        StringBuilder differentKey = new StringBuilder()
+        StringBuilder allChanges = new StringBuilder()
+        dataFromFirstFile.each {key,value ->
+            if (dataFromSecondFile.containsKey(key)) {
+
+                if (value != dataFromSecondFile.get(key)) {
+                    differentValue.put(key, dataFromSecondFile.get(key))
+                }
+
+            } else {
+                differentKey.append(key + ", ")
+            }
+        }
+        allChanges.append("Различия по ключам: ${differentKey.length() != 0 ? differentKey : "Различий нет"} \n")
+        allChanges.append("Отличия по значениям \n")
+        if (!differentValue.isEmpty()) {
+            differentValue.each {key, value ->
+                allChanges.append(key + " : " + value + "\n")
+            }
+        }
+        return allChanges
+    }
 
     private YamlFile firstYaml
     private YamlFile secondYaml

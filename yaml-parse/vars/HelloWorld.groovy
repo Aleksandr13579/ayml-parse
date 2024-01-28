@@ -18,9 +18,7 @@ def call(def jenkins) {
 
                 jenkins.echo "${compare.dataFromFirstFile}"
 
-                compare.dataFromSecondFile.each { key, value ->
-                    jenkins.echo "${key} : ${value}"
-                }
+                jenkins.echo "${compare.whatHasBeenAdded()}"
 
 
             }
