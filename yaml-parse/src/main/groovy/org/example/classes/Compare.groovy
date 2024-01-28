@@ -37,10 +37,10 @@ class Compare {
         this.secondYaml = new YamlFile()
         secondYaml.load(second)
 
-        this.dataFromFirstFile = new LinkedHashMap<>()
+        this.dataFromFirstFile = new TreeMap<>()
         converter(jenkins,firstYaml.getData(), this.dataFromFirstFile)
 
-        this.dataFromSecondFile = new LinkedHashMap<>()
+        this.dataFromSecondFile = new TreeMap<>()
         converter(jenkins, secondYaml.getData(), this.dataFromSecondFile)
 
     }
@@ -117,6 +117,6 @@ class Compare {
 
     private YamlFile firstYaml
     private YamlFile secondYaml
-    private LinkedHashMap<String, String> dataFromFirstFile
-    private LinkedHashMap<String, String> dataFromSecondFile
+    private TreeMap<String, String> dataFromFirstFile
+    private TreeMap<String, String> dataFromSecondFile
 }
