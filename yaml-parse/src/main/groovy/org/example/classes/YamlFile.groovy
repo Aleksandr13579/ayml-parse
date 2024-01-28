@@ -15,7 +15,6 @@ class YamlFile {
         try {
             this.file = new File(nameFile)
             this.fileName = nameFile
-            //InputStream input = new FileInputStream(this.file)
             this.yamlFile = new Yaml()
             this.yamlData = yamlFile.load(this.file.text) as Map<String, ?>
 

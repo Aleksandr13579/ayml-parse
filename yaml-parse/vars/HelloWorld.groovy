@@ -16,10 +16,12 @@ def call(def jenkins) {
                 yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
                 compare = new Compare(yamlFileFirst, yamlFileSecond, jenkins)
 
+                @NonCPS
                 compare.getDataFromFirstFile().each { key, value ->
                     jenkins.echo "${key} : ${value}"
                 }
 
+                @NonCPS
                 compare.getDataFromSecondFile().each { key, value ->
                     jenkins.echo "${key} : ${value}"
                 }
