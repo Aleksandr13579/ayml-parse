@@ -99,7 +99,7 @@ class Compare {
             }
         }
 
-        allChanges.append("Добавлен параметр: ${newKey.length() != 0 ? newKey : "Различий нет"} \n")
+        allChanges.append("Добавлены параметры: ${newKey.length() != 0 ? newKey : "Различий нет"} \n")
                 .append("Изменения в параметрах по значениям \n")
 
         this.dataFromFirstFile.each {key,value ->
@@ -114,9 +114,12 @@ class Compare {
             }
         }
         allChanges.append("Удалены параметры:").append(oldKey)
+
+        echo.jenkEcho("vsdvsdvsdvsdvsdvsd")
         return allChanges
     }
 
+    private Echo echo
     private YamlFile firstYaml
     private YamlFile secondYaml
     private LinkedHashMap<String, String> dataFromFirstFile
