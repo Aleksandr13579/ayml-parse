@@ -61,6 +61,7 @@ class Compare {
     private void converter(def jenkins, Map<String, ?> yam, Map<String, String> data, String oldKey = "") {
         yam.each { key, value ->
             if (key == null) key = "2222222222"
+            if (value == null) value = "2222222222"
             if (value instanceof Map) {
                 if (oldKey != "") {
                     converter(jenkins,value, data, "${oldKey}.${key}")
