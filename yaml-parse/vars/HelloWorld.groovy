@@ -21,7 +21,7 @@ def call(def jenkins) {
             }
             post {
                 always {
-                    cleanWs()
+                    deleteDir()
                 }
             }
         }
