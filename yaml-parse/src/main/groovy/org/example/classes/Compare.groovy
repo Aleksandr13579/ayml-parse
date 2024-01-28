@@ -90,7 +90,7 @@ class Compare {
         }
     }
 
-
+    @NonCPS
     private String whatHasBeenAdded() {
         LinkedHashMap<String, String> differentValue
         StringBuilder differentKey
