@@ -40,6 +40,7 @@ class Compare {
         this.dataFromFirstFile = new LinkedHashMap<>()
         converter(jenkins,firstYaml.getData(), this.dataFromFirstFile)
 
+
         this.dataFromSecondFile = new LinkedHashMap<>()
         converter(jenkins, secondYaml.getData(), this.dataFromSecondFile)
 
