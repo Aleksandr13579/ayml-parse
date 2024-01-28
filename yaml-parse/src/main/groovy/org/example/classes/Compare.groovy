@@ -44,8 +44,8 @@ class Compare {
 
     @NonCPS
     String getAdded() {
-        Compare compare = new Compare()
-        return compare.whatHasBeenAdded()
+        String returnValue = whatHasBeenAdded()
+        return returnValue
     }
 
     /**
