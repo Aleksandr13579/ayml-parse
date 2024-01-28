@@ -43,12 +43,12 @@ class Compare {
     LinkedHashMap<String, String> dataFromFirstFile
     LinkedHashMap<String, String> dataFromSecondFile
 
-    @NonSCP
+    @NonCPS
     getDataFromFirstFile() {
         return this.dataFromFirstFile
     }
 
-    @NonSCP
+    @NonCPS
     getDataFromSecondFile() {
         return this.dataFromSecondFile
     }
