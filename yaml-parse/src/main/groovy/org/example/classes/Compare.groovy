@@ -1,6 +1,8 @@
 //package org.example.classes
 package main.groovy.org.example.classes
 
+import main.groovy.org.example.classes.Echo
+
 class Compare {
 
     LinkedHashMap<String, String> mismatchedFields
@@ -115,11 +117,9 @@ class Compare {
         }
         allChanges.append("Удалены параметры:").append(oldKey)
 
-        echo.jenkEcho("vsdvsdvsdvsdvsdvsd")
         return allChanges
     }
 
-    private Echo echo
     private YamlFile firstYaml
     private YamlFile secondYaml
     private LinkedHashMap<String, String> dataFromFirstFile

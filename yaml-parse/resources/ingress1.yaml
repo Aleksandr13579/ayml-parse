@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-servers
+spec:
+  rules:
+    - host: nginx.example.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: nginx
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+    - host: haproxy.example.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: haproxy
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+  tls:
+    - hosts:
+        - nginx.example.com
+        - haproxy.example.com
+      secretName: tls-secret
+
+
+
+
+      

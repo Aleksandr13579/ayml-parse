@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dnsutils
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: dnsutils
+  template:
+    metadata:
+      labels:
+        name: dnsutils
+    spec:
+      containers:
+        - name: dnsutils
+          image: tutum/dnsutils
+          command: ["bin/sh"]
+          args: ["-c", "sleep infinity"]
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: 150m
+              memory: 300Mi
+            requests:
+              cpu: 100m
+              memory: 200Mi

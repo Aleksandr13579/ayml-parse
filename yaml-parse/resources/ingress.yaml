@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-test
+spec:
+  rules:
+    - host: kubia.example.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: kubia
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+    - host: fortune.example.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: fortune
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+  tls:
+    - hosts:
+        - kubia.example.com
+        - fortune.example.com
+      secretName: tls-secret
+
+
+
+
+      
