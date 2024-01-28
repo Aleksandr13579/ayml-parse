@@ -93,7 +93,7 @@ class Compare {
     }
 
     @NonCPS
-    String whatHasBeenAdded() {
+    String whatHasBeenAdded(def jenkins) {
         LinkedHashMap<String, String> differentValue
         StringBuilder differentKey
         StringBuilder allChanges
@@ -101,6 +101,7 @@ class Compare {
             if (this.dataFromSecondFile.containsKey(key)) {
 
                 if (value != this.dataFromSecondFile.get(key)) {
+                    jenkins.echo "${key} : ${value.toString()}"
                     differentValue.put(key, this.dataFromSecondFile.get(key))
                 }
 
