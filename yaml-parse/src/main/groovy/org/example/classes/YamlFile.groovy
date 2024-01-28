@@ -24,7 +24,12 @@ class YamlFile {
         }
     }
 
-    Map yamlData
+    @NonCPS
+    getDataFromYaml() {
+        return this.yamlData
+    }
+
+    private Map yamlData
 
     private File file
     private String fileName

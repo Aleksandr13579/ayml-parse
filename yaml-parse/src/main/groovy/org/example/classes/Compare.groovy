@@ -10,10 +10,10 @@ class Compare {
         this.secondYaml = second
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        converter(firstYaml.getYamlData(), this.dataFromFirstFile)
+        converter(firstYaml.getDataFromYaml(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        converter(secondYaml.getYamlData(), this.dataFromSecondFile)
+        converter(secondYaml.getDataFromYaml(), this.dataFromSecondFile)
     }
 
     Compare(File first, File second) {
@@ -21,10 +21,10 @@ class Compare {
         this.secondYaml = new YamlFile(second)
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        converter(firstYaml.getYamlData(), this.dataFromFirstFile)
+        converter(firstYaml.getDataFromYaml(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        converter(secondYaml.getYamlData(), this.dataFromSecondFile)
+        converter(secondYaml.getDataFromYaml(), this.dataFromSecondFile)
     }
 
     Compare(String first, String second) {
@@ -33,15 +33,22 @@ class Compare {
         this.secondYaml = new YamlFile(second)
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        converter(firstYaml.getYamlData(), this.dataFromFirstFile)
+        converter(firstYaml.getDataFromYaml(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        converter(secondYaml.getYamlData(), this.dataFromSecondFile)
+        converter(secondYaml.getDataFromYaml(), this.dataFromSecondFile)
 
     }
 
-    LinkedHashMap<String, String> dataFromFirstFile
-    LinkedHashMap<String, String> dataFromSecondFile
+    @NonCPS
+    getFirstFileData() {
+        return this.dataFromFirstFile
+    }
+
+    @NonCPS
+    getSecondFileData() {
+        return this.dataFromSecondFile
+    }
 
     /**
      * сроавнгиваем информацию из двух ямл файлов
@@ -114,4 +121,6 @@ class Compare {
 
     private YamlFile firstYaml
     private YamlFile secondYaml
+    private LinkedHashMap<String, String> dataFromFirstFile
+    private LinkedHashMap<String, String> dataFromSecondFile
 }
