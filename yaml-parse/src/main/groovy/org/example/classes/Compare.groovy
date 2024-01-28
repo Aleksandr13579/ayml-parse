@@ -9,6 +9,8 @@ class Compare {
         this.firstYaml = first
         this.secondYaml = second
 
+        println("veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+
         this.dataFromFirstFile = new LinkedHashMap<>()
         converter(firstYaml.getData(), this.dataFromFirstFile, jenkins)
 
