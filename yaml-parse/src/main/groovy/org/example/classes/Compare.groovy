@@ -42,8 +42,10 @@ class Compare {
 
     }
 
-
-    String added
+    @NonCPS
+    String getAdded() {
+        return whatHasBeenAdded()
+    }
 
     /**
      * метод для преобразования загруженного yaml файла в LinkedHashMap вида
@@ -85,7 +87,7 @@ class Compare {
     }
 
     @NonCPS
-    void whatHasBeenAdded() {
+    String whatHasBeenAdded() {
         LinkedHashMap<String, String> differentValue
         StringBuilder differentKey
         StringBuilder allChanges
@@ -107,7 +109,7 @@ class Compare {
                 allChanges.append(key + " : " + value + "\n")
             }
         }
-        this.added = allChanges
+        return allChanges
     }
 
     private YamlFile firstYaml
