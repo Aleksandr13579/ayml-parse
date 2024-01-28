@@ -19,6 +19,7 @@ def call(def jenkins) {
                 def changes = compare.getAdded()
                 jenkins.echo "${changes}"
 
+                compare = null
 
             }
         }
