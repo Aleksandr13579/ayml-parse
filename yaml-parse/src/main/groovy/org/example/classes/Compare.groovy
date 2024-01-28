@@ -10,10 +10,10 @@ class Compare {
         this.secondYaml = second
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        this.dataFromFirstFile = converter(firstYaml.getData())
+        converter(firstYaml.getData(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        this.dataFromSecondFile = converter(secondYaml.getData())
+        converter(secondYaml.getData(), this.dataFromSecondFile)
 
     }
 
@@ -24,10 +24,10 @@ class Compare {
         secondYaml.load(second)
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        this.dataFromFirstFile = converter(firstYaml.getData())
+        converter(firstYaml.getData(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        this.dataFromSecondFile = converter(secondYaml.getData())
+        converter(secondYaml.getData(), this.dataFromSecondFile)
 
     }
 
@@ -38,10 +38,10 @@ class Compare {
         secondYaml.load(second)
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        this.dataFromFirstFile = converter(firstYaml.getData())
+        converter(firstYaml.getData(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        this.dataFromSecondFile = converter(secondYaml.getData())
+        converter(secondYaml.getData(), this.dataFromSecondFile)
 
     }
 
@@ -58,21 +58,20 @@ class Compare {
      * @return
      */
     @NonCPS
-    private LinkedHashMap<String, String> converter(Map<String, ?> yam, String oldKey = "") {
-        LinkedHashMap<String, String> data
+    private void converter(Map<String, ?> yam, Map<String, String> data, String oldKey = "") {
         yam.each { key, value ->
             if (value instanceof Map) {
                 if (oldKey != "") {
-                    converter(value, "${oldKey}.${key}")
+                    converter(value, data, "${oldKey}.${key}")
                 } else {
-                    converter(value, "${key}")
+                    converter(value, data, "${key}")
                 }
             } else if (value instanceof ArrayList<?>) {
                 value.each {
                     if (it instanceof String) {
-                        data.put(oldKey + "." + key, value.toString())
+                        data.put(oldKey + "." + key, it.toString())
                     } else {
-                        converter(it, "${oldKey}.${key}")
+                        converter(it, data, "${oldKey}.${key}")
                     }
                 }
             } else {
@@ -83,7 +82,6 @@ class Compare {
                 }
             }
         }
-        return data
     }
 
     @NonCPS
