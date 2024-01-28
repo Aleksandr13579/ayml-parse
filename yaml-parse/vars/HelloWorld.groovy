@@ -1,6 +1,5 @@
 import main.groovy.org.example.classes.YamlFile
 import main.groovy.org.example.classes.Compare
-import main.groovy.org.example.classes.Echo
 
 LinkedHashSet<String> filesInFirstArchive = new LinkedHashSet<>()
 LinkedHashSet<String> filesInSecondArchive = new LinkedHashSet<>()
@@ -9,7 +8,7 @@ def call(def jenkins) {
 
     pipeline {
 
-        agent any()
+        agent any
 
         options {
             timestamps()
