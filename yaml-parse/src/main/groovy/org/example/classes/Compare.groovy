@@ -90,7 +90,7 @@ class Compare {
     String whatHasBeenAdded() {
         LinkedHashMap<String, String> differentValue
         StringBuilder differentKey
-        StringBuilder allChanges
+        StringBuilder allChanges = new StringBuilder()
         dataFromFirstFile.each {key,value ->
             if (dataFromSecondFile.containsKey(key)) {
 
