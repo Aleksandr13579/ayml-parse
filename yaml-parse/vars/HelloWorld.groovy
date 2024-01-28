@@ -17,12 +17,12 @@ def call(def jenkins) {
                 compare = new Compare(yamlFileFirst, yamlFileSecond, jenkins)
 
                 @NonCPS
-                compare.getDataFromFirstFile().each { key, value ->
+                compare.dataFromFirstFile.each { key, value ->
                     jenkins.echo "${key} : ${value}"
                 }
 
                 @NonCPS
-                compare.getDataFromSecondFile().each { key, value ->
+                compare.dataFromSecondFile.each { key, value ->
                     jenkins.echo "${key} : ${value}"
                 }
 

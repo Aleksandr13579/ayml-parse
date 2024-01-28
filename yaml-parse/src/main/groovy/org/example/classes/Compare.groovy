@@ -21,10 +21,10 @@ class Compare {
         this.secondYaml = new YamlFile(second)
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(firstYaml.getYamlData())
+        converter(firstYaml.getYamlData(), this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        dataFromSecondFile = converter(secondYaml.getYamlData())
+        converter(secondYaml.getYamlData(), this.dataFromSecondFile)
     }
 
     Compare(String first, String second) {
