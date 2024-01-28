@@ -8,7 +8,7 @@ class Compare {
     Compare(YamlFile first, YamlFile second, def jenkins) {
         this.firstYaml = first
         this.secondYaml = second
-        jenkins.getClass().getSimpleName();
+        jenkins.echo "${jenkins.getClass().getSimpleName()}"
         jenkins.echo "veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
 
         jenkins.echo "vsdvsdvsdvsdvsdv"
