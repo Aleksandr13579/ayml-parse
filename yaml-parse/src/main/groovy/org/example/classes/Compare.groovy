@@ -8,10 +8,7 @@ class Compare {
     Compare(YamlFile first, YamlFile second, def jenkins) {
         this.firstYaml = first
         this.secondYaml = second
-        jenkins.echo "${jenkins.getClass().getSimpleName()}"
-        jenkins.echo "veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
 
-        jenkins.echo "vsdvsdvsdvsdvsdv"
         this.dataFromFirstFile = new LinkedHashMap<>()
         converter(jenkins,firstYaml.getData(), this.dataFromFirstFile)
 
@@ -63,7 +60,6 @@ class Compare {
     @NonCPS
     private void converter(def jenkins, Map<String, ?> yam, Map<String, String> data, String oldKey = "") {
         yam.each { key, value ->
-            jenkins.echo "vsdvdsvsdvsdvsdvsdvsdvsdvsd"
             if (value instanceof Map) {
                 if (oldKey != "") {
                     converter(jenkins,value, data, "${oldKey}.${key}")
