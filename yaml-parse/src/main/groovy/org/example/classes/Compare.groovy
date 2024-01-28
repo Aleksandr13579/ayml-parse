@@ -18,8 +18,10 @@ class Compare {
     }
 
     Compare(File first, File second) {
-        this.firstYaml = new YamlFile(first)
-        this.secondYaml = new YamlFile(second)
+        this.firstYaml = new YamlFile()
+        firstYaml.load(first)
+        this.secondYaml = new YamlFile()
+        secondYaml.load(second)
 
         this.dataFromFirstFile = new LinkedHashMap<>()
         converter(firstYaml.getData(), this.dataFromFirstFile)
@@ -30,9 +32,10 @@ class Compare {
     }
 
     Compare(String first, String second) {
-
-        this.firstYaml = new YamlFile(first)
-        this.secondYaml = new YamlFile(second)
+        this.firstYaml = new YamlFile()
+        firstYaml.load(first)
+        this.secondYaml = new YamlFile()
+        secondYaml.load(second)
 
         this.dataFromFirstFile = new LinkedHashMap<>()
         converter(firstYaml.getData(), this.dataFromFirstFile)

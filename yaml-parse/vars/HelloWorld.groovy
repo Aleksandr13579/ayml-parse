@@ -14,10 +14,12 @@ def call(def jenkins) {
 
                 yamlFileFirst = new YamlFile()
                 yamlFileFirst.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
+                jenkins.echo  "vsdsdvsddsv"
                 yamlFileSecond = new YamlFile()
                 yamlFileSecond.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
+                jenkins.echo "vsdvsdvsdvs x xcxcxczzxc"
                 compare = new Compare(yamlFileFirst, yamlFileSecond)
-
+                jenkins.echo "yyyyyyyy"
 
             }
         }
