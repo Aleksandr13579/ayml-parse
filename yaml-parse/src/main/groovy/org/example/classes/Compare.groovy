@@ -107,7 +107,7 @@ class Compare {
                 allChanges.append(key + " : " + value + "\n")
             }
         }
-        added = allChanges
+        this.added = allChanges
     }
 
     private YamlFile firstYaml
