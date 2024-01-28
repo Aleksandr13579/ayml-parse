@@ -29,6 +29,7 @@ class YamlFile {
         return this.yamlData
     }
 
+    @NonCPS
     private Map yamlData
 
     private File file
