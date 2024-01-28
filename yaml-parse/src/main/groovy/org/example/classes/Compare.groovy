@@ -98,7 +98,7 @@ class Compare {
             }
         }
         allChanges.append("Добавлен параметр: ${differentKey.length() != 0 ? differentKey : "Различий нет"} \n")
-                .append("Изменения в парметрах значениям \n")
+                .append("Изменения в параметрах по значениям \n")
         if (!differentValue.isEmpty()) {
             differentValue.each {key, value ->
                 allChanges.append("В параметре " + key + " было " + "${this.dataFromFirstFile.get(key)}" + " стало " + value + '\n')
