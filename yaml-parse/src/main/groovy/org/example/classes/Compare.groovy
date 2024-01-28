@@ -14,6 +14,8 @@ class Compare {
 
         this.dataFromSecondFile = new LinkedHashMap<>()
         converter(secondYaml.getDataFromYaml(), this.dataFromSecondFile)
+
+        added = new String(whatHasBeenAdded())
     }
 
     Compare(File first, File second) {
@@ -25,6 +27,8 @@ class Compare {
 
         this.dataFromSecondFile = new LinkedHashMap<>()
         converter(secondYaml.getDataFromYaml(), this.dataFromSecondFile)
+
+        added = new String(whatHasBeenAdded())
     }
 
     Compare(String first, String second) {
@@ -38,18 +42,11 @@ class Compare {
         this.dataFromSecondFile = new LinkedHashMap<>()
         converter(secondYaml.getDataFromYaml(), this.dataFromSecondFile)
 
+        added = new String(whatHasBeenAdded())
     }
 
-    @NonCPS
-    getFirstFileData() {
-        return this.dataFromFirstFile
-    }
 
-    @NonCPS
-    getSecondFileData() {
-        return this.dataFromSecondFile
-    }
-
+    String added
     /**
      * сроавнгиваем информацию из двух ямл файлов
      */
@@ -93,12 +90,8 @@ class Compare {
         }
     }
 
-    @NonCPS
-    getMeWhatHasBeenAdded() {
-        return whatHasBeenAdded(this.dataFromFirstFile, this.dataFromSecondFile)
-    }
 
-    private String whatHasBeenAdded(def dataFromFirstFile, def dataFromSecondFile) {
+    private String whatHasBeenAdded() {
         LinkedHashMap<String, String> differentValue
         StringBuilder differentKey
         StringBuilder allChanges
