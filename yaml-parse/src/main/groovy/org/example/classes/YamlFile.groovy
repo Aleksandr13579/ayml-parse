@@ -24,11 +24,6 @@ class YamlFile {
         }
     }
 
-    @NonCPS
-    getYamlData() throws  NotSerializableException {
-        return this.yamlData
-    }
-
     Map yamlData
 
     private File file

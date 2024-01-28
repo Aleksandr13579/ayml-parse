@@ -43,16 +43,6 @@ class Compare {
     LinkedHashMap<String, String> dataFromFirstFile
     LinkedHashMap<String, String> dataFromSecondFile
 
-    @NonCPS
-    getDataFromFirstFile() throws NotSerializableException {
-        return this.dataFromFirstFile
-    }
-
-    @NonCPS
-    getDataFromSecondFile() throws NotSerializableException {
-        return this.dataFromSecondFile
-    }
-
     /**
      * сроавнгиваем информацию из двух ямл файлов
      */

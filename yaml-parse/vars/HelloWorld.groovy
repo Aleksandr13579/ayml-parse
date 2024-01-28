@@ -18,7 +18,8 @@ def call(def jenkins) {
 
                 jenkins.echo "${compare.getDataFromFirstFile()}"
 
-                jenkins.echo "${compare.whatHasBeenAdded()}"
+                def changes = compare.whatHasBeenAdded()
+                jenkins.echo "${changes}"
 
 
             }
