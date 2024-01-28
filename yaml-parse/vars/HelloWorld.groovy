@@ -17,8 +17,10 @@ def call(def jenkins) {
                 )
             }
             stage('Unzip files') {
-                unzip zipFile: "${env.WORKSPACE}/yaml-parse/resources/first.zip", dir: "${env.WORKSPACE}/yaml-parse/resources/first"
-                unzip zipFile: "${env.WORKSPACE}/yaml-parse/resources/second.zip", dir: "${env.WORKSPACE}/yaml-parse/resources/second"
+                sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/first"
+                sh "${env.WORKSPACE}/yaml-parse/resources/second"
+                sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first"
+                sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second"
 
                 sh "ls -alrt ${env.WORKSPACE}/yaml-parse/resources"
             }
