@@ -5,15 +5,15 @@ class Compare {
 
     LinkedHashMap<String, String> mismatchedFields
 
-    Compare(YamlFile first, YamlFile second) {
+    Compare(YamlFile first, YamlFile second, def jenkins) {
         this.firstYaml = first
         this.secondYaml = second
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        converter(firstYaml.getData(), this.dataFromFirstFile)
+        converter(firstYaml.getData(), this.dataFromFirstFile, jenkins)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        converter(secondYaml.getData(), this.dataFromSecondFile)
+        converter(secondYaml.getData(), this.dataFromSecondFile, jenkins)
 
     }
 
