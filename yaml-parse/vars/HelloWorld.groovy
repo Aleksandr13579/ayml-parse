@@ -12,8 +12,10 @@ def call(def jenkins) {
         timestamps {
             stage('Load filed') {
 
-                yamlFileFirst = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
-                yamlFileSecond = new YamlFile("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
+                yamlFileFirst = new YamlFile()
+                yamlFileFirst.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
+                yamlFileSecond = new YamlFile()
+                yamlFileSecond.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
                 compare = new Compare(yamlFileFirst, yamlFileSecond)
 
 
