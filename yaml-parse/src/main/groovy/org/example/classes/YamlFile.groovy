@@ -8,7 +8,6 @@ class YamlFile {
     YamlFile(File yourFile) {
         this.file = yourFile
         this.fileName = "undefind"
-        this.yamlData = yamlFile.load(this.file.text) as Map<String, ?>
     }
 
     YamlFile(String nameFile) {
@@ -16,7 +15,6 @@ class YamlFile {
             this.file = new File(nameFile)
             this.fileName = nameFile
             this.yamlFile = new Yaml()
-            this.yamlData = yamlFile.load(this.file.text) as Map<String, ?>
 
         }
         catch (FileNotFoundException e) {
@@ -25,11 +23,10 @@ class YamlFile {
     }
 
     @NonCPS
-    getDataFromYaml() {
-        return this.yamlData
+    load(File file ) {
+        this.yamlData = yamlFile.load(this.file.text) as Map<String, ?>
     }
 
-    @NonCPS
     private Map yamlData
 
     private File file
