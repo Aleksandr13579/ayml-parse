@@ -86,7 +86,8 @@ class Compare {
     @NonCPS
     String whatHasBeenAdded( ) {
         LinkedHashMap<String, String> differentValue = new LinkedHashMap<>()
-        StringBuilder differentKey = new StringBuilder()
+        StringBuilder newKey = new StringBuilder()
+        StringBuilder oldKey = new StringBuilder()
         StringBuilder allChanges = new StringBuilder()
         this.dataFromSecondFile.each {key,value ->
             if (this.dataFromFirstFile.containsKey(key)) {
@@ -94,16 +95,25 @@ class Compare {
                     differentValue.put(key, this.dataFromSecondFile.get(key))
                 }
             } else {
-                differentKey.append('\n' + key)
+                newKey.append('\n' + key)
             }
         }
-        allChanges.append("Добавлен параметр: ${differentKey.length() != 0 ? differentKey : "Различий нет"} \n")
+
+        allChanges.append("Добавлен параметр: ${newKey.length() != 0 ? newKey : "Различий нет"} \n")
                 .append("Изменения в параметрах по значениям \n")
+
+        this.dataFromFirstFile.each {key,value ->
+            if (!this.dataFromSecondFile.containsKey(key)) {
+                oldKey.append('\n' + key)
+            }
+        }
+
         if (!differentValue.isEmpty()) {
             differentValue.each {key, value ->
                 allChanges.append("В параметре " + key + " было " + "${this.dataFromFirstFile.get(key)}" + " стало " + value + '\n')
             }
         }
+        allChanges.append("Удалены значения: \n").append(oldKey)
         return allChanges
     }
 
