@@ -102,6 +102,7 @@ class Compare {
                 jenkins.echo "2222222222"
                 if (value != this.dataFromSecondFile.get(key)) {
                     jenkins.echo "${key} : ${value.toString()}"
+                    jenkins.echo "${this.dataFromSecondFile.get(key)}"
                     differentValue.put(key, this.dataFromSecondFile.get(key))
                 }
 
