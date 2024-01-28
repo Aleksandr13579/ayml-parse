@@ -59,6 +59,7 @@ class Compare {
      */
     @NonCPS
     private void converter(Map<String, ?> yam, Map<String, String> data, def jenkins, String oldKey = "") {
+        jenkins.echo "vsdvdsvsdvsdvsdvsdvsdvsdvsd"
         yam.each { key, value ->
             if (value instanceof Map) {
                 if (oldKey != "") {
