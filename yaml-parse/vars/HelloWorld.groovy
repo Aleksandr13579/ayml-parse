@@ -23,11 +23,22 @@ def call(def jenkins) {
                     sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first"
                     sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second"
 
-                    def firstArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true ) =~ /.*first\/(.*yaml|.*yml)$/
-                    def secondArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"",returnStdout: true ) =~ /.*second\/(.*yaml|.*yml)$/
+                    def firstArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true ).split('\n')
+                    def secondArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"",returnStdout: true ).split('\n')
 
-                    filesInFirstArchive = firstArchiveUnzip.split('\n')
-                    filesInSecondArchive = secondArchiveUnzip.split('\n')
+                    firstArchiveUnzip.each {
+                        def pattern = ~/.*first\/(.*yaml|.*yml)$/
+
+                        def match = pattern.matcher(it)
+                        if (match.find()) filesInFirstArchive.add(match.group(1))
+                    }
+
+                    secondArchiveUnzip.each {
+                        def pattern = ~/.*first\/(.*yaml|.*yml)$/
+
+                        def match = pattern.matcher(it)
+                        if (match.find()) secondArchiveUnzip.add(match.group(1))
+                    }
 
 
                     echo "${filesInFirstArchive}"
