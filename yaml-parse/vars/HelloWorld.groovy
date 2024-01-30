@@ -1,10 +1,10 @@
 import main.groovy.org.example.classes.YamlFile
 import main.groovy.org.example.classes.Compare
 
-def call(def jenkins) {
+def filesInFirstArchive =  new LinkedHashSet<>()
+def filesInSecondArchive = new LinkedHashSet<>()
 
-    LinkedHashSet<String> filesInFirstArchive =  new LinkedHashSet<>()
-    LinkedHashSet<String> filesInSecondArchive = new LinkedHashSet<>()
+def call(def jenkins) {
 
     LinkedHashMap<String, String> fileAndPathInFirstArchive = new LinkedHashMap<>()
     LinkedHashMap<String, String> fileAndPathInSecondArchive = new LinkedHashMap<>()
