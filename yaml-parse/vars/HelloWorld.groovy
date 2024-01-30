@@ -20,8 +20,8 @@ def call(def jenkins) {
                 stage('Unzip files') {
                     sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/first"
                     sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/second"
-                    unzip zipFile: "${env.WORKSPACE}/yaml-parse/resources/first.zip", dir: "${env.WORKSPACE}/yaml-parse/resources/first", quiet: true
-                    unzip zipFile: "${env.WORKSPACE}/yaml-parse/resources/second.zip", dir: "${env.WORKSPACE}/yaml-parse/resources/second", quiet: true
+                    sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first > /dev/null"
+                    sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second > /dev/null"
 
                     def firstArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true).split('\n')
                     def secondArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"", returnStdout: true).split('\n')
