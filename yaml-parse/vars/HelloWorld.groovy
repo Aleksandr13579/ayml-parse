@@ -34,10 +34,10 @@ def call(def jenkins) {
                     }
 
                     secondArchiveUnzip.each {
-                        def pattern = ~/.*first\/(.*yaml|.*yml)$/
+                        def pattern = ~/.*second\/(.*yaml|.*yml)$/
 
                         def match = pattern.matcher(it)
-                        if (match.find()) secondArchiveUnzip.add(match.group(1))
+                        if (match.find()) filesInSecondArchive.add(match.group(1))
                     }
 
 
