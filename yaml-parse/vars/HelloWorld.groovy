@@ -22,7 +22,7 @@ def call(def jenkins) {
                     sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/first"
                     sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/second"
                     sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first && chmod 777 ${env.WORKSPACE}/yaml-parse/resources/first"
-                    sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second && ${env.WORKSPACE}/yaml-parse/resources/second"
+                    sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second && chmod 777 ${env.WORKSPACE}/yaml-parse/resources/second"
 
                     filesInFirstArchive = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true )
                     filesInSecondArchive = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"",returnStdout: true )
