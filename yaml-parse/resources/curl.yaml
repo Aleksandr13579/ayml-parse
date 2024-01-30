@@ -5,5 +5,7 @@ metadata:
 spec:
   containers:
     - name: curl
+       {{if bfjknbfjknbdfgbnj;dfg}}
       image: tutum/curl
+        {{vsdvsdvsdvdvsd}}
       command: ["sleep", "9999999"]
