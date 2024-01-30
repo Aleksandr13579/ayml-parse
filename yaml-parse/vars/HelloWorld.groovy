@@ -32,8 +32,8 @@ def call(def jenkins) {
                     echo "${filesInSecondArchive}"
                 }
                 stage('Parse file names') {
-                    def parser1 = ~/.*first\/(.*)\/(.*)$/
-                    def parser2 = ~/.*second\/(.*)\/(.*)$/
+                    def parser1 = ~/.*first\/(.*)(.*)$/
+                    def parser2 = ~/.*second\/(.*)(.*)$/
 
                     filesInFirstArchive.each {
                         def match = parser1.matcher(it)
