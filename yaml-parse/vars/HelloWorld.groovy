@@ -8,9 +8,6 @@ def call(def jenkins) {
         timestamps {
             try {
 
-                ArrayList<String> filesInFirstArchive =  new ArrayList<>()
-                ArrayList<String> filesInSecondArchive =  new ArrayList<>()
-
                 def fileAndPathInFirstArchive = new LinkedHashMap<>()
                 def fileAndPathInSecondArchive = new LinkedHashMap<>()
 
@@ -27,8 +24,8 @@ def call(def jenkins) {
                     sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first"
                     sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second"
 
-                    filesInFirstArchive = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true )
-                    filesInSecondArchive = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"",returnStdout: true )
+                    env.filesInFirstArchive = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true )
+                    env.filesInSecondArchive = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"",returnStdout: true )
 
                     echo "${filesInFirstArchive}"
                     echo "+++++++++++++++++++++"
@@ -37,7 +34,7 @@ def call(def jenkins) {
                 stage('Parse file names') {
                     def parser = ~/.*resources(.*)\/(.*yaml|yml)$/
 
-                    filesInFirstArchive.each {
+                    env.filesInFirstArchive.each {
                         def match = parser.matcher(it)
                         if (match.find())
                             fileAndPathInFirstArchive.put(match.group(2), match.group(1))
@@ -45,7 +42,7 @@ def call(def jenkins) {
                         echo "${it}"
                     }
 
-                    filesInSecondArchive.each {
+                    env.filesInSecondArchive.each {
                         def match = parser.matcher(it)
                         if (match.find())
                             fileAndPathInSecondArchive.put(match.group(2), match.group(1))
