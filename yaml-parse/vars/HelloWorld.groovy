@@ -22,10 +22,10 @@ def call(def jenkins) {
                     )
                 }
                 stage('Unzip files') {
-                    sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/first"
-                    sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/second"
-                    sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first > /dev/null"
-                    sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second > /dev/null"
+                    sh (script: "mkdir ${env.WORKSPACE}/yaml-parse/resources/first", returnStdout: false)
+                    sh (script:  "mkdir ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: false)
+                    sh (script:  "unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first", returnStdout: false)
+                    sh (script:  "unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: false)
 
                     def firstArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true).split('\n')
                     def secondArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"", returnStdout: true).split('\n')
@@ -47,17 +47,17 @@ def call(def jenkins) {
 
                     filesInSecondArchive.each {
                         if (filesInFirstArchive.contains(it)) {
-                            echo "File ${it} exist in first archive"
+                            echo "Файл ${it} существет в двух архивах"
                             files.add("${it}")
                         } else {
-                            echo "File ${it} do not exist in first archive"
+                            echo "Файл ${it} не существует в старой версии, добавлен в новой"
                             newFiles.add("${it}")
                         }
                     }
 
                     filesInFirstArchive.each {
                         if (!filesInSecondArchive.contains(it)) {
-                            echo "File ${it} was deleted from new archive"
+                            echo "Файл ${it} удален из нового архива"
                             deletedFiles.add("${it}")
                         }
 
