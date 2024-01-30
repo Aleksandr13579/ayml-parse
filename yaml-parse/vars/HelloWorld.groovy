@@ -4,8 +4,8 @@ import main.groovy.org.example.classes.Compare
 LinkedHashSet<String> filesInFirstArchive =  new LinkedHashSet<>()
 LinkedHashSet<String> filesInSecondArchive = new LinkedHashSet<>()
 
-LinkedHashMap<String, String> fileAndPathInFirstArchive = new LinkedHashMap<> ()
-LinkedHashMap<String, String> fileAndPathInSecondArchive = new LinkedHashMap<> ()
+LinkedHashMap<String, String> fileAndPathInFirstArchive = new LinkedHashMap<>()
+LinkedHashMap<String, String> fileAndPathInSecondArchive = new LinkedHashMap<>()
 
 def call(def jenkins) {
 
