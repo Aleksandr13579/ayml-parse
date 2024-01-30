@@ -36,14 +36,14 @@ def call(def jenkins) {
                     def parser2 = ~/.*second\/(.*)\/(.*)$/
 
                     filesInFirstArchive.each {
-                        def match
-                        if ((match = it =~ parser1))
+                        def match = parser1.matcher(it)
+                        if (match.find())
                             fileAndPathInFirstArchive.put(match.group(2), match(1))
                     }
 
                     filesInSecondArchive.each {
-                        def match
-                        if ((match = it =~ parser2))
+                        def match = parser2.matcher(it)
+                        if (match.find())
                             fileAndPathInSecondArchive.put(match.group(2), match(1))
                     }
 
