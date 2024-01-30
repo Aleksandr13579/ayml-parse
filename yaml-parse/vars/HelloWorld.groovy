@@ -8,8 +8,12 @@ def call(def jenkins) {
         timestamps {
             try {
 
-                ArrayList<String> filesInFirstArchive = new ArrayList<>()
-                ArrayList<String> filesInSecondArchive = new ArrayList<>()
+                List<String> filesInFirstArchive = new ArrayList<>()
+                List<String> filesInSecondArchive = new ArrayList<>()
+
+                List<String> files = new ArrayList<>()
+                List<String> newFiles = new ArrayList<>()
+                List<String> deletedFiles = new ArrayList<>()
 
                 stage('Chekout') {
                     git(
@@ -44,14 +48,17 @@ def call(def jenkins) {
                     filesInSecondArchive.each {
                         if (filesInFirstArchive.contains(it)) {
                             echo "File ${it} exist in first archive"
+                            files.add("${it}")
                         } else {
                             echo "File ${it} do not exist in first archive"
+                            newFiles.add("${it}")
                         }
                     }
 
                     filesInFirstArchive.each {
                         if (!filesInSecondArchive.contains(it)) {
                             echo "File ${it} was deleted from new archive"
+                            deletedFiles.add("${it}")
                         }
 
 
@@ -59,15 +66,20 @@ def call(def jenkins) {
                 }
                 stage('Parse Yaml') {
 
-                    YamlFile yamlFileFirst = new YamlFile()
-                    yamlFileFirst.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
+                    files.each {
+                        YamlFile yamlFileFirst = new YamlFile()
+                        yamlFileFirst.load("${env.WORKSPACE}/yaml-parse/resources/first/${it}")
 
-                    YamlFile yamlFileSecond = new YamlFile()
-                    yamlFileSecond.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_2}")
+                        YamlFile yamlFileSecond = new YamlFile()
+                        yamlFileSecond.load("${env.WORKSPACE}/yaml-parse/resources/second/${it}")
 
-                    Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
-                    def changes = compare.whatHasBeenAdded()
-                    jenkins.echo "${changes}"
+                        Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
+                        def changes = compare.whatHasBeenAdded()
+                        echo "Filename: ${it}"
+                        echo "${changes}"
+                        echo "==============\n"
+
+                    }
 
 
                 }
