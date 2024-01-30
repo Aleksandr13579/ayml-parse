@@ -4,6 +4,9 @@ import main.groovy.org.example.classes.Compare
 LinkedHashSet<String> filesInFirstArchive =  new LinkedHashSet<>()
 LinkedHashSet<String> filesInSecondArchive = new LinkedHashSet<>()
 
+def fileAndPathInFirstArchive = [:]
+def fileAndPathInSecondArchive = [:]
+
 def call(def jenkins) {
 
     node {
@@ -28,7 +31,24 @@ def call(def jenkins) {
                     echo "+++++++++++++++++++++"
                     echo "${filesInSecondArchive}"
                 }
-                stage('Load filed') {
+                stage('') {
+                    def parser1 = ~/.*first\/(.*)\/(.*)$/
+                    def parser2 = ~/.*second\/(.*)\/(.*)$/
+
+                    filesInFirstArchive.each {
+                        if (match = it =~ parser1)
+                            fileAndPathInFirstArchive.put(match.group(2), match(1))
+                    }
+
+                    filesInSecondArchive.each {
+                        if (match = it =~ parser2)
+                            fileAndPathInSecondArchive.put(match.group(2), match(1))
+                    }
+
+                    fileAndPathInFirstArchive.each { jenkins.echo "${it}"}
+                    fileAndPathInSecondArchive.each { jenkins.echo "${it}"}
+                }
+                stage('Parse Yaml') {
 
                     YamlFile yamlFileFirst = new YamlFile()
                     yamlFileFirst.load("${env.WORKSPACE}/yaml-parse/resources/${params.ARCHIVE_1}")
