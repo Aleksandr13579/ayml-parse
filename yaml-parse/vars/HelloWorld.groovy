@@ -39,7 +39,7 @@ def call(def jenkins) {
                 stage('Parse file names') {
                     def parser = ~/.*resources(.*)\/(.*yaml|yml)$/
 
-                    env.filesInFirstArchive.each {
+                    filesInFirstArchive.each {
                         def match = parser.matcher(it)
                         if (match.find())
                             fileAndPathInFirstArchive.put(match.group(2), match.group(1))
@@ -47,7 +47,7 @@ def call(def jenkins) {
                         echo "${it}"
                     }
 
-                    env.filesInSecondArchive.each {
+                    filesInSecondArchive.each {
                         def match = parser.matcher(it)
                         if (match.find())
                             fileAndPathInSecondArchive.put(match.group(2), match.group(1))
