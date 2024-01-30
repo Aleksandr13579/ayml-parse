@@ -8,8 +8,8 @@ def call(def jenkins) {
         timestamps {
             try {
 
-                def filesInFirstArchive =  new LinkedHashSet<>()
-                def filesInSecondArchive = new LinkedHashSet<>()
+                def filesInFirstArchive =  new ArrayList<>()
+                def filesInSecondArchive = new ArrayList<>()
 
                 def fileAndPathInFirstArchive = new LinkedHashMap<>()
                 def fileAndPathInSecondArchive = new LinkedHashMap<>()
