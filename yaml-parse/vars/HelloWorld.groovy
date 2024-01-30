@@ -20,8 +20,8 @@ def call(def jenkins) {
                 stage('Unzip files') {
                     sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/first"
                     sh "mkdir ${env.WORKSPACE}/yaml-parse/resources/second"
-                    sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first"
-                    sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second"
+                    unzip zipFile: ${env.WORKSPACE}/yaml-parse/resources/first.zip, dir: ${env.WORKSPACE}/yaml-parse/resources/first,  quiet: true
+                    unzip zipFile: ${env.WORKSPACE}/yaml-parse/resources/second.zip, dir: ${env.WORKSPACE}/yaml-parse/resources/second,  quiet: true
 
                     def firstArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true ).split('\n')
                     def secondArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"",returnStdout: true ).split('\n')
@@ -41,11 +41,6 @@ def call(def jenkins) {
                     }
 
 
-                    echo "${filesInFirstArchive}"
-                    echo "+++++++++++++++++++++"
-                    echo "${filesInSecondArchive}"
-                    echo "============================"
-
                     filesInSecondArchive.each {
                         if (filesInFirstArchive.contains(it)) {
                             echo "File ${it} exist in first archive"
@@ -53,6 +48,12 @@ def call(def jenkins) {
                             echo "File ${it} do not exist in first archive"
                         }
                     }
+
+                    filesInFirstArchive.each {
+                        if (!filesInSecondArchive.contains(it)) {
+                            echo "File ${it} was deleted from new archive"
+                    }
+
 
                 }
                 stage('Parse Yaml') {
