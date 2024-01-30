@@ -1,17 +1,20 @@
 import main.groovy.org.example.classes.YamlFile
 import main.groovy.org.example.classes.Compare
 
-def filesInFirstArchive =  new LinkedHashSet<>()
-def filesInSecondArchive = new LinkedHashSet<>()
 
 def call(def jenkins) {
-
-    LinkedHashMap<String, String> fileAndPathInFirstArchive = new LinkedHashMap<>()
-    LinkedHashMap<String, String> fileAndPathInSecondArchive = new LinkedHashMap<>()
 
     node {
         timestamps {
             try {
+
+                def filesInFirstArchive =  new LinkedHashSet<>()
+                def filesInSecondArchive = new LinkedHashSet<>()
+
+                def fileAndPathInFirstArchive = new LinkedHashMap<>()
+                def fileAndPathInSecondArchive = new LinkedHashMap<>()
+
+
                 stage('Chekout') {
                     git(
                             url: 'https://github.com/Aleksandr13579/ayml-parse.git',
