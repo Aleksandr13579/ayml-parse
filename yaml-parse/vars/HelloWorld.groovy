@@ -42,14 +42,14 @@ def call(def jenkins) {
                         if (match.find())
                             fileAndPathInFirstArchive.put(match.group(2), match.group(1))
 
-                        echo "ZZZZZZZ"
+                        echo "${it}"
                     }
 
                     filesInSecondArchive.each {
                         def match = parser.matcher(it)
                         if (match.find())
                             fileAndPathInSecondArchive.put(match.group(2), match.group(1))
-                        echo "vvvvvvvvvvvvvvvv"
+                        echo "${it}"
                     }
 
                     fileAndPathInFirstArchive.each { key, value -> echo "${key} : ${value}"}
