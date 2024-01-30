@@ -30,7 +30,7 @@ def call(def jenkins) {
                     def SecondArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"",returnStdout: true )
 
                     filesInFirstArchive = FirstArchiveUnzip.split(', ')
-                    filesInSecondArchive = SecondArchiveUnzip.split(',.')
+                    filesInSecondArchive = SecondArchiveUnzip.split(', ')
 
                     echo "${filesInFirstArchive}"
                     echo "+++++++++++++++++++++"
