@@ -40,7 +40,7 @@ def call(def jenkins) {
                     filesInFirstArchive.each {
                         def match = parser.matcher(it)
                         if (match.find())
-                            fileAndPathInFirstArchive.put(match.group(2), match(1))
+                            fileAndPathInFirstArchive.put(match.group(2), match.group(1))
 
                         echo "ZZZZZZZ"
                     }
@@ -48,7 +48,7 @@ def call(def jenkins) {
                     filesInSecondArchive.each {
                         def match = parser.matcher(it)
                         if (match.find())
-                            fileAndPathInSecondArchive.put(match.group(2), match(1))
+                            fileAndPathInSecondArchive.put(match.group(2), match.group(1))
                         echo "vvvvvvvvvvvvvvvv"
                     }
 
