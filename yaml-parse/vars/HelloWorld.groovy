@@ -11,6 +11,8 @@ def call(def jenkins) {
                 def fileAndPathInFirstArchive = new LinkedHashMap<>()
                 def fileAndPathInSecondArchive = new LinkedHashMap<>()
 
+                LinkedHashSet<String> filesInFirstArchive = new LinkedHashSet<>()
+                LinkedHashSet<String> filesInSecondArchive = new LinkedHashSet<>()
 
                 stage('Chekout') {
                     git(
@@ -24,8 +26,11 @@ def call(def jenkins) {
                     sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first"
                     sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second"
 
-                    env.filesInFirstArchive = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true ).split('\n')
-                    env.filesInSecondArchive = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"",returnStdout: true ).split('\n')
+                    def FirstArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true )
+                    def SecondArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"",returnStdout: true )
+
+                    filesInFirstArchive = FirstArchiveUnzip.split('\n')
+                    filesInSecondArchive = SecondArchiveUnzip.split('\n')
 
                     echo "${filesInFirstArchive}"
                     echo "+++++++++++++++++++++"
