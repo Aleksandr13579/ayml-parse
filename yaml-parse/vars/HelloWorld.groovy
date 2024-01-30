@@ -31,7 +31,7 @@ def call(def jenkins) {
                     echo "+++++++++++++++++++++"
                     echo "${filesInSecondArchive}"
                 }
-                stage('') {
+                stage('Parse file names') {
                     def parser1 = ~/.*first\/(.*)\/(.*)$/
                     def parser2 = ~/.*second\/(.*)\/(.*)$/
 
