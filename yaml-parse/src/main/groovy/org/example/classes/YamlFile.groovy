@@ -24,7 +24,6 @@ class YamlFile {
         this.fileName = "undefind"
         this.yamlData = yamlFile.load(this.file.text) as Map
     }
-
     @NonCPS
     def getData() {
         return this.yamlData
