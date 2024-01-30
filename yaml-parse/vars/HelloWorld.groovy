@@ -47,8 +47,8 @@ def call(def jenkins) {
                             fileAndPathInSecondArchive.put(match.group(2), match(1))
                     }
 
-                    fileAndPathInFirstArchive.each { key, value -> jenkins.echo "${key} : ${value}"}
-                    fileAndPathInSecondArchive.each { key, value -> jenkins.echo "${key} : ${value}"}
+                    fileAndPathInFirstArchive.each { key, value -> echo "${key} : ${value}"}
+                    fileAndPathInSecondArchive.each { key, value -> echo "${key} : ${value}"}
                 }
                 stage('Parse Yaml') {
 
