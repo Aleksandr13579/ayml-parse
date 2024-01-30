@@ -44,29 +44,6 @@ def call(def jenkins) {
                     }
 
                 }
-                stage('Parse file names') {
-                    def parser = ~/.*resources(.*)\/(.*yaml|.*yml)$/
-
-                    filesInFirstArchive.each {
-                        def match = parser.matcher(it)
-                        if (match.find()) {
-                            fileAndPathInFirstArchive.put(match.group(2), match.group(1))
-
-                            echo "${it}"
-                        }
-                    }
-
-                    filesInSecondArchive.each {
-                        def match = parser.matcher(it)
-                        if (match.find()) {
-                            fileAndPathInSecondArchive.put(match.group(2), match.group(1))
-                            echo "${it}"
-                        }
-                    }
-
-                    fileAndPathInFirstArchive.each { key, value -> echo "${key} : ${value}"}
-                    fileAndPathInSecondArchive.each { key, value -> echo "${key} : ${value}"}
-                }
                 stage('Parse Yaml') {
 
                     YamlFile yamlFileFirst = new YamlFile()
