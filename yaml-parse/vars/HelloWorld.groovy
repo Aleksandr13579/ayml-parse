@@ -8,8 +8,8 @@ def call(def jenkins) {
         timestamps {
             try {
 
-                Set<String> filesInFirstArchive = new LinkedHashSet<>()
-                Set<String> filesInSecondArchive = new LinkedHashSet<>()
+                ArrayList<String> filesInFirstArchive = new ArrayList<>()
+                ArrayList<String> filesInSecondArchive = new ArrayList<>()
 
                 stage('Chekout') {
                     git(
