@@ -8,11 +8,8 @@ def call(def jenkins) {
         timestamps {
             try {
 
-                def fileAndPathInFirstArchive = new LinkedHashMap<>()
-                def fileAndPathInSecondArchive = new LinkedHashMap<>()
-
-                LinkedHashSet<String> filesInFirstArchive = new LinkedHashSet<>()
-                LinkedHashSet<String> filesInSecondArchive = new LinkedHashSet<>()
+                Set<String> filesInFirstArchive = new LinkedHashSet<>()
+                Set<String> filesInSecondArchive = new LinkedHashSet<>()
 
                 stage('Chekout') {
                     git(
@@ -26,15 +23,26 @@ def call(def jenkins) {
                     sh " unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first"
                     sh " unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second"
 
-                    def FirstArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true )
-                    def SecondArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"",returnStdout: true )
+                    def firstArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true )
+                    def secondArchiveUnzip = sh ( script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"",returnStdout: true )
 
-                    filesInFirstArchive = FirstArchiveUnzip.split(', ')
-                    filesInSecondArchive = SecondArchiveUnzip.split(', ')
+                    filesInFirstArchive = firstArchiveUnzip.split(', ')
+                    filesInSecondArchive = secondArchiveUnzip.split(', ')
+
 
                     echo "${filesInFirstArchive}"
                     echo "+++++++++++++++++++++"
                     echo "${filesInSecondArchive}"
+                    echo "============================"
+
+                    filesInSecondArchive.each {
+                        if (filesInFirstArchive.contains(it)) {
+                            echo "File ${it} exist in first archive"
+                        } else {
+                            echo "File ${it} do not exist in first archive"
+                        }
+                    }
+
                 }
                 stage('Parse file names') {
                     def parser = ~/.*resources(.*)\/(.*yaml|.*yml)$/
