@@ -35,19 +35,21 @@ def call(def jenkins) {
                     echo "${filesInSecondArchive}"
                 }
                 stage('Parse file names') {
-                    def parser1 = ~/.*first\/(.*)\/(.*)$/
-                    def parser2 = ~/.*second\/(.*)\/(.*)$/
+                    def parser = ~/.*resources(.*)\/(.*yaml|yml)$/
 
                     filesInFirstArchive.each {
-                        def match = parser1.matcher(it)
+                        def match = parser.matcher(it)
                         if (match.find())
                             fileAndPathInFirstArchive.put(match.group(2), match(1))
+
+                        echo "ZZZZZZZ"
                     }
 
                     filesInSecondArchive.each {
-                        def match = parser2.matcher(it)
+                        def match = parser.matcher(it)
                         if (match.find())
                             fileAndPathInSecondArchive.put(match.group(2), match(1))
+                        echo "vvvvvvvvvvvvvvvv"
                     }
 
                     fileAndPathInFirstArchive.each { key, value -> echo "${key} : ${value}"}
