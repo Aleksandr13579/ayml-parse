@@ -84,14 +84,14 @@ def call(def jenkins) {
                         def changes = compare.whatHasBeenAdded()
                         echo "Filename: ${it}"
                         echo "${changes}"
-                        report.append("<br><font color=\"green\">Файл: ${it}</font> ${changes} <br>${struct}")
+                        report.append("<br><font color=\"green\">Файл: ${it}</font> ${changes}")
                         echo "==============\n"
 
                     }
                 }
                 stage('mail') {
                     emailext( to: 'test@mailhog.local',
-                            body: "${report}",
+                            body: "${report}<br>${struct}",
                             subject: "Результат сравнения",
                             mimeType: 'text/html',
                             attachmentsPattern: "**/yaml-parse/resources/f*.zip" )
