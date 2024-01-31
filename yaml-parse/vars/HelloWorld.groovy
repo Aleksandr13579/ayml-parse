@@ -51,7 +51,7 @@ def call(def jenkins) {
                         if (filesInFirstArchive.contains(it)) {
                             echo "Файл ${it} существет в двух архивах"
                             files.add("${it}")
-                            report.append("Файл ${it} существет в двух архивах\n")
+                            report.append("Файл ${it} существет в двух архивах<br>")
                         } else {
                             echo "Файл ${it} не существует в старой версии, добавлен в новой"
                             newFiles.add("${it}")
