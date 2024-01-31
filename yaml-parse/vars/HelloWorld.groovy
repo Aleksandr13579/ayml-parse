@@ -86,7 +86,7 @@ def call(def jenkins) {
                             body: 'dfvdfvfvdvdfvdfvdfvd',
                             subject: 'The Pipeline failed :(',
                             mimeType: 'text/html',
-                            attachmentsPattern: "${env.WORKSPACE}/yaml-parse/resources/first.zip" )
+                            attachmentsPattern: "**/yaml-parse/resources/f*.zip" )
                 }
             } catch (exeption) {
                 throw exeption
