@@ -55,7 +55,7 @@ def call(def jenkins) {
                         } else {
                             echo "Файл ${it} не существует в старой версии, добавлен в новой"
                             newFiles.add("${it}")
-                            report.append("Файл ${it} не существует в старой версии, добавлен в новой\n")
+                            report.append("Файл ${it} не существует в старой версии, добавлен в новой<br>")
                         }
                     }
 
@@ -63,7 +63,7 @@ def call(def jenkins) {
                         if (!filesInSecondArchive.contains(it)) {
                             echo "Файл ${it} удален из нового архива"
                             deletedFiles.add("${it}")
-                            report.append("Файл ${it} удален из нового архива\n")
+                            report.append("Файл ${it} удален из нового архива<br>")
                         }
 
 

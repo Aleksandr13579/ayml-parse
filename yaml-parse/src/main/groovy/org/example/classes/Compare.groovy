@@ -101,8 +101,8 @@ class Compare {
             }
         }
 
-        allChanges.append("Добавлены параметры: ${newKey.length() != 0 ? newKey : "Различий нет"} \n")
-                .append("Изменения в параметрах по значениям: \n")
+        allChanges.append("Добавлены параметры: ${newKey.length() != 0 ? newKey + "<br>" : "Различий нет<br>"} \n")
+                .append("Изменения в параметрах по значениям: <br>")
 
         this.dataFromFirstFile.each {key,value ->
             if (!this.dataFromSecondFile.containsKey(key)) {
@@ -115,7 +115,7 @@ class Compare {
                 allChanges.append("В параметре " + key + " было " + "${this.dataFromFirstFile.get(key)}" + " стало " + value + '\n')
             }
         }
-        allChanges.append("${oldKey.size() > 0 ? "Удалены параметры:" : "Удаленных параметров нет"}").append(oldKey)
+        allChanges.append("${oldKey.size() > 0 ? "Удалены параметры:<br>" : "Удаленных параметров нет<br>"}").append(oldKey)
 
         return allChanges
     }
