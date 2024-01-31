@@ -112,7 +112,7 @@ class Compare {
 
         if (!differentValue.isEmpty()) {
             differentValue.each {key, value ->
-                allChanges.append("В параметре " + key + " было " + "${this.dataFromFirstFile.get(key)}" + " стало " + value + '\n')
+                allChanges.append("В параметре " + key + " было " + "${this.dataFromFirstFile.get(key)}" + " стало " + value + '<br>')
             }
         }
         allChanges.append("${oldKey.size() > 0 ? "Удалены параметры:<br>" : "Удаленных параметров нет<br>"}").append(oldKey)
