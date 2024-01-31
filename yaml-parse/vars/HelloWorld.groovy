@@ -82,7 +82,7 @@ def call(def jenkins) {
                     }
                 }
                 stage('mail') {
-                    mailtext( to: 'test@mailhog.local',
+                    emailtext( to: 'test@mailhog.local',
                             body: 'dfvdfvfvdvdfvdfvdfvd',
                             subject: 'The Pipeline failed :(',
                             attachmentsPattern: "${env.WORKSPACE}/yaml-parse/resources/first/curl.yaml" )
