@@ -15,6 +15,8 @@ def call(def jenkins) {
                 List<String> newFiles = new ArrayList<>()
                 List<String> deletedFiles = new ArrayList<>()
 
+                StringBuilder report = new StringBuilder()
+
                 stage('Chekout') {
                     git(
                             url: 'https://github.com/Aleksandr13579/ayml-parse.git',
@@ -49,9 +51,11 @@ def call(def jenkins) {
                         if (filesInFirstArchive.contains(it)) {
                             echo "Файл ${it} существет в двух архивах"
                             files.add("${it}")
+                            report.append("Файл ${it} существет в двух архивах\n")
                         } else {
                             echo "Файл ${it} не существует в старой версии, добавлен в новой"
                             newFiles.add("${it}")
+                            report.append("Файл ${it} не существует в старой версии, добавлен в новой\n")
                         }
                     }
 
@@ -59,6 +63,7 @@ def call(def jenkins) {
                         if (!filesInSecondArchive.contains(it)) {
                             echo "Файл ${it} удален из нового архива"
                             deletedFiles.add("${it}")
+                            report.append("Файл ${it} удален из нового архива\n")
                         }
 
 
@@ -77,13 +82,14 @@ def call(def jenkins) {
                         def changes = compare.whatHasBeenAdded()
                         echo "Filename: ${it}"
                         echo "${changes}"
+                        report.append("${changes}")
                         echo "==============\n"
 
                     }
                 }
                 stage('mail') {
                     emailext( to: 'test@mailhog.local',
-                            body: "${newFiles} \n ${deletedFiles}",
+                            body: "${report}",
                             subject: "Результат сравнения",
                             mimeType: 'text/html',
                             attachmentsPattern: "**/yaml-parse/resources/f*.zip" )
