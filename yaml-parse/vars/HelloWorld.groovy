@@ -51,19 +51,19 @@ def call(def jenkins) {
                         if (filesInFirstArchive.contains(it)) {
                             echo "Файл ${it} существет в двух архивах"
                             files.add("${it}")
-                            report.append("Файл ${it} существет в двух архивах<br>")
+                            report.append("Файл <font color=\"red\">${it}</font> существет в двух архивах<br>")
                         } else {
                             echo "Файл ${it} не существует в старой версии, добавлен в новой"
                             newFiles.add("${it}")
-                            report.append("Файл ${it} не существует в старой версии, добавлен в новой<br>")
+                            report.append("Файл <font color=\"red\">${it}</font> не существует в старой версии, добавлен в новой<br>")
                         }
                     }
 
                     filesInFirstArchive.each {
                         if (!filesInSecondArchive.contains(it)) {
-                            echo "Файл ${it} удален из нового архива"
+                            echo "Файл <font color=\"red\">${it}</font> удален из нового архива"
                             deletedFiles.add("${it}")
-                            report.append("Файл ${it} удален из нового архива<br>")
+                            report.append("Файл <font color=\"red\">${it}</font> удален из нового архива<br>")
                         }
 
 
