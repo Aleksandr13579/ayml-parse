@@ -80,8 +80,9 @@ def call(def jenkins) {
                         echo "==============\n"
 
                     }
-
-
+                }
+                stage('mail') {
+                    mail body: 'dfvdfvfvdvdfvdfvdfvd'
                 }
             } catch (exeption) {
                 throw exeption
