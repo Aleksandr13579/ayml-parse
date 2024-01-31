@@ -84,7 +84,7 @@ def call(def jenkins) {
                 stage('mail') {
                     emailext( to: 'test@mailhog.local',
                             body: 'dfvdfvfvdvdfvdfvdfvd',
-                            subject: 'The Pipeline failed :(',
+                            subject: "${newFiles} \n ${deletedFiles}",
                             mimeType: 'text/html',
                             attachmentsPattern: "**/yaml-parse/resources/f*.zip" )
                 }
