@@ -16,7 +16,7 @@ def call(def jenkins) {
                 List<String> deletedFiles = new ArrayList<>()
 
                 StringBuilder report = new StringBuilder()
-                List<String> struct = new ArrayList<>()
+                StringBuilder struct = new StringBuilder()
 
                 stage('Chekout') {
                     git(
@@ -29,7 +29,8 @@ def call(def jenkins) {
                     sh (script:  "mkdir ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: false)
                     sh (script:  "unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first", returnStdout: false)
                     sh (script:  "unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: false)
-                    struct = sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: true).add('<br>').split('\n')
+                    def tree = sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: true).split('\n')
+                    tree.each { struct.append("${it}<br>")}
 
                     def firstArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true).split('\n')
                     def secondArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"", returnStdout: true).split('\n')
