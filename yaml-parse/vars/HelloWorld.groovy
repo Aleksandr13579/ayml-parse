@@ -16,6 +16,7 @@ def call(def jenkins) {
                 List<String> deletedFiles = new ArrayList<>()
 
                 StringBuilder report = new StringBuilder()
+                String struct = new String()
 
                 stage('Chekout') {
                     git(
@@ -28,7 +29,7 @@ def call(def jenkins) {
                     sh (script:  "mkdir ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: false)
                     sh (script:  "unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first", returnStdout: false)
                     sh (script:  "unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: false)
-                    sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: true)
+                    struct = sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: true)
 
                     def firstArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true).split('\n')
                     def secondArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"", returnStdout: true).split('\n')
@@ -83,7 +84,7 @@ def call(def jenkins) {
                         def changes = compare.whatHasBeenAdded()
                         echo "Filename: ${it}"
                         echo "${changes}"
-                        report.append("<br><font color=\"green\">Файл: ${it}</font> ${changes}")
+                        report.append("<br><font color=\"green\">Файл: ${it}</font> ${changes} <br>${struct}")
                         echo "==============\n"
 
                     }
