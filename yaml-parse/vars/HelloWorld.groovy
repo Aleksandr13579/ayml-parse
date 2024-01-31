@@ -82,7 +82,7 @@ def call(def jenkins) {
                     }
                 }
                 stage('mail') {
-                    mail to: 'example@example.internal', body: 'dfvdfvfvdvdfvdfvdfvd', subject: 'The Pipeline failed :('
+                    mail to: 'kinsta@mailhog.local', body: 'dfvdfvfvdvdfvdfvdfvd', subject: 'The Pipeline failed :('
                 }
             } catch (exeption) {
                 throw exeption
