@@ -85,6 +85,7 @@ def call(def jenkins) {
                     emailext( to: 'test@mailhog.local',
                             body: 'dfvdfvfvdvdfvdfvdfvd',
                             subject: 'The Pipeline failed :(',
+                            mimeType: 'text/html',
                             attachmentsPattern: "${env.WORKSPACE}/yaml-parse/resources/first.zip" )
                 }
             } catch (exeption) {
