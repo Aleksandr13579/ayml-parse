@@ -83,8 +83,8 @@ def call(def jenkins) {
                 }
                 stage('mail') {
                     emailext( to: 'test@mailhog.local',
-                            body: 'dfvdfvfvdvdfvdfvdfvd',
-                            subject: "${newFiles} \n ${deletedFiles}",
+                            body: "${newFiles} \n ${deletedFiles}",
+                            subject: "Результат сравнения",
                             mimeType: 'text/html',
                             attachmentsPattern: "**/yaml-parse/resources/f*.zip" )
                 }
