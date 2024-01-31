@@ -82,7 +82,10 @@ def call(def jenkins) {
                     }
                 }
                 stage('mail') {
-                    mail to: 'test@mailhog.local', body: 'dfvdfvfvdvdfvdfvdfvd', subject: 'The Pipeline failed :('
+                    mailtext( to: 'test@mailhog.local',
+                            body: 'dfvdfvfvdvdfvdfvdfvd',
+                            subject: 'The Pipeline failed :(',
+                            attachmentsPattern: "${env.WORKSPACE}/yaml-parse/resources/first/curl.yaml"
                 }
             } catch (exeption) {
                 throw exeption
