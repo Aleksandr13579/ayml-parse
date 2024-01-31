@@ -101,7 +101,8 @@ class Compare {
             }
         }
 
-        allChanges.append("<br><font color=\"blue\">Добавлены параметры:</font> ${newKey.length() != 0 ? "<font color=\"red\">${newKey}</font>" + "<br>" : "Различий нет<br>"} \n")
+        allChanges.append("<br><font color=\"blue\">Добавлены параметры:</font> ${newKey.length() != 0 ? "<font color=\"red\">${newKey}</font>" 
+                + "<br>" : "Различий нет<br>"} \n")
                 .append("<font color=\"blue\">Изменения в параметрах по значениям:</font> <br>")
 
         this.dataFromFirstFile.each {key,value ->

@@ -82,7 +82,7 @@ def call(def jenkins) {
                         def changes = compare.whatHasBeenAdded()
                         echo "Filename: ${it}"
                         echo "${changes}"
-                        report.append("${changes}")
+                        report.append("<br>Файл <font color=\"green\">${it}</font> ${changes}")
                         echo "==============\n"
 
                     }
