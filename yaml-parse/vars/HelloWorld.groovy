@@ -52,11 +52,9 @@ def call(def jenkins) {
 
                     filesInSecondArchive.each {
                         if (filesInFirstArchive.contains(it)) {
-                            echo "Файл ${it} существет в двух архивах"
                             files.add("${it}")
                             report.append("Файл <font color=\"red\">${it}</font> существет в двух архивах<br>")
                         } else {
-                            echo "Файл ${it} не существует в старой версии, добавлен в новой"
                             newFiles.add("${it}")
                             report.append("Файл <font color=\"red\">${it}</font> не существует в старой версии, добавлен в новой<br>")
                         }
@@ -64,7 +62,6 @@ def call(def jenkins) {
 
                     filesInFirstArchive.each {
                         if (!filesInSecondArchive.contains(it)) {
-                            echo "Файл <font color=\"red\">${it}</font> удален из нового архива"
                             deletedFiles.add("${it}")
                             report.append("Файл <font color=\"red\">${it}</font> удален из нового архива<br>")
                         }
@@ -83,10 +80,7 @@ def call(def jenkins) {
 
                         Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
                         def changes = compare.whatHasBeenAdded()
-                        echo "Filename: ${it}"
-                        echo "${changes}"
                         report.append("<br><font color=\"green\">Файл: ${it}</font> ${changes}")
-                        echo "==============\n"
 
                     }
                 }
@@ -98,7 +92,7 @@ def call(def jenkins) {
                             attachmentsPattern: "**/yaml-parse/resources/f*.zip" )
                 }
             } catch (exeption) {
-                throw exeption
+                throw new Exception(exeption)
             } finally {
                 cleanWs()
             }
