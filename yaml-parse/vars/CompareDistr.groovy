@@ -98,7 +98,7 @@ def call() {
             } catch (exeption) {
                 throw new Exception(exeption)
             } finally {
-
+                cleanWs()
             }
         }
     }
