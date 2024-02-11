@@ -23,6 +23,7 @@ class PDFConverter {
         } catch (Exception e) { e.printStackTrace() }
     }
 
+    @NonCPS
     void fromHtmlToPdfConverter(String htmlFile) {
         pdfDocument.open()
         HtmlConverter.convertToPdf(htmlFile,file)
