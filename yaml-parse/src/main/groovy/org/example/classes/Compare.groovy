@@ -1,7 +1,6 @@
 //package org.example.classes
 package main.groovy.org.example.classes
 
-import main.groovy.org.example.classes.Echo
 
 class Compare {
 

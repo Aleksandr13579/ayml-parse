@@ -2,7 +2,7 @@ import main.groovy.org.example.classes.YamlFile
 import main.groovy.org.example.classes.Compare
 import main.groovy.org.example.classes.PDFConverter
 
-def call(def jenkins) {
+def call() {
 
     node {
         timestamps {
@@ -82,10 +82,11 @@ def call(def jenkins) {
                         def changes = compare.whatHasBeenAdded()
                         report.append("<br><font color=\"green\">Файл: ${it}</font> ${changes}")
 
-                        PDFConverter pdfConverter = new PDFConverter()
-                        pdfConverter.fromHtmlToPdfConverter(report)
 
                     }
+
+                    PDFConverter pdfConverter = new PDFConverter()
+                    pdfConverter.fromHtmlToPdfConverter(report)
                 }
                 stage('mail') {
                     emailext( to: 'test@mailhog.local',
