@@ -82,6 +82,9 @@ def call(def jenkins) {
                         def changes = compare.whatHasBeenAdded()
                         report.append("<br><font color=\"green\">Файл: ${it}</font> ${changes}")
 
+                        PDFConverter pdfConverter = new PDFConverter()
+                        pdfConverter.fromHtmlToPdfConverter(report)
+
                     }
                 }
                 stage('mail') {
@@ -94,7 +97,7 @@ def call(def jenkins) {
             } catch (exeption) {
                 throw new Exception(exeption)
             } finally {
-                cleanWs()
+
             }
         }
     }
