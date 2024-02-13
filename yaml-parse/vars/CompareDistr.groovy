@@ -88,7 +88,7 @@ def call() {
                     }
 
                     PDFConverter pdfConverter = new PDFConverter()
-                    pdfConverter.fromHtmlToPdfConverter(report)
+                    pdfConverter.fromHtmlToPdfConverter(report, 'report.pdf')
                 }
                 stage('mail') {
                     emailext( to: 'test@mailhog.local',
