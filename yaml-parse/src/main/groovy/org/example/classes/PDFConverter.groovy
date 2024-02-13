@@ -8,11 +8,6 @@ import com.itextpdf.kernel.pdf.PdfDocument
 
 class PDFConverter {
 
-    private PdfWriter pdfWriter
-    private PdfDocument pdfDocument
-    private ByteArrayOutputStream baos
-    private OutputStream file
-
     PDFConverter() {
         try {
             this.baos = new ByteArrayOutputStream()
@@ -24,10 +19,15 @@ class PDFConverter {
 
     @NonCPS
     void fromHtmlToPdfConverter(String htmlFile, String fileName = "report.pdf") {
-        file = new FileOutputStream(new File(fileName))
+        this.file = new FileOutputStream(new File(fileName))
         pdfDocument.open()
         HtmlConverter.convertToPdf(htmlFile,file)
         pdfDocument.close()
     }
+
+    private PdfWriter pdfWriter
+    private PdfDocument pdfDocument
+    private ByteArrayOutputStream baos
+    private OutputStream file
 
 }
