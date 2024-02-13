@@ -88,7 +88,7 @@ def call() {
                     }
 
                     PDFConverter pdfConverter = new PDFConverter()
-                    pdfConverter.fromHtmlToPdfConverter(report.toString(), 'report.pdf')
+                    pdfConverter.fromHtmlToPdfConverter(report.toString(), "${env.WORKSPACE}/yaml-parse/resource/report.pdf")
                 }
                 stage('mail') {
                     emailext( to: 'test@mailhog.local',
