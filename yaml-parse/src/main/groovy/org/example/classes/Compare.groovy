@@ -98,7 +98,7 @@ class Compare {
                     differentValue.put(key, this.dataFromSecondFile.get(key))
                 }
             } else {
-                newKey.append('\n' + key)
+                newKey.append("<br>" + key)
             }
         }
 
