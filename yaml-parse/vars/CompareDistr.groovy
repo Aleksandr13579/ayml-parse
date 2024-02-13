@@ -117,7 +117,7 @@ def call() {
                 }
                 stage('mail') {
                     emailext( to: 'test@mailhog.local',
-                            body: "${report}<br>${struct}",
+                            body: "${report}<br>",
                             subject: "Результат сравнения",
                             mimeType: 'text/html',
                             attachmentsPattern: "**/yaml-parse/resources/f*.zip" )
