@@ -36,8 +36,8 @@ def call() {
                             <table width = "100%" border = "1">
                             <colgroup><col span=2 style="background-color:#d6d6d6"></colgroup>
                             <tr><th>Дистрибутив</th><th>Версия</th></tr>
-                            <tr><td>${params.ARCHIVE_1}</td><td>версия</td></tr>
-                            <tr><td>${params.ARCHIVE_2}</td><td>версия</td></tr>
+                            <tr><td><font size="2">${params.ARCHIVE_1}</font></td><td><font size="2">версия</font></td></tr>
+                            <tr><td><font size="2">${params.ARCHIVE_2}</font></td><td><font size="2">версия</font></td></tr>
                             </table><br><br>
                             """
                     )
