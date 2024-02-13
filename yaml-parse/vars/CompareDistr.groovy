@@ -33,7 +33,7 @@ def call() {
                     sh (script:  "unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: false)
 
                     report.append("""
-                            <table>
+                            <table width = "100%" border = "2">
                             <colgroup><col span=2 style="background-color:#d1d1d1"></colgroup>
                             <tr><th>текст заголовка</th><th>текст заголовка</th></tr>
                             <tr><td>данные</td><td>данные</td></tr>
