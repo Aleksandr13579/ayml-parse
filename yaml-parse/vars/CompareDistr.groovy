@@ -1,4 +1,4 @@
-@Grab('com.itextpdf:html2pdf:5.0.0')
+@Grab('com.itextpdf:kernel:7.2.0')
 @Grab('com.itextpdf:html2pdf:5.0.0')
 import main.groovy.org.example.classes.YamlFile
 import main.groovy.org.example.classes.Compare
