@@ -61,6 +61,7 @@ class Compare {
     private void converter(Map<String, ?> yam, Map<String, String> data, String oldKey = "") {
         yam.each { key, value ->
             if (value instanceof Map) {
+                int count = 0
                 if (oldKey != "") {
                     converter(value, data, "${oldKey}.${key}")
                 } else {
@@ -72,7 +73,7 @@ class Compare {
                     if (it instanceof String) {
                         data.put(oldKey + "." + key + "[${count++}]", value.toString())
                     } else {
-                        converter(it, data, "${oldKey}.${key}")
+                        converter(it, data, "${oldKey}.${key}.[${count++}]")
                     }
                 }
             } else {
