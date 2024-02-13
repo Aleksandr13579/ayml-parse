@@ -51,7 +51,7 @@ def call() {
                     tree2.each { structNew.append("${it}")}
 
                     report.append("""
-                            <table width = "50%" border = "1">
+                            <table width = "100%" border = "1">
                             <colgroup><col span=2 style="background-color:#d6d6d6"></colgroup>
                             <tr><th>
                                 <font size="3" face="times new roman">
@@ -89,7 +89,7 @@ def call() {
                     filesInSecondArchive.each {
                         if (filesInFirstArchive.contains(it)) {
                             files.add("${it}")
-                            report.append("Файл <font color=\"#158000\">${it}</font> существет в двух архивах<br>")
+                            report.append("Файл <font color=\"#158000\">${it}</font> существует в двух архивах<br>")
                         } else {
                             newFiles.add("${it}")
                             report.append("Файл <font color=\"#158000\">${it}</font> не существует в старой версии, добавлен в новой<br>")
