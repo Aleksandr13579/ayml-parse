@@ -34,7 +34,7 @@ def call() {
 
                     report.append("""
                             <table width = "100%" border = "1">
-                            <colgroup><col span=2 style="background-color:##dedede"></colgroup>
+                            <colgroup><col span=2 style="background-color:#d6d6d6"></colgroup>
                             <tr><th>Дистрибутив</th><th>Версия</th></tr>
                             <tr><td>${params.ARCHIVE_1}</td><td>версия</td></tr>
                             <tr><td>${params.ARCHIVE_2}</td><td>версия</td></tr>
