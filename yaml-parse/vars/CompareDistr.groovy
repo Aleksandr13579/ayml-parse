@@ -53,8 +53,8 @@ def call() {
                     report.append("""
                             <table width = "100%" border = "1">
                             <colgroup><col span=2 style="background-color:#d6d6d6"></colgroup>
-                            <tr><th><font size="3">Структура ${params.ARCHIVE_1}</font></th><th><font size="3">Структура ${params.ARCHIVE_2}</font></th></tr>
-                            <tr><td><font size="1" face="times new roman">${structOld}</font></td><td><font size="1" face="times new roman">${structNew}</font></td></tr>
+                            <tr><th><font size="3" face="times new roman" >Структура ${params.ARCHIVE_1}</font></th><th><font size="3" face="times new roman">Структура ${params.ARCHIVE_2}</font></th></tr>
+                            <tr><td><font size="1">${structOld}</font></td><td><font size="1">${structNew}</font></td></tr>
                             </table><br><br>
                             """
                     )
