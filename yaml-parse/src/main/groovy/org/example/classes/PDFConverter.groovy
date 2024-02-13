@@ -13,18 +13,18 @@ class PDFConverter {
     private ByteArrayOutputStream baos
     private OutputStream file
 
-    PDFConverter(String fileName = "report.pdf") {
+    PDFConverter() {
         try {
             baos = new ByteArrayOutputStream()
             pdfWriter = new PdfWriter(baos)
             pdfDocument = new PdfDocument(pdfWriter)
             pdfDocument.setDefaultPageSize(new PageSize(PageSize.A4))
-            file = new FileOutputStream(new File(fileName))
         } catch (Exception e) { e.printStackTrace() }
     }
 
     @NonCPS
-    void fromHtmlToPdfConverter(String htmlFile) {
+    void fromHtmlToPdfConverter(String htmlFile, String fileName = "report.pdf") {
+        file = new FileOutputStream(new File(fileName))
         pdfDocument.open()
         HtmlConverter.convertToPdf(htmlFile,file)
         pdfDocument.close()
