@@ -67,9 +67,10 @@ class Compare {
                     converter(value, data, "${key}")
                 }
             } else if (value instanceof ArrayList) {
+                int count = 0
                 value.each {
                     if (it instanceof String) {
-                        data.put(oldKey + "." + key, value.toString())
+                        data.put(oldKey + "." + key + "[${count++}]", value.toString())
                     } else {
                         converter(it, data, "${oldKey}.${key}")
                     }
