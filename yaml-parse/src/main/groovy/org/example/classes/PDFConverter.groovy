@@ -15,10 +15,10 @@ class PDFConverter {
 
     PDFConverter() {
         try {
-            baos = new ByteArrayOutputStream()
-            pdfWriter = new PdfWriter(baos)
-            pdfDocument = new PdfDocument(pdfWriter)
-            pdfDocument.setDefaultPageSize(new PageSize(PageSize.A4))
+            this.baos = new ByteArrayOutputStream()
+            this.pdfWriter = new PdfWriter(baos)
+            this.pdfDocument = new PdfDocument(pdfWriter)
+            this.pdfDocument.setDefaultPageSize(new PageSize(PageSize.A4))
         } catch (Exception e) { e.printStackTrace() }
     }
 
