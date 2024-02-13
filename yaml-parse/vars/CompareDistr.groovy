@@ -31,6 +31,15 @@ def call() {
                     sh (script:  "mkdir ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: false)
                     sh (script:  "unzip ${env.WORKSPACE}/yaml-parse/resources/first.zip -d ${env.WORKSPACE}/yaml-parse/resources/first", returnStdout: false)
                     sh (script:  "unzip ${env.WORKSPACE}/yaml-parse/resources/second.zip -d ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: false)
+
+                    report.append("""
+                            <table>
+                            <tr><th>текст заголовка</th><th>текст заголовка</th></tr>
+                            <tr><td>данные</td><td>данные</td></tr>
+                            </table><br><br>
+                            """
+                    )
+
                     def tree = sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: true).split('\n')
                     tree.each { struct.append("${it}<br>")}
 
@@ -92,14 +101,7 @@ def call() {
                 }
                 stage('mail') {
                     emailext( to: 'test@mailhog.local',
-                            body: """
-                            <table>
-                            <tr><th>Дистрибутив</th><th>вверсия</th></tr>
-                            <tr><td>данные</td><td>данные</td></tr>
-                            <tr><td>данные</td><td>данные</td></tr>
-                            </table><br><br>
-                            ${report}<br>${struct}
-                            """,
+                            body: "${report}<br>${struct}",
                             subject: "Результат сравнения",
                             mimeType: 'text/html',
                             attachmentsPattern: "**/yaml-parse/resources/f*.zip" )
