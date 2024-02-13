@@ -55,17 +55,17 @@ def call() {
                     filesInSecondArchive.each {
                         if (filesInFirstArchive.contains(it)) {
                             files.add("${it}")
-                            report.append("Файл <font color=\"#FFB3B3\">${it}</font> существет в двух архивах<br>")
+                            report.append("Файл <font color=\"#00E64D\">${it}</font> существет в двух архивах<br>")
                         } else {
                             newFiles.add("${it}")
-                            report.append("Файл <font color=\"#FFB3B3\">${it}</font> не существует в старой версии, добавлен в новой<br>")
+                            report.append("Файл <font color=\"#00E64D\">${it}</font> не существует в старой версии, добавлен в новой<br>")
                         }
                     }
 
                     filesInFirstArchive.each {
                         if (!filesInSecondArchive.contains(it)) {
                             deletedFiles.add("${it}")
-                            report.append("Файл <font color=\"#FFB3B3\">${it}</font> удален из нового архива<br>")
+                            report.append("Файл <font color=\"#00E64D\">${it}</font> удален из нового архива<br>")
                         }
 
 
