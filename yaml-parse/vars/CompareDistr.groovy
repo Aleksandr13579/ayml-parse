@@ -45,16 +45,25 @@ def call() {
                     StringBuilder structNew = new StringBuilder()
 
                     def tree1 = sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/first", returnStdout: true).split('\n')
-                    tree1.each { structOld.append("${it}<br>")}
+                    tree1.each { structOld.append("${it}")}
 
                     def tree2 = sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: true).split('\n')
-                    tree2.each { structNew.append("${it}<br>")}
+                    tree2.each { structNew.append("${it}")}
 
                     report.append("""
-                            <table width = "100%" border = "1">
+                            <table width = "50%" border = "1">
                             <colgroup><col span=2 style="background-color:#d6d6d6"></colgroup>
-                            <tr><th><font size="3" face="times new roman" >Структура ${params.ARCHIVE_1}</font></th><th><font size="3" face="times new roman">Структура ${params.ARCHIVE_2}</font></th></tr>
-                            <tr><td><font size="1">${structOld}</font></td><td><font size="1">${structNew}</font></td></tr>
+                            <tr><th>
+                                <font size="3" face="times new roman">
+                                    Структура ${params.ARCHIVE_1}
+                                </font>
+                            </th><th>
+                                <font size="3" face="times new roman">
+                                    Структура ${params.ARCHIVE_2}
+                                </font>
+                            </th></tr>
+                            <tr><td><font size="1">${structOld}</font></td>
+                            <td><font size="1">${structNew}</font></td></tr>
                             </table><br><br>
                             """
                     )
