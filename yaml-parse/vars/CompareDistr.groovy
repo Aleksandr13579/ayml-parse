@@ -18,7 +18,6 @@ def call() {
                 List<String> deletedFiles = new ArrayList<>()
 
                 StringBuilder report = new StringBuilder()
-                StringBuilder struct = new StringBuilder()
 
                 stage('Chekout') {
                     git(
@@ -42,8 +41,23 @@ def call() {
                             """
                     )
 
-                    def tree = sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: true).split('\n')
-                    tree.each { struct.append("${it}<br>")}
+                    StringBuilder structOld = new StringBuilder()
+                    StringBuilder structNew = new StringBuilder()
+
+                    def tree1 = sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/first", returnStdout: true).split('\n')
+                    tree1.each { structOld.append("${it}<br>")}
+
+                    def tree2 = sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: true).split('\n')
+                    tree2.each { structNew.append("${it}<br>")}
+
+                    report.append("""
+                            <table width = "100%" border = "1">
+                            <colgroup><col span=2 style="background-color:#d6d6d6"></colgroup>
+                            <tr><th>Структура ${params.ARCHIVE_1}</th><th>Структура ${params.ARCHIVE_2}</th></tr>
+                            <tr><td><font size="1">${structOld}</font></td><td><font size="1">${structNew}</font></td></tr>
+                            </table><br><br>
+                            """
+                    )
 
                     def firstArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true).split('\n')
                     def secondArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"", returnStdout: true).split('\n')
