@@ -55,17 +55,17 @@ def call() {
                     filesInSecondArchive.each {
                         if (filesInFirstArchive.contains(it)) {
                             files.add("${it}")
-                            report.append("Файл <font color=\"red\">${it}</font> существет в двух архивах<br>")
+                            report.append("Файл <font color=\"#FFB3B3\">${it}</font> существет в двух архивах<br>")
                         } else {
                             newFiles.add("${it}")
-                            report.append("Файл <font color=\"red\">${it}</font> не существует в старой версии, добавлен в новой<br>")
+                            report.append("Файл <font color=\"#FFB3B3\">${it}</font> не существует в старой версии, добавлен в новой<br>")
                         }
                     }
 
                     filesInFirstArchive.each {
                         if (!filesInSecondArchive.contains(it)) {
                             deletedFiles.add("${it}")
-                            report.append("Файл <font color=\"red\">${it}</font> удален из нового архива<br>")
+                            report.append("Файл <font color=\"#FFB3B3\">${it}</font> удален из нового архива<br>")
                         }
 
 
@@ -82,7 +82,7 @@ def call() {
 
                         Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
                         def changes = compare.whatHasBeenAdded()
-                        report.append("<br><font color=\"green\">Файл: ${it}</font> ${changes}")
+                        report.append("<br><font color=\"#CCFFDD\">Файл: ${it}</font> ${changes}")
 
 
                     }

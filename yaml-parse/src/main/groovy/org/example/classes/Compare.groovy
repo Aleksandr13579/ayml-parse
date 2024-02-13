@@ -102,8 +102,8 @@ class Compare {
             }
         }
 
-        allChanges.append("<br><font color=\"blue\">Добавлены параметры:</font> ${newKey.length() != 0 ? "<font color=\"red\">${newKey}</font><br>" : "Различий нет<br>"} \n")
-                .append("<font color=\"blue\">Изменения в параметрах по значениям:</font> <br>")
+        allChanges.append("<br><font color=\"#B3BFFF\">Добавлены параметры:</font> ${newKey.length() != 0 ? "<font color=\"#FFB3B3\">${newKey}</font><br>" : "Различий нет<br>"} \n")
+                .append("<font color=\"#B3BFFF\">Изменения в параметрах по значениям:</font> <br>")
 
         this.dataFromFirstFile.each {key,value ->
             if (!this.dataFromSecondFile.containsKey(key)) {
@@ -113,11 +113,11 @@ class Compare {
 
         if (!differentValue.isEmpty()) {
             differentValue.each {key, value ->
-                allChanges.append("В параметре " + "<font color=\"red\">${key}</font>" + " было "
-                        + "<font color=\"red\">${this.dataFromFirstFile.get(key)}</font>" + " стало " + "<font color=\"red\">${value}</font>" + '<br>')
+                allChanges.append("В параметре " + "<font color=\"#FFB3B3\">${key}</font>" + " было "
+                        + "<font color=\"#FFB3B3\">${this.dataFromFirstFile.get(key)}</font>" + " стало " + "<font color=\"#FFB3B3\">${value}</font>" + '<br>')
             }
         }
-        allChanges.append("${oldKey.size() > 0 ? "<font color=\"blue\"Удалены параметры:</font><br>" : "Удаленных параметров нет<br>"}").append(oldKey)
+        allChanges.append("${oldKey.size() > 0 ? "<font color=\"#B3BFFF\"Удалены параметры:</font><br>" : "Удаленных параметров нет<br>"}").append(oldKey)
 
         return allChanges
     }
