@@ -1,0 +1,78 @@
+/*
+    This file is part of the iText (R) project.
+    Copyright (c) 1998-2023 Apryse Group NV
+    Authors: Apryse Software.
+
+    This program is offered under a commercial and under the AGPL license.
+    For commercial licensing, contact us at https://itextpdf.com/sales.  For AGPL licensing, see below.
+
+    AGPL licensing:
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+package kernel.crypto.securityhandler;
+
+import com.itextpdf.io.source.ByteUtils;
+import com.itextpdf.io.util.StreamUtil;
+import kernel.pdf.*;
+
+public abstract class StandardSecurityHandler extends SecurityHandler {
+
+    protected static final int PERMS_MASK_1_FOR_REVISION_2 = 0xffffffc0;
+    protected static final int PERMS_MASK_1_FOR_REVISION_3_OR_GREATER = 0xfffff0c0;
+    protected static final int PERMS_MASK_2 = 0xfffffffc;
+
+    protected long permissions;
+    protected boolean usedOwnerPassword = true;
+
+    public long getPermissions() {
+        return permissions;
+    }
+
+    public boolean isUsedOwnerPassword() {
+        return usedOwnerPassword;
+    }
+
+    protected void setStandardHandlerDicEntries(PdfDictionary encryptionDictionary, byte[] userKey, byte[] ownerKey) {
+        encryptionDictionary.put(PdfName.Filter, PdfName.Standard);
+        encryptionDictionary.put(PdfName.O, new PdfLiteral(StreamUtil.createEscapedString(ownerKey)));
+        encryptionDictionary.put(PdfName.U, new PdfLiteral(StreamUtil.createEscapedString(userKey)));
+        encryptionDictionary.put(PdfName.P, new PdfNumber(permissions));
+    }
+
+    protected byte[] generateOwnerPasswordIfNullOrEmpty(byte[] ownerPassword) {
+        if (ownerPassword == null || ownerPassword.length == 0) {
+            ownerPassword = md5.digest(PdfEncryption.generateNewDocumentId());
+        }
+        return ownerPassword;
+    }
+
+    /**
+     * Gets bytes of String-value without considering encoding.
+     *
+     * @param string a {@link PdfString} to get bytes from it
+     * @return byte array
+     */
+    protected byte[] getIsoBytes(PdfString string) {
+        return ByteUtils.getIsoBytes(string.getValue());
+    }
+
+    protected static boolean equalsArray(byte[] ar1, byte[] ar2, int size) {
+        for (int k = 0; k < size; ++k) {
+            if (ar1[k] != ar2[k]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}

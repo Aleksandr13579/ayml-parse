@@ -1,0 +1,66 @@
+/*
+    This file is part of the iText (R) project.
+    Copyright (c) 1998-2023 Apryse Group NV
+    Authors: Apryse Software.
+
+    This program is offered under a commercial and under the AGPL license.
+    For commercial licensing, contact us at https://itextpdf.com/sales.  For AGPL licensing, see below.
+
+    AGPL licensing:
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+package kernel.pdf.canvas.parser.data;
+
+import com.itextpdf.io.logs.IoLogMessageConstant;
+import kernel.pdf.canvas.CanvasGraphicsState;
+
+public class AbstractRenderInfo implements IEventData {
+
+    protected CanvasGraphicsState gs;
+    private boolean graphicsStateIsPreserved;
+
+    public AbstractRenderInfo(CanvasGraphicsState gs) {
+        this.gs = gs;
+    }
+
+    @Override
+    public CanvasGraphicsState getGraphicsState() {
+        checkGraphicsState();
+        return graphicsStateIsPreserved ? gs : new CanvasGraphicsState(gs);
+    }
+
+    public boolean isGraphicsStatePreserved() {
+        return graphicsStateIsPreserved;
+    }
+
+    public void preserveGraphicsState() {
+        checkGraphicsState();
+        this.graphicsStateIsPreserved = true;
+        gs = new CanvasGraphicsState(gs);
+    }
+
+    public void releaseGraphicsState() {
+        if (!graphicsStateIsPreserved) {
+            gs = null;
+        }
+    }
+
+
+    // check if graphics state was released
+    protected void checkGraphicsState() {
+        if (null == gs) {
+            throw new IllegalStateException(IoLogMessageConstant.GRAPHICS_STATE_WAS_DELETED);
+        }
+    }
+}
