@@ -22,17 +22,17 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.io.font.otf.GlyphLine;
-import com.itextpdf.io.logs.IoLogMessageConstant;
-import com.itextpdf.kernel.font.PdfFont;
-import com.itextpdf.layout.layout.LayoutContext;
-import com.itextpdf.layout.layout.LayoutResult;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.layout.renderer.DrawContext;
-import com.itextpdf.layout.renderer.IRenderer;
-import com.itextpdf.layout.renderer.TargetCounterHandler;
-import com.itextpdf.layout.renderer.TextRenderer;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.io.font.otf.GlyphLine;
+import main.groovy.io.logs.IoLogMessageConstant;
+import main.groovy.kernel.font.PdfFont;
+import main.groovy.layout.layout.LayoutContext;
+import main.groovy.layout.layout.LayoutResult;
+import main.groovy.layout.properties.Property;
+import main.groovy.layout.renderer.DrawContext;
+import main.groovy.layout.renderer.IRenderer;
+import main.groovy.layout.renderer.TargetCounterHandler;
+import main.groovy.layout.renderer.TextRenderer;
 import html2pdf.css.page.css.resolve.func.counter.CounterDigitsGlyphStyle;
 import html2pdf.css.page.html.HtmlUtils;
 import html2pdf.css.page.logs.Html2PdfLogMessageConstant;

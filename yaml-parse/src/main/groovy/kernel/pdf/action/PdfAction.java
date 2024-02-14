@@ -22,7 +22,7 @@
  */
 package kernel.pdf.action;
 
-import com.itextpdf.io.logs.IoLogMessageConstant;
+import main.groovy.io.logs.IoLogMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;
 import kernel.pdf.annot.PdfAnnotation;

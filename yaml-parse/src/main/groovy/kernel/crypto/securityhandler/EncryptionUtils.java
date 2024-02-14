@@ -22,14 +22,14 @@
  */
 package kernel.crypto.securityhandler;
 
-import com.itextpdf.bouncycastleconnector.BouncyCastleFactoryCreator;
-import com.itextpdf.commons.bouncycastle.IBouncyCastleFactory;
-import com.itextpdf.commons.bouncycastle.asn1.IASN1InputStream;
-import com.itextpdf.commons.bouncycastle.asn1.IASN1Primitive;
-import com.itextpdf.commons.bouncycastle.asn1.x509.IAlgorithmIdentifier;
-import com.itextpdf.commons.bouncycastle.cert.IX509CertificateHolder;
-import com.itextpdf.commons.bouncycastle.cms.ICMSEnvelopedData;
-import com.itextpdf.commons.bouncycastle.cms.IRecipientInformation;
+import main.groovy.bouncycastleconnector.BouncyCastleFactoryCreator;
+import main.groovy.commons.bouncycastle.IBouncyCastleFactory;
+import main.groovy.commons.bouncycastle.asn1.IASN1InputStream;
+import main.groovy.commons.bouncycastle.asn1.IASN1Primitive;
+import main.groovy.commons.bouncycastle.asn1.x509.IAlgorithmIdentifier;
+import main.groovy.commons.bouncycastle.cert.IX509CertificateHolder;
+import main.groovy.commons.bouncycastle.cms.ICMSEnvelopedData;
+import main.groovy.commons.bouncycastle.cms.IRecipientInformation;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.PdfArray;

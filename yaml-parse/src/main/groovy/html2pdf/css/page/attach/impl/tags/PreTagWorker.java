@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 
@@ -45,7 +45,7 @@ public class PreTagWorker extends DivTagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.impl.tags.DivTagWorker#processContent(java.lang.String, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.impl.tags.DivTagWorker#processContent(java.lang.String, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processContent(String content, ProcessorContext context) {
@@ -60,7 +60,7 @@ public class PreTagWorker extends DivTagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.impl.tags.DivTagWorker#processTagChild(com.itextpdf.html2pdf.attach.ITagWorker, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.impl.tags.DivTagWorker#processTagChild(main.groovy.html2pdf.attach.ITagWorker, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processTagChild(ITagWorker childTagWorker, ProcessorContext context) {

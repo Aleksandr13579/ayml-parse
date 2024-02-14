@@ -22,11 +22,11 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.kernel.pdf.tagging.StandardRoles;
-import com.itextpdf.layout.element.Div;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.styledxmlparser.node.IElementNode;
-import com.itextpdf.styledxmlparser.resolver.resource.UriResolver;
+import main.groovy.kernel.pdf.tagging.StandardRoles;
+import main.groovy.layout.element.Div;
+import main.groovy.layout.properties.Property;
+import main.groovy.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.resolver.resource.UriResolver;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.util.LinkHelper;
 import html2pdf.css.page.html.AttributeConstants;
@@ -49,7 +49,7 @@ public class ABlockTagWorker extends DivTagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.impl.tags.DivTagWorker#processEnd(com.itextpdf.html2pdf.html.node.IElementNode, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.impl.tags.DivTagWorker#processEnd(main.groovy.html2pdf.html.node.IElementNode, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public void processEnd(IElementNode element, ProcessorContext context) {

@@ -22,8 +22,8 @@
  */
 package html2pdf.css.page.css.resolve.func.counter;
 
-import com.itextpdf.styledxmlparser.node.INode;
-import com.itextpdf.styledxmlparser.node.impl.jsoup.node.JsoupElementNode;
+import main.groovy.styledxmlparser.node.INode;
+import main.groovy.styledxmlparser.node.impl.jsoup.node.JsoupElementNode;
 
 /**
  * {@link JsoupElementNode} implementation for page target-counters.

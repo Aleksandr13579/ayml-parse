@@ -22,7 +22,7 @@
  */
 package kernel.pdf.canvas.parser.data;
 
-import com.itextpdf.kernel.pdf.canvas.PdfCanvasConstants.FillingRule;
+import main.groovy.kernel.pdf.canvas.PdfCanvasConstants.FillingRule;
 import kernel.colors.Color;
 import kernel.geom.Matrix;
 import kernel.geom.Path;

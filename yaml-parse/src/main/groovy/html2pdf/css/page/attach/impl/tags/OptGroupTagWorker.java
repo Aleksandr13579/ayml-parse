@@ -22,14 +22,14 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.forms.form.FormProperty;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.Div;
-import com.itextpdf.layout.element.Paragraph;
-import com.itextpdf.layout.properties.OverflowPropertyValue;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.layout.tagging.IAccessibleElement;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.forms.form.FormProperty;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.Div;
+import main.groovy.layout.element.Paragraph;
+import main.groovy.layout.properties.OverflowPropertyValue;
+import main.groovy.layout.properties.Property;
+import main.groovy.layout.tagging.IAccessibleElement;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.util.AccessiblePropHelper;
@@ -73,7 +73,7 @@ public class OptGroupTagWorker extends DivTagWorker {
                 String lang = ((IAccessibleElement) propertyContainer).getAccessibilityProperties().getLanguage();
                 AccessiblePropHelper.trySetLangAttribute((Div) childTagWorker.getElementResult(), lang);
             }
-            return addBlockChild((com.itextpdf.layout.element.IElement) element);
+            return addBlockChild((main.groovy.layout.element.IElement) element);
         } else {
             return super.processTagChild(childTagWorker, context);
         }

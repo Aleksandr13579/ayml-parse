@@ -22,28 +22,28 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.kernel.colors.Color;
-import com.itextpdf.kernel.colors.gradients.StrategyBasedLinearGradientBuilder;
-import com.itextpdf.kernel.geom.Rectangle;
-import com.itextpdf.kernel.numbering.AlphabetNumbering;
-import com.itextpdf.kernel.pdf.PdfDocument;
-import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
-import com.itextpdf.kernel.pdf.xobject.PdfFormXObject;
-import com.itextpdf.kernel.pdf.xobject.PdfImageXObject;
-import com.itextpdf.kernel.pdf.xobject.PdfXObject;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.*;
-import com.itextpdf.layout.properties.IListSymbolFactory;
-import com.itextpdf.layout.properties.ListNumberingType;
-import com.itextpdf.layout.properties.ListSymbolPosition;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.styledxmlparser.css.util.CssDimensionParsingUtils;
-import com.itextpdf.styledxmlparser.css.util.CssGradientUtil;
-import com.itextpdf.styledxmlparser.css.util.CssUtils;
-import com.itextpdf.styledxmlparser.exceptions.StyledXMLParserException;
-import com.itextpdf.styledxmlparser.node.IElementNode;
-import com.itextpdf.styledxmlparser.node.IStylesContainer;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.kernel.colors.Color;
+import main.groovy.kernel.colors.gradients.StrategyBasedLinearGradientBuilder;
+import main.groovy.kernel.geom.Rectangle;
+import main.groovy.kernel.numbering.AlphabetNumbering;
+import main.groovy.kernel.pdf.PdfDocument;
+import main.groovy.kernel.pdf.canvas.PdfCanvas;
+import main.groovy.kernel.pdf.xobject.PdfFormXObject;
+import main.groovy.kernel.pdf.xobject.PdfImageXObject;
+import main.groovy.kernel.pdf.xobject.PdfXObject;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.*;
+import main.groovy.layout.properties.IListSymbolFactory;
+import main.groovy.layout.properties.ListNumberingType;
+import main.groovy.layout.properties.ListSymbolPosition;
+import main.groovy.layout.properties.Property;
+import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
+import main.groovy.styledxmlparser.css.util.CssGradientUtil;
+import main.groovy.styledxmlparser.css.util.CssUtils;
+import main.groovy.styledxmlparser.exceptions.StyledXMLParserException;
+import main.groovy.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.node.IStylesContainer;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.html.TagConstants;
@@ -303,7 +303,7 @@ public final class ListStyleApplierUtil {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.layout.property.IListSymbolFactory#createSymbol(int, com.itextpdf.layout.IPropertyContainer, com.itextpdf.layout.IPropertyContainer)
+         * @see main.groovy.layout.property.IListSymbolFactory#createSymbol(int, main.groovy.layout.IPropertyContainer, main.groovy.layout.IPropertyContainer)
          */
         @Override
         public IElement createSymbol(int index, IPropertyContainer list, IPropertyContainer listItem) {

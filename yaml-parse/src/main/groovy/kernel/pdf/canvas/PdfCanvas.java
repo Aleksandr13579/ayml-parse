@@ -22,15 +22,15 @@
  */
 package kernel.pdf.canvas;
 
-import com.itextpdf.io.font.FontProgram;
-import com.itextpdf.io.font.PdfEncodings;
-import com.itextpdf.io.font.otf.ActualTextIterator;
-import com.itextpdf.io.font.otf.Glyph;
-import com.itextpdf.io.font.otf.GlyphLine;
-import com.itextpdf.io.image.ImageData;
-import com.itextpdf.io.image.ImageType;
-import com.itextpdf.io.source.ByteUtils;
-import com.itextpdf.io.util.StreamUtil;
+import main.groovy.io.font.FontProgram;
+import main.groovy.io.font.PdfEncodings;
+import main.groovy.io.font.otf.ActualTextIterator;
+import main.groovy.io.font.otf.Glyph;
+import main.groovy.io.font.otf.GlyphLine;
+import main.groovy.io.image.ImageData;
+import main.groovy.io.image.ImageType;
+import main.groovy.io.source.ByteUtils;
+import main.groovy.io.util.StreamUtil;
 import kernel.colors.Color;
 import kernel.colors.DeviceGray;
 import kernel.colors.PatternColor;

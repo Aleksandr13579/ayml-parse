@@ -22,12 +22,12 @@
  */
 package kernel.pdf.canvas.wmf;
 
-import com.itextpdf.io.font.FontProgram;
-import com.itextpdf.io.font.PdfEncodings;
-import com.itextpdf.io.image.ImageData;
-import com.itextpdf.io.image.ImageDataFactory;
-import com.itextpdf.io.image.ImageType;
-import com.itextpdf.kernel.font.PdfFontFactory.EmbeddingStrategy;
+import main.groovy.io.font.FontProgram;
+import main.groovy.io.font.PdfEncodings;
+import main.groovy.io.image.ImageData;
+import main.groovy.io.image.ImageDataFactory;
+import main.groovy.io.image.ImageType;
+import main.groovy.kernel.font.PdfFontFactory.EmbeddingStrategy;
 import kernel.colors.Color;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;

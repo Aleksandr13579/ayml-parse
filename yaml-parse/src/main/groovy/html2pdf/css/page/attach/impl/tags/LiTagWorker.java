@@ -22,12 +22,12 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.*;
-import com.itextpdf.layout.properties.ListSymbolPosition;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.styledxmlparser.css.util.CssDimensionParsingUtils;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.*;
+import main.groovy.layout.properties.ListSymbolPosition;
+import main.groovy.layout.properties.Property;
+import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.util.AccessiblePropHelper;
@@ -86,7 +86,7 @@ public class LiTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#processEnd(com.itextpdf.html2pdf.html.node.IElementNode, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.ITagWorker#processEnd(main.groovy.html2pdf.html.node.IElementNode, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public void processEnd(IElementNode element, ProcessorContext context) {
@@ -94,7 +94,7 @@ public class LiTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#processContent(java.lang.String, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.ITagWorker#processContent(java.lang.String, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processContent(String content, ProcessorContext context) {
@@ -103,7 +103,7 @@ public class LiTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#processTagChild(com.itextpdf.html2pdf.attach.ITagWorker, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.ITagWorker#processTagChild(main.groovy.html2pdf.attach.ITagWorker, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processTagChild(ITagWorker childTagWorker, ProcessorContext context) {
@@ -135,7 +135,7 @@ public class LiTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#getElementResult()
+     * @see main.groovy.html2pdf.attach.ITagWorker#getElementResult()
      */
     @Override
     public IPropertyContainer getElementResult() {

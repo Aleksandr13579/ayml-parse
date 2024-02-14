@@ -22,13 +22,13 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.IBlockElement;
-import com.itextpdf.layout.element.Image;
-import com.itextpdf.layout.properties.HorizontalAlignment;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.layout.properties.UnitValue;
-import com.itextpdf.styledxmlparser.css.util.CssDimensionParsingUtils;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.IBlockElement;
+import main.groovy.layout.element.Image;
+import main.groovy.layout.properties.HorizontalAlignment;
+import main.groovy.layout.properties.Property;
+import main.groovy.layout.properties.UnitValue;
+import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.logs.Html2PdfLogMessageConstant;

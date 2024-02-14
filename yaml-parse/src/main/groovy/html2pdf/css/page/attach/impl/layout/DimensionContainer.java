@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import com.itextpdf.layout.properties.UnitValue;
-import com.itextpdf.styledxmlparser.css.CssContextNode;
-import com.itextpdf.styledxmlparser.css.util.CssDimensionParsingUtils;
+import main.groovy.layout.properties.UnitValue;
+import main.groovy.styledxmlparser.css.CssContextNode;
+import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
 import html2pdf.css.page.css.CssConstants;
 
 /**

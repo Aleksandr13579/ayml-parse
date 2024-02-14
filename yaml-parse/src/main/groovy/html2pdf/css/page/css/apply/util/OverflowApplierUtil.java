@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.properties.OverflowPropertyValue;
-import com.itextpdf.layout.properties.Property;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.properties.OverflowPropertyValue;
+import main.groovy.layout.properties.Property;
 import html2pdf.css.page.css.CssConstants;
 
 import java.util.Map;

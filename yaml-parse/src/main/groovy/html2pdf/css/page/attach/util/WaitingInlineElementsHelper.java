@@ -22,13 +22,13 @@
  */
 package html2pdf.css.page.attach.util;
 
-import com.itextpdf.kernel.pdf.tagging.StandardRoles;
-import com.itextpdf.layout.Document;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.*;
-import com.itextpdf.layout.renderer.FlexContainerRenderer;
-import com.itextpdf.styledxmlparser.css.CommonCssConstants;
-import com.itextpdf.styledxmlparser.util.WhiteSpaceUtil;
+import main.groovy.kernel.pdf.tagging.StandardRoles;
+import main.groovy.layout.Document;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.*;
+import main.groovy.layout.renderer.FlexContainerRenderer;
+import main.groovy.styledxmlparser.css.CommonCssConstants;
+import main.groovy.styledxmlparser.util.WhiteSpaceUtil;
 import html2pdf.css.page.attach.impl.layout.Html2PdfProperty;
 import html2pdf.css.page.attach.impl.layout.RunningElement;
 import html2pdf.css.page.css.CssConstants;
@@ -172,10 +172,10 @@ public class WaitingInlineElementsHelper {
                 ((Div) container).add(p);
             } else if (container instanceof Cell) {
                 ((Cell) container).add(p);
-            } else if (container instanceof com.itextpdf.layout.element.List) {
+            } else if (container instanceof main.groovy.layout.element.List) {
                 ListItem li = new ListItem();
                 li.add(p);
-                ((com.itextpdf.layout.element.List) container).add(li);
+                ((main.groovy.layout.element.List) container).add(li);
             } else {
                 throw new IllegalStateException("Unable to process hanging inline content");
             }

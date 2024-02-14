@@ -22,14 +22,14 @@
  */
 package html2pdf.css.page.css.util;
 
-import com.itextpdf.styledxmlparser.css.CssDeclaration;
-import com.itextpdf.styledxmlparser.css.CssRuleSet;
-import com.itextpdf.styledxmlparser.css.CssStatement;
-import com.itextpdf.styledxmlparser.css.CssStyleSheet;
-import com.itextpdf.styledxmlparser.css.media.CssMediaRule;
-import com.itextpdf.styledxmlparser.css.page.CssMarginRule;
-import com.itextpdf.styledxmlparser.css.page.CssPageRule;
-import com.itextpdf.styledxmlparser.css.parse.CssDeclarationValueTokenizer;
+import main.groovy.styledxmlparser.css.CssDeclaration;
+import main.groovy.styledxmlparser.css.CssRuleSet;
+import main.groovy.styledxmlparser.css.CssStatement;
+import main.groovy.styledxmlparser.css.CssStyleSheet;
+import main.groovy.styledxmlparser.css.media.CssMediaRule;
+import main.groovy.styledxmlparser.css.page.CssMarginRule;
+import main.groovy.styledxmlparser.css.page.CssPageRule;
+import main.groovy.styledxmlparser.css.parse.CssDeclarationValueTokenizer;
 import html2pdf.css.page.css.CssConstants;
 
 import java.util.Collection;

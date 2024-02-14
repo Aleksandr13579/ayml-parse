@@ -22,10 +22,10 @@
  */
 package io.image;
 
-import com.itextpdf.io.codec.CCITTG4Encoder;
-import com.itextpdf.io.codec.TIFFFaxDecoder;
-import com.itextpdf.io.exceptions.IOException;
-import com.itextpdf.io.exceptions.IoExceptionMessageConstant;
+import main.groovy.io.codec.CCITTG4Encoder;
+import main.groovy.io.codec.TIFFFaxDecoder;
+import main.groovy.io.exceptions.IOException;
+import main.groovy.io.exceptions.IoExceptionMessageConstant;
 
 import java.util.HashMap;
 import java.util.Map;

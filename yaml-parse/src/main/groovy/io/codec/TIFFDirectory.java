@@ -45,7 +45,7 @@
 */
 package io.codec;
 
-import com.itextpdf.io.source.RandomAccessFileOrArray;
+import main.groovy.io.source.RandomAccessFileOrArray;
 import io.exceptions.IOException;
 import io.exceptions.IoExceptionMessageConstant;
 

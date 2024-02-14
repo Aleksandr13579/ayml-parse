@@ -22,8 +22,8 @@
  */
 package kernel.crypto.securityhandler;
 
-import com.itextpdf.io.logs.IoLogMessageConstant;
-import com.itextpdf.io.util.StreamUtil;
+import main.groovy.io.logs.IoLogMessageConstant;
+import main.groovy.io.util.StreamUtil;
 import kernel.crypto.*;
 import kernel.exceptions.BadPasswordException;
 import kernel.exceptions.KernelExceptionMessageConstant;

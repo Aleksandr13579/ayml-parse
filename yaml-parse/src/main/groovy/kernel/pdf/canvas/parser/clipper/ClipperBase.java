@@ -31,7 +31,7 @@
  */
 package kernel.pdf.canvas.parser.clipper;
 
-import com.itextpdf.kernel.pdf.canvas.parser.clipper.Point.LongPoint;
+import main.groovy.kernel.pdf.canvas.parser.clipper.Point.LongPoint;
 
 import java.util.ArrayList;
 import java.util.List;

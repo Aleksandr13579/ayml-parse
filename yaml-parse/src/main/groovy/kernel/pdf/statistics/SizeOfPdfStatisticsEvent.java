@@ -22,9 +22,9 @@
  */
 package kernel.pdf.statistics;
 
-import com.itextpdf.commons.actions.AbstractStatisticsAggregator;
-import com.itextpdf.commons.actions.AbstractStatisticsEvent;
-import com.itextpdf.commons.actions.data.ProductData;
+import main.groovy.commons.actions.AbstractStatisticsAggregator;
+import main.groovy.commons.actions.AbstractStatisticsEvent;
+import main.groovy.commons.actions.data.ProductData;
 import kernel.exceptions.KernelExceptionMessageConstant;
 
 import java.util.Collections;

@@ -22,8 +22,8 @@
  */
 package io.codec;
 
-import com.itextpdf.io.source.ByteUtils;
-import com.itextpdf.io.source.DeflaterOutputStream;
+import main.groovy.io.source.ByteUtils;
+import main.groovy.io.source.DeflaterOutputStream;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

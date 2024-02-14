@@ -22,17 +22,17 @@
  */
 package kernel.actions.events;
 
-import com.itextpdf.commons.actions.AbstractITextConfigurationEvent;
-import com.itextpdf.commons.actions.AbstractProductProcessITextEvent;
-import com.itextpdf.commons.actions.EventManager;
-import com.itextpdf.commons.actions.confirmations.ConfirmEvent;
-import com.itextpdf.commons.actions.confirmations.ConfirmedEventWrapper;
-import com.itextpdf.commons.actions.confirmations.EventConfirmationType;
-import com.itextpdf.commons.actions.data.ProductData;
-import com.itextpdf.commons.actions.processors.ITextProductEventProcessor;
-import com.itextpdf.commons.actions.producer.ProducerBuilder;
-import com.itextpdf.commons.actions.sequence.SequenceId;
-import com.itextpdf.commons.utils.MessageFormatUtil;
+import main.groovy.commons.actions.AbstractITextConfigurationEvent;
+import main.groovy.commons.actions.AbstractProductProcessITextEvent;
+import main.groovy.commons.actions.EventManager;
+import main.groovy.commons.actions.confirmations.ConfirmEvent;
+import main.groovy.commons.actions.confirmations.ConfirmedEventWrapper;
+import main.groovy.commons.actions.confirmations.EventConfirmationType;
+import main.groovy.commons.actions.data.ProductData;
+import main.groovy.commons.actions.processors.ITextProductEventProcessor;
+import main.groovy.commons.actions.producer.ProducerBuilder;
+import main.groovy.commons.actions.sequence.SequenceId;
+import main.groovy.commons.utils.MessageFormatUtil;
 import kernel.actions.data.ITextCoreProductData;
 import kernel.logs.KernelLogMessageConstant;
 import kernel.pdf.PdfDocument;

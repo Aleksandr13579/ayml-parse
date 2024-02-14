@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
+import main.groovy.commons.utils.MessageFormatUtil;
 
 import java.util.ArrayList;
 import java.util.List;

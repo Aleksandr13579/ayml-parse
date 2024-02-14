@@ -22,18 +22,18 @@
  */
 package html2pdf.css.page.util;
 
-import com.itextpdf.kernel.geom.Rectangle;
-import com.itextpdf.kernel.pdf.PdfDocument;
-import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
-import com.itextpdf.kernel.pdf.xobject.PdfFormXObject;
-import com.itextpdf.layout.element.Image;
-import com.itextpdf.styledxmlparser.resolver.resource.ResourceResolver;
-import com.itextpdf.svg.converter.SvgConverter;
-import com.itextpdf.svg.processors.ISvgProcessorResult;
-import com.itextpdf.svg.processors.impl.SvgProcessorResult;
-import com.itextpdf.svg.renderers.ISvgNodeRenderer;
-import com.itextpdf.svg.renderers.SvgDrawContext;
-import com.itextpdf.svg.renderers.impl.PdfRootSvgNodeRenderer;
+import main.groovy.kernel.geom.Rectangle;
+import main.groovy.kernel.pdf.PdfDocument;
+import main.groovy.kernel.pdf.canvas.PdfCanvas;
+import main.groovy.kernel.pdf.xobject.PdfFormXObject;
+import main.groovy.layout.element.Image;
+import main.groovy.styledxmlparser.resolver.resource.ResourceResolver;
+import main.groovy.svg.converter.SvgConverter;
+import main.groovy.svg.processors.ISvgProcessorResult;
+import main.groovy.svg.processors.impl.SvgProcessorResult;
+import main.groovy.svg.renderers.ISvgNodeRenderer;
+import main.groovy.svg.renderers.SvgDrawContext;
+import main.groovy.svg.renderers.impl.PdfRootSvgNodeRenderer;
 
 /**
  * Utility class for handling operations related to SVG

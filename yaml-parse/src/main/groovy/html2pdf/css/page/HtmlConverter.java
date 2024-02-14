@@ -22,20 +22,20 @@
  */
 package html2pdf.css.page;
 
-import com.itextpdf.commons.actions.contexts.IMetaInfo;
-import com.itextpdf.commons.utils.FileUtil;
-import com.itextpdf.html2pdf.attach.Attacher;
-import com.itextpdf.html2pdf.exceptions.Html2PdfException;
-import com.itextpdf.kernel.pdf.DocumentProperties;
-import com.itextpdf.kernel.pdf.PdfDocument;
-import com.itextpdf.kernel.pdf.PdfWriter;
-import com.itextpdf.layout.Document;
-import com.itextpdf.layout.element.IElement;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.layout.renderer.MetaInfoContainer;
-import com.itextpdf.styledxmlparser.IXmlParser;
-import com.itextpdf.styledxmlparser.node.IDocumentNode;
-import com.itextpdf.styledxmlparser.node.impl.jsoup.JsoupHtmlParser;
+import main.groovy.commons.actions.contexts.IMetaInfo;
+import main.groovy.commons.utils.FileUtil;
+import main.groovy.html2pdf.attach.Attacher;
+import main.groovy.html2pdf.exceptions.Html2PdfException;
+import main.groovy.kernel.pdf.DocumentProperties;
+import main.groovy.kernel.pdf.PdfDocument;
+import main.groovy.kernel.pdf.PdfWriter;
+import main.groovy.layout.Document;
+import main.groovy.layout.element.IElement;
+import main.groovy.layout.properties.Property;
+import main.groovy.layout.renderer.MetaInfoContainer;
+import main.groovy.styledxmlparser.IXmlParser;
+import main.groovy.styledxmlparser.node.IDocumentNode;
+import main.groovy.styledxmlparser.node.impl.jsoup.JsoupHtmlParser;
 
 import java.io.*;
 import java.util.List;

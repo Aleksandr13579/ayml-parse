@@ -22,9 +22,9 @@
  */
 package kernel.font;
 
-import com.itextpdf.io.font.*;
-import com.itextpdf.io.font.constants.StandardFonts;
-import com.itextpdf.io.font.otf.Glyph;
+import main.groovy.io.font.*;
+import main.groovy.io.font.constants.StandardFonts;
+import main.groovy.io.font.otf.Glyph;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.PdfDictionary;

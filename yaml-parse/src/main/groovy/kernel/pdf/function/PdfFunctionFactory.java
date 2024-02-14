@@ -22,7 +22,7 @@
  */
 package kernel.pdf.function;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
+import main.groovy.commons.utils.MessageFormatUtil;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.PdfDictionary;

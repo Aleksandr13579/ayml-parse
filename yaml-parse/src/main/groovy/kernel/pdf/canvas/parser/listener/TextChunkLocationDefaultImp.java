@@ -22,7 +22,7 @@
  */
 package kernel.pdf.canvas.parser.listener;
 
-import com.itextpdf.io.font.FontProgram;
+import main.groovy.io.font.FontProgram;
 import kernel.geom.LineSegment;
 import kernel.geom.Vector;
 

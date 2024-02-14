@@ -22,16 +22,16 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.forms.form.FormProperty;
-import com.itextpdf.forms.form.element.Button;
-import com.itextpdf.forms.form.element.IFormField;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.Div;
-import com.itextpdf.layout.element.IBlockElement;
-import com.itextpdf.layout.element.IElement;
-import com.itextpdf.layout.element.Image;
-import com.itextpdf.layout.tagging.IAccessibleElement;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.forms.form.FormProperty;
+import main.groovy.forms.form.element.Button;
+import main.groovy.forms.form.element.IFormField;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.Div;
+import main.groovy.layout.element.IBlockElement;
+import main.groovy.layout.element.IElement;
+import main.groovy.layout.element.Image;
+import main.groovy.layout.tagging.IAccessibleElement;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.util.AccessiblePropHelper;
@@ -78,7 +78,7 @@ public class ButtonTagWorker extends DivTagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#processContent(java.lang.String, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.ITagWorker#processContent(java.lang.String, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processContent(String content, ProcessorContext context) {
@@ -87,7 +87,7 @@ public class ButtonTagWorker extends DivTagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#processTagChild(com.itextpdf.html2pdf.attach.ITagWorker, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.ITagWorker#processTagChild(main.groovy.html2pdf.attach.ITagWorker, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processTagChild(ITagWorker childTagWorker, ProcessorContext context) {
@@ -96,7 +96,7 @@ public class ButtonTagWorker extends DivTagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#getElementResult()
+     * @see main.groovy.html2pdf.attach.ITagWorker#getElementResult()
      */
     @Override
     public IPropertyContainer getElementResult() {

@@ -23,7 +23,7 @@
 package io.source;
 
 
-import com.itextpdf.io.exceptions.IoExceptionMessageConstant;
+import main.groovy.io.exceptions.IoExceptionMessageConstant;
 
 /**
  * A RandomAccessSource that is based on an underlying byte array

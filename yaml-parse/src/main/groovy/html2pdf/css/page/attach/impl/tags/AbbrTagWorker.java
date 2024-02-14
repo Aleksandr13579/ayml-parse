@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.Text;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.Text;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.html.AttributeConstants;
 
@@ -44,7 +44,7 @@ public class AbbrTagWorker extends SpanTagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.impl.tags.SpanTagWorker#processContent(java.lang.String, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.impl.tags.SpanTagWorker#processContent(java.lang.String, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processContent(String content, ProcessorContext context) {
@@ -52,7 +52,7 @@ public class AbbrTagWorker extends SpanTagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.impl.tags.SpanTagWorker#processEnd(com.itextpdf.html2pdf.html.node.IElementNode, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.impl.tags.SpanTagWorker#processEnd(main.groovy.html2pdf.html.node.IElementNode, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public void processEnd(IElementNode element, ProcessorContext context) {

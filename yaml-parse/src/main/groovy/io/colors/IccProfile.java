@@ -22,8 +22,8 @@
  */
 package io.colors;
 
-import com.itextpdf.io.source.RandomAccessFileOrArray;
-import com.itextpdf.io.source.RandomAccessSourceFactory;
+import main.groovy.io.source.RandomAccessFileOrArray;
+import main.groovy.io.source.RandomAccessSourceFactory;
 import io.exceptions.IOException;
 import io.exceptions.IoExceptionMessageConstant;
 

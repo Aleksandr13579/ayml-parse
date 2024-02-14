@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.commons.actions.data.ProductData;
+import main.groovy.commons.actions.data.ProductData;
 
 import java.util.Collection;
 import java.util.Collections;

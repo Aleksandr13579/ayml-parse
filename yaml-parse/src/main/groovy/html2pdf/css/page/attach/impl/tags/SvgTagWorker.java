@@ -22,15 +22,15 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.html2pdf.util.SvgProcessingUtil;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.Image;
-import com.itextpdf.styledxmlparser.node.IElementNode;
-import com.itextpdf.styledxmlparser.node.INode;
-import com.itextpdf.svg.exceptions.SvgProcessingException;
-import com.itextpdf.svg.processors.ISvgProcessorResult;
-import com.itextpdf.svg.processors.impl.DefaultSvgProcessor;
-import com.itextpdf.svg.processors.impl.SvgConverterProperties;
+import main.groovy.html2pdf.util.SvgProcessingUtil;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.Image;
+import main.groovy.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.node.INode;
+import main.groovy.svg.exceptions.SvgProcessingException;
+import main.groovy.svg.processors.ISvgProcessorResult;
+import main.groovy.svg.processors.impl.DefaultSvgProcessor;
+import main.groovy.svg.processors.impl.SvgConverterProperties;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.util.AccessiblePropHelper;

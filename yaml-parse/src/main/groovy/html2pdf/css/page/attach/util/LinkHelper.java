@@ -22,18 +22,18 @@
  */
 package html2pdf.css.page.attach.util;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.kernel.geom.Rectangle;
-import com.itextpdf.kernel.pdf.PdfArray;
-import com.itextpdf.kernel.pdf.action.PdfAction;
-import com.itextpdf.kernel.pdf.annot.PdfAnnotation;
-import com.itextpdf.kernel.pdf.annot.PdfLinkAnnotation;
-import com.itextpdf.kernel.pdf.tagging.StandardRoles;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.ILeafElement;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.layout.tagging.IAccessibleElement;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.kernel.geom.Rectangle;
+import main.groovy.kernel.pdf.PdfArray;
+import main.groovy.kernel.pdf.action.PdfAction;
+import main.groovy.kernel.pdf.annot.PdfAnnotation;
+import main.groovy.kernel.pdf.annot.PdfLinkAnnotation;
+import main.groovy.kernel.pdf.tagging.StandardRoles;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.ILeafElement;
+import main.groovy.layout.properties.Property;
+import main.groovy.layout.tagging.IAccessibleElement;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.impl.tags.SpanTagWorker;

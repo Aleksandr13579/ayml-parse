@@ -22,15 +22,15 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.IBlockElement;
-import com.itextpdf.layout.element.Text;
-import com.itextpdf.layout.properties.*;
-import com.itextpdf.styledxmlparser.css.util.CssDimensionParsingUtils;
-import com.itextpdf.styledxmlparser.css.util.CssTypesValidationUtils;
-import com.itextpdf.styledxmlparser.node.IElementNode;
-import com.itextpdf.styledxmlparser.node.INode;
-import com.itextpdf.styledxmlparser.node.IStylesContainer;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.IBlockElement;
+import main.groovy.layout.element.Text;
+import main.groovy.layout.properties.*;
+import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
+import main.groovy.styledxmlparser.css.util.CssTypesValidationUtils;
+import main.groovy.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.node.INode;
+import main.groovy.styledxmlparser.node.IStylesContainer;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 

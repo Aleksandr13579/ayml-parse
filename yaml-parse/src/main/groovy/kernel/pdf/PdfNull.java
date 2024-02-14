@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.io.source.ByteUtils;
+import main.groovy.io.source.ByteUtils;
 import kernel.utils.ICopyFilter;
 
 /**

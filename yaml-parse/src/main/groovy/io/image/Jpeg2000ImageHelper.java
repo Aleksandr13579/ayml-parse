@@ -22,8 +22,8 @@
  */
 package io.image;
 
-import com.itextpdf.io.exceptions.IOException;
-import com.itextpdf.io.exceptions.IoExceptionMessageConstant;
+import main.groovy.io.exceptions.IOException;
+import main.groovy.io.exceptions.IoExceptionMessageConstant;
 import io.util.StreamUtil;
 
 import java.io.ByteArrayInputStream;

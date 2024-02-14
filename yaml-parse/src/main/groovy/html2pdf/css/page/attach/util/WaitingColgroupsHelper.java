@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.attach.util;
 
-import com.itextpdf.styledxmlparser.css.util.CssDimensionParsingUtils;
-import com.itextpdf.styledxmlparser.node.IElementNode;
-import com.itextpdf.styledxmlparser.node.INode;
+import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
+import main.groovy.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.node.INode;
 import html2pdf.css.page.attach.wrapelement.ColWrapper;
 import html2pdf.css.page.attach.wrapelement.ColgroupWrapper;
 import html2pdf.css.page.html.AttributeConstants;

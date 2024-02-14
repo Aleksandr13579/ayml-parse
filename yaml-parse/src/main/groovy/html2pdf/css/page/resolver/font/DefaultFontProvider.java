@@ -22,13 +22,13 @@
  */
 package html2pdf.css.page.resolver.font;
 
-import com.itextpdf.html2pdf.logs.Html2PdfLogMessageConstant;
-import com.itextpdf.io.util.ResourceUtil;
-import com.itextpdf.io.util.StreamUtil;
-import com.itextpdf.layout.font.Range;
-import com.itextpdf.layout.font.RangeBuilder;
-import com.itextpdf.layout.renderer.TypographyUtils;
-import com.itextpdf.styledxmlparser.resolver.font.BasicFontProvider;
+import main.groovy.html2pdf.logs.Html2PdfLogMessageConstant;
+import main.groovy.io.util.ResourceUtil;
+import main.groovy.io.util.StreamUtil;
+import main.groovy.layout.font.Range;
+import main.groovy.layout.font.RangeBuilder;
+import main.groovy.layout.renderer.TypographyUtils;
+import main.groovy.styledxmlparser.resolver.font.BasicFontProvider;
 import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;

@@ -31,11 +31,11 @@
  */
 package kernel.pdf.canvas.parser.clipper;
 
-import com.itextpdf.kernel.pdf.canvas.parser.clipper.IClipper.ClipType;
-import com.itextpdf.kernel.pdf.canvas.parser.clipper.IClipper.Direction;
-import com.itextpdf.kernel.pdf.canvas.parser.clipper.IClipper.PolyFillType;
-import com.itextpdf.kernel.pdf.canvas.parser.clipper.IClipper.PolyType;
-import com.itextpdf.kernel.pdf.canvas.parser.clipper.Point.LongPoint;
+import main.groovy.kernel.pdf.canvas.parser.clipper.IClipper.ClipType;
+import main.groovy.kernel.pdf.canvas.parser.clipper.IClipper.Direction;
+import main.groovy.kernel.pdf.canvas.parser.clipper.IClipper.PolyFillType;
+import main.groovy.kernel.pdf.canvas.parser.clipper.IClipper.PolyType;
+import main.groovy.kernel.pdf.canvas.parser.clipper.Point.LongPoint;
 
 import java.math.BigInteger;
 import java.util.logging.Logger;

@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.html;
 
-import com.itextpdf.kernel.numbering.*;
+import main.groovy.kernel.numbering.*;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.css.resolve.func.counter.CounterDigitsGlyphStyle;
 

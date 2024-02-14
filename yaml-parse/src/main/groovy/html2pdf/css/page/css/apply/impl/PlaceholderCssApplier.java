@@ -22,10 +22,10 @@
  */
 package html2pdf.css.page.css.apply.impl;
 
-import com.itextpdf.forms.form.element.IPlaceholderable;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.styledxmlparser.css.pseudo.CssPseudoElementNode;
-import com.itextpdf.styledxmlparser.node.IStylesContainer;
+import main.groovy.forms.form.element.IPlaceholderable;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.styledxmlparser.css.pseudo.CssPseudoElementNode;
+import main.groovy.styledxmlparser.node.IStylesContainer;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.apply.ICssApplier;

@@ -22,12 +22,12 @@
  */
 package html2pdf.css.page.css.resolve;
 
-import com.itextpdf.io.util.ResourceUtil;
-import com.itextpdf.styledxmlparser.css.CssDeclaration;
-import com.itextpdf.styledxmlparser.css.CssStyleSheet;
-import com.itextpdf.styledxmlparser.css.media.MediaDeviceDescription;
-import com.itextpdf.styledxmlparser.css.parse.CssStyleSheetParser;
-import com.itextpdf.styledxmlparser.node.INode;
+import main.groovy.io.util.ResourceUtil;
+import main.groovy.styledxmlparser.css.CssDeclaration;
+import main.groovy.styledxmlparser.css.CssStyleSheet;
+import main.groovy.styledxmlparser.css.media.MediaDeviceDescription;
+import main.groovy.styledxmlparser.css.parse.CssStyleSheetParser;
+import main.groovy.styledxmlparser.node.INode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

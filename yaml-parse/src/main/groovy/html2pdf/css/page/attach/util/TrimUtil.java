@@ -22,14 +22,14 @@
  */
 package html2pdf.css.page.attach.util;
 
-import com.itextpdf.layout.borders.Border;
-import com.itextpdf.layout.element.IElement;
-import com.itextpdf.layout.element.Text;
-import com.itextpdf.layout.layout.LayoutPosition;
-import com.itextpdf.layout.properties.FloatPropertyValue;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.layout.properties.UnitValue;
-import com.itextpdf.styledxmlparser.util.WhiteSpaceUtil;
+import main.groovy.layout.borders.Border;
+import main.groovy.layout.element.IElement;
+import main.groovy.layout.element.Text;
+import main.groovy.layout.layout.LayoutPosition;
+import main.groovy.layout.properties.FloatPropertyValue;
+import main.groovy.layout.properties.Property;
+import main.groovy.layout.properties.UnitValue;
+import main.groovy.styledxmlparser.util.WhiteSpaceUtil;
 import html2pdf.css.page.attach.impl.layout.RunningElement;
 
 import java.util.ArrayList;

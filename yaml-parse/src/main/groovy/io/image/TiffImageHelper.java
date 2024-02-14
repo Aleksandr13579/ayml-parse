@@ -22,11 +22,11 @@
  */
 package io.image;
 
-import com.itextpdf.io.codec.*;
-import com.itextpdf.io.colors.IccProfile;
-import com.itextpdf.io.exceptions.IOException;
-import com.itextpdf.io.exceptions.IoExceptionMessageConstant;
-import com.itextpdf.io.font.PdfEncodings;
+import main.groovy.io.codec.*;
+import main.groovy.io.colors.IccProfile;
+import main.groovy.io.exceptions.IOException;
+import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import main.groovy.io.font.PdfEncodings;
 import io.source.*;
 import io.util.FilterUtil;
 

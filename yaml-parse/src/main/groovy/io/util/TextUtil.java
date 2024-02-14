@@ -22,8 +22,8 @@
  */
 package io.util;
 
-import com.itextpdf.io.font.otf.Glyph;
-import com.itextpdf.io.font.otf.GlyphLine;
+import main.groovy.io.font.otf.Glyph;
+import main.groovy.io.font.otf.GlyphLine;
 
 import java.nio.charset.Charset;
 import java.util.ArrayList;

@@ -22,7 +22,7 @@
  */
 package kernel.utils;
 
-import com.itextpdf.io.exceptions.IoExceptionMessageConstant;
+import main.groovy.io.exceptions.IoExceptionMessageConstant;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;
@@ -163,7 +163,7 @@ public class TaggedPdfReaderTool {
                 out.write(" <flushedKid/> ");
             }
         } catch (IOException e) {
-            throw new com.itextpdf.io.exceptions.IOException(IoExceptionMessageConstant.UNKNOWN_IO_EXCEPTION, e);
+            throw new main.groovy.io.exceptions.IOException(IoExceptionMessageConstant.UNKNOWN_IO_EXCEPTION, e);
         }
     }
 
@@ -187,7 +187,7 @@ public class TaggedPdfReaderTool {
                     out.write("\"");
                 }
             } catch (IOException e) {
-                throw new com.itextpdf.io.exceptions.IOException(IoExceptionMessageConstant.UNKNOWN_IO_EXCEPTION, e);
+                throw new main.groovy.io.exceptions.IOException(IoExceptionMessageConstant.UNKNOWN_IO_EXCEPTION, e);
             }
         }
     }
@@ -222,7 +222,7 @@ public class TaggedPdfReaderTool {
         try {
             out.write(escapeXML(tagContent, true));
         } catch (IOException e) {
-            throw new com.itextpdf.io.exceptions.IOException(IoExceptionMessageConstant.UNKNOWN_IO_EXCEPTION, e);
+            throw new main.groovy.io.exceptions.IOException(IoExceptionMessageConstant.UNKNOWN_IO_EXCEPTION, e);
         }
     }
 

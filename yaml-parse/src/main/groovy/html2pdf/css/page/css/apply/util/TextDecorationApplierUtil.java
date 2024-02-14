@@ -22,8 +22,8 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import com.itextpdf.styledxmlparser.css.CommonCssConstants;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.css.CommonCssConstants;
+import main.groovy.styledxmlparser.node.IElementNode;
 
 import java.util.*;
 

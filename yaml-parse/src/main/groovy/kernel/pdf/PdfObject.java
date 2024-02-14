@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.io.logs.IoLogMessageConstant;
+import main.groovy.io.logs.IoLogMessageConstant;
 import kernel.exceptions.BadPasswordException;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;

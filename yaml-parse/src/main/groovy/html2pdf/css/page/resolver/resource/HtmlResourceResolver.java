@@ -22,17 +22,17 @@
  */
 package html2pdf.css.page.resolver.resource;
 
-import com.itextpdf.commons.utils.Base64;
-import com.itextpdf.commons.utils.FileUtil;
-import com.itextpdf.html2pdf.attach.ProcessorContext;
-import com.itextpdf.html2pdf.attach.util.ContextMappingHelper;
-import com.itextpdf.kernel.pdf.xobject.PdfFormXObject;
-import com.itextpdf.kernel.pdf.xobject.PdfXObject;
-import com.itextpdf.styledxmlparser.resolver.resource.IResourceRetriever;
-import com.itextpdf.styledxmlparser.resolver.resource.ResourceResolver;
-import com.itextpdf.svg.converter.SvgConverter;
-import com.itextpdf.svg.processors.ISvgProcessorResult;
-import com.itextpdf.svg.processors.impl.SvgConverterProperties;
+import main.groovy.commons.utils.Base64;
+import main.groovy.commons.utils.FileUtil;
+import main.groovy.html2pdf.attach.ProcessorContext;
+import main.groovy.html2pdf.attach.util.ContextMappingHelper;
+import main.groovy.kernel.pdf.xobject.PdfFormXObject;
+import main.groovy.kernel.pdf.xobject.PdfXObject;
+import main.groovy.styledxmlparser.resolver.resource.IResourceRetriever;
+import main.groovy.styledxmlparser.resolver.resource.ResourceResolver;
+import main.groovy.svg.converter.SvgConverter;
+import main.groovy.svg.processors.ISvgProcessorResult;
+import main.groovy.svg.processors.impl.SvgConverterProperties;
 import html2pdf.css.page.util.SvgProcessingUtil;
 
 import java.io.ByteArrayInputStream;
@@ -97,7 +97,7 @@ public class HtmlResourceResolver extends ResourceResolver {
     }
 
     /**
-     * Retrieve image as either {@link com.itextpdf.kernel.pdf.xobject.PdfImageXObject}, or {@link PdfFormXObject}.
+     * Retrieve image as either {@link main.groovy.kernel.pdf.xobject.PdfImageXObject}, or {@link PdfFormXObject}.
      *
      * @param src either link to file or base64 encoded stream
      * @return PdfXObject on success, otherwise null

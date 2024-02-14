@@ -22,8 +22,8 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 
@@ -44,7 +44,7 @@ public class LinkTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#processEnd(com.itextpdf.html2pdf.html.node.IElementNode, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.ITagWorker#processEnd(main.groovy.html2pdf.html.node.IElementNode, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public void processEnd(IElementNode element, ProcessorContext context) {
@@ -52,7 +52,7 @@ public class LinkTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#processContent(java.lang.String, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.ITagWorker#processContent(java.lang.String, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processContent(String content, ProcessorContext context) {
@@ -60,7 +60,7 @@ public class LinkTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#processTagChild(com.itextpdf.html2pdf.attach.ITagWorker, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.ITagWorker#processTagChild(main.groovy.html2pdf.attach.ITagWorker, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processTagChild(ITagWorker childTagWorker, ProcessorContext context) {
@@ -68,7 +68,7 @@ public class LinkTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#getElementResult()
+     * @see main.groovy.html2pdf.attach.ITagWorker#getElementResult()
      */
     @Override
     public IPropertyContainer getElementResult() {

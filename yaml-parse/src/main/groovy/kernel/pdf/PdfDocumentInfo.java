@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.io.font.PdfEncodings;
+import main.groovy.io.font.PdfEncodings;
 
 import java.util.Map;
 

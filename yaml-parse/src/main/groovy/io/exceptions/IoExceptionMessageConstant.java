@@ -22,8 +22,8 @@
  */
 package io.exceptions;
 
-import com.itextpdf.io.util.GhostscriptHelper;
-import com.itextpdf.io.util.ImageMagickHelper;
+import main.groovy.io.util.GhostscriptHelper;
+import main.groovy.io.util.ImageMagickHelper;
 
 /**
  * Class containing constants to be used in exceptions in the IO module.

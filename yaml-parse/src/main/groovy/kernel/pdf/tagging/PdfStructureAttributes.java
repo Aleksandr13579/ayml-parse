@@ -22,7 +22,7 @@
  */
 package kernel.pdf.tagging;
 
-import com.itextpdf.io.font.PdfEncodings;
+import main.groovy.io.font.PdfEncodings;
 import kernel.pdf.*;
 
 public class PdfStructureAttributes extends PdfObjectWrapper<PdfDictionary> {

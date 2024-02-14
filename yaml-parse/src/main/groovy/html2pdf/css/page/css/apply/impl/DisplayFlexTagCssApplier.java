@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.css.apply.impl;
 
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.styledxmlparser.node.IStylesContainer;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.properties.Property;
+import main.groovy.styledxmlparser.node.IStylesContainer;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.apply.ICssApplier;

@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.commons.utils.SystemUtil;
+import main.groovy.commons.utils.SystemUtil;
 import kernel.crypto.IDecryptor;
 import kernel.crypto.OutputStreamEncryption;
 import kernel.crypto.securityhandler.*;
@@ -294,7 +294,7 @@ public class PdfEncryption extends PdfObjectWrapper<PdfDictionary> {
             secondId = padByteArrayTo16(secondId);
         }
 
-        com.itextpdf.io.source.ByteBuffer buf = new com.itextpdf.io.source.ByteBuffer(90);
+        main.groovy.io.source.ByteBuffer buf = new main.groovy.io.source.ByteBuffer(90);
         buf.append('[').append('<');
 
         for (int k = 0; k < firstId.length; ++k)

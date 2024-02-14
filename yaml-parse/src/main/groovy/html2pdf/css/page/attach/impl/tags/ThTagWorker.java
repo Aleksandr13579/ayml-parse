@@ -22,15 +22,15 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.kernel.pdf.PdfDictionary;
-import com.itextpdf.kernel.pdf.PdfName;
-import com.itextpdf.kernel.pdf.tagging.PdfStructureAttributes;
-import com.itextpdf.kernel.pdf.tagging.StandardRoles;
-import com.itextpdf.kernel.pdf.tagutils.AccessibilityProperties;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.tagging.IAccessibleElement;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.kernel.pdf.PdfDictionary;
+import main.groovy.kernel.pdf.PdfName;
+import main.groovy.kernel.pdf.tagging.PdfStructureAttributes;
+import main.groovy.kernel.pdf.tagging.StandardRoles;
+import main.groovy.kernel.pdf.tagutils.AccessibilityProperties;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.tagging.IAccessibleElement;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.html.AttributeConstants;
 import html2pdf.css.page.logs.Html2PdfLogMessageConstant;

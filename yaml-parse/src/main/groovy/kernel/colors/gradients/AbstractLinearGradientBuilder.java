@@ -22,9 +22,9 @@
  */
 package kernel.colors.gradients;
 
-import com.itextpdf.io.logs.IoLogMessageConstant;
-import com.itextpdf.kernel.colors.gradients.GradientColorStop.HintOffsetType;
-import com.itextpdf.kernel.colors.gradients.GradientColorStop.OffsetType;
+import main.groovy.io.logs.IoLogMessageConstant;
+import main.groovy.kernel.colors.gradients.GradientColorStop.HintOffsetType;
+import main.groovy.kernel.colors.gradients.GradientColorStop.OffsetType;
 import kernel.colors.Color;
 import kernel.colors.PatternColor;
 import kernel.geom.AffineTransform;

@@ -22,39 +22,39 @@
  */
 package html2pdf.css.page.attach.impl;
 
-import com.itextpdf.commons.actions.EventManager;
-import com.itextpdf.commons.actions.sequence.AbstractIdentifiableElement;
-import com.itextpdf.commons.actions.sequence.SequenceId;
-import com.itextpdf.commons.actions.sequence.SequenceIdManager;
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.forms.form.element.IPlaceholderable;
-import com.itextpdf.html2pdf.ConverterProperties;
-import com.itextpdf.html2pdf.ProcessorContextCreator;
-import com.itextpdf.io.font.FontProgram;
-import com.itextpdf.io.font.FontProgramFactory;
-import com.itextpdf.io.font.PdfEncodings;
-import com.itextpdf.kernel.pdf.PdfDocument;
-import com.itextpdf.layout.Document;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.Div;
-import com.itextpdf.layout.element.IAbstractElement;
-import com.itextpdf.layout.element.IElement;
-import com.itextpdf.layout.font.FontInfo;
-import com.itextpdf.layout.font.Range;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.layout.properties.RenderingMode;
-import com.itextpdf.layout.renderer.DocumentRenderer;
-import com.itextpdf.layout.renderer.MetaInfoContainer;
-import com.itextpdf.styledxmlparser.css.CssDeclaration;
-import com.itextpdf.styledxmlparser.css.CssFontFaceRule;
-import com.itextpdf.styledxmlparser.css.ICssResolver;
-import com.itextpdf.styledxmlparser.css.font.CssFontFace;
-import com.itextpdf.styledxmlparser.css.pseudo.CssPseudoElementNode;
-import com.itextpdf.styledxmlparser.css.pseudo.CssPseudoElementUtil;
-import com.itextpdf.styledxmlparser.node.IElementNode;
-import com.itextpdf.styledxmlparser.node.INode;
-import com.itextpdf.styledxmlparser.node.ITextNode;
-import com.itextpdf.styledxmlparser.util.FontFamilySplitterUtil;
+import main.groovy.commons.actions.EventManager;
+import main.groovy.commons.actions.sequence.AbstractIdentifiableElement;
+import main.groovy.commons.actions.sequence.SequenceId;
+import main.groovy.commons.actions.sequence.SequenceIdManager;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.forms.form.element.IPlaceholderable;
+import main.groovy.html2pdf.ConverterProperties;
+import main.groovy.html2pdf.ProcessorContextCreator;
+import main.groovy.io.font.FontProgram;
+import main.groovy.io.font.FontProgramFactory;
+import main.groovy.io.font.PdfEncodings;
+import main.groovy.kernel.pdf.PdfDocument;
+import main.groovy.layout.Document;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.Div;
+import main.groovy.layout.element.IAbstractElement;
+import main.groovy.layout.element.IElement;
+import main.groovy.layout.font.FontInfo;
+import main.groovy.layout.font.Range;
+import main.groovy.layout.properties.Property;
+import main.groovy.layout.properties.RenderingMode;
+import main.groovy.layout.renderer.DocumentRenderer;
+import main.groovy.layout.renderer.MetaInfoContainer;
+import main.groovy.styledxmlparser.css.CssDeclaration;
+import main.groovy.styledxmlparser.css.CssFontFaceRule;
+import main.groovy.styledxmlparser.css.ICssResolver;
+import main.groovy.styledxmlparser.css.font.CssFontFace;
+import main.groovy.styledxmlparser.css.pseudo.CssPseudoElementNode;
+import main.groovy.styledxmlparser.css.pseudo.CssPseudoElementUtil;
+import main.groovy.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.node.INode;
+import main.groovy.styledxmlparser.node.ITextNode;
+import main.groovy.styledxmlparser.util.FontFamilySplitterUtil;
 import html2pdf.css.page.actions.events.PdfHtmlProductEvent;
 import html2pdf.css.page.attach.IHtmlProcessor;
 import html2pdf.css.page.attach.ITagWorker;
@@ -168,7 +168,7 @@ public class DefaultHtmlProcessor implements IHtmlProcessor {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.IHtmlProcessor#processElements(com.itextpdf.html2pdf.html.node.INode)
+     * @see main.groovy.html2pdf.attach.IHtmlProcessor#processElements(main.groovy.html2pdf.html.node.INode)
      */
     @Override
     public List<IElement> processElements(INode root) {
@@ -209,7 +209,7 @@ public class DefaultHtmlProcessor implements IHtmlProcessor {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.IHtmlProcessor#processDocument(com.itextpdf.html2pdf.html.node.INode, com.itextpdf.kernel.pdf.PdfDocument)
+     * @see main.groovy.html2pdf.attach.IHtmlProcessor#processDocument(main.groovy.html2pdf.html.node.INode, main.groovy.kernel.pdf.PdfDocument)
      */
     @Override
     public Document processDocument(INode root, PdfDocument pdfDocument) {

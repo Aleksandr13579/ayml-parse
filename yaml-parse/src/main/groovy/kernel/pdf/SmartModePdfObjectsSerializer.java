@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.io.source.ByteBuffer;
+import main.groovy.io.source.ByteBuffer;
 import kernel.exceptions.PdfException;
 
 import java.security.MessageDigest;

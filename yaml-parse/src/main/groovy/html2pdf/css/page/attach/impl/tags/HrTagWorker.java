@@ -22,10 +22,10 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.kernel.pdf.tagging.StandardRoles;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.tagging.IAccessibleElement;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.kernel.pdf.tagging.StandardRoles;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.tagging.IAccessibleElement;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ProcessorContext;
 
 /**
@@ -44,7 +44,7 @@ public class HrTagWorker extends DivTagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorker#getElementResult()
+     * @see main.groovy.html2pdf.attach.ITagWorker#getElementResult()
      */
     @Override
     public IPropertyContainer getElementResult() {

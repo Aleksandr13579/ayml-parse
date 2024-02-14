@@ -22,7 +22,7 @@
  */
 package kernel.pdf.layer;
 
-import com.itextpdf.io.font.PdfEncodings;
+import main.groovy.io.font.PdfEncodings;
 import kernel.pdf.*;
 
 import java.util.ArrayList;

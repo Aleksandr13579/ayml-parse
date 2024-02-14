@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.io.font.PdfEncodings;
+import main.groovy.io.font.PdfEncodings;
 import kernel.xmp.*;
 import kernel.xmp.options.PropertyOptions;
 import kernel.xmp.properties.XMPProperty;

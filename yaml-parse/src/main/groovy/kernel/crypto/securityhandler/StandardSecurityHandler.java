@@ -22,8 +22,8 @@
  */
 package kernel.crypto.securityhandler;
 
-import com.itextpdf.io.source.ByteUtils;
-import com.itextpdf.io.util.StreamUtil;
+import main.groovy.io.source.ByteUtils;
+import main.groovy.io.util.StreamUtil;
 import kernel.pdf.*;
 
 public abstract class StandardSecurityHandler extends SecurityHandler {

@@ -22,16 +22,16 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.commons.actions.EventManager;
-import com.itextpdf.commons.actions.confirmations.ConfirmEvent;
-import com.itextpdf.commons.actions.confirmations.EventConfirmationType;
-import com.itextpdf.commons.actions.data.ProductData;
-import com.itextpdf.commons.actions.sequence.SequenceId;
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.io.logs.IoLogMessageConstant;
-import com.itextpdf.io.source.ByteUtils;
-import com.itextpdf.io.source.RandomAccessFileOrArray;
-import com.itextpdf.kernel.pdf.PdfReader.StrictnessLevel;
+import main.groovy.commons.actions.EventManager;
+import main.groovy.commons.actions.confirmations.ConfirmEvent;
+import main.groovy.commons.actions.confirmations.EventConfirmationType;
+import main.groovy.commons.actions.data.ProductData;
+import main.groovy.commons.actions.sequence.SequenceId;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.io.logs.IoLogMessageConstant;
+import main.groovy.io.source.ByteUtils;
+import main.groovy.io.source.RandomAccessFileOrArray;
+import main.groovy.kernel.pdf.PdfReader.StrictnessLevel;
 import kernel.actions.data.ITextCoreProductData;
 import kernel.actions.events.FlushPdfDocumentEvent;
 import kernel.actions.events.ITextCoreProductEvent;

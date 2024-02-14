@@ -3,11 +3,6 @@
 import main.groovy.org.example.classes.YamlFile
 import main.groovy.org.example.classes.Compare
 import main.groovy.org.example.classes.PDFConverter
-import main.groovy.html2pdf.css.page.HtmlConverter
-import main.groovy.io.source.ByteArrayOutputStream
-import main.groovy.kernel.geom.PageSize
-import main.groovy.kernel.pdf.PdfWriter
-import main.groovy.kernel.pdf.PdfDocument
 
 def call() {
 

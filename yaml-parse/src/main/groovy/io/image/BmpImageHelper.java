@@ -22,9 +22,9 @@
  */
 package io.image;
 
-import com.itextpdf.io.exceptions.IOException;
-import com.itextpdf.io.exceptions.IoExceptionMessageConstant;
-import com.itextpdf.io.font.PdfEncodings;
+import main.groovy.io.exceptions.IOException;
+import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import main.groovy.io.font.PdfEncodings;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

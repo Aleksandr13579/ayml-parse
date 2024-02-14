@@ -22,7 +22,7 @@
  */
 package kernel.colors;
 
-import com.itextpdf.io.logs.IoLogMessageConstant;
+import main.groovy.io.logs.IoLogMessageConstant;
 import kernel.pdf.colorspace.PdfDeviceCs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

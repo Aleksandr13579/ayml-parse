@@ -22,9 +22,9 @@
  */
 package io.image;
 
-import com.itextpdf.io.codec.TIFFDirectory;
-import com.itextpdf.io.exceptions.IOException;
-import com.itextpdf.io.exceptions.IoExceptionMessageConstant;
+import main.groovy.io.codec.TIFFDirectory;
+import main.groovy.io.exceptions.IOException;
+import main.groovy.io.exceptions.IoExceptionMessageConstant;
 import io.source.IRandomAccessSource;
 import io.source.RandomAccessFileOrArray;
 import io.source.RandomAccessSourceFactory;

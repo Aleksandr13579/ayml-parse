@@ -22,16 +22,16 @@
  */
 package kernel.font;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.io.font.*;
-import com.itextpdf.io.font.cmap.CMapToUnicode;
-import com.itextpdf.io.font.constants.FontDescriptorFlags;
-import com.itextpdf.io.font.otf.Glyph;
-import com.itextpdf.io.font.otf.GlyphLine;
-import com.itextpdf.io.logs.IoLogMessageConstant;
-import com.itextpdf.io.util.ArrayUtil;
-import com.itextpdf.io.util.StreamUtil;
-import com.itextpdf.io.util.TextUtil;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.io.font.*;
+import main.groovy.io.font.cmap.CMapToUnicode;
+import main.groovy.io.font.constants.FontDescriptorFlags;
+import main.groovy.io.font.otf.Glyph;
+import main.groovy.io.font.otf.GlyphLine;
+import main.groovy.io.logs.IoLogMessageConstant;
+import main.groovy.io.util.ArrayUtil;
+import main.groovy.io.util.StreamUtil;
+import main.groovy.io.util.TextUtil;
 import kernel.pdf.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.css.resolve.func.counter;
 
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.html.AttributeConstants;
 import html2pdf.css.page.html.HtmlUtils;
 

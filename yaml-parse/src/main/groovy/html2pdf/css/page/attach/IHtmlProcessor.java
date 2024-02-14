@@ -22,10 +22,10 @@
  */
 package html2pdf.css.page.attach;
 
-import com.itextpdf.kernel.pdf.PdfDocument;
-import com.itextpdf.layout.Document;
-import com.itextpdf.layout.element.IElement;
-import com.itextpdf.styledxmlparser.node.INode;
+import main.groovy.kernel.pdf.PdfDocument;
+import main.groovy.layout.Document;
+import main.groovy.layout.element.IElement;
+import main.groovy.styledxmlparser.node.INode;
 
 import java.util.List;
 

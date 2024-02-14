@@ -22,10 +22,10 @@
  */
 package io.util;
 
-import com.itextpdf.commons.utils.FileUtil;
-import com.itextpdf.commons.utils.ProcessInfo;
-import com.itextpdf.commons.utils.SystemUtil;
-import com.itextpdf.io.exceptions.IoExceptionMessageConstant;
+import main.groovy.commons.utils.FileUtil;
+import main.groovy.commons.utils.ProcessInfo;
+import main.groovy.commons.utils.SystemUtil;
+import main.groovy.io.exceptions.IoExceptionMessageConstant;
 
 import java.io.IOException;
 import java.util.regex.Matcher;

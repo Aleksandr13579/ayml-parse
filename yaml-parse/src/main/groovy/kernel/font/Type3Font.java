@@ -22,12 +22,12 @@
  */
 package kernel.font;
 
-import com.itextpdf.io.font.FontNames;
-import com.itextpdf.io.font.FontProgram;
-import com.itextpdf.io.font.constants.FontDescriptorFlags;
-import com.itextpdf.io.font.constants.FontStretches;
-import com.itextpdf.io.font.constants.FontWeights;
-import com.itextpdf.io.font.otf.Glyph;
+import main.groovy.io.font.FontNames;
+import main.groovy.io.font.FontProgram;
+import main.groovy.io.font.constants.FontDescriptorFlags;
+import main.groovy.io.font.constants.FontStretches;
+import main.groovy.io.font.constants.FontWeights;
+import main.groovy.io.font.otf.Glyph;
 
 import java.util.HashMap;
 import java.util.Map;

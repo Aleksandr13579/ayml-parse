@@ -22,13 +22,13 @@
  */
 package kernel.pdf.canvas.parser;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.io.font.FontProgram;
-import com.itextpdf.io.logs.IoLogMessageConstant;
-import com.itextpdf.io.source.PdfTokenizer;
-import com.itextpdf.io.source.RandomAccessFileOrArray;
-import com.itextpdf.io.source.RandomAccessSourceFactory;
-import com.itextpdf.kernel.pdf.canvas.PdfCanvasConstants.FillingRule;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.io.font.FontProgram;
+import main.groovy.io.logs.IoLogMessageConstant;
+import main.groovy.io.source.PdfTokenizer;
+import main.groovy.io.source.RandomAccessFileOrArray;
+import main.groovy.io.source.RandomAccessSourceFactory;
+import main.groovy.kernel.pdf.canvas.PdfCanvasConstants.FillingRule;
 import kernel.colors.*;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;

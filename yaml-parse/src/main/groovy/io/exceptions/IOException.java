@@ -22,8 +22,8 @@
  */
 package io.exceptions;
 
-import com.itextpdf.commons.exceptions.ITextException;
-import com.itextpdf.commons.utils.MessageFormatUtil;
+import main.groovy.commons.exceptions.ITextException;
+import main.groovy.commons.utils.MessageFormatUtil;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -22,10 +22,10 @@
  */
 package html2pdf.css.page.attach.wrapelement;
 
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.IBlockElement;
-import com.itextpdf.layout.element.IElement;
-import com.itextpdf.layout.element.ILeafElement;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.IBlockElement;
+import main.groovy.layout.element.IElement;
+import main.groovy.layout.element.ILeafElement;
 
 import java.util.ArrayList;
 import java.util.Collection;

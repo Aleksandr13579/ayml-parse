@@ -22,19 +22,19 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import com.itextpdf.kernel.events.Event;
-import com.itextpdf.kernel.events.IEventHandler;
-import com.itextpdf.kernel.events.PdfDocumentEvent;
-import com.itextpdf.kernel.geom.Rectangle;
-import com.itextpdf.kernel.pdf.PdfPage;
-import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
-import com.itextpdf.kernel.pdf.tagging.StandardRoles;
-import com.itextpdf.layout.Canvas;
-import com.itextpdf.layout.borders.Border;
-import com.itextpdf.layout.element.Div;
-import com.itextpdf.layout.properties.Background;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.layout.properties.UnitValue;
+import main.groovy.kernel.events.Event;
+import main.groovy.kernel.events.IEventHandler;
+import main.groovy.kernel.events.PdfDocumentEvent;
+import main.groovy.kernel.geom.Rectangle;
+import main.groovy.kernel.pdf.PdfPage;
+import main.groovy.kernel.pdf.canvas.PdfCanvas;
+import main.groovy.kernel.pdf.tagging.StandardRoles;
+import main.groovy.layout.Canvas;
+import main.groovy.layout.borders.Border;
+import main.groovy.layout.element.Div;
+import main.groovy.layout.properties.Background;
+import main.groovy.layout.properties.Property;
+import main.groovy.layout.properties.UnitValue;
 
 import java.util.HashMap;
 import java.util.Map;

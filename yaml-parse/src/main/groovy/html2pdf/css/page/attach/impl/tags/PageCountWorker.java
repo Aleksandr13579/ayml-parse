@@ -22,8 +22,8 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.impl.layout.Html2PdfProperty;
 import html2pdf.css.page.attach.impl.layout.PageCountElement;
@@ -63,7 +63,7 @@ public class PageCountWorker extends SpanTagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.impl.tags.SpanTagWorker#processEnd(com.itextpdf.html2pdf.html.node.IElementNode, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.impl.tags.SpanTagWorker#processEnd(main.groovy.html2pdf.html.node.IElementNode, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public void processEnd(IElementNode element, ProcessorContext context) {

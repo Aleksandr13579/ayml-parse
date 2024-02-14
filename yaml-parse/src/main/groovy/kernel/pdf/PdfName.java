@@ -22,8 +22,8 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.io.source.ByteBuffer;
-import com.itextpdf.io.source.ByteUtils;
+import main.groovy.io.source.ByteBuffer;
+import main.groovy.io.source.ByteUtils;
 import kernel.utils.ICopyFilter;
 
 import java.nio.charset.StandardCharsets;

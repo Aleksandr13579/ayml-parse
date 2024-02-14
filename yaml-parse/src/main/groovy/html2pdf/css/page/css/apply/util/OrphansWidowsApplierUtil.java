@@ -22,11 +22,11 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.properties.ParagraphOrphansControl;
-import com.itextpdf.layout.properties.ParagraphWidowsControl;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.styledxmlparser.css.util.CssDimensionParsingUtils;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.properties.ParagraphOrphansControl;
+import main.groovy.layout.properties.ParagraphWidowsControl;
+import main.groovy.layout.properties.Property;
+import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
 import html2pdf.css.page.css.CssConstants;
 
 import java.util.Map;

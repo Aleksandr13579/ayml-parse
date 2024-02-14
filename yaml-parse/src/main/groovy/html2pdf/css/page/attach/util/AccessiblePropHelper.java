@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.attach.util;
 
-import com.itextpdf.kernel.pdf.tagutils.AccessibilityProperties;
-import com.itextpdf.layout.tagging.IAccessibleElement;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.kernel.pdf.tagutils.AccessibilityProperties;
+import main.groovy.layout.tagging.IAccessibleElement;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.html.AttributeConstants;
 
 public class AccessiblePropHelper {

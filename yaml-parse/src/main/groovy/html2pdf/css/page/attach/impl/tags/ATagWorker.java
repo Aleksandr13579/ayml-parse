@@ -22,15 +22,15 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.kernel.pdf.tagging.StandardRoles;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.Div;
-import com.itextpdf.layout.element.IBlockElement;
-import com.itextpdf.layout.properties.FloatPropertyValue;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.layout.properties.Transform;
-import com.itextpdf.styledxmlparser.node.IElementNode;
-import com.itextpdf.styledxmlparser.resolver.resource.UriResolver;
+import main.groovy.kernel.pdf.tagging.StandardRoles;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.Div;
+import main.groovy.layout.element.IBlockElement;
+import main.groovy.layout.properties.FloatPropertyValue;
+import main.groovy.layout.properties.Property;
+import main.groovy.layout.properties.Transform;
+import main.groovy.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.resolver.resource.UriResolver;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.impl.layout.RunningElement;
 import html2pdf.css.page.attach.util.LinkHelper;
@@ -55,7 +55,7 @@ public class ATagWorker extends SpanTagWorker {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.impl.tags.SpanTagWorker#processEnd(com.itextpdf.html2pdf.html.node.IElementNode, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.impl.tags.SpanTagWorker#processEnd(main.groovy.html2pdf.html.node.IElementNode, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public void processEnd(IElementNode element, ProcessorContext context) {

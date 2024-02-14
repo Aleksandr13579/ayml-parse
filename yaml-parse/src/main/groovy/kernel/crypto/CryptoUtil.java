@@ -22,11 +22,11 @@
  */
 package kernel.crypto;
 
-import com.itextpdf.bouncycastleconnector.BouncyCastleFactoryCreator;
-import com.itextpdf.commons.bouncycastle.IBouncyCastleFactory;
-import com.itextpdf.commons.bouncycastle.asn1.IASN1Encoding;
-import com.itextpdf.commons.bouncycastle.asn1.IASN1OutputStream;
-import com.itextpdf.commons.utils.MessageFormatUtil;
+import main.groovy.bouncycastleconnector.BouncyCastleFactoryCreator;
+import main.groovy.commons.bouncycastle.IBouncyCastleFactory;
+import main.groovy.commons.bouncycastle.asn1.IASN1Encoding;
+import main.groovy.commons.bouncycastle.asn1.IASN1OutputStream;
+import main.groovy.commons.utils.MessageFormatUtil;
 import kernel.exceptions.KernelExceptionMessageConstant;
 
 import java.io.InputStream;

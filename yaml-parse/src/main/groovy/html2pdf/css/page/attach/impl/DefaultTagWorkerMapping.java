@@ -22,10 +22,10 @@
  */
 package html2pdf.css.page.attach.impl;
 
-import com.itextpdf.html2pdf.util.TagProcessorMapping;
-import com.itextpdf.styledxmlparser.css.page.PageMarginBoxContextNode;
-import com.itextpdf.styledxmlparser.css.pseudo.CssPseudoElementUtil;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.html2pdf.util.TagProcessorMapping;
+import main.groovy.styledxmlparser.css.page.PageMarginBoxContextNode;
+import main.groovy.styledxmlparser.css.pseudo.CssPseudoElementUtil;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.impl.tags.*;

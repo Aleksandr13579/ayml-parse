@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.io.logs.IoLogMessageConstant;
+import main.groovy.io.logs.IoLogMessageConstant;
 import kernel.utils.ICopyFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

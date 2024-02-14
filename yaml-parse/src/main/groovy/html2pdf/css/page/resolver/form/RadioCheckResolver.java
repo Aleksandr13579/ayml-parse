@@ -22,8 +22,8 @@
  */
 package html2pdf.css.page.resolver.form;
 
-import com.itextpdf.forms.form.FormProperty;
-import com.itextpdf.forms.form.element.Radio;
+import main.groovy.forms.form.FormProperty;
+import main.groovy.forms.form.element.Radio;
 
 import java.util.HashMap;
 import java.util.Map;

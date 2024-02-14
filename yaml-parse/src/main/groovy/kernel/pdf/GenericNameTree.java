@@ -22,8 +22,8 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.io.logs.IoLogMessageConstant;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.io.logs.IoLogMessageConstant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

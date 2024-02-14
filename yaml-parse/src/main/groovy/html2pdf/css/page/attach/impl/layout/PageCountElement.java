@@ -22,8 +22,8 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import com.itextpdf.layout.element.Text;
-import com.itextpdf.layout.renderer.IRenderer;
+import main.groovy.layout.element.Text;
+import main.groovy.layout.renderer.IRenderer;
 import html2pdf.css.page.css.resolve.func.counter.CounterDigitsGlyphStyle;
 import html2pdf.css.page.html.HtmlUtils;
 
@@ -64,7 +64,7 @@ public class PageCountElement extends Text {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.layout.element.Text#makeNewRenderer()
+     * @see main.groovy.layout.element.Text#makeNewRenderer()
      */
     @Override
     public IRenderer makeNewRenderer() {

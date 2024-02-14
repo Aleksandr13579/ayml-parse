@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.attach.wrapelement;
 
-import com.itextpdf.layout.element.Cell;
+import main.groovy.layout.element.Cell;
 
 import java.util.ArrayList;
 import java.util.Collections;

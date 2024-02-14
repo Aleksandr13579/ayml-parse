@@ -22,7 +22,7 @@
  */
 package kernel.crypto;
 
-import com.itextpdf.commons.utils.SystemUtil;
+import main.groovy.commons.utils.SystemUtil;
 
 import java.nio.charset.StandardCharsets;
 

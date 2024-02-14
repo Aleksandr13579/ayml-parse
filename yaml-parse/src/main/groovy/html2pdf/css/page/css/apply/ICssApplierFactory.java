@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.css.apply;
 
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.node.IElementNode;
 
 /**
  * {@link ICssApplierFactory} interface is used for instantiating new {@link ICssApplier} objects.

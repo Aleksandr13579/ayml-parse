@@ -22,10 +22,10 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import com.itextpdf.forms.form.FormProperty;
-import com.itextpdf.styledxmlparser.jsoup.nodes.TextNode;
-import com.itextpdf.styledxmlparser.node.IElementNode;
-import com.itextpdf.styledxmlparser.node.impl.jsoup.node.JsoupTextNode;
+import main.groovy.forms.form.FormProperty;
+import main.groovy.styledxmlparser.jsoup.nodes.TextNode;
+import main.groovy.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.node.impl.jsoup.node.JsoupTextNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.html.AttributeConstants;

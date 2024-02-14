@@ -22,8 +22,8 @@
  */
 package io.source;
 
-import com.itextpdf.io.exceptions.IOException;
-import com.itextpdf.io.exceptions.IoExceptionMessageConstant;
+import main.groovy.io.exceptions.IOException;
+import main.groovy.io.exceptions.IoExceptionMessageConstant;
 
 
 public class OutputStream<T extends java.io.OutputStream> extends java.io.OutputStream {

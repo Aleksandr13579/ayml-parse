@@ -22,10 +22,10 @@
  */
 package io.image;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.io.colors.IccProfile;
-import com.itextpdf.io.exceptions.IOException;
-import com.itextpdf.io.exceptions.IoExceptionMessageConstant;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.io.colors.IccProfile;
+import main.groovy.io.exceptions.IOException;
+import main.groovy.io.exceptions.IoExceptionMessageConstant;
 import io.logs.IoLogMessageConstant;
 import io.source.ByteArrayOutputStream;
 import io.source.ByteBuffer;

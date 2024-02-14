@@ -22,20 +22,20 @@
  */
 package html2pdf.css.page.attach;
 
-import com.itextpdf.commons.actions.contexts.IMetaInfo;
-import com.itextpdf.html2pdf.ConverterProperties;
-import com.itextpdf.html2pdf.resolver.font.DefaultFontProvider;
-import com.itextpdf.html2pdf.resolver.form.FormFieldNameResolver;
-import com.itextpdf.html2pdf.resolver.form.RadioCheckResolver;
-import com.itextpdf.html2pdf.resolver.resource.HtmlResourceResolver;
-import com.itextpdf.io.font.FontProgram;
-import com.itextpdf.kernel.pdf.PdfDocument;
-import com.itextpdf.layout.font.FontInfo;
-import com.itextpdf.layout.font.FontProvider;
-import com.itextpdf.layout.font.FontSet;
-import com.itextpdf.layout.font.Range;
-import com.itextpdf.styledxmlparser.css.media.MediaDeviceDescription;
-import com.itextpdf.styledxmlparser.resolver.resource.ResourceResolver;
+import main.groovy.commons.actions.contexts.IMetaInfo;
+import main.groovy.html2pdf.ConverterProperties;
+import main.groovy.html2pdf.resolver.font.DefaultFontProvider;
+import main.groovy.html2pdf.resolver.form.FormFieldNameResolver;
+import main.groovy.html2pdf.resolver.form.RadioCheckResolver;
+import main.groovy.html2pdf.resolver.resource.HtmlResourceResolver;
+import main.groovy.io.font.FontProgram;
+import main.groovy.kernel.pdf.PdfDocument;
+import main.groovy.layout.font.FontInfo;
+import main.groovy.layout.font.FontProvider;
+import main.groovy.layout.font.FontSet;
+import main.groovy.layout.font.Range;
+import main.groovy.styledxmlparser.css.media.MediaDeviceDescription;
+import main.groovy.styledxmlparser.resolver.resource.ResourceResolver;
 import html2pdf.css.page.attach.impl.DefaultTagWorkerFactory;
 import html2pdf.css.page.attach.impl.HtmlMetaInfoContainer;
 import html2pdf.css.page.attach.impl.LinkContext;

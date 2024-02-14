@@ -22,13 +22,13 @@
  */
 package html2pdf.css.page;
 
-import com.itextpdf.commons.actions.contexts.IMetaInfo;
-import com.itextpdf.html2pdf.attach.ITagWorkerFactory;
-import com.itextpdf.html2pdf.attach.impl.OutlineHandler;
-import com.itextpdf.html2pdf.css.apply.ICssApplierFactory;
-import com.itextpdf.layout.font.FontProvider;
-import com.itextpdf.styledxmlparser.css.media.MediaDeviceDescription;
-import com.itextpdf.styledxmlparser.resolver.resource.IResourceRetriever;
+import main.groovy.commons.actions.contexts.IMetaInfo;
+import main.groovy.html2pdf.attach.ITagWorkerFactory;
+import main.groovy.html2pdf.attach.impl.OutlineHandler;
+import main.groovy.html2pdf.css.apply.ICssApplierFactory;
+import main.groovy.layout.font.FontProvider;
+import main.groovy.styledxmlparser.css.media.MediaDeviceDescription;
+import main.groovy.styledxmlparser.resolver.resource.IResourceRetriever;
 
 /**
  * Properties that will be used by the {@link HtmlConverter}.
@@ -204,7 +204,7 @@ public class ConverterProperties {
     /**
      * Gets the TagWorkerFactory instance.
      * <p>
-     * The tagWorkerFactory is used to create {@link com.itextpdf.html2pdf.attach.ITagWorker}, which in turn
+     * The tagWorkerFactory is used to create {@link main.groovy.html2pdf.attach.ITagWorker}, which in turn
      * are used to convert the HTML tags to the PDF elements.
      *
      * @return the TagWorkerFactory
@@ -216,7 +216,7 @@ public class ConverterProperties {
     /**
      * Sets the TagWorkerFactory.
      * <p>
-     * The tagWorkerFactory is used to create {@link com.itextpdf.html2pdf.attach.ITagWorker}, which in turn
+     * The tagWorkerFactory is used to create {@link main.groovy.html2pdf.attach.ITagWorker}, which in turn
      * are used to convert the HTML tags to the PDF elements.
      *
      * @param tagWorkerFactory the TagWorkerFactory
@@ -230,7 +230,7 @@ public class ConverterProperties {
     /**
      * Gets the CSS applier factory.
      * <p>
-     * The cssApplierFactory is used to create {@link com.itextpdf.html2pdf.css.apply.ICssApplier}, which in turn
+     * The cssApplierFactory is used to create {@link main.groovy.html2pdf.css.apply.ICssApplier}, which in turn
      * are used to convert the CSS properties to the PDF properties.
      *
      * @return the CSS applier factory
@@ -242,7 +242,7 @@ public class ConverterProperties {
     /**
      * Sets the CSS applier factory.
      * <p>
-     * The cssApplierFactory is used to create {@link com.itextpdf.html2pdf.css.apply.ICssApplier}, which in turn
+     * The cssApplierFactory is used to create {@link main.groovy.html2pdf.css.apply.ICssApplier}, which in turn
      * are used to convert the CSS properties to the PDF properties.
      *
      * @param cssApplierFactory the CSS applier factory

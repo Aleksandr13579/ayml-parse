@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.resolver.form;
 
-import com.itextpdf.styledxmlparser.css.util.CssDimensionParsingUtils;
+import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
 
 import java.util.HashMap;
 import java.util.Map;

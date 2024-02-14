@@ -22,15 +22,15 @@
  */
 package kernel.utils;
 
-import com.itextpdf.commons.actions.contexts.IMetaInfo;
-import com.itextpdf.commons.utils.FileUtil;
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.io.font.PdfEncodings;
-import com.itextpdf.io.logs.IoLogMessageConstant;
-import com.itextpdf.io.util.GhostscriptHelper;
-import com.itextpdf.io.util.ImageMagickHelper;
-import com.itextpdf.io.util.UrlUtil;
-import com.itextpdf.io.util.XmlUtil;
+import main.groovy.commons.actions.contexts.IMetaInfo;
+import main.groovy.commons.utils.FileUtil;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.io.font.PdfEncodings;
+import main.groovy.io.logs.IoLogMessageConstant;
+import main.groovy.io.util.GhostscriptHelper;
+import main.groovy.io.util.ImageMagickHelper;
+import main.groovy.io.util.UrlUtil;
+import main.groovy.io.util.XmlUtil;
 import kernel.geom.Rectangle;
 import kernel.pdf.*;
 import kernel.pdf.annot.PdfAnnotation;

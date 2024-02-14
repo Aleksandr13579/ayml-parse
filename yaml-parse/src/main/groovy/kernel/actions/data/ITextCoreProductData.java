@@ -22,8 +22,8 @@
  */
 package kernel.actions.data;
 
-import com.itextpdf.commons.actions.ProductNameConstant;
-import com.itextpdf.commons.actions.data.ProductData;
+import main.groovy.commons.actions.ProductNameConstant;
+import main.groovy.commons.actions.data.ProductData;
 
 /**
  * Stores an instance of {@link ProductData} related to iText core module.

@@ -22,10 +22,10 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.properties.ClearPropertyValue;
-import com.itextpdf.layout.properties.FloatPropertyValue;
-import com.itextpdf.layout.properties.Property;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.properties.ClearPropertyValue;
+import main.groovy.layout.properties.FloatPropertyValue;
+import main.groovy.layout.properties.Property;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 

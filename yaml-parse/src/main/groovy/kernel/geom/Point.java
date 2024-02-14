@@ -23,8 +23,8 @@
  */
 package kernel.geom;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.io.util.HashCode;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.io.util.HashCode;
 
 public class Point implements Cloneable {
 

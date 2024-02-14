@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.bouncycastleconnector.BouncyCastleFactoryCreator;
+import main.groovy.bouncycastleconnector.BouncyCastleFactoryCreator;
 
 import java.security.cert.Certificate;
 

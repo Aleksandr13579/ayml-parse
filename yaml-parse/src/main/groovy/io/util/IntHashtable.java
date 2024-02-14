@@ -22,7 +22,7 @@
  */
 package io.util;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
+import main.groovy.commons.utils.MessageFormatUtil;
 
 import java.util.Arrays;
 

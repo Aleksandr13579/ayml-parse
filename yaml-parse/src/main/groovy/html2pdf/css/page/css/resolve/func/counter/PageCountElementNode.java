@@ -23,11 +23,11 @@
 package html2pdf.css.page.css.resolve.func.counter;
 
 
-import com.itextpdf.styledxmlparser.jsoup.nodes.Element;
-import com.itextpdf.styledxmlparser.jsoup.parser.Tag;
-import com.itextpdf.styledxmlparser.node.ICustomElementNode;
-import com.itextpdf.styledxmlparser.node.INode;
-import com.itextpdf.styledxmlparser.node.impl.jsoup.node.JsoupElementNode;
+import main.groovy.styledxmlparser.jsoup.nodes.Element;
+import main.groovy.styledxmlparser.jsoup.parser.Tag;
+import main.groovy.styledxmlparser.node.ICustomElementNode;
+import main.groovy.styledxmlparser.node.INode;
+import main.groovy.styledxmlparser.node.impl.jsoup.node.JsoupElementNode;
 
 import java.util.Collections;
 import java.util.List;
@@ -55,7 +55,7 @@ public class PageCountElementNode extends JsoupElementNode implements ICustomEle
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.html.node.INode#childNodes()
+     * @see main.groovy.html2pdf.html.node.INode#childNodes()
      */
     @Override
     public List<INode> childNodes() {
@@ -63,7 +63,7 @@ public class PageCountElementNode extends JsoupElementNode implements ICustomEle
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.html.node.INode#addChild(com.itextpdf.html2pdf.html.node.INode)
+     * @see main.groovy.html2pdf.html.node.INode#addChild(main.groovy.html2pdf.html.node.INode)
      */
     @Override
     public void addChild(INode node) {
@@ -71,7 +71,7 @@ public class PageCountElementNode extends JsoupElementNode implements ICustomEle
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.html.node.INode#parentNode()
+     * @see main.groovy.html2pdf.html.node.INode#parentNode()
      */
     @Override
     public INode parentNode() {

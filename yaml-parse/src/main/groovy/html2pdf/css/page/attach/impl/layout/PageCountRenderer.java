@@ -22,18 +22,18 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.io.font.otf.GlyphLine;
-import com.itextpdf.io.logs.IoLogMessageConstant;
-import com.itextpdf.kernel.font.PdfFont;
-import com.itextpdf.layout.Document;
-import com.itextpdf.layout.layout.LayoutContext;
-import com.itextpdf.layout.layout.LayoutResult;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.layout.renderer.AbstractRenderer;
-import com.itextpdf.layout.renderer.DocumentRenderer;
-import com.itextpdf.layout.renderer.IRenderer;
-import com.itextpdf.layout.renderer.TextRenderer;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.io.font.otf.GlyphLine;
+import main.groovy.io.logs.IoLogMessageConstant;
+import main.groovy.kernel.font.PdfFont;
+import main.groovy.layout.Document;
+import main.groovy.layout.layout.LayoutContext;
+import main.groovy.layout.layout.LayoutResult;
+import main.groovy.layout.properties.Property;
+import main.groovy.layout.renderer.AbstractRenderer;
+import main.groovy.layout.renderer.DocumentRenderer;
+import main.groovy.layout.renderer.IRenderer;
+import main.groovy.layout.renderer.TextRenderer;
 import html2pdf.css.page.css.resolve.func.counter.CounterDigitsGlyphStyle;
 import html2pdf.css.page.html.HtmlUtils;
 import org.slf4j.Logger;
@@ -65,7 +65,7 @@ class PageCountRenderer extends TextRenderer {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.layout.renderer.TextRenderer#layout(com.itextpdf.layout.layout.LayoutContext)
+     * @see main.groovy.layout.renderer.TextRenderer#layout(main.groovy.layout.layout.LayoutContext)
      */
     @Override
     public LayoutResult layout(LayoutContext layoutContext) {
@@ -130,7 +130,7 @@ class PageCountRenderer extends TextRenderer {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.layout.renderer.TextRenderer#resolveFonts(java.util.List)
+     * @see main.groovy.layout.renderer.TextRenderer#resolveFonts(java.util.List)
      */
     @Override
     protected boolean resolveFonts(List<IRenderer> addTo) {

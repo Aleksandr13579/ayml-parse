@@ -22,10 +22,10 @@
  */
 package kernel.pdf;
 
-import com.itextpdf.commons.actions.data.ProductData;
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.io.logs.IoLogMessageConstant;
-import com.itextpdf.io.source.ByteUtils;
+import main.groovy.commons.actions.data.ProductData;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.io.logs.IoLogMessageConstant;
+import main.groovy.io.source.ByteUtils;
 import kernel.actions.data.ITextCoreProductData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

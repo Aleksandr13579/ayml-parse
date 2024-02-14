@@ -22,12 +22,12 @@
  */
 package html2pdf.css.page.css.apply.impl;
 
-import com.itextpdf.forms.form.element.IFormField;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.element.Text;
-import com.itextpdf.layout.properties.FloatPropertyValue;
-import com.itextpdf.layout.properties.Property;
-import com.itextpdf.styledxmlparser.node.IStylesContainer;
+import main.groovy.forms.form.element.IFormField;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.element.Text;
+import main.groovy.layout.properties.FloatPropertyValue;
+import main.groovy.layout.properties.Property;
+import main.groovy.styledxmlparser.node.IStylesContainer;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.impl.tags.SpanTagWorker;
@@ -43,7 +43,7 @@ import java.util.Map;
 public class SpanTagCssApplier implements ICssApplier {
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.css.apply.ICssApplier#apply(com.itextpdf.html2pdf.attach.ProcessorContext, com.itextpdf.html2pdf.html.node.IStylesContainer, com.itextpdf.html2pdf.attach.ITagWorker)
+     * @see main.groovy.html2pdf.css.apply.ICssApplier#apply(main.groovy.html2pdf.attach.ProcessorContext, main.groovy.html2pdf.html.node.IStylesContainer, main.groovy.html2pdf.attach.ITagWorker)
      */
     @Override
     public void apply(ProcessorContext context, IStylesContainer stylesContainer, ITagWorker tagWorker) {

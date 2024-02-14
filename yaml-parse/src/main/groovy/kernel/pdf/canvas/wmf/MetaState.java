@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import static com.itextpdf.kernel.pdf.canvas.PdfCanvasConstants.LineJoinStyle;
+import static main.groovy.kernel.pdf.canvas.PdfCanvasConstants.LineJoinStyle;
 
 /**
  * Class to keep the state.

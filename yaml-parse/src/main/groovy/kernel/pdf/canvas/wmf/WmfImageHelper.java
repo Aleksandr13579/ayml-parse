@@ -22,8 +22,8 @@
  */
 package kernel.pdf.canvas.wmf;
 
-import com.itextpdf.io.image.ImageData;
-import com.itextpdf.io.image.ImageType;
+import main.groovy.io.image.ImageData;
+import main.groovy.io.image.ImageType;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.geom.Rectangle;

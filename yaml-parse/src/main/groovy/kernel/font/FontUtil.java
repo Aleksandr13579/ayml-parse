@@ -22,11 +22,11 @@
  */
 package kernel.font;
 
-import com.itextpdf.io.font.FontCache;
-import com.itextpdf.io.font.PdfEncodings;
-import com.itextpdf.io.font.cmap.*;
-import com.itextpdf.io.logs.IoLogMessageConstant;
-import com.itextpdf.io.util.IntHashtable;
+import main.groovy.io.font.FontCache;
+import main.groovy.io.font.PdfEncodings;
+import main.groovy.io.font.cmap.*;
+import main.groovy.io.logs.IoLogMessageConstant;
+import main.groovy.io.util.IntHashtable;
 import kernel.pdf.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

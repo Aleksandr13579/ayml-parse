@@ -22,7 +22,7 @@
  */
 package kernel.pdf.colorspace;
 
-import com.itextpdf.io.colors.IccProfile;
+import main.groovy.io.colors.IccProfile;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;

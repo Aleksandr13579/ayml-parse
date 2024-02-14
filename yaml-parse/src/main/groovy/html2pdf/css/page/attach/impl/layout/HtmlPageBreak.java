@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import com.itextpdf.layout.element.AreaBreak;
+import main.groovy.layout.element.AreaBreak;
 
 /**
  * The HTML implementation of an {@link AreaBreak}.

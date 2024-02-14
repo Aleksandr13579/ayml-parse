@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.attach.impl;
 
-import com.itextpdf.html2pdf.attach.impl.DefaultTagWorkerMapping.ITagWorkerCreator;
-import com.itextpdf.html2pdf.util.TagProcessorMapping;
-import com.itextpdf.styledxmlparser.node.IElementNode;
+import main.groovy.html2pdf.attach.impl.DefaultTagWorkerMapping.ITagWorkerCreator;
+import main.groovy.html2pdf.util.TagProcessorMapping;
+import main.groovy.styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ITagWorkerFactory;
 import html2pdf.css.page.attach.ProcessorContext;
@@ -57,7 +57,7 @@ public class DefaultTagWorkerFactory implements ITagWorkerFactory {
     }
 
     /* (non-Javadoc)
-     * @see com.itextpdf.html2pdf.attach.ITagWorkerFactory#getTagWorker(com.itextpdf.html2pdf.html.node.IElementNode, com.itextpdf.html2pdf.attach.ProcessorContext)
+     * @see main.groovy.html2pdf.attach.ITagWorkerFactory#getTagWorker(main.groovy.html2pdf.html.node.IElementNode, main.groovy.html2pdf.attach.ProcessorContext)
      */
     @Override
     public final ITagWorker getTagWorker(IElementNode tag, ProcessorContext context) {

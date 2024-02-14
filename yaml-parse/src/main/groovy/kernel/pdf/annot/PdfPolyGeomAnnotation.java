@@ -22,7 +22,7 @@
  */
 package kernel.pdf.annot;
 
-import com.itextpdf.io.logs.IoLogMessageConstant;
+import main.groovy.io.logs.IoLogMessageConstant;
 import kernel.colors.Color;
 import kernel.colors.DeviceCmyk;
 import kernel.colors.DeviceGray;

@@ -22,21 +22,21 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.kernel.colors.Color;
-import com.itextpdf.kernel.colors.ColorConstants;
-import com.itextpdf.kernel.pdf.canvas.PdfCanvasConstants.LineCapStyle;
-import com.itextpdf.layout.IPropertyContainer;
-import com.itextpdf.layout.properties.*;
-import com.itextpdf.layout.splitting.BreakAllSplitCharacters;
-import com.itextpdf.layout.splitting.DefaultSplitCharacters;
-import com.itextpdf.layout.splitting.KeepAllSplitCharacters;
-import com.itextpdf.styledxmlparser.css.CommonCssConstants;
-import com.itextpdf.styledxmlparser.css.util.CssDimensionParsingUtils;
-import com.itextpdf.styledxmlparser.css.util.CssTypesValidationUtils;
-import com.itextpdf.styledxmlparser.node.IElementNode;
-import com.itextpdf.styledxmlparser.node.IStylesContainer;
-import com.itextpdf.styledxmlparser.util.FontFamilySplitterUtil;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.kernel.colors.Color;
+import main.groovy.kernel.colors.ColorConstants;
+import main.groovy.kernel.pdf.canvas.PdfCanvasConstants.LineCapStyle;
+import main.groovy.layout.IPropertyContainer;
+import main.groovy.layout.properties.*;
+import main.groovy.layout.splitting.BreakAllSplitCharacters;
+import main.groovy.layout.splitting.DefaultSplitCharacters;
+import main.groovy.layout.splitting.KeepAllSplitCharacters;
+import main.groovy.styledxmlparser.css.CommonCssConstants;
+import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
+import main.groovy.styledxmlparser.css.util.CssTypesValidationUtils;
+import main.groovy.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.node.IStylesContainer;
+import main.groovy.styledxmlparser.util.FontFamilySplitterUtil;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.logs.Html2PdfLogMessageConstant;

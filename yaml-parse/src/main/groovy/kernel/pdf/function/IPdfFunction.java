@@ -22,8 +22,8 @@
  */
 package kernel.pdf.function;
 
-import com.itextpdf.kernel.pdf.function.BaseInputOutPutConvertors.IInputConversionFunction;
-import com.itextpdf.kernel.pdf.function.BaseInputOutPutConvertors.IOutputConversionFunction;
+import main.groovy.kernel.pdf.function.BaseInputOutPutConvertors.IInputConversionFunction;
+import main.groovy.kernel.pdf.function.BaseInputOutPutConvertors.IOutputConversionFunction;
 import kernel.pdf.PdfObject;
 import kernel.pdf.colorspace.PdfColorSpace;
 

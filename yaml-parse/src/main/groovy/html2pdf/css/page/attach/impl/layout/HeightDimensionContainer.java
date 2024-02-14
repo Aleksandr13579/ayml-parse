@@ -22,12 +22,12 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import com.itextpdf.kernel.geom.Rectangle;
-import com.itextpdf.layout.layout.LayoutArea;
-import com.itextpdf.layout.layout.LayoutContext;
-import com.itextpdf.layout.layout.LayoutResult;
-import com.itextpdf.layout.renderer.IRenderer;
-import com.itextpdf.styledxmlparser.css.CssContextNode;
+import main.groovy.kernel.geom.Rectangle;
+import main.groovy.layout.layout.LayoutArea;
+import main.groovy.layout.layout.LayoutContext;
+import main.groovy.layout.layout.LayoutResult;
+import main.groovy.layout.renderer.IRenderer;
+import main.groovy.styledxmlparser.css.CssContextNode;
 import html2pdf.css.page.css.CssConstants;
 
 class HeightDimensionContainer extends DimensionContainer {

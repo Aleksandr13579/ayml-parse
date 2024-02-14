@@ -22,13 +22,13 @@
  */
 package html2pdf.css.page.css.resolve;
 
-import com.itextpdf.styledxmlparser.css.CssDeclaration;
-import com.itextpdf.styledxmlparser.css.resolve.shorthand.impl.BorderShorthandResolver;
-import com.itextpdf.styledxmlparser.css.util.CssDimensionParsingUtils;
-import com.itextpdf.styledxmlparser.css.util.CssTypesValidationUtils;
-import com.itextpdf.styledxmlparser.node.IAttribute;
-import com.itextpdf.styledxmlparser.node.IElementNode;
-import com.itextpdf.styledxmlparser.node.INode;
+import main.groovy.styledxmlparser.css.CssDeclaration;
+import main.groovy.styledxmlparser.css.resolve.shorthand.impl.BorderShorthandResolver;
+import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
+import main.groovy.styledxmlparser.css.util.CssTypesValidationUtils;
+import main.groovy.styledxmlparser.node.IAttribute;
+import main.groovy.styledxmlparser.node.IElementNode;
+import main.groovy.styledxmlparser.node.INode;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.html.AttributeConstants;
 import html2pdf.css.page.html.TagConstants;
@@ -143,7 +143,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -151,7 +151,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -199,7 +199,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -207,7 +207,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -229,7 +229,7 @@ class HtmlStylesToCssConverter {
     private static class CellSpacingAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -237,7 +237,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -259,7 +259,7 @@ class HtmlStylesToCssConverter {
                         TagConstants.TR));
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -267,7 +267,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -282,7 +282,7 @@ class HtmlStylesToCssConverter {
     private static class FontColorAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -290,7 +290,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -304,7 +304,7 @@ class HtmlStylesToCssConverter {
     private static class SizeAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -312,7 +312,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -359,7 +359,7 @@ class HtmlStylesToCssConverter {
     private static class FontFaceAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -367,7 +367,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -381,7 +381,7 @@ class HtmlStylesToCssConverter {
     private static class TypeAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -389,7 +389,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -421,7 +421,7 @@ class HtmlStylesToCssConverter {
     private static class DirAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -429,7 +429,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -443,7 +443,7 @@ class HtmlStylesToCssConverter {
     private static class WidthAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -454,7 +454,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -473,7 +473,7 @@ class HtmlStylesToCssConverter {
     private static class HeightAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -482,7 +482,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -501,7 +501,7 @@ class HtmlStylesToCssConverter {
     private static class AlignAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -511,7 +511,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -561,7 +561,7 @@ class HtmlStylesToCssConverter {
     private static class NoShadeAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -569,7 +569,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -587,7 +587,7 @@ class HtmlStylesToCssConverter {
     private static class NoWrapAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -595,7 +595,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {
@@ -611,7 +611,7 @@ class HtmlStylesToCssConverter {
     private static class VAlignAttributeConverter implements IAttributeConverter {
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#isSupportedForElement(java.lang.String)
          */
         @Override
         public boolean isSupportedForElement(String elementName) {
@@ -620,7 +620,7 @@ class HtmlStylesToCssConverter {
         }
 
         /* (non-Javadoc)
-         * @see com.itextpdf.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(com.itextpdf.styledxmlparser.html.node.IElementNode, java.lang.String)
+         * @see main.groovy.html2pdf.css.resolve.HtmlStylesToCssConverter.IAttributeConverter#convert(main.groovy.styledxmlparser.html.node.IElementNode, java.lang.String)
          */
         @Override
         public List<CssDeclaration> convert(IElementNode element, String value) {

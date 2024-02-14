@@ -22,18 +22,18 @@
  */
 package kernel.font;
 
-import com.itextpdf.commons.utils.MessageFormatUtil;
-import com.itextpdf.io.font.*;
-import com.itextpdf.io.font.cmap.CMapContentParser;
-import com.itextpdf.io.font.cmap.CMapToUnicode;
-import com.itextpdf.io.font.otf.Glyph;
-import com.itextpdf.io.font.otf.GlyphLine;
-import com.itextpdf.io.logs.IoLogMessageConstant;
-import com.itextpdf.io.source.ByteArrayOutputStream;
-import com.itextpdf.io.source.ByteBuffer;
-import com.itextpdf.io.source.OutputStream;
-import com.itextpdf.io.util.StreamUtil;
-import com.itextpdf.io.util.TextUtil;
+import main.groovy.commons.utils.MessageFormatUtil;
+import main.groovy.io.font.*;
+import main.groovy.io.font.cmap.CMapContentParser;
+import main.groovy.io.font.cmap.CMapToUnicode;
+import main.groovy.io.font.otf.Glyph;
+import main.groovy.io.font.otf.GlyphLine;
+import main.groovy.io.logs.IoLogMessageConstant;
+import main.groovy.io.source.ByteArrayOutputStream;
+import main.groovy.io.source.ByteBuffer;
+import main.groovy.io.source.OutputStream;
+import main.groovy.io.util.StreamUtil;
+import main.groovy.io.util.TextUtil;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;
@@ -737,7 +737,7 @@ public class PdfType0Font extends PdfFont {
                 if (subset || ttf.getDirectoryOffset() > 0) {
                     try {
                         ttfBytes = ttf.getSubset(usedGlyphs, subset);
-                    } catch (com.itextpdf.io.exceptions.IOException e) {
+                    } catch (main.groovy.io.exceptions.IOException e) {
                         Logger logger = LoggerFactory.getLogger(PdfType0Font.class);
                         logger.warn(IoLogMessageConstant.FONT_SUBSET_ISSUE);
                         ttfBytes = null;
