@@ -1,6 +1,6 @@
 package org.example.classes
 
-import html2pdf.css.page.HtmlConverter
+import html2pdf.HtmlConverter
 import io.source.ByteArrayOutputStream
 import kernel.geom.PageSize
 import kernel.pdf.PdfWriter
