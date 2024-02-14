@@ -1,0 +1,102 @@
+/*
+    This file is part of the iText (R) project.
+    Copyright (c) 1998-2023 Apryse Group NV
+    Authors: Apryse Software.
+
+    This program is offered under a commercial and under the AGPL license.
+    For commercial licensing, contact us at https://itextpdf.com/sales.  For AGPL licensing, see below.
+
+    AGPL licensing:
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+package kernel.crypto;
+
+import bouncycastleconnector.BouncyCastleFactoryCreator;
+import commons.bouncycastle.IBouncyCastleFactory;
+import kernel.exceptions.KernelExceptionMessageConstant;
+import kernel.exceptions.PdfException;
+import kernel.logs.KernelLogMessageConstant;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+
+/**
+ * Creates an AES Cipher with CBC and padding PKCS5/7.
+ *
+ * @author Paulo Soares
+ */
+public class AESCipher {
+    
+    private static final Logger LOGGER = LoggerFactory.getLogger(AESCipher.class);
+
+    private static final String CIPHER_WITH_PKCS5_PADDING = "AES/CBC/PKCS5Padding";
+
+    private static final IBouncyCastleFactory BOUNCY_CASTLE_FACTORY = BouncyCastleFactoryCreator.getFactory();
+
+    private static Cipher cipher;
+    
+    static {
+        try {
+            if ("BC".equals(BOUNCY_CASTLE_FACTORY.getProviderName())) {
+                // Do not pass bc provider and use default one here not to require bc provider for this functionality
+                // Do not use bc provider in kernel
+                cipher = Cipher.getInstance(CIPHER_WITH_PKCS5_PADDING);
+            } else {
+                cipher = Cipher.getInstance(CIPHER_WITH_PKCS5_PADDING, BOUNCY_CASTLE_FACTORY.getProvider());
+            }
+        } catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
+            throw new PdfException(KernelExceptionMessageConstant.ERROR_WHILE_INITIALIZING_AES_CIPHER, e);
+        }
+    }
+
+    /**
+     * Creates a new instance of AESCipher
+     *
+     * @param forEncryption if true the cipher is initialised for
+     *                      encryption, if false for decryption
+     * @param key           the key to be used in the cipher
+     * @param iv            initialization vector to be used in cipher
+     */
+    public AESCipher(boolean forEncryption, byte[] key, byte[] iv) {
+        try {
+            cipher.init(forEncryption ? Cipher.ENCRYPT_MODE : Cipher.DECRYPT_MODE,
+                    new SecretKeySpec(key, "AES"),
+                    new IvParameterSpec(iv));
+        } catch (InvalidKeyException | InvalidAlgorithmParameterException e) {
+            throw new PdfException(KernelExceptionMessageConstant.ERROR_WHILE_INITIALIZING_AES_CIPHER, e);
+        }
+    }
+
+    public byte[] update(byte[] inp, int inpOff, int inpLen) {
+        return cipher.update(inp, inpOff, inpLen);
+    }
+
+    public byte[] doFinal() {
+        try {
+            return cipher.doFinal();
+        } catch (IllegalBlockSizeException | BadPaddingException e) {
+            LOGGER.info(KernelLogMessageConstant.ERROR_WHILE_FINALIZING_AES_CIPHER, e);
+            return null;
+        }
+    }
+}

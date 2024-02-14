@@ -1,10 +1,11 @@
-package main.groovy.org.example.classes
+package org.example.classes
 
-import com.itextpdf.html2pdf.HtmlConverter
-import com.itextpdf.io.source.ByteArrayOutputStream
-import com.itextpdf.kernel.geom.PageSize
-import com.itextpdf.kernel.pdf.PdfWriter
-import com.itextpdf.kernel.pdf.PdfDocument
+import html2pdf.HtmlConverter
+import io.source.ByteArrayOutputStream
+import kernel.geom.PageSize
+import kernel.pdf.PdfWriter
+import kernel.pdf.PdfDocument
+
 
 
 class PDFConverter {

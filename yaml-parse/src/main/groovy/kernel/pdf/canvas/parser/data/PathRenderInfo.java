@@ -1,0 +1,294 @@
+/*
+    This file is part of the iText (R) project.
+    Copyright (c) 1998-2023 Apryse Group NV
+    Authors: Apryse Software.
+
+    This program is offered under a commercial and under the AGPL license.
+    For commercial licensing, contact us at https://itextpdf.com/sales.  For AGPL licensing, see below.
+
+    AGPL licensing:
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+package kernel.pdf.canvas.parser.data;
+
+import kernel.pdf.canvas.PdfCanvasConstants.FillingRule;
+import kernel.colors.Color;
+import kernel.geom.Matrix;
+import kernel.geom.Path;
+import kernel.pdf.PdfArray;
+import kernel.pdf.canvas.CanvasGraphicsState;
+import kernel.pdf.canvas.CanvasTag;
+import kernel.pdf.canvas.PdfCanvasConstants;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Stack;
+
+/**
+ * Contains information relating to painting current path.
+ */
+public class PathRenderInfo extends AbstractRenderInfo {
+
+    /**
+     * End the path object without filling or stroking it. This operator shall be a path-painting no-op,
+     * used primarily for the side effect of changing the current clipping path
+     */
+    public static final int NO_OP = 0;
+
+    /**
+     * Value specifying stroke operation to perform on the current path.
+     */
+    public static final int STROKE = 1;
+
+    /**
+     * Value specifying fill operation to perform on the current path. When the fill operation
+     * is performed it should use either nonzero winding or even-odd rule.
+     */
+    public static final int FILL = 2;
+
+    private Path path;
+    private int operation;
+    private int rule;
+    private boolean isClip;
+    private int clippingRule;
+
+    /**
+     * Hierarchy of nested canvas tags for the text from the most inner (nearest to text) tag to the most outer.
+     */
+    private List<CanvasTag> canvasTagHierarchy;
+
+    /**
+     * Creates the new {@link PathRenderInfo} instance.
+     *
+     * @param canvasTagHierarchy the canvas tag hierarchy
+     * @param gs                 the graphics state
+     * @param path               the path to be rendered
+     * @param operation          one of the possible combinations of {@link #STROKE} and
+     *                           {@link #FILL} values or {@link #NO_OP}
+     * @param rule               either {@link FillingRule#NONZERO_WINDING} or {@link FillingRule#EVEN_ODD}
+     * @param isClip             {@code true} indicates that current path modifies the clipping path
+     * @param clipRule           either {@link FillingRule#NONZERO_WINDING} or {@link FillingRule#EVEN_ODD}
+     */
+    public PathRenderInfo(Stack<CanvasTag> canvasTagHierarchy, CanvasGraphicsState gs, Path path, int operation, int rule, boolean isClip, int clipRule) {
+        super(gs);
+        this.canvasTagHierarchy = Collections.<CanvasTag>unmodifiableList(new ArrayList<>(canvasTagHierarchy));
+        this.path = path;
+        this.operation = operation;
+        this.rule = rule;
+        this.isClip = isClip;
+        this.clippingRule = clipRule;
+    }
+
+    /**
+     * If the operation is {@link #NO_OP} then the rule is ignored,
+     * otherwise {@link FillingRule#NONZERO_WINDING} is used by default.
+     * With this constructor path is considered as not modifying clipping path.
+     * <p>
+     * See {@link #PathRenderInfo(Stack, CanvasGraphicsState, Path, int, int, boolean, int)}
+     *
+     * @param canvasTagHierarchy the canvas tag hierarchy
+     * @param gs                 the graphics state
+     * @param path               the path to be rendered
+     * @param operation          one of the possible combinations of {@link #STROKE} and
+     *                           {@link #FILL} values or {@link #NO_OP}
+     */
+    public PathRenderInfo(Stack<CanvasTag> canvasTagHierarchy, CanvasGraphicsState gs, Path path, int operation) {
+        this(canvasTagHierarchy, gs, path, operation, FillingRule.NONZERO_WINDING, false, FillingRule.NONZERO_WINDING);
+    }
+
+    /**
+     * Gets the {@link Path} to be rendered
+     *
+     * @return the {@link Path} to be rendered
+     */
+    public Path getPath() {
+        return path;
+    }
+
+    /**
+     * Gets the {@code int} value which is either {@link #NO_OP} or one of possible
+     * combinations of {@link #STROKE} and {@link #FILL}.
+     *
+     * @return the operation value
+     */
+    public int getOperation() {
+        return operation;
+    }
+
+    /**
+     * Gets either {@link FillingRule#NONZERO_WINDING} or {@link FillingRule#EVEN_ODD}.
+     *
+     * @return the rule value
+     */
+    public int getRule() {
+        return rule;
+    }
+
+    /**
+     * Gets the clipping path flag.
+     *
+     * @return {@code true} indicates that current path modifies the clipping path
+     */
+    public boolean isPathModifiesClippingPath() {
+        return isClip;
+    }
+
+    /**
+     * Gets either {@link FillingRule#NONZERO_WINDING} or {@link FillingRule#EVEN_ODD}.
+     *
+     * @return the clipping rule value
+     */
+    public int getClippingRule() {
+        return clippingRule;
+    }
+
+    /**
+     * Gets the current transformation matrix.
+     *
+     * @return the current transformation {@link Matrix matrix}
+     */
+    public Matrix getCtm() {
+        checkGraphicsState();
+        return gs.getCtm();
+    }
+
+    /**
+     * Gets the path's line width.
+     *
+     * @return the path's line width
+     */
+    public float getLineWidth() {
+        checkGraphicsState();
+        return gs.getLineWidth();
+    }
+
+    /**
+     * Gets the line cap style. See {@link PdfCanvasConstants.LineCapStyle}.
+     *
+     * @return the line cap style value
+     */
+    public int getLineCapStyle() {
+        checkGraphicsState();
+        return gs.getLineCapStyle();
+    }
+
+    /**
+     * Gets the line join style. See {@link PdfCanvasConstants.LineJoinStyle}.
+     *
+     * @return the line join style value
+     */
+    public int getLineJoinStyle() {
+        checkGraphicsState();
+        return gs.getLineJoinStyle();
+    }
+
+    /**
+     * Gets the miter limit.
+     *
+     * @return the miter limit
+     */
+    public float getMiterLimit() {
+        checkGraphicsState();
+        return gs.getMiterLimit();
+    }
+
+    /**
+     * Gets the path's dash pattern.
+     *
+     * @return the path's dash pattern as a {@link PdfArray}
+     */
+    public PdfArray getLineDashPattern() {
+        checkGraphicsState();
+        return gs.getDashPattern();
+    }
+
+    /**
+     * Gets the path's stroke color.
+     *
+     * @return the path's stroke {@link Color color}
+     */
+    public Color getStrokeColor() {
+        checkGraphicsState();
+        return gs.getStrokeColor();
+    }
+
+    /**
+     * Gets the path's fill color.
+     *
+     * @return the path's fill {@link Color color}
+     */
+    public Color getFillColor() {
+        checkGraphicsState();
+        return gs.getFillColor();
+    }
+
+    /**
+     * Gets hierarchy of the canvas tags that wraps given text.
+     *
+     * @return list of the wrapping canvas tags. The first tag is the innermost (nearest to the text)
+     */
+    public List<CanvasTag> getCanvasTagHierarchy() {
+        return canvasTagHierarchy;
+    }
+
+    /**
+     * Gets the marked-content identifier associated with this {@link PathRenderInfo} instance
+     *
+     * @return associated marked-content identifier or -1 in case content is unmarked
+     */
+    public int getMcid() {
+        for (CanvasTag tag : canvasTagHierarchy) {
+            if (tag.hasMcid()) {
+                return tag.getMcid();
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * Checks if the text belongs to a marked content sequence
+     * with a given mcid.
+     *
+     * @param mcid a marked content id
+     * @return {@code true} if the text is marked with this id
+     */
+    public boolean hasMcid(int mcid) {
+        return hasMcid(mcid, false);
+    }
+
+    /**
+     * Checks if the text belongs to a marked content sequence
+     * with a given mcid.
+     *
+     * @param mcid                     a marked content id
+     * @param checkTheTopmostLevelOnly indicates whether to check the topmost level of marked content stack only
+     * @return {@code true} if the text is marked with this id
+     */
+    public boolean hasMcid(int mcid, boolean checkTheTopmostLevelOnly) {
+        if (checkTheTopmostLevelOnly) {
+            if (canvasTagHierarchy != null) {
+                int infoMcid = getMcid();
+                return infoMcid != -1 && infoMcid == mcid;
+            }
+        } else {
+            for (CanvasTag tag : canvasTagHierarchy) {
+                if (tag.hasMcid())
+                    if (tag.getMcid() == mcid)
+                        return true;
+            }
+        }
+        return false;
+    }
+}
