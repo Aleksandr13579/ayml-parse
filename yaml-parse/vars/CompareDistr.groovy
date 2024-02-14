@@ -1,8 +1,5 @@
 //@Grab('com.itextpdf:kernel:7.2.0')
 //@Grab('com.itextpdf:html2pdf:5.0.0')
-import main.groovy.org.example.classes.YamlFile
-import main.groovy.org.example.classes.Compare
-import main.groovy.org.example.classes.PDFConverter
 
 def call() {
 
@@ -27,6 +24,10 @@ def call() {
                 }
                 stage('gradle dependencies') {
                     sh (script: "./${env.WORKSPACE}/gradlew :yaml-parse:tasks dependencies")
+
+                    import main.groovy.org.example.classes.YamlFile
+                    import main.groovy.org.example.classes.Compare
+                    import main.groovy.org.example.classes.PDFConverter
                 }
                 stage('Unzip files') {
                     sh (script: "mkdir ${env.WORKSPACE}/yaml-parse/resources/first", returnStdout: false)
