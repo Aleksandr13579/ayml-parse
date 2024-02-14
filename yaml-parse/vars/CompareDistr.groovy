@@ -22,8 +22,11 @@ def call() {
                 stage('Chekout') {
                     git(
                             url: 'https://github.com/Aleksandr13579/ayml-parse.git',
-                            branch: "main"
+                            branch: "main "
                     )
+                }
+                stage('gradle dependencies') {
+                    sh (script: "./${env.WORKSPACE}/gradlew :yaml-parse:tasks dependencies")
                 }
                 stage('Unzip files') {
                     sh (script: "mkdir ${env.WORKSPACE}/yaml-parse/resources/first", returnStdout: false)
