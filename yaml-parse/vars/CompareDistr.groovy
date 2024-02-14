@@ -1,11 +1,19 @@
 //@Grab('com.itextpdf:kernel:7.2.0')
 //@Grab('com.itextpdf:html2pdf:5.0.0')
 
+
 def call() {
 
     node {
+        withGradle {
+            sh './${env.WORKSPACE}/gradlew :yaml-parse:tasks dependencies'
+        }
         timestamps {
             try {
+
+                import main.groovy.org.example.classes.YamlFile
+                import main.groovy.org.example.classes.Compare
+                import main.groovy.org.example.classes.PDFConverter
 
                 List<String> filesInFirstArchive = new ArrayList<>()
                 List<String> filesInSecondArchive = new ArrayList<>()
@@ -21,13 +29,6 @@ def call() {
                             url: 'https://github.com/Aleksandr13579/ayml-parse.git',
                             branch: "main "
                     )
-                }
-                stage('gradle dependencies') {
-                    sh (script: "./${env.WORKSPACE}/gradlew :yaml-parse:tasks dependencies")
-
-                    import main.groovy.org.example.classes.YamlFile
-                    import main.groovy.org.example.classes.Compare
-                    import main.groovy.org.example.classes.PDFConverter
                 }
                 stage('Unzip files') {
                     sh (script: "mkdir ${env.WORKSPACE}/yaml-parse/resources/first", returnStdout: false)
