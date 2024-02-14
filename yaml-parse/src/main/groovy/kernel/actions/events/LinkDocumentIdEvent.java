@@ -22,11 +22,11 @@
  */
 package kernel.actions.events;
 
-import main.groovy.commons.actions.AbstractITextConfigurationEvent;
-import main.groovy.commons.actions.AbstractProductProcessITextEvent;
-import main.groovy.commons.actions.sequence.AbstractIdentifiableElement;
-import main.groovy.commons.actions.sequence.SequenceId;
-import main.groovy.commons.actions.sequence.SequenceIdManager;
+import commons.actions.AbstractITextConfigurationEvent;
+import commons.actions.AbstractProductProcessITextEvent;
+import commons.actions.sequence.AbstractIdentifiableElement;
+import commons.actions.sequence.SequenceId;
+import commons.actions.sequence.SequenceIdManager;
 import kernel.pdf.PdfDocument;
 
 import java.lang.ref.WeakReference;

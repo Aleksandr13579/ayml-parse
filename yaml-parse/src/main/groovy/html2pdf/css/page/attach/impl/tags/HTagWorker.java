@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.tagging.IAccessibleElement;
-import main.groovy.styledxmlparser.node.IElementNode;
+import layout.IPropertyContainer;
+import layout.tagging.IAccessibleElement;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ProcessorContext;
 
 public class HTagWorker extends DivTagWorker {

@@ -22,14 +22,14 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import main.groovy.forms.form.FormProperty;
-import main.groovy.forms.form.element.AbstractSelectField;
-import main.groovy.forms.form.element.ComboBoxField;
-import main.groovy.forms.form.element.ListBoxField;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.IBlockElement;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
-import main.groovy.styledxmlparser.node.IElementNode;
+import forms.form.FormProperty;
+import forms.form.element.AbstractSelectField;
+import forms.form.element.ComboBoxField;
+import forms.form.element.ListBoxField;
+import layout.IPropertyContainer;
+import layout.element.IBlockElement;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;

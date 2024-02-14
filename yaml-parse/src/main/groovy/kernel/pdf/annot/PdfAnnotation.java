@@ -22,8 +22,8 @@
  */
 package kernel.pdf.annot;
 
-import main.groovy.io.font.PdfEncodings;
-import main.groovy.io.logs.IoLogMessageConstant;
+import io.font.PdfEncodings;
+import io.logs.IoLogMessageConstant;
 import kernel.colors.Color;
 import kernel.colors.DeviceCmyk;
 import kernel.colors.DeviceGray;

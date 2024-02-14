@@ -8,7 +8,7 @@ package io.codec.brotli.dec;
 
 import java.nio.ByteBuffer;
 
-import static main.groovy.io.codec.brotli.dec.WordTransformType.*;
+import static io.codec.brotli.dec.WordTransformType.*;
 
 /**
  * Transformations on dictionary words.

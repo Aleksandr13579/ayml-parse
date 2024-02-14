@@ -22,8 +22,8 @@
  */
 package kernel.utils;
 
-import main.groovy.commons.actions.contexts.IMetaInfo;
-import main.groovy.io.source.ByteArrayOutputStream;
+import commons.actions.contexts.IMetaInfo;
+import io.source.ByteArrayOutputStream;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;

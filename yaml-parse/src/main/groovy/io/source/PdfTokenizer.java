@@ -22,9 +22,9 @@
  */
 package io.source;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.exceptions.IOException;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import commons.utils.MessageFormatUtil;
+import io.exceptions.IOException;
+import io.exceptions.IoExceptionMessageConstant;
 import io.logs.IoLogMessageConstant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

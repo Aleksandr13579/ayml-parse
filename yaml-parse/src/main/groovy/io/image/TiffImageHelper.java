@@ -22,11 +22,11 @@
  */
 package io.image;
 
-import main.groovy.io.codec.*;
-import main.groovy.io.colors.IccProfile;
-import main.groovy.io.exceptions.IOException;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
-import main.groovy.io.font.PdfEncodings;
+import io.codec.*;
+import io.colors.IccProfile;
+import io.exceptions.IOException;
+import io.exceptions.IoExceptionMessageConstant;
+import io.font.PdfEncodings;
 import io.source.*;
 import io.util.FilterUtil;
 

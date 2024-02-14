@@ -22,12 +22,12 @@
  */
 package kernel.pdf;
 
-import main.groovy.bouncycastleconnector.BouncyCastleFactoryCreator;
-import main.groovy.commons.actions.contexts.IMetaInfo;
-import main.groovy.commons.bouncycastle.IBouncyCastleFactory;
-import main.groovy.commons.bouncycastle.cms.AbstractCMSException;
-import main.groovy.commons.bouncycastle.cms.IRecipient;
-import main.groovy.commons.bouncycastle.cms.IRecipientInformation;
+import bouncycastleconnector.BouncyCastleFactoryCreator;
+import commons.actions.contexts.IMetaInfo;
+import commons.bouncycastle.IBouncyCastleFactory;
+import commons.bouncycastle.cms.AbstractCMSException;
+import commons.bouncycastle.cms.IRecipient;
+import commons.bouncycastle.cms.IRecipientInformation;
 
 import java.io.IOException;
 import java.io.OutputStream;

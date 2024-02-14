@@ -22,11 +22,11 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.*;
-import main.groovy.layout.properties.Property;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
-import main.groovy.styledxmlparser.node.IElementNode;
+import layout.IPropertyContainer;
+import layout.element.*;
+import layout.properties.Property;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.util.AccessiblePropHelper;
@@ -68,7 +68,7 @@ public class UlOlTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processEnd(main.groovy.html2pdf.html.node.IElementNode, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processEnd(html2pdf.html.node.IElementNode, html2pdf.attach.ProcessorContext)
      */
     @Override
     public void processEnd(IElementNode element, ProcessorContext context) {
@@ -76,7 +76,7 @@ public class UlOlTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processContent(java.lang.String, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processContent(java.lang.String, html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processContent(String content, ProcessorContext context) {
@@ -85,7 +85,7 @@ public class UlOlTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processTagChild(main.groovy.html2pdf.attach.ITagWorker, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processTagChild(html2pdf.attach.ITagWorker, html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processTagChild(ITagWorker childTagWorker, ProcessorContext context) {
@@ -114,7 +114,7 @@ public class UlOlTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#getElementResult()
+     * @see html2pdf.attach.ITagWorker#getElementResult()
      */
     @Override
     public IPropertyContainer getElementResult() {

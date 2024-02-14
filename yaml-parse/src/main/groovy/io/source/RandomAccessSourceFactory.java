@@ -22,8 +22,8 @@
  */
 package io.source;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import commons.utils.MessageFormatUtil;
+import io.exceptions.IoExceptionMessageConstant;
 import io.util.ResourceUtil;
 import io.util.StreamUtil;
 

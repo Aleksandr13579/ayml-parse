@@ -22,17 +22,17 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.font.otf.GlyphLine;
-import main.groovy.io.logs.IoLogMessageConstant;
-import main.groovy.kernel.font.PdfFont;
-import main.groovy.layout.layout.LayoutContext;
-import main.groovy.layout.layout.LayoutResult;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.renderer.DrawContext;
-import main.groovy.layout.renderer.IRenderer;
-import main.groovy.layout.renderer.TargetCounterHandler;
-import main.groovy.layout.renderer.TextRenderer;
+import commons.utils.MessageFormatUtil;
+import io.font.otf.GlyphLine;
+import io.logs.IoLogMessageConstant;
+import kernel.font.PdfFont;
+import layout.layout.LayoutContext;
+import layout.layout.LayoutResult;
+import layout.properties.Property;
+import layout.renderer.DrawContext;
+import layout.renderer.IRenderer;
+import layout.renderer.TargetCounterHandler;
+import layout.renderer.TextRenderer;
 import html2pdf.css.page.css.resolve.func.counter.CounterDigitsGlyphStyle;
 import html2pdf.css.page.html.HtmlUtils;
 import html2pdf.css.page.logs.Html2PdfLogMessageConstant;

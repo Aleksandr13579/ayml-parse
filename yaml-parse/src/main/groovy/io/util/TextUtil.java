@@ -22,8 +22,8 @@
  */
 package io.util;
 
-import main.groovy.io.font.otf.Glyph;
-import main.groovy.io.font.otf.GlyphLine;
+import io.font.otf.Glyph;
+import io.font.otf.GlyphLine;
 
 import java.nio.charset.Charset;
 import java.util.ArrayList;

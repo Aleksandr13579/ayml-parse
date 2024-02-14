@@ -22,7 +22,7 @@
  */
 package kernel.pdf.xobject;
 
-import main.groovy.io.logs.IoLogMessageConstant;
+import io.logs.IoLogMessageConstant;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.geom.Rectangle;
 import kernel.pdf.*;

@@ -22,9 +22,9 @@
  */
 package kernel.pdf.statistics;
 
-import main.groovy.commons.actions.AbstractStatisticsAggregator;
-import main.groovy.commons.actions.AbstractStatisticsEvent;
-import main.groovy.commons.utils.MapUtil;
+import commons.actions.AbstractStatisticsAggregator;
+import commons.actions.AbstractStatisticsEvent;
+import commons.utils.MapUtil;
 
 import java.util.*;
 

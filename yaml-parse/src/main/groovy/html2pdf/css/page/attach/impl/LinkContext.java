@@ -22,8 +22,8 @@
  */
 package html2pdf.css.page.attach.impl;
 
-import main.groovy.styledxmlparser.node.IElementNode;
-import main.groovy.styledxmlparser.node.INode;
+import styledxmlparser.node.IElementNode;
+import styledxmlparser.node.INode;
 import html2pdf.css.page.html.AttributeConstants;
 import html2pdf.css.page.html.TagConstants;
 

@@ -22,8 +22,8 @@
  */
 package kernel.pdf.canvas.parser.data;
 
-import main.groovy.io.font.FontProgram;
-import main.groovy.io.font.otf.GlyphLine;
+import io.font.FontProgram;
+import io.font.otf.GlyphLine;
 import kernel.colors.Color;
 import kernel.font.PdfFont;
 import kernel.font.PdfType0Font;

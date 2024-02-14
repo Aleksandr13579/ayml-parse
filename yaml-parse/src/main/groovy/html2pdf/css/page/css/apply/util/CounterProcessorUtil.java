@@ -22,8 +22,8 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
-import main.groovy.styledxmlparser.node.IElementNode;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.css.resolve.CssContext;
 import html2pdf.css.page.css.resolve.func.counter.CssCounterManager;

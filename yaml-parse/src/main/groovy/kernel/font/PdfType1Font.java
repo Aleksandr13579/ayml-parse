@@ -22,9 +22,9 @@
  */
 package kernel.font;
 
-import main.groovy.io.font.FontEncoding;
-import main.groovy.io.font.Type1Font;
-import main.groovy.io.font.otf.Glyph;
+import io.font.FontEncoding;
+import io.font.Type1Font;
+import io.font.otf.Glyph;
 import kernel.pdf.PdfDictionary;
 import kernel.pdf.PdfName;
 import kernel.pdf.PdfNumber;

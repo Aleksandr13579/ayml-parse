@@ -22,9 +22,9 @@
  */
 package io.image;
 
-import main.groovy.io.colors.IccProfile;
-import main.groovy.io.exceptions.IOException;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import io.colors.IccProfile;
+import io.exceptions.IOException;
+import io.exceptions.IoExceptionMessageConstant;
 import io.logs.IoLogMessageConstant;
 import io.source.ByteArrayOutputStream;
 import io.source.RandomAccessFileOrArray;

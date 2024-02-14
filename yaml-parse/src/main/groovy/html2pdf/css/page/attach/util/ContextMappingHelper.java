@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.attach.util;
 
-import main.groovy.svg.processors.impl.SvgConverterProperties;
+import svg.processors.impl.SvgConverterProperties;
 import html2pdf.css.page.attach.ProcessorContext;
 
 public class ContextMappingHelper {

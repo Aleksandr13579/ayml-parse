@@ -22,11 +22,11 @@
  */
 package html2pdf.css.page.css.apply.impl;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.borders.Border;
-import main.groovy.layout.properties.Property;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
-import main.groovy.styledxmlparser.node.IStylesContainer;
+import layout.IPropertyContainer;
+import layout.borders.Border;
+import layout.properties.Property;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
+import styledxmlparser.node.IStylesContainer;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
@@ -42,7 +42,7 @@ import java.util.Map;
 public class TdTagCssApplier extends BlockCssApplier {
     
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.css.apply.impl.BlockCssApplier#apply(main.groovy.html2pdf.attach.ProcessorContext, main.groovy.html2pdf.html.node.IStylesContainer, main.groovy.html2pdf.attach.ITagWorker)
+     * @see html2pdf.css.apply.impl.BlockCssApplier#apply(html2pdf.attach.ProcessorContext, html2pdf.html.node.IStylesContainer, html2pdf.attach.ITagWorker)
      */
     @Override
     public void apply(ProcessorContext context, IStylesContainer stylesContainer, ITagWorker worker) {

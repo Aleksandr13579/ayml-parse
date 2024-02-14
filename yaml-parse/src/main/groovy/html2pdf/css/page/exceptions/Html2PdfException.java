@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.exceptions;
 
-import main.groovy.commons.exceptions.ITextException;
+import commons.exceptions.ITextException;
 
 /**
  * Runtime exception that gets thrown if something goes wrong in the HTML to PDF conversion.

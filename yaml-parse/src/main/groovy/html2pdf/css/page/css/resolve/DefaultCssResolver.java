@@ -22,24 +22,24 @@
  */
 package html2pdf.css.page.css.resolve;
 
-import main.groovy.io.util.DecimalFormatUtil;
-import main.groovy.styledxmlparser.css.*;
-import main.groovy.styledxmlparser.css.media.CssMediaRule;
-import main.groovy.styledxmlparser.css.media.MediaDeviceDescription;
-import main.groovy.styledxmlparser.css.page.PageMarginBoxContextNode;
-import main.groovy.styledxmlparser.css.parse.CssRuleSetParser;
-import main.groovy.styledxmlparser.css.parse.CssStyleSheetParser;
-import main.groovy.styledxmlparser.css.pseudo.CssPseudoElementNode;
-import main.groovy.styledxmlparser.css.resolve.AbstractCssContext;
-import main.groovy.styledxmlparser.css.resolve.CssDefaults;
-import main.groovy.styledxmlparser.css.resolve.CssInheritance;
-import main.groovy.styledxmlparser.css.resolve.IStyleInheritance;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
-import main.groovy.styledxmlparser.css.util.CssTypesValidationUtils;
-import main.groovy.styledxmlparser.css.util.CssUtils;
-import main.groovy.styledxmlparser.node.*;
-import main.groovy.styledxmlparser.resolver.resource.ResourceResolver;
-import main.groovy.styledxmlparser.util.StyleUtil;
+import io.util.DecimalFormatUtil;
+import styledxmlparser.css.*;
+import styledxmlparser.css.media.CssMediaRule;
+import styledxmlparser.css.media.MediaDeviceDescription;
+import styledxmlparser.css.page.PageMarginBoxContextNode;
+import styledxmlparser.css.parse.CssRuleSetParser;
+import styledxmlparser.css.parse.CssStyleSheetParser;
+import styledxmlparser.css.pseudo.CssPseudoElementNode;
+import styledxmlparser.css.resolve.AbstractCssContext;
+import styledxmlparser.css.resolve.CssDefaults;
+import styledxmlparser.css.resolve.CssInheritance;
+import styledxmlparser.css.resolve.IStyleInheritance;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
+import styledxmlparser.css.util.CssTypesValidationUtils;
+import styledxmlparser.css.util.CssUtils;
+import styledxmlparser.node.*;
+import styledxmlparser.resolver.resource.ResourceResolver;
+import styledxmlparser.util.StyleUtil;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.css.apply.util.CounterProcessorUtil;
@@ -138,7 +138,7 @@ public class DefaultCssResolver implements ICssResolver {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.css.resolve.ICssResolver#resolveStyles(main.groovy.html2pdf.html.node.INode, main.groovy.html2pdf.css.resolve.CssContext)
+     * @see html2pdf.css.resolve.ICssResolver#resolveStyles(html2pdf.html.node.INode, html2pdf.css.resolve.CssContext)
      */
     private Map<String, String> resolveStyles(INode element, CssContext context) {
         Map<String, String> elementStyles = resolveElementsStyles(element);

@@ -22,28 +22,28 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.kernel.colors.Color;
-import main.groovy.kernel.colors.gradients.StrategyBasedLinearGradientBuilder;
-import main.groovy.kernel.geom.Rectangle;
-import main.groovy.kernel.numbering.AlphabetNumbering;
-import main.groovy.kernel.pdf.PdfDocument;
-import main.groovy.kernel.pdf.canvas.PdfCanvas;
-import main.groovy.kernel.pdf.xobject.PdfFormXObject;
-import main.groovy.kernel.pdf.xobject.PdfImageXObject;
-import main.groovy.kernel.pdf.xobject.PdfXObject;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.*;
-import main.groovy.layout.properties.IListSymbolFactory;
-import main.groovy.layout.properties.ListNumberingType;
-import main.groovy.layout.properties.ListSymbolPosition;
-import main.groovy.layout.properties.Property;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
-import main.groovy.styledxmlparser.css.util.CssGradientUtil;
-import main.groovy.styledxmlparser.css.util.CssUtils;
-import main.groovy.styledxmlparser.exceptions.StyledXMLParserException;
-import main.groovy.styledxmlparser.node.IElementNode;
-import main.groovy.styledxmlparser.node.IStylesContainer;
+import commons.utils.MessageFormatUtil;
+import kernel.colors.Color;
+import kernel.colors.gradients.StrategyBasedLinearGradientBuilder;
+import kernel.geom.Rectangle;
+import kernel.numbering.AlphabetNumbering;
+import kernel.pdf.PdfDocument;
+import kernel.pdf.canvas.PdfCanvas;
+import kernel.pdf.xobject.PdfFormXObject;
+import kernel.pdf.xobject.PdfImageXObject;
+import kernel.pdf.xobject.PdfXObject;
+import layout.IPropertyContainer;
+import layout.element.*;
+import layout.properties.IListSymbolFactory;
+import layout.properties.ListNumberingType;
+import layout.properties.ListSymbolPosition;
+import layout.properties.Property;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
+import styledxmlparser.css.util.CssGradientUtil;
+import styledxmlparser.css.util.CssUtils;
+import styledxmlparser.exceptions.StyledXMLParserException;
+import styledxmlparser.node.IElementNode;
+import styledxmlparser.node.IStylesContainer;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.html.TagConstants;
@@ -303,7 +303,7 @@ public final class ListStyleApplierUtil {
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.layout.property.IListSymbolFactory#createSymbol(int, main.groovy.layout.IPropertyContainer, main.groovy.layout.IPropertyContainer)
+         * @see layout.property.IListSymbolFactory#createSymbol(int, layout.IPropertyContainer, layout.IPropertyContainer)
          */
         @Override
         public IElement createSymbol(int index, IPropertyContainer list, IPropertyContainer listItem) {

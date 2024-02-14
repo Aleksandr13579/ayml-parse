@@ -22,11 +22,11 @@
  */
 package kernel.pdf.canvas.wmf;
 
-import main.groovy.io.font.FontEncoding;
-import main.groovy.io.font.FontProgram;
-import main.groovy.io.font.FontProgramFactory;
-import main.groovy.io.font.PdfEncodings;
-import main.groovy.io.font.constants.FontStyles;
+import io.font.FontEncoding;
+import io.font.FontProgram;
+import io.font.FontProgramFactory;
+import io.font.PdfEncodings;
+import io.font.constants.FontStyles;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

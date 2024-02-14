@@ -22,7 +22,7 @@
  */
 package io.source;
 
-import main.groovy.commons.utils.MessageFormatUtil;
+import commons.utils.MessageFormatUtil;
 
 public class ByteBuffer {
 

@@ -22,12 +22,12 @@
  */
 package html2pdf.css.page.css.apply.impl;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.properties.ListSymbolPosition;
-import main.groovy.layout.properties.Property;
-import main.groovy.styledxmlparser.node.IElementNode;
-import main.groovy.styledxmlparser.node.INode;
-import main.groovy.styledxmlparser.node.IStylesContainer;
+import layout.IPropertyContainer;
+import layout.properties.ListSymbolPosition;
+import layout.properties.Property;
+import styledxmlparser.node.IElementNode;
+import styledxmlparser.node.INode;
+import styledxmlparser.node.IStylesContainer;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
@@ -41,7 +41,7 @@ import html2pdf.css.page.html.TagConstants;
 public class LiTagCssApplier extends BlockCssApplier {
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.css.apply.impl.BlockCssApplier#apply(main.groovy.html2pdf.attach.ProcessorContext, main.groovy.html2pdf.html.node.IStylesContainer, main.groovy.html2pdf.attach.ITagWorker)
+     * @see html2pdf.css.apply.impl.BlockCssApplier#apply(html2pdf.attach.ProcessorContext, html2pdf.html.node.IStylesContainer, html2pdf.attach.ITagWorker)
      */
     @Override
     public void apply(ProcessorContext context, IStylesContainer stylesContainer, ITagWorker tagWorker) {

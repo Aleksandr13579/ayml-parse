@@ -22,20 +22,20 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.kernel.colors.gradients.StrategyBasedLinearGradientBuilder;
-import main.groovy.kernel.pdf.xobject.PdfFormXObject;
-import main.groovy.kernel.pdf.xobject.PdfImageXObject;
-import main.groovy.kernel.pdf.xobject.PdfXObject;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.properties.*;
-import main.groovy.layout.properties.BackgroundRepeat.BackgroundRepeatValue;
-import main.groovy.styledxmlparser.css.CommonCssConstants;
-import main.groovy.styledxmlparser.css.util.CssBackgroundUtils;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
-import main.groovy.styledxmlparser.css.util.CssGradientUtil;
-import main.groovy.styledxmlparser.css.util.CssUtils;
-import main.groovy.styledxmlparser.exceptions.StyledXMLParserException;
+import commons.utils.MessageFormatUtil;
+import kernel.colors.gradients.StrategyBasedLinearGradientBuilder;
+import kernel.pdf.xobject.PdfFormXObject;
+import kernel.pdf.xobject.PdfImageXObject;
+import kernel.pdf.xobject.PdfXObject;
+import layout.IPropertyContainer;
+import layout.properties.*;
+import layout.properties.BackgroundRepeat.BackgroundRepeatValue;
+import styledxmlparser.css.CommonCssConstants;
+import styledxmlparser.css.util.CssBackgroundUtils;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
+import styledxmlparser.css.util.CssGradientUtil;
+import styledxmlparser.css.util.CssUtils;
+import styledxmlparser.exceptions.StyledXMLParserException;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.logs.Html2PdfLogMessageConstant;

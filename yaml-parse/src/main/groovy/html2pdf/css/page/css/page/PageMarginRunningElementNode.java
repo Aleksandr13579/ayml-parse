@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.css.page;
 
-import main.groovy.styledxmlparser.node.INode;
+import styledxmlparser.node.INode;
 
 import java.util.List;
 

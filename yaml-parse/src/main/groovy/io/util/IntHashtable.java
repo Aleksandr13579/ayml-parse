@@ -22,7 +22,7 @@
  */
 package io.util;
 
-import main.groovy.commons.utils.MessageFormatUtil;
+import commons.utils.MessageFormatUtil;
 
 import java.util.Arrays;
 

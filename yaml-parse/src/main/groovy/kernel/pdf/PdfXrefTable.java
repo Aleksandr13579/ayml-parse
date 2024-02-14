@@ -22,10 +22,10 @@
  */
 package kernel.pdf;
 
-import main.groovy.commons.actions.data.ProductData;
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.logs.IoLogMessageConstant;
-import main.groovy.io.source.ByteUtils;
+import commons.actions.data.ProductData;
+import commons.utils.MessageFormatUtil;
+import io.logs.IoLogMessageConstant;
+import io.source.ByteUtils;
 import kernel.actions.data.ITextCoreProductData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import main.groovy.io.source.ByteArrayOutputStream;
+import io.source.ByteArrayOutputStream;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.utils.ICopyFilter;
@@ -170,7 +170,7 @@ public class PdfStream extends PdfDictionary {
 
     /**
      * Gets compression level of this PdfStream.
-     * For more details @see {@link main.groovy.io.source.DeflaterOutputStream}.
+     * For more details @see {@link io.source.DeflaterOutputStream}.
      *
      * @return compression level.
      */
@@ -180,7 +180,7 @@ public class PdfStream extends PdfDictionary {
 
     /**
      * Sets compression level of this PdfStream.
-     * For more details @see {@link main.groovy.io.source.DeflaterOutputStream}.
+     * For more details @see {@link io.source.DeflaterOutputStream}.
      *
      * @param compressionLevel the compression level (0 = best speed, 9 = best compression, -1 is default)
      */

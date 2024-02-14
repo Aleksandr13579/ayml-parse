@@ -22,7 +22,7 @@
  */
 package kernel.crypto;
 
-import main.groovy.commons.utils.SystemUtil;
+import commons.utils.SystemUtil;
 
 import java.nio.charset.StandardCharsets;
 

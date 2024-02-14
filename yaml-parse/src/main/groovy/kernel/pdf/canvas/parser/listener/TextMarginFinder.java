@@ -22,7 +22,7 @@
  */
 package kernel.pdf.canvas.parser.listener;
 
-import main.groovy.commons.utils.MessageFormatUtil;
+import commons.utils.MessageFormatUtil;
 import kernel.geom.Rectangle;
 import kernel.pdf.canvas.parser.EventType;
 import kernel.pdf.canvas.parser.data.IEventData;

@@ -22,7 +22,7 @@
  */
 package kernel.pdf.annot;
 
-import main.groovy.io.logs.IoLogMessageConstant;
+import io.logs.IoLogMessageConstant;
 import kernel.geom.Rectangle;
 import kernel.pdf.*;
 import org.slf4j.Logger;

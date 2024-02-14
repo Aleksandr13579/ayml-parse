@@ -22,9 +22,9 @@
  */
 package kernel.pdf;
 
-import main.groovy.commons.utils.FileUtil;
-import main.groovy.io.logs.IoLogMessageConstant;
-import main.groovy.io.source.ByteUtils;
+import commons.utils.FileUtil;
+import io.logs.IoLogMessageConstant;
+import io.source.ByteUtils;
 import kernel.utils.ICopyFilter;
 import kernel.utils.NullCopyFilter;
 import org.slf4j.Logger;
@@ -121,7 +121,7 @@ public class PdfWriter extends PdfOutputStream {
 
     /**
      * Gets default compression level for @see PdfStream.
-     * For more details @see {@link main.groovy.io.source.DeflaterOutputStream}.
+     * For more details @see {@link io.source.DeflaterOutputStream}.
      *
      * @return compression level.
      */
@@ -131,7 +131,7 @@ public class PdfWriter extends PdfOutputStream {
 
     /**
      * Sets default compression level for @see PdfStream.
-     * For more details @see {@link main.groovy.io.source.DeflaterOutputStream}.
+     * For more details @see {@link io.source.DeflaterOutputStream}.
      *
      * @param compressionLevel compression level.
      *

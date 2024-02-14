@@ -22,7 +22,7 @@
  */
 package kernel.pdf.canvas.wmf;
 
-import main.groovy.io.util.StreamUtil;
+import io.util.StreamUtil;
 import kernel.colors.Color;
 import kernel.colors.DeviceRgb;
 

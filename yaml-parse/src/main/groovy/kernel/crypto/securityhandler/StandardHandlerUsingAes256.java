@@ -22,8 +22,8 @@
  */
 package kernel.crypto.securityhandler;
 
-import main.groovy.io.logs.IoLogMessageConstant;
-import main.groovy.io.util.StreamUtil;
+import io.logs.IoLogMessageConstant;
+import io.util.StreamUtil;
 import kernel.crypto.*;
 import kernel.exceptions.BadPasswordException;
 import kernel.exceptions.KernelExceptionMessageConstant;

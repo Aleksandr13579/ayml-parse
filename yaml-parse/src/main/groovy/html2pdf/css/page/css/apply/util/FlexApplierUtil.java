@@ -22,14 +22,14 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.properties.AlignmentPropertyValue;
-import main.groovy.layout.properties.JustifyContent;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.properties.UnitValue;
-import main.groovy.styledxmlparser.css.CommonCssConstants;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
+import commons.utils.MessageFormatUtil;
+import layout.IPropertyContainer;
+import layout.properties.AlignmentPropertyValue;
+import layout.properties.JustifyContent;
+import layout.properties.Property;
+import layout.properties.UnitValue;
+import styledxmlparser.css.CommonCssConstants;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.logs.Html2PdfLogMessageConstant;

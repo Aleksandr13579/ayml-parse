@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.css.resolve;
 
-import main.groovy.styledxmlparser.css.resolve.AbstractCssContext;
-import main.groovy.styledxmlparser.css.resolve.CssDefaults;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
+import styledxmlparser.css.resolve.AbstractCssContext;
+import styledxmlparser.css.resolve.CssDefaults;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.css.page.CssRunningManager;
 import html2pdf.css.page.css.resolve.func.counter.CssCounterManager;

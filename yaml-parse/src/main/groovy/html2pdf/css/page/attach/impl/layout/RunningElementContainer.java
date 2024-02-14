@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import main.groovy.styledxmlparser.node.IElementNode;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 
 /**

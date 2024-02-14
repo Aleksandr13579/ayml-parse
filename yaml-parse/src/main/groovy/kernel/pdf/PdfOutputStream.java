@@ -22,12 +22,12 @@
  */
 package kernel.pdf;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.logs.IoLogMessageConstant;
-import main.groovy.io.source.ByteArrayOutputStream;
-import main.groovy.io.source.ByteUtils;
-import main.groovy.io.source.DeflaterOutputStream;
-import main.groovy.io.source.OutputStream;
+import commons.utils.MessageFormatUtil;
+import io.logs.IoLogMessageConstant;
+import io.source.ByteArrayOutputStream;
+import io.source.ByteUtils;
+import io.source.DeflaterOutputStream;
+import io.source.OutputStream;
 import kernel.crypto.OutputStreamEncryption;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;

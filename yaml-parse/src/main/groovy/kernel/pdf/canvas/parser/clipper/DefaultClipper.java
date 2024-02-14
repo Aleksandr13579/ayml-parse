@@ -31,9 +31,9 @@
  */
 package kernel.pdf.canvas.parser.clipper;
 
-import main.groovy.kernel.pdf.canvas.parser.clipper.Path.Join;
-import main.groovy.kernel.pdf.canvas.parser.clipper.Path.OutRec;
-import main.groovy.kernel.pdf.canvas.parser.clipper.Point.LongPoint;
+import kernel.pdf.canvas.parser.clipper.Path.Join;
+import kernel.pdf.canvas.parser.clipper.Path.OutRec;
+import kernel.pdf.canvas.parser.clipper.Point.LongPoint;
 
 import java.util.ArrayList;
 import java.util.Collections;

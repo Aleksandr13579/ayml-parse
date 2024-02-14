@@ -22,8 +22,8 @@
  */
 package io.codec;
 
-import main.groovy.io.source.ByteUtils;
-import main.groovy.io.source.DeflaterOutputStream;
+import io.source.ByteUtils;
+import io.source.DeflaterOutputStream;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

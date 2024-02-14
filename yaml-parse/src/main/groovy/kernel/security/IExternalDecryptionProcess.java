@@ -22,8 +22,8 @@
  */
 package kernel.security;
 
-import main.groovy.commons.bouncycastle.cms.IRecipient;
-import main.groovy.commons.bouncycastle.cms.IRecipientId;
+import commons.bouncycastle.cms.IRecipient;
+import commons.bouncycastle.cms.IRecipientId;
 
 /**
  * Interface to externalize the retrieval of the CMS recipient info.

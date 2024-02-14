@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import main.groovy.bouncycastleconnector.BouncyCastleFactoryCreator;
+import bouncycastleconnector.BouncyCastleFactoryCreator;
 
 import java.security.cert.Certificate;
 

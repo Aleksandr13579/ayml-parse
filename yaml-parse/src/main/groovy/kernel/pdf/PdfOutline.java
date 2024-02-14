@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import main.groovy.io.font.PdfEncodings;
+import io.font.PdfEncodings;
 import kernel.colors.Color;
 import kernel.pdf.action.PdfAction;
 import kernel.pdf.colorspace.PdfColorSpace;

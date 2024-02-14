@@ -22,8 +22,8 @@
  */
 package kernel.crypto.securityhandler;
 
-import main.groovy.bouncycastleconnector.BouncyCastleFactoryCreator;
-import main.groovy.commons.bouncycastle.IBouncyCastleFactory;
+import bouncycastleconnector.BouncyCastleFactoryCreator;
+import commons.bouncycastle.IBouncyCastleFactory;
 import kernel.crypto.IDecryptor;
 import kernel.crypto.OutputStreamEncryption;
 import kernel.exceptions.KernelExceptionMessageConstant;

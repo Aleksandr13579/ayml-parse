@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page;
 
-import main.groovy.html2pdf.attach.ProcessorContext;
+import html2pdf.attach.ProcessorContext;
 
 /**
  * Class that creates ProcessorContext with IMetaInfo.

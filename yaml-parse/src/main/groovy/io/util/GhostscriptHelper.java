@@ -22,10 +22,10 @@
  */
 package io.util;
 
-import main.groovy.commons.utils.FileUtil;
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.commons.utils.SystemUtil;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import commons.utils.FileUtil;
+import commons.utils.MessageFormatUtil;
+import commons.utils.SystemUtil;
+import io.exceptions.IoExceptionMessageConstant;
 
 import java.io.IOException;
 import java.nio.file.Paths;

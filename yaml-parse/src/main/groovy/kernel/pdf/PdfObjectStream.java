@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import main.groovy.io.source.ByteArrayOutputStream;
+import io.source.ByteArrayOutputStream;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 

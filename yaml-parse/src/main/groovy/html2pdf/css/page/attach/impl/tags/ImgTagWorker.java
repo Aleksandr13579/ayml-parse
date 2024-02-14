@@ -22,14 +22,14 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.kernel.pdf.xobject.PdfFormXObject;
-import main.groovy.kernel.pdf.xobject.PdfImageXObject;
-import main.groovy.kernel.pdf.xobject.PdfXObject;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.Image;
-import main.groovy.layout.properties.ObjectFit;
-import main.groovy.styledxmlparser.node.IElementNode;
+import commons.utils.MessageFormatUtil;
+import kernel.pdf.xobject.PdfFormXObject;
+import kernel.pdf.xobject.PdfImageXObject;
+import kernel.pdf.xobject.PdfXObject;
+import layout.IPropertyContainer;
+import layout.element.Image;
+import layout.properties.ObjectFit;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.util.AccessiblePropHelper;
@@ -102,14 +102,14 @@ public class ImgTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processEnd(main.groovy.html2pdf.html.node.IElementNode, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processEnd(html2pdf.html.node.IElementNode, html2pdf.attach.ProcessorContext)
      */
     @Override
     public void processEnd(IElementNode element, ProcessorContext context) {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processContent(java.lang.String, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processContent(java.lang.String, html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processContent(String content, ProcessorContext context) {
@@ -117,7 +117,7 @@ public class ImgTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processTagChild(main.groovy.html2pdf.attach.ITagWorker, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processTagChild(html2pdf.attach.ITagWorker, html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processTagChild(ITagWorker childTagWorker, ProcessorContext context) {
@@ -125,7 +125,7 @@ public class ImgTagWorker implements ITagWorker {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#getElementResult()
+     * @see html2pdf.attach.ITagWorker#getElementResult()
      */
     @Override
     public IPropertyContainer getElementResult() {
@@ -198,7 +198,7 @@ public class ImgTagWorker implements ITagWorker {
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.layout.element.Image#getImageWidth()
+         * @see layout.element.Image#getImageWidth()
          */
         @Override
         public float getImageWidth() {
@@ -206,7 +206,7 @@ public class ImgTagWorker implements ITagWorker {
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.layout.element.Image#getImageHeight()
+         * @see layout.element.Image#getImageHeight()
          */
         @Override
         public float getImageHeight() {

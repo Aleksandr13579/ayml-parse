@@ -22,18 +22,18 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import main.groovy.commons.utils.FileUtil;
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.html2pdf.util.SvgProcessingUtil;
-import main.groovy.kernel.pdf.PdfDocument;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.Image;
-import main.groovy.styledxmlparser.node.IElementNode;
-import main.groovy.styledxmlparser.resolver.resource.ResourceResolver;
-import main.groovy.svg.converter.SvgConverter;
-import main.groovy.svg.exceptions.SvgProcessingException;
-import main.groovy.svg.processors.ISvgProcessorResult;
-import main.groovy.svg.processors.impl.SvgConverterProperties;
+import commons.utils.FileUtil;
+import commons.utils.MessageFormatUtil;
+import html2pdf.util.SvgProcessingUtil;
+import kernel.pdf.PdfDocument;
+import layout.IPropertyContainer;
+import layout.element.Image;
+import styledxmlparser.node.IElementNode;
+import styledxmlparser.resolver.resource.ResourceResolver;
+import svg.converter.SvgConverter;
+import svg.exceptions.SvgProcessingException;
+import svg.processors.ISvgProcessorResult;
+import svg.processors.impl.SvgConverterProperties;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.util.AccessiblePropHelper;

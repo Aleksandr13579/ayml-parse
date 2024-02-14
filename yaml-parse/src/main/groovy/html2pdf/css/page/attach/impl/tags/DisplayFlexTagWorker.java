@@ -22,10 +22,10 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.*;
-import main.groovy.layout.renderer.FlexContainerRenderer;
-import main.groovy.styledxmlparser.node.IElementNode;
+import layout.IPropertyContainer;
+import layout.element.*;
+import layout.renderer.FlexContainerRenderer;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.util.AccessiblePropHelper;

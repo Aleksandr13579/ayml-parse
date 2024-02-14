@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.attach.impl;
 
-import main.groovy.commons.actions.contexts.IMetaInfo;
+import commons.actions.contexts.IMetaInfo;
 
 /**
  * Class to store metaInfo that will be used for html operations.

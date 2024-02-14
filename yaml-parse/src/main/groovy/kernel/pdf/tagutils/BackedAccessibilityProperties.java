@@ -22,7 +22,7 @@
  */
 package kernel.pdf.tagutils;
 
-import main.groovy.io.font.PdfEncodings;
+import io.font.PdfEncodings;
 import kernel.pdf.*;
 import kernel.pdf.tagging.PdfNamespace;
 import kernel.pdf.tagging.PdfStructElem;

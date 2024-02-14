@@ -22,9 +22,9 @@
  */
 package kernel.colors.gradients;
 
-import main.groovy.io.logs.IoLogMessageConstant;
-import main.groovy.kernel.colors.gradients.GradientColorStop.HintOffsetType;
-import main.groovy.kernel.colors.gradients.GradientColorStop.OffsetType;
+import io.logs.IoLogMessageConstant;
+import kernel.colors.gradients.GradientColorStop.HintOffsetType;
+import kernel.colors.gradients.GradientColorStop.OffsetType;
 import kernel.colors.Color;
 import kernel.colors.PatternColor;
 import kernel.geom.AffineTransform;

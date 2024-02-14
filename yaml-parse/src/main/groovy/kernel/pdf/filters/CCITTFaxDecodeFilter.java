@@ -22,9 +22,9 @@
  */
 package kernel.pdf.filters;
 
-import main.groovy.io.codec.TIFFConstants;
-import main.groovy.io.codec.TIFFFaxDecoder;
-import main.groovy.io.codec.TIFFFaxDecompressor;
+import io.codec.TIFFConstants;
+import io.codec.TIFFFaxDecoder;
+import io.codec.TIFFFaxDecompressor;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;

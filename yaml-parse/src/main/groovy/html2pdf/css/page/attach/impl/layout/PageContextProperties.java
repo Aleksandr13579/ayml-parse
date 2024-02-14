@@ -22,11 +22,11 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import main.groovy.styledxmlparser.css.CssRuleName;
-import main.groovy.styledxmlparser.css.ICssResolver;
-import main.groovy.styledxmlparser.css.page.PageContextNode;
-import main.groovy.styledxmlparser.css.page.PageMarginBoxContextNode;
-import main.groovy.styledxmlparser.node.INode;
+import styledxmlparser.css.CssRuleName;
+import styledxmlparser.css.ICssResolver;
+import styledxmlparser.css.page.PageContextNode;
+import styledxmlparser.css.page.PageMarginBoxContextNode;
+import styledxmlparser.node.INode;
 import html2pdf.css.page.css.resolve.CssContext;
 
 import java.util.ArrayList;

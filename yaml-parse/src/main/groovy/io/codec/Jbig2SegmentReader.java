@@ -22,7 +22,7 @@
  */
 package io.codec;
 
-import main.groovy.io.source.RandomAccessFileOrArray;
+import io.source.RandomAccessFileOrArray;
 import io.exceptions.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

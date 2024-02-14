@@ -22,9 +22,9 @@
  */
 package io.image;
 
-import main.groovy.io.codec.Jbig2SegmentReader;
-import main.groovy.io.exceptions.IOException;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import io.codec.Jbig2SegmentReader;
+import io.exceptions.IOException;
+import io.exceptions.IoExceptionMessageConstant;
 import io.logs.IoLogMessageConstant;
 import io.source.IRandomAccessSource;
 import io.source.RandomAccessFileOrArray;

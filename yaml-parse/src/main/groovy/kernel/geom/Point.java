@@ -23,8 +23,8 @@
  */
 package kernel.geom;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.util.HashCode;
+import commons.utils.MessageFormatUtil;
+import io.util.HashCode;
 
 public class Point implements Cloneable {
 

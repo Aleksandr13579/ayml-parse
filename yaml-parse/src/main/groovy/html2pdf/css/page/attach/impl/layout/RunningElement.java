@@ -22,18 +22,18 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import main.groovy.kernel.pdf.tagging.StandardRoles;
-import main.groovy.layout.element.Div;
-import main.groovy.layout.layout.LayoutContext;
-import main.groovy.layout.layout.LayoutResult;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.properties.RenderingMode;
-import main.groovy.layout.renderer.DivRenderer;
-import main.groovy.layout.renderer.DrawContext;
-import main.groovy.layout.renderer.IRenderer;
+import kernel.pdf.tagging.StandardRoles;
+import layout.element.Div;
+import layout.layout.LayoutContext;
+import layout.layout.LayoutResult;
+import layout.properties.Property;
+import layout.properties.RenderingMode;
+import layout.renderer.DivRenderer;
+import layout.renderer.DrawContext;
+import layout.renderer.IRenderer;
 
 /**
- * An {@link main.groovy.layout.element.IElement} that serves as a placeholder for removed running element
+ * An {@link layout.element.IElement} that serves as a placeholder for removed running element
  * from the normal flow. This element is designed to register where particular running element would have been placed.
  */
 public class RunningElement extends Div {

@@ -22,8 +22,8 @@
  */
 package kernel.pdf.annot.da;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.font.constants.StandardFonts;
+import commons.utils.MessageFormatUtil;
+import io.font.constants.StandardFonts;
 import kernel.colors.DeviceCmyk;
 import kernel.colors.DeviceGray;
 import kernel.colors.DeviceRgb;

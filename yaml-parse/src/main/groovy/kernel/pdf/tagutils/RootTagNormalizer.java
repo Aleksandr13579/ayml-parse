@@ -22,7 +22,7 @@
  */
 package kernel.pdf.tagutils;
 
-import main.groovy.io.logs.IoLogMessageConstant;
+import io.logs.IoLogMessageConstant;
 import kernel.pdf.PdfDocument;
 import kernel.pdf.PdfName;
 import kernel.pdf.tagging.*;

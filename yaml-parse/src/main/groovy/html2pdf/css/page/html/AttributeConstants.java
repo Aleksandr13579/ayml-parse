@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.html;
 
-import main.groovy.styledxmlparser.CommonAttributeConstants;
+import styledxmlparser.CommonAttributeConstants;
 
 import java.util.Arrays;
 import java.util.Collections;

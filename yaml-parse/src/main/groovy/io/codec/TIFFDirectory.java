@@ -45,7 +45,7 @@
 */
 package io.codec;
 
-import main.groovy.io.source.RandomAccessFileOrArray;
+import io.source.RandomAccessFileOrArray;
 import io.exceptions.IOException;
 import io.exceptions.IoExceptionMessageConstant;
 

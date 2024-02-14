@@ -22,11 +22,11 @@
  */
 package kernel.crypto;
 
-import main.groovy.bouncycastleconnector.BouncyCastleFactoryCreator;
-import main.groovy.commons.bouncycastle.IBouncyCastleFactory;
-import main.groovy.commons.bouncycastle.asn1.IASN1Encoding;
-import main.groovy.commons.bouncycastle.asn1.IASN1OutputStream;
-import main.groovy.commons.utils.MessageFormatUtil;
+import bouncycastleconnector.BouncyCastleFactoryCreator;
+import commons.bouncycastle.IBouncyCastleFactory;
+import commons.bouncycastle.asn1.IASN1Encoding;
+import commons.bouncycastle.asn1.IASN1OutputStream;
+import commons.utils.MessageFormatUtil;
 import kernel.exceptions.KernelExceptionMessageConstant;
 
 import java.io.InputStream;

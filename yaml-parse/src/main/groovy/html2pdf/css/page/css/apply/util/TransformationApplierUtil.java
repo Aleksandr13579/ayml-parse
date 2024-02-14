@@ -22,11 +22,11 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.properties.Transform;
-import main.groovy.layout.properties.UnitValue;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
+import layout.IPropertyContainer;
+import layout.properties.Property;
+import layout.properties.Transform;
+import layout.properties.UnitValue;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 

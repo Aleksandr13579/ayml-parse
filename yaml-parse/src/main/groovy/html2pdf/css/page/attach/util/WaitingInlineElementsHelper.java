@@ -22,13 +22,13 @@
  */
 package html2pdf.css.page.attach.util;
 
-import main.groovy.kernel.pdf.tagging.StandardRoles;
-import main.groovy.layout.Document;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.*;
-import main.groovy.layout.renderer.FlexContainerRenderer;
-import main.groovy.styledxmlparser.css.CommonCssConstants;
-import main.groovy.styledxmlparser.util.WhiteSpaceUtil;
+import kernel.pdf.tagging.StandardRoles;
+import layout.Document;
+import layout.IPropertyContainer;
+import layout.element.*;
+import layout.renderer.FlexContainerRenderer;
+import styledxmlparser.css.CommonCssConstants;
+import styledxmlparser.util.WhiteSpaceUtil;
 import html2pdf.css.page.attach.impl.layout.Html2PdfProperty;
 import html2pdf.css.page.attach.impl.layout.RunningElement;
 import html2pdf.css.page.css.CssConstants;
@@ -172,10 +172,10 @@ public class WaitingInlineElementsHelper {
                 ((Div) container).add(p);
             } else if (container instanceof Cell) {
                 ((Cell) container).add(p);
-            } else if (container instanceof main.groovy.layout.element.List) {
+            } else if (container instanceof layout.element.List) {
                 ListItem li = new ListItem();
                 li.add(p);
-                ((main.groovy.layout.element.List) container).add(li);
+                ((layout.element.List) container).add(li);
             } else {
                 throw new IllegalStateException("Unable to process hanging inline content");
             }

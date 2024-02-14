@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.css.apply.impl;
 
-import main.groovy.html2pdf.css.apply.impl.DefaultTagCssApplierMapping.ICssApplierCreator;
-import main.groovy.html2pdf.util.TagProcessorMapping;
-import main.groovy.styledxmlparser.node.IElementNode;
+import html2pdf.css.apply.impl.DefaultTagCssApplierMapping.ICssApplierCreator;
+import html2pdf.util.TagProcessorMapping;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.css.apply.ICssApplier;
 import html2pdf.css.page.css.apply.ICssApplierFactory;
@@ -55,7 +55,7 @@ public class DefaultCssApplierFactory implements ICssApplierFactory {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.css.apply.ICssApplierFactory#getCssApplier(main.groovy.html2pdf.html.node.IElementNode)
+     * @see html2pdf.css.apply.ICssApplierFactory#getCssApplier(html2pdf.html.node.IElementNode)
      */
     @Override
     public final ICssApplier getCssApplier(IElementNode tag) {

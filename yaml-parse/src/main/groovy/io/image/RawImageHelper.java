@@ -22,10 +22,10 @@
  */
 package io.image;
 
-import main.groovy.io.codec.CCITTG4Encoder;
-import main.groovy.io.codec.TIFFFaxDecoder;
-import main.groovy.io.exceptions.IOException;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import io.codec.CCITTG4Encoder;
+import io.codec.TIFFFaxDecoder;
+import io.exceptions.IOException;
+import io.exceptions.IoExceptionMessageConstant;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -22,10 +22,10 @@
  */
 package html2pdf.css.page.actions.events;
 
-import main.groovy.commons.actions.AbstractProductProcessITextEvent;
-import main.groovy.commons.actions.confirmations.EventConfirmationType;
-import main.groovy.commons.actions.contexts.IMetaInfo;
-import main.groovy.commons.actions.sequence.SequenceId;
+import commons.actions.AbstractProductProcessITextEvent;
+import commons.actions.confirmations.EventConfirmationType;
+import commons.actions.contexts.IMetaInfo;
+import commons.actions.sequence.SequenceId;
 import html2pdf.css.page.actions.data.PdfHtmlProductData;
 
 /**

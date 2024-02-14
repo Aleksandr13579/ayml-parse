@@ -22,7 +22,7 @@
  */
 package io.util;
 
-import main.groovy.commons.utils.SystemUtil;
+import commons.utils.SystemUtil;
 
 public final class CliCommandUtil {
 

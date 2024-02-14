@@ -22,8 +22,8 @@
  */
 package kernel.pdf.canvas.parser.util;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.source.PdfTokenizer;
+import commons.utils.MessageFormatUtil;
+import io.source.PdfTokenizer;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;

@@ -22,8 +22,8 @@
  */
 package io.source;
 
-import main.groovy.io.exceptions.IOException;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import io.exceptions.IOException;
+import io.exceptions.IoExceptionMessageConstant;
 
 
 public class OutputStream<T extends java.io.OutputStream> extends java.io.OutputStream {

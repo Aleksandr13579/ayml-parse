@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.css.apply.impl;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.Div;
-import main.groovy.styledxmlparser.node.IStylesContainer;
+import layout.IPropertyContainer;
+import layout.element.Div;
+import styledxmlparser.node.IStylesContainer;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
@@ -45,7 +45,7 @@ public class CssContentLinearGradientApplier implements ICssApplier {
     private static final float DEFAULT_CONTENT_HEIGHT_PT = 112.5f;
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.css.apply.ICssApplier#apply(main.groovy.html2pdf.attach.ProcessorContext, main.groovy.html2pdf.html.node.IStylesContainer, main.groovy.html2pdf.attach.ITagWorker)
+     * @see html2pdf.css.apply.ICssApplier#apply(html2pdf.attach.ProcessorContext, html2pdf.html.node.IStylesContainer, html2pdf.attach.ITagWorker)
      */
     @Override
     public void apply(ProcessorContext context, IStylesContainer stylesContainer, ITagWorker tagWorker) {

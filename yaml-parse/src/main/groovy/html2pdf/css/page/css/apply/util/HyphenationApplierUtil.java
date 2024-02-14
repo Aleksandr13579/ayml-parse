@@ -22,12 +22,12 @@
  */
 package html2pdf.css.page.css.apply.util;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.hyphenation.HyphenationConfig;
-import main.groovy.layout.properties.Property;
-import main.groovy.styledxmlparser.css.resolve.CssDefaults;
-import main.groovy.styledxmlparser.node.IElementNode;
-import main.groovy.styledxmlparser.node.IStylesContainer;
+import layout.IPropertyContainer;
+import layout.hyphenation.HyphenationConfig;
+import layout.properties.Property;
+import styledxmlparser.css.resolve.CssDefaults;
+import styledxmlparser.node.IElementNode;
+import styledxmlparser.node.IStylesContainer;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 

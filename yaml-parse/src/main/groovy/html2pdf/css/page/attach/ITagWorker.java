@@ -22,8 +22,8 @@
  */
 package html2pdf.css.page.attach;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.styledxmlparser.node.IElementNode;
+import layout.IPropertyContainer;
+import styledxmlparser.node.IElementNode;
 
 /**
  * Interface for all the tag worker implementations.

@@ -1,4 +1,4 @@
-package main.groovy.org.example.classes
+package org.example.classes
 
 //package org.example.classes
 import org.yaml.snakeyaml.Yaml

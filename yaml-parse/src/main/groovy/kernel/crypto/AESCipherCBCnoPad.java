@@ -22,8 +22,8 @@
  */
 package kernel.crypto;
 
-import main.groovy.bouncycastleconnector.BouncyCastleFactoryCreator;
-import main.groovy.commons.bouncycastle.IBouncyCastleFactory;
+import bouncycastleconnector.BouncyCastleFactoryCreator;
+import commons.bouncycastle.IBouncyCastleFactory;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 

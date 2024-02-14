@@ -22,13 +22,13 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import main.groovy.kernel.pdf.tagging.StandardRoles;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.Div;
-import main.groovy.layout.element.IBlockElement;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.tagging.IAccessibleElement;
-import main.groovy.styledxmlparser.node.IElementNode;
+import kernel.pdf.tagging.StandardRoles;
+import layout.IPropertyContainer;
+import layout.element.Div;
+import layout.element.IBlockElement;
+import layout.properties.Property;
+import layout.tagging.IAccessibleElement;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ProcessorContext;
 
 /**

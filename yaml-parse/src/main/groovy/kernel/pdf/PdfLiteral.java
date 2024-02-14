@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import main.groovy.io.font.PdfEncodings;
+import io.font.PdfEncodings;
 import kernel.utils.ICopyFilter;
 
 import java.nio.charset.StandardCharsets;

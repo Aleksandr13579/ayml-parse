@@ -22,9 +22,9 @@
  */
 package kernel.font;
 
-import main.groovy.io.font.*;
-import main.groovy.io.font.constants.FontStyles;
-import main.groovy.io.font.constants.StandardFonts;
+import io.font.*;
+import io.font.constants.FontStyles;
+import io.font.constants.StandardFonts;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;

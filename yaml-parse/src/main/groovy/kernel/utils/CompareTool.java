@@ -22,15 +22,15 @@
  */
 package kernel.utils;
 
-import main.groovy.commons.actions.contexts.IMetaInfo;
-import main.groovy.commons.utils.FileUtil;
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.font.PdfEncodings;
-import main.groovy.io.logs.IoLogMessageConstant;
-import main.groovy.io.util.GhostscriptHelper;
-import main.groovy.io.util.ImageMagickHelper;
-import main.groovy.io.util.UrlUtil;
-import main.groovy.io.util.XmlUtil;
+import commons.actions.contexts.IMetaInfo;
+import commons.utils.FileUtil;
+import commons.utils.MessageFormatUtil;
+import io.font.PdfEncodings;
+import io.logs.IoLogMessageConstant;
+import io.util.GhostscriptHelper;
+import io.util.ImageMagickHelper;
+import io.util.UrlUtil;
+import io.util.XmlUtil;
 import kernel.geom.Rectangle;
 import kernel.pdf.*;
 import kernel.pdf.annot.PdfAnnotation;

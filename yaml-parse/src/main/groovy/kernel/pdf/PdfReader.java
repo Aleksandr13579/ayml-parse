@@ -22,9 +22,9 @@
  */
 package kernel.pdf;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.logs.IoLogMessageConstant;
-import main.groovy.io.source.*;
+import commons.utils.MessageFormatUtil;
+import io.logs.IoLogMessageConstant;
+import io.source.*;
 import kernel.crypto.securityhandler.UnsupportedSecurityHandlerException;
 import kernel.exceptions.*;
 import kernel.pdf.filters.FilterHandlers;
@@ -1537,7 +1537,7 @@ public class PdfReader implements Closeable {
         int offset;
         try {
             offset = tok.getHeaderOffset();
-        } catch (main.groovy.io.exceptions.IOException ex) {
+        } catch (io.exceptions.IOException ex) {
             if (closeStream) {
                 tok.close();
             }

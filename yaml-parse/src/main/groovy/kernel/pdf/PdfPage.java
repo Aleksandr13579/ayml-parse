@@ -22,8 +22,8 @@
  */
 package kernel.pdf;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.logs.IoLogMessageConstant;
+import commons.utils.MessageFormatUtil;
+import io.logs.IoLogMessageConstant;
 import kernel.events.PdfDocumentEvent;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;

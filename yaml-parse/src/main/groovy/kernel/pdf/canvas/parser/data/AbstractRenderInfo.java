@@ -22,7 +22,7 @@
  */
 package kernel.pdf.canvas.parser.data;
 
-import main.groovy.io.logs.IoLogMessageConstant;
+import io.logs.IoLogMessageConstant;
 import kernel.pdf.canvas.CanvasGraphicsState;
 
 public class AbstractRenderInfo implements IEventData {

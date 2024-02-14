@@ -22,14 +22,14 @@
  */
 package html2pdf.css.page.attach.impl;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.kernel.pdf.PdfOutline;
-import main.groovy.kernel.pdf.PdfString;
-import main.groovy.kernel.pdf.navigation.PdfDestination;
-import main.groovy.layout.element.IElement;
-import main.groovy.layout.properties.Property;
-import main.groovy.styledxmlparser.node.IElementNode;
-import main.groovy.styledxmlparser.node.impl.jsoup.node.JsoupElementNode;
+import commons.utils.MessageFormatUtil;
+import kernel.pdf.PdfOutline;
+import kernel.pdf.PdfString;
+import kernel.pdf.navigation.PdfDestination;
+import layout.element.IElement;
+import layout.properties.Property;
+import styledxmlparser.node.IElementNode;
+import styledxmlparser.node.impl.jsoup.node.JsoupElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.html.TagConstants;

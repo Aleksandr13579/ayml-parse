@@ -1,4 +1,4 @@
-package main.groovy.org.example.classes
+package org.example.classes
 
 import html2pdf.css.page.HtmlConverter
 import io.source.ByteArrayOutputStream

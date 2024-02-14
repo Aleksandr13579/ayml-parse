@@ -22,11 +22,11 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.Cell;
-import main.groovy.layout.element.Div;
-import main.groovy.layout.element.Table;
-import main.groovy.styledxmlparser.node.IElementNode;
+import layout.IPropertyContainer;
+import layout.element.Cell;
+import layout.element.Div;
+import layout.element.Table;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.util.WaitingColgroupsHelper;
@@ -100,7 +100,7 @@ public class TableTagWorker implements ITagWorker, IDisplayAware {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processEnd(main.groovy.html2pdf.html.node.IElementNode, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processEnd(html2pdf.html.node.IElementNode, html2pdf.attach.ProcessorContext)
      */
     @Override
     public void processEnd(IElementNode element, ProcessorContext context) {
@@ -108,7 +108,7 @@ public class TableTagWorker implements ITagWorker, IDisplayAware {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processContent(java.lang.String, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processContent(java.lang.String, html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processContent(String content, ProcessorContext context) {
@@ -116,7 +116,7 @@ public class TableTagWorker implements ITagWorker, IDisplayAware {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processTagChild(main.groovy.html2pdf.attach.ITagWorker, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processTagChild(html2pdf.attach.ITagWorker, html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processTagChild(ITagWorker childTagWorker, ProcessorContext context) {
@@ -170,7 +170,7 @@ public class TableTagWorker implements ITagWorker, IDisplayAware {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#getElementResult()
+     * @see html2pdf.attach.ITagWorker#getElementResult()
      */
     @Override
     public IPropertyContainer getElementResult() {
@@ -178,7 +178,7 @@ public class TableTagWorker implements ITagWorker, IDisplayAware {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.impl.tags.IDisplayAware#getDisplay()
+     * @see html2pdf.attach.impl.tags.IDisplayAware#getDisplay()
      */
     @Override
     public String getDisplay() {

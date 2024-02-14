@@ -22,14 +22,14 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import main.groovy.forms.form.FormProperty;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.Div;
-import main.groovy.layout.element.Paragraph;
-import main.groovy.layout.properties.OverflowPropertyValue;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.tagging.IAccessibleElement;
-import main.groovy.styledxmlparser.node.IElementNode;
+import forms.form.FormProperty;
+import layout.IPropertyContainer;
+import layout.element.Div;
+import layout.element.Paragraph;
+import layout.properties.OverflowPropertyValue;
+import layout.properties.Property;
+import layout.tagging.IAccessibleElement;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.util.AccessiblePropHelper;
@@ -73,7 +73,7 @@ public class OptGroupTagWorker extends DivTagWorker {
                 String lang = ((IAccessibleElement) propertyContainer).getAccessibilityProperties().getLanguage();
                 AccessiblePropHelper.trySetLangAttribute((Div) childTagWorker.getElementResult(), lang);
             }
-            return addBlockChild((main.groovy.layout.element.IElement) element);
+            return addBlockChild((layout.element.IElement) element);
         } else {
             return super.processTagChild(childTagWorker, context);
         }

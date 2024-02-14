@@ -22,8 +22,8 @@
  */
 package html2pdf.css.page.exceptions;
 
-import main.groovy.commons.exceptions.ITextException;
-import main.groovy.commons.utils.MessageFormatUtil;
+import commons.exceptions.ITextException;
+import commons.utils.MessageFormatUtil;
 
 /**
  * Runtime exception that gets thrown if a tag worker can't be initialized.

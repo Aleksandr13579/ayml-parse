@@ -22,11 +22,11 @@
  */
 package kernel.pdf.xobject;
 
-import main.groovy.io.codec.PngWriter;
-import main.groovy.io.codec.TIFFConstants;
-import main.groovy.io.codec.TiffWriter;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
-import main.groovy.kernel.pdf.colorspace.PdfSpecialCs.Separation;
+import io.codec.PngWriter;
+import io.codec.TIFFConstants;
+import io.codec.TiffWriter;
+import io.exceptions.IoExceptionMessageConstant;
+import kernel.pdf.colorspace.PdfSpecialCs.Separation;
 import kernel.actions.data.ITextCoreProductData;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.pdf.*;
@@ -74,22 +74,22 @@ class ImagePdfBytesInfo {
     public byte[] decodeTiffAndPngBytes(byte[] imageBytes) throws IOException {
         if (pngColorType < 0) {
             if (bpc != 8)
-                throw new main.groovy.io.exceptions.IOException(IoExceptionMessageConstant.COLOR_DEPTH_IS_NOT_SUPPORTED).setMessageParams(bpc);
+                throw new io.exceptions.IOException(IoExceptionMessageConstant.COLOR_DEPTH_IS_NOT_SUPPORTED).setMessageParams(bpc);
 
             if (colorspace instanceof PdfArray) {
                 PdfArray ca = (PdfArray) colorspace;
                 PdfObject tyca = ca.get(0);
                 if (!PdfName.ICCBased.equals(tyca))
-                    throw new main.groovy.io.exceptions.IOException(IoExceptionMessageConstant.COLOR_SPACE_IS_NOT_SUPPORTED).setMessageParams(tyca.toString());
+                    throw new io.exceptions.IOException(IoExceptionMessageConstant.COLOR_SPACE_IS_NOT_SUPPORTED).setMessageParams(tyca.toString());
 
                 PdfStream pr = (PdfStream) ca.get(1);
                 int n = pr.getAsNumber(PdfName.N).intValue();
                 if (n != 4) {
-                    throw new main.groovy.io.exceptions.IOException(IoExceptionMessageConstant.N_VALUE_IS_NOT_SUPPORTED).setMessageParams(n);
+                    throw new io.exceptions.IOException(IoExceptionMessageConstant.N_VALUE_IS_NOT_SUPPORTED).setMessageParams(n);
                 }
                 icc = pr.getBytes();
             } else if (!PdfName.DeviceCMYK.equals(colorspace)) {
-                throw new main.groovy.io.exceptions.IOException(IoExceptionMessageConstant.COLOR_SPACE_IS_NOT_SUPPORTED).setMessageParams(colorspace.toString());
+                throw new io.exceptions.IOException(IoExceptionMessageConstant.COLOR_SPACE_IS_NOT_SUPPORTED).setMessageParams(colorspace.toString());
             }
             java.io.ByteArrayOutputStream ms = new java.io.ByteArrayOutputStream();
 

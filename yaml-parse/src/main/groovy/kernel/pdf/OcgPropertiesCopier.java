@@ -22,9 +22,9 @@
  */
 package kernel.pdf;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.font.PdfEncodings;
-import main.groovy.io.logs.IoLogMessageConstant;
+import commons.utils.MessageFormatUtil;
+import io.font.PdfEncodings;
+import io.logs.IoLogMessageConstant;
 import kernel.pdf.annot.PdfAnnotation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

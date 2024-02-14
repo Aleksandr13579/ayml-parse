@@ -22,8 +22,8 @@
  */
 package kernel.font;
 
-import main.groovy.io.image.ImageData;
-import main.groovy.io.source.ByteUtils;
+import io.image.ImageData;
+import io.source.ByteUtils;
 import kernel.exceptions.PdfException;
 import kernel.pdf.PdfDocument;
 import kernel.pdf.PdfStream;

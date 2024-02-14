@@ -22,10 +22,10 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import main.groovy.layout.minmaxwidth.MinMaxWidth;
-import main.groovy.layout.renderer.BlockRenderer;
-import main.groovy.layout.renderer.IRenderer;
-import main.groovy.styledxmlparser.css.CssContextNode;
+import layout.minmaxwidth.MinMaxWidth;
+import layout.renderer.BlockRenderer;
+import layout.renderer.IRenderer;
+import styledxmlparser.css.CssContextNode;
 import html2pdf.css.page.css.CssConstants;
 
 class WidthDimensionContainer extends DimensionContainer {

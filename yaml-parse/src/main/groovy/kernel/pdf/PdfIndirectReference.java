@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import main.groovy.commons.utils.MessageFormatUtil;
+import commons.utils.MessageFormatUtil;
 import kernel.utils.ICopyFilter;
 
 public class PdfIndirectReference extends PdfObject implements Comparable<PdfIndirectReference> {

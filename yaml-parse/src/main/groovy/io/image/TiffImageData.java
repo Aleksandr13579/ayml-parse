@@ -22,9 +22,9 @@
  */
 package io.image;
 
-import main.groovy.io.codec.TIFFDirectory;
-import main.groovy.io.exceptions.IOException;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import io.codec.TIFFDirectory;
+import io.exceptions.IOException;
+import io.exceptions.IoExceptionMessageConstant;
 import io.source.IRandomAccessSource;
 import io.source.RandomAccessFileOrArray;
 import io.source.RandomAccessSourceFactory;

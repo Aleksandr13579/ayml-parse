@@ -22,10 +22,10 @@
  */
 package io.image;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.colors.IccProfile;
-import main.groovy.io.exceptions.IOException;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import commons.utils.MessageFormatUtil;
+import io.colors.IccProfile;
+import io.exceptions.IOException;
+import io.exceptions.IoExceptionMessageConstant;
 import io.logs.IoLogMessageConstant;
 import io.util.StreamUtil;
 import org.slf4j.Logger;

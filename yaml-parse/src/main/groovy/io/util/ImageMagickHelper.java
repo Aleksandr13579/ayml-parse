@@ -22,10 +22,10 @@
  */
 package io.util;
 
-import main.groovy.commons.utils.FileUtil;
-import main.groovy.commons.utils.ProcessInfo;
-import main.groovy.commons.utils.SystemUtil;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import commons.utils.FileUtil;
+import commons.utils.ProcessInfo;
+import commons.utils.SystemUtil;
+import io.exceptions.IoExceptionMessageConstant;
 
 import java.io.IOException;
 import java.util.regex.Matcher;

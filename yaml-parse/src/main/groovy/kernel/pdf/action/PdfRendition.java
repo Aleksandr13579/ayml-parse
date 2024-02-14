@@ -22,7 +22,7 @@
  */
 package kernel.pdf.action;
 
-import main.groovy.commons.utils.MessageFormatUtil;
+import commons.utils.MessageFormatUtil;
 import kernel.pdf.*;
 import kernel.pdf.filespec.PdfFileSpec;
 

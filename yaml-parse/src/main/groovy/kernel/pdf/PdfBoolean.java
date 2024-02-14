@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import main.groovy.io.source.ByteUtils;
+import io.source.ByteUtils;
 import kernel.utils.ICopyFilter;
 
 public class PdfBoolean extends PdfPrimitiveObject {

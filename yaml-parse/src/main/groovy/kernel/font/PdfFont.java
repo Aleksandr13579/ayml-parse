@@ -22,10 +22,10 @@
  */
 package kernel.font;
 
-import main.groovy.io.font.FontProgram;
-import main.groovy.io.font.otf.Glyph;
-import main.groovy.io.font.otf.GlyphLine;
-import main.groovy.io.util.TextUtil;
+import io.font.FontProgram;
+import io.font.otf.Glyph;
+import io.font.otf.GlyphLine;
+import io.util.TextUtil;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;
@@ -454,8 +454,8 @@ public abstract class PdfFont extends PdfObjectWrapper<PdfDictionary> {
      *
      * @see PdfDocument#findFont(String, String)
      * @see FontProgram#isBuiltWith(String)
-     * @see main.groovy.io.font.FontEncoding#isBuiltWith(String)
-     * @see main.groovy.io.font.CMapEncoding#isBuiltWith(String)
+     * @see io.font.FontEncoding#isBuiltWith(String)
+     * @see io.font.CMapEncoding#isBuiltWith(String)
      */
     public boolean isBuiltWith(String fontProgram, String encoding) {
         return false;

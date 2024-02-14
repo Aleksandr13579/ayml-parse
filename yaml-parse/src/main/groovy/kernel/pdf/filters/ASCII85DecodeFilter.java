@@ -22,7 +22,7 @@
  */
 package kernel.pdf.filters;
 
-import main.groovy.io.source.PdfTokenizer;
+import io.source.PdfTokenizer;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.MemoryLimitsAwareFilter;

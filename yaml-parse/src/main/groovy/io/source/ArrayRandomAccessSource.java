@@ -23,7 +23,7 @@
 package io.source;
 
 
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import io.exceptions.IoExceptionMessageConstant;
 
 /**
  * A RandomAccessSource that is based on an underlying byte array

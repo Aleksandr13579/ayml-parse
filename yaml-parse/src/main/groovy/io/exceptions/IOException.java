@@ -22,8 +22,8 @@
  */
 package io.exceptions;
 
-import main.groovy.commons.exceptions.ITextException;
-import main.groovy.commons.utils.MessageFormatUtil;
+import commons.exceptions.ITextException;
+import commons.utils.MessageFormatUtil;
 
 import java.util.ArrayList;
 import java.util.Collections;

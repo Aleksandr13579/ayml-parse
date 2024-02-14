@@ -31,8 +31,8 @@
  */
 package kernel.pdf.canvas.parser.clipper;
 
-import main.groovy.kernel.pdf.canvas.parser.clipper.IClipper.EndType;
-import main.groovy.kernel.pdf.canvas.parser.clipper.IClipper.JoinType;
+import kernel.pdf.canvas.parser.clipper.IClipper.EndType;
+import kernel.pdf.canvas.parser.clipper.IClipper.JoinType;
 
 import java.util.ArrayList;
 import java.util.Collections;

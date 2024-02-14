@@ -22,7 +22,7 @@
  */
 package io.util;
 
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
+import io.exceptions.IoExceptionMessageConstant;
 import io.source.ByteBuffer;
 import io.source.ByteUtils;
 import io.source.IRandomAccessSource;
@@ -89,7 +89,7 @@ public final class StreamUtil {
         try {
             outputStream.write(buf.getInternalBuffer(), 0, buf.size());
         } catch (IOException e) {
-            throw new main.groovy.io.exceptions.IOException(IoExceptionMessageConstant.CANNOT_WRITE_BYTES, e);
+            throw new io.exceptions.IOException(IoExceptionMessageConstant.CANNOT_WRITE_BYTES, e);
         }
     }
 
@@ -98,7 +98,7 @@ public final class StreamUtil {
         try {
             outputStream.write(buf.getInternalBuffer(), 0, buf.size());
         } catch (IOException e) {
-            throw new main.groovy.io.exceptions.IOException(IoExceptionMessageConstant.CANNOT_WRITE_BYTES, e);
+            throw new io.exceptions.IOException(IoExceptionMessageConstant.CANNOT_WRITE_BYTES, e);
         }
     }
 

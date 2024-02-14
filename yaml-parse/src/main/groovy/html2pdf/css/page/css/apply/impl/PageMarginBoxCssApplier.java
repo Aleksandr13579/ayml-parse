@@ -22,14 +22,14 @@
  */
 package html2pdf.css.page.css.apply.impl;
 
-import main.groovy.kernel.geom.Rectangle;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.properties.OverflowPropertyValue;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.properties.UnitValue;
-import main.groovy.styledxmlparser.css.page.PageMarginBoxContextNode;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
-import main.groovy.styledxmlparser.node.IStylesContainer;
+import kernel.geom.Rectangle;
+import layout.IPropertyContainer;
+import layout.properties.OverflowPropertyValue;
+import layout.properties.Property;
+import layout.properties.UnitValue;
+import styledxmlparser.css.page.PageMarginBoxContextNode;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
+import styledxmlparser.node.IStylesContainer;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;

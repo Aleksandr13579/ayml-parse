@@ -22,9 +22,9 @@
  */
 package io.image;
 
-import main.groovy.io.exceptions.IOException;
-import main.groovy.io.exceptions.IoExceptionMessageConstant;
-import main.groovy.io.font.PdfEncodings;
+import io.exceptions.IOException;
+import io.exceptions.IoExceptionMessageConstant;
+import io.font.PdfEncodings;
 import io.util.StreamUtil;
 
 import java.io.ByteArrayInputStream;

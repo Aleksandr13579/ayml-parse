@@ -22,13 +22,13 @@
  */
 package kernel.font;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.font.AdobeGlyphList;
-import main.groovy.io.font.FontEncoding;
-import main.groovy.io.font.PdfEncodings;
-import main.groovy.io.font.cmap.CMapToUnicode;
-import main.groovy.io.logs.IoLogMessageConstant;
-import main.groovy.io.util.IntHashtable;
+import commons.utils.MessageFormatUtil;
+import io.font.AdobeGlyphList;
+import io.font.FontEncoding;
+import io.font.PdfEncodings;
+import io.font.cmap.CMapToUnicode;
+import io.logs.IoLogMessageConstant;
+import io.util.IntHashtable;
 import kernel.pdf.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

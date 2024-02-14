@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import main.groovy.kernel.geom.PageSize;
-import main.groovy.kernel.pdf.PdfDocument;
-import main.groovy.layout.Document;
+import kernel.geom.PageSize;
+import kernel.pdf.PdfDocument;
+import layout.Document;
 
 /**
  * This class is a wrapper on {@link Document}, which is the default root element while creating a self-sufficient PDF.

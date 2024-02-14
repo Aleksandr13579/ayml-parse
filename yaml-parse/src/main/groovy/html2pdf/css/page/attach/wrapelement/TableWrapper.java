@@ -22,10 +22,10 @@
  */
 package html2pdf.css.page.attach.wrapelement;
 
-import main.groovy.layout.element.Cell;
-import main.groovy.layout.element.Div;
-import main.groovy.layout.element.Table;
-import main.groovy.layout.properties.UnitValue;
+import layout.element.Cell;
+import layout.element.Div;
+import layout.element.Table;
+import layout.properties.UnitValue;
 import html2pdf.css.page.attach.util.AccessiblePropHelper;
 import html2pdf.css.page.attach.util.RowColHelper;
 import html2pdf.css.page.attach.util.WaitingColgroupsHelper;

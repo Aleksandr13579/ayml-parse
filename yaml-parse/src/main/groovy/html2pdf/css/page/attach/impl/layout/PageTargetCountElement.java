@@ -22,8 +22,8 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import main.groovy.layout.element.Text;
-import main.groovy.layout.renderer.IRenderer;
+import layout.element.Text;
+import layout.renderer.IRenderer;
 import html2pdf.css.page.css.resolve.func.counter.CounterDigitsGlyphStyle;
 import html2pdf.css.page.html.HtmlUtils;
 

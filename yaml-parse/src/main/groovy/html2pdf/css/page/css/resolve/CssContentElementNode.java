@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.css.resolve;
 
-import main.groovy.styledxmlparser.css.CssContextNode;
-import main.groovy.styledxmlparser.css.pseudo.CssPseudoElementUtil;
-import main.groovy.styledxmlparser.node.*;
+import styledxmlparser.css.CssContextNode;
+import styledxmlparser.css.pseudo.CssPseudoElementUtil;
+import styledxmlparser.node.*;
 
 import java.util.Iterator;
 import java.util.List;
@@ -55,7 +55,7 @@ public class CssContentElementNode extends CssContextNode implements IElementNod
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.styledxmlparser.html.node.IElementNode#name()
+     * @see styledxmlparser.html.node.IElementNode#name()
      */
     @Override
     public String name() {
@@ -63,7 +63,7 @@ public class CssContentElementNode extends CssContextNode implements IElementNod
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.styledxmlparser.html.node.IElementNode#getAttributes()
+     * @see styledxmlparser.html.node.IElementNode#getAttributes()
      */
     @Override
     public IAttributes getAttributes() {
@@ -71,7 +71,7 @@ public class CssContentElementNode extends CssContextNode implements IElementNod
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.styledxmlparser.html.node.IElementNode#getAttribute(java.lang.String)
+     * @see styledxmlparser.html.node.IElementNode#getAttribute(java.lang.String)
      */
     @Override
     public String getAttribute(String key) {
@@ -79,7 +79,7 @@ public class CssContentElementNode extends CssContextNode implements IElementNod
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.styledxmlparser.html.node.IElementNode#getAdditionalHtmlStyles()
+     * @see styledxmlparser.html.node.IElementNode#getAdditionalHtmlStyles()
      */
     @Override
     public List<Map<String, String>> getAdditionalHtmlStyles() {
@@ -87,7 +87,7 @@ public class CssContentElementNode extends CssContextNode implements IElementNod
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.styledxmlparser.html.node.IElementNode#addAdditionalHtmlStyles(java.util.Map)
+     * @see styledxmlparser.html.node.IElementNode#addAdditionalHtmlStyles(java.util.Map)
      */
     @Override
     public void addAdditionalHtmlStyles(Map<String, String> styles) {
@@ -95,7 +95,7 @@ public class CssContentElementNode extends CssContextNode implements IElementNod
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.styledxmlparser.html.node.IElementNode#getLang()
+     * @see styledxmlparser.html.node.IElementNode#getLang()
      */
     @Override
     public String getLang() {
@@ -120,7 +120,7 @@ public class CssContentElementNode extends CssContextNode implements IElementNod
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.styledxmlparser.html.node.IAttributes#getAttribute(java.lang.String)
+         * @see styledxmlparser.html.node.IAttributes#getAttribute(java.lang.String)
          */
         @Override
         public String getAttribute(String key) {
@@ -128,7 +128,7 @@ public class CssContentElementNode extends CssContextNode implements IElementNod
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.styledxmlparser.html.node.IAttributes#setAttribute(java.lang.String, java.lang.String)
+         * @see styledxmlparser.html.node.IAttributes#setAttribute(java.lang.String, java.lang.String)
          */
         @Override
         public void setAttribute(String key, String value) {
@@ -136,7 +136,7 @@ public class CssContentElementNode extends CssContextNode implements IElementNod
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.styledxmlparser.html.node.IAttributes#size()
+         * @see styledxmlparser.html.node.IAttributes#size()
          */
         @Override
         public int size() {
@@ -170,7 +170,7 @@ public class CssContentElementNode extends CssContextNode implements IElementNod
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.styledxmlparser.html.node.IAttribute#getKey()
+         * @see styledxmlparser.html.node.IAttribute#getKey()
          */
         @Override
         public String getKey() {
@@ -178,7 +178,7 @@ public class CssContentElementNode extends CssContextNode implements IElementNod
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.styledxmlparser.html.node.IAttribute#getValue()
+         * @see styledxmlparser.html.node.IAttribute#getValue()
          */
         @Override
         public String getValue() {

@@ -22,11 +22,11 @@
  */
 package html2pdf.css.page.attach;
 
-import main.groovy.html2pdf.ConverterProperties;
-import main.groovy.kernel.pdf.PdfDocument;
-import main.groovy.layout.Document;
-import main.groovy.layout.element.IElement;
-import main.groovy.styledxmlparser.node.IDocumentNode;
+import html2pdf.ConverterProperties;
+import kernel.pdf.PdfDocument;
+import layout.Document;
+import layout.element.IElement;
+import styledxmlparser.node.IDocumentNode;
 import html2pdf.css.page.attach.impl.DefaultHtmlProcessor;
 
 import java.util.List;

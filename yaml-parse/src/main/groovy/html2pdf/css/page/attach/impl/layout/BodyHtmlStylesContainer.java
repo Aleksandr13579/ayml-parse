@@ -22,12 +22,12 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.borders.Border;
-import main.groovy.layout.properties.Background;
-import main.groovy.layout.properties.BackgroundImage;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.properties.UnitValue;
+import layout.IPropertyContainer;
+import layout.borders.Border;
+import layout.properties.Background;
+import layout.properties.BackgroundImage;
+import layout.properties.Property;
+import layout.properties.UnitValue;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -111,7 +111,7 @@ public class BodyHtmlStylesContainer implements IPropertyContainer {
     }
 
     /**
-     * This method is needed to check if we need to draw a simulated {@link main.groovy.layout.element.Div} element,
+     * This method is needed to check if we need to draw a simulated {@link layout.element.Div} element,
      * i.e. to perform any drawing at all.
      *
      * @return true if there is at least one {@link Border} or a {@link Background} or a {@link BackgroundImage} present in the container

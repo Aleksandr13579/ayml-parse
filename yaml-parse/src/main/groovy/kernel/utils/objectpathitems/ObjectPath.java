@@ -22,7 +22,7 @@
  */
 package kernel.utils.objectpathitems;
 
-import main.groovy.commons.utils.MessageFormatUtil;
+import commons.utils.MessageFormatUtil;
 import kernel.pdf.PdfIndirectReference;
 import kernel.pdf.PdfName;
 import org.w3c.dom.Document;

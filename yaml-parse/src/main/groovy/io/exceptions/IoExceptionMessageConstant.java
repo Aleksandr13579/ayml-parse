@@ -22,8 +22,8 @@
  */
 package io.exceptions;
 
-import main.groovy.io.util.GhostscriptHelper;
-import main.groovy.io.util.ImageMagickHelper;
+import io.util.GhostscriptHelper;
+import io.util.ImageMagickHelper;
 
 /**
  * Class containing constants to be used in exceptions in the IO module.

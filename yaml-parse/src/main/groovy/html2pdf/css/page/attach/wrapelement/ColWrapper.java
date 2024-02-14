@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.attach.wrapelement;
 
-import main.groovy.layout.properties.UnitValue;
+import layout.properties.UnitValue;
 
 import java.util.Map;
 

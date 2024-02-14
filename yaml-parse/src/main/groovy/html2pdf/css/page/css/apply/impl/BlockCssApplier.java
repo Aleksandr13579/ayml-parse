@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.css.apply.impl;
 
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.styledxmlparser.node.IStylesContainer;
-import main.groovy.styledxmlparser.node.impl.jsoup.node.JsoupElementNode;
+import layout.IPropertyContainer;
+import styledxmlparser.node.IStylesContainer;
+import styledxmlparser.node.impl.jsoup.node.JsoupElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.attach.impl.tags.ImgTagWorker;
@@ -41,7 +41,7 @@ import java.util.Map;
 public class BlockCssApplier implements ICssApplier {
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.css.apply.ICssApplier#apply(main.groovy.html2pdf.attach.ProcessorContext, main.groovy.html2pdf.html.node.IStylesContainer, main.groovy.html2pdf.attach.ITagWorker)
+     * @see html2pdf.css.apply.ICssApplier#apply(html2pdf.attach.ProcessorContext, html2pdf.html.node.IStylesContainer, html2pdf.attach.ITagWorker)
      */
     @Override
     public void apply(ProcessorContext context, IStylesContainer stylesContainer, ITagWorker tagWorker) {

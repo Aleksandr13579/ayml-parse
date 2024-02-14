@@ -22,12 +22,12 @@
  */
 package html2pdf.css.page.css.resolve;
 
-import main.groovy.io.util.ResourceUtil;
-import main.groovy.styledxmlparser.css.CssDeclaration;
-import main.groovy.styledxmlparser.css.CssStyleSheet;
-import main.groovy.styledxmlparser.css.media.MediaDeviceDescription;
-import main.groovy.styledxmlparser.css.parse.CssStyleSheetParser;
-import main.groovy.styledxmlparser.node.INode;
+import io.util.ResourceUtil;
+import styledxmlparser.css.CssDeclaration;
+import styledxmlparser.css.CssStyleSheet;
+import styledxmlparser.css.media.MediaDeviceDescription;
+import styledxmlparser.css.parse.CssStyleSheetParser;
+import styledxmlparser.node.INode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -22,10 +22,10 @@
  */
 package kernel.pdf;
 
-import main.groovy.io.font.PdfEncodings;
-import main.groovy.io.source.ByteBuffer;
-import main.groovy.io.source.PdfTokenizer;
-import main.groovy.io.util.StreamUtil;
+import io.font.PdfEncodings;
+import io.source.ByteBuffer;
+import io.source.PdfTokenizer;
+import io.util.StreamUtil;
 import kernel.utils.ICopyFilter;
 
 import java.nio.charset.StandardCharsets;
@@ -158,7 +158,7 @@ public class PdfString extends PdfPrimitiveObject {
      *
      * @return byte array
      */
-    // Analog of main.groovy.text.pdf.PdfString.getBytes() method in iText5.
+    // Analog of text.pdf.PdfString.getBytes() method in iText5.
     public byte[] getValueBytes() {
         if (value == null)
             generateValue();

@@ -22,7 +22,7 @@
  */
 package io.exceptions;
 
-import main.groovy.commons.exceptions.ITextException;
+import commons.exceptions.ITextException;
 
 public class FontCompressionException extends ITextException {
 

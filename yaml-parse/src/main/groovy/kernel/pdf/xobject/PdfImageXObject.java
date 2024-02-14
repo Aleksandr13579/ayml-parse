@@ -22,10 +22,10 @@
  */
 package kernel.pdf.xobject;
 
-import main.groovy.io.colors.IccProfile;
-import main.groovy.io.font.PdfEncodings;
-import main.groovy.io.image.*;
-import main.groovy.io.logs.IoLogMessageConstant;
+import io.colors.IccProfile;
+import io.font.PdfEncodings;
+import io.image.*;
+import io.logs.IoLogMessageConstant;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;

@@ -22,11 +22,11 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.kernel.geom.PageSize;
-import main.groovy.layout.properties.UnitValue;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
-import main.groovy.styledxmlparser.css.util.CssTypesValidationUtils;
+import commons.utils.MessageFormatUtil;
+import kernel.geom.PageSize;
+import layout.properties.UnitValue;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
+import styledxmlparser.css.util.CssTypesValidationUtils;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.logs.Html2PdfLogMessageConstant;
 import org.slf4j.Logger;

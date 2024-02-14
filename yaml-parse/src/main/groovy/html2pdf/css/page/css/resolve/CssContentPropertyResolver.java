@@ -22,19 +22,19 @@
  */
 package html2pdf.css.page.css.resolve;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.styledxmlparser.css.CommonCssConstants;
-import main.groovy.styledxmlparser.css.page.PageMarginBoxContextNode;
-import main.groovy.styledxmlparser.css.parse.CssDeclarationValueTokenizer;
-import main.groovy.styledxmlparser.css.pseudo.CssPseudoElementNode;
-import main.groovy.styledxmlparser.css.resolve.CssQuotes;
-import main.groovy.styledxmlparser.css.util.CssGradientUtil;
-import main.groovy.styledxmlparser.css.util.CssUtils;
-import main.groovy.styledxmlparser.css.util.EscapeGroup;
-import main.groovy.styledxmlparser.node.IElementNode;
-import main.groovy.styledxmlparser.node.INode;
-import main.groovy.styledxmlparser.node.IStylesContainer;
-import main.groovy.styledxmlparser.node.ITextNode;
+import commons.utils.MessageFormatUtil;
+import styledxmlparser.css.CommonCssConstants;
+import styledxmlparser.css.page.PageMarginBoxContextNode;
+import styledxmlparser.css.parse.CssDeclarationValueTokenizer;
+import styledxmlparser.css.pseudo.CssPseudoElementNode;
+import styledxmlparser.css.resolve.CssQuotes;
+import styledxmlparser.css.util.CssGradientUtil;
+import styledxmlparser.css.util.CssUtils;
+import styledxmlparser.css.util.EscapeGroup;
+import styledxmlparser.node.IElementNode;
+import styledxmlparser.node.INode;
+import styledxmlparser.node.IStylesContainer;
+import styledxmlparser.node.ITextNode;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.css.page.PageMarginRunningElementNode;
 import html2pdf.css.page.css.resolve.func.counter.CounterDigitsGlyphStyle;
@@ -285,7 +285,7 @@ class CssContentPropertyResolver {
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.html2pdf.html.node.INode#childNodes()
+         * @see html2pdf.html.node.INode#childNodes()
          */
         @Override
         public List<INode> childNodes() {
@@ -293,7 +293,7 @@ class CssContentPropertyResolver {
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.html2pdf.html.node.INode#addChild(main.groovy.html2pdf.html.node.INode)
+         * @see html2pdf.html.node.INode#addChild(html2pdf.html.node.INode)
          */
         @Override
         public void addChild(INode node) {
@@ -301,7 +301,7 @@ class CssContentPropertyResolver {
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.html2pdf.html.node.INode#parentNode()
+         * @see html2pdf.html.node.INode#parentNode()
          */
         @Override
         public INode parentNode() {
@@ -309,7 +309,7 @@ class CssContentPropertyResolver {
         }
 
         /* (non-Javadoc)
-         * @see main.groovy.html2pdf.html.node.ITextNode#wholeText()
+         * @see html2pdf.html.node.ITextNode#wholeText()
          */
         @Override
         public String wholeText() {

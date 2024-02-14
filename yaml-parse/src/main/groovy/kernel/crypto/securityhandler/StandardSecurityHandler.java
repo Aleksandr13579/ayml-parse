@@ -22,8 +22,8 @@
  */
 package kernel.crypto.securityhandler;
 
-import main.groovy.io.source.ByteUtils;
-import main.groovy.io.util.StreamUtil;
+import io.source.ByteUtils;
+import io.util.StreamUtil;
 import kernel.pdf.*;
 
 public abstract class StandardSecurityHandler extends SecurityHandler {

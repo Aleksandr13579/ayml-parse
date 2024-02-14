@@ -22,8 +22,8 @@
  */
 package kernel.utils;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.util.XmlUtil;
+import commons.utils.MessageFormatUtil;
+import io.util.XmlUtil;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.logs.KernelLogMessageConstant;

@@ -22,8 +22,8 @@
  */
 package kernel.colors;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.logs.IoLogMessageConstant;
+import commons.utils.MessageFormatUtil;
+import io.logs.IoLogMessageConstant;
 import kernel.pdf.colorspace.PdfDeviceCs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

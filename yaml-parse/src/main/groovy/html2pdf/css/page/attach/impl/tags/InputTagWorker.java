@@ -22,21 +22,21 @@
  */
 package html2pdf.css.page.attach.impl.tags;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.forms.form.FormProperty;
-import main.groovy.forms.form.element.Button;
-import main.groovy.forms.form.element.CheckBox;
-import main.groovy.forms.form.element.InputField;
-import main.groovy.forms.form.element.Radio;
-import main.groovy.kernel.colors.ColorConstants;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.borders.Border;
-import main.groovy.layout.borders.SolidBorder;
-import main.groovy.layout.element.IElement;
-import main.groovy.layout.element.Paragraph;
-import main.groovy.layout.properties.Property;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
-import main.groovy.styledxmlparser.node.IElementNode;
+import commons.utils.MessageFormatUtil;
+import forms.form.FormProperty;
+import forms.form.element.Button;
+import forms.form.element.CheckBox;
+import forms.form.element.InputField;
+import forms.form.element.Radio;
+import kernel.colors.ColorConstants;
+import layout.IPropertyContainer;
+import layout.borders.Border;
+import layout.borders.SolidBorder;
+import layout.element.IElement;
+import layout.element.Paragraph;
+import layout.properties.Property;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
+import styledxmlparser.node.IElementNode;
 import html2pdf.css.page.attach.ITagWorker;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
@@ -164,7 +164,7 @@ public class InputTagWorker implements ITagWorker, IDisplayAware {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processEnd(main.groovy.html2pdf.html.node.IElementNode, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processEnd(html2pdf.html.node.IElementNode, html2pdf.attach.ProcessorContext)
      */
     @Override
     public void processEnd(IElementNode element, ProcessorContext context) {
@@ -172,7 +172,7 @@ public class InputTagWorker implements ITagWorker, IDisplayAware {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.impl.tags.IDisplayAware#getDisplay()
+     * @see html2pdf.attach.impl.tags.IDisplayAware#getDisplay()
      */
     @Override
     public String getDisplay() {
@@ -180,7 +180,7 @@ public class InputTagWorker implements ITagWorker, IDisplayAware {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processContent(java.lang.String, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processContent(java.lang.String, html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processContent(String content, ProcessorContext context) {
@@ -188,7 +188,7 @@ public class InputTagWorker implements ITagWorker, IDisplayAware {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#processTagChild(main.groovy.html2pdf.attach.ITagWorker, main.groovy.html2pdf.attach.ProcessorContext)
+     * @see html2pdf.attach.ITagWorker#processTagChild(html2pdf.attach.ITagWorker, html2pdf.attach.ProcessorContext)
      */
     @Override
     public boolean processTagChild(ITagWorker childTagWorker, ProcessorContext context) {
@@ -196,7 +196,7 @@ public class InputTagWorker implements ITagWorker, IDisplayAware {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.ITagWorker#getElementResult()
+     * @see html2pdf.attach.ITagWorker#getElementResult()
      */
     @Override
     public IPropertyContainer getElementResult() {

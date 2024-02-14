@@ -23,17 +23,17 @@
 package html2pdf.css.page.css.apply.util;
 
 
-import main.groovy.kernel.colors.Color;
-import main.groovy.kernel.colors.ColorConstants;
-import main.groovy.kernel.colors.DeviceCmyk;
-import main.groovy.kernel.colors.DeviceRgb;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.borders.*;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.properties.TransparentColor;
-import main.groovy.layout.properties.UnitValue;
-import main.groovy.styledxmlparser.css.resolve.CssDefaults;
-import main.groovy.styledxmlparser.css.util.CssDimensionParsingUtils;
+import kernel.colors.Color;
+import kernel.colors.ColorConstants;
+import kernel.colors.DeviceCmyk;
+import kernel.colors.DeviceRgb;
+import layout.IPropertyContainer;
+import layout.borders.*;
+import layout.properties.Property;
+import layout.properties.TransparentColor;
+import layout.properties.UnitValue;
+import styledxmlparser.css.resolve.CssDefaults;
+import styledxmlparser.css.util.CssDimensionParsingUtils;
 import html2pdf.css.page.attach.ProcessorContext;
 import html2pdf.css.page.css.CssConstants;
 import org.slf4j.Logger;

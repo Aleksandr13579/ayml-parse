@@ -22,39 +22,39 @@
  */
 package html2pdf.css.page.attach.impl;
 
-import main.groovy.commons.actions.EventManager;
-import main.groovy.commons.actions.sequence.AbstractIdentifiableElement;
-import main.groovy.commons.actions.sequence.SequenceId;
-import main.groovy.commons.actions.sequence.SequenceIdManager;
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.forms.form.element.IPlaceholderable;
-import main.groovy.html2pdf.ConverterProperties;
-import main.groovy.html2pdf.ProcessorContextCreator;
-import main.groovy.io.font.FontProgram;
-import main.groovy.io.font.FontProgramFactory;
-import main.groovy.io.font.PdfEncodings;
-import main.groovy.kernel.pdf.PdfDocument;
-import main.groovy.layout.Document;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.Div;
-import main.groovy.layout.element.IAbstractElement;
-import main.groovy.layout.element.IElement;
-import main.groovy.layout.font.FontInfo;
-import main.groovy.layout.font.Range;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.properties.RenderingMode;
-import main.groovy.layout.renderer.DocumentRenderer;
-import main.groovy.layout.renderer.MetaInfoContainer;
-import main.groovy.styledxmlparser.css.CssDeclaration;
-import main.groovy.styledxmlparser.css.CssFontFaceRule;
-import main.groovy.styledxmlparser.css.ICssResolver;
-import main.groovy.styledxmlparser.css.font.CssFontFace;
-import main.groovy.styledxmlparser.css.pseudo.CssPseudoElementNode;
-import main.groovy.styledxmlparser.css.pseudo.CssPseudoElementUtil;
-import main.groovy.styledxmlparser.node.IElementNode;
-import main.groovy.styledxmlparser.node.INode;
-import main.groovy.styledxmlparser.node.ITextNode;
-import main.groovy.styledxmlparser.util.FontFamilySplitterUtil;
+import commons.actions.EventManager;
+import commons.actions.sequence.AbstractIdentifiableElement;
+import commons.actions.sequence.SequenceId;
+import commons.actions.sequence.SequenceIdManager;
+import commons.utils.MessageFormatUtil;
+import forms.form.element.IPlaceholderable;
+import html2pdf.ConverterProperties;
+import html2pdf.ProcessorContextCreator;
+import io.font.FontProgram;
+import io.font.FontProgramFactory;
+import io.font.PdfEncodings;
+import kernel.pdf.PdfDocument;
+import layout.Document;
+import layout.IPropertyContainer;
+import layout.element.Div;
+import layout.element.IAbstractElement;
+import layout.element.IElement;
+import layout.font.FontInfo;
+import layout.font.Range;
+import layout.properties.Property;
+import layout.properties.RenderingMode;
+import layout.renderer.DocumentRenderer;
+import layout.renderer.MetaInfoContainer;
+import styledxmlparser.css.CssDeclaration;
+import styledxmlparser.css.CssFontFaceRule;
+import styledxmlparser.css.ICssResolver;
+import styledxmlparser.css.font.CssFontFace;
+import styledxmlparser.css.pseudo.CssPseudoElementNode;
+import styledxmlparser.css.pseudo.CssPseudoElementUtil;
+import styledxmlparser.node.IElementNode;
+import styledxmlparser.node.INode;
+import styledxmlparser.node.ITextNode;
+import styledxmlparser.util.FontFamilySplitterUtil;
 import html2pdf.css.page.actions.events.PdfHtmlProductEvent;
 import html2pdf.css.page.attach.IHtmlProcessor;
 import html2pdf.css.page.attach.ITagWorker;
@@ -168,7 +168,7 @@ public class DefaultHtmlProcessor implements IHtmlProcessor {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.IHtmlProcessor#processElements(main.groovy.html2pdf.html.node.INode)
+     * @see html2pdf.attach.IHtmlProcessor#processElements(html2pdf.html.node.INode)
      */
     @Override
     public List<IElement> processElements(INode root) {
@@ -209,7 +209,7 @@ public class DefaultHtmlProcessor implements IHtmlProcessor {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.html2pdf.attach.IHtmlProcessor#processDocument(main.groovy.html2pdf.html.node.INode, main.groovy.kernel.pdf.PdfDocument)
+     * @see html2pdf.attach.IHtmlProcessor#processDocument(html2pdf.html.node.INode, kernel.pdf.PdfDocument)
      */
     @Override
     public Document processDocument(INode root, PdfDocument pdfDocument) {

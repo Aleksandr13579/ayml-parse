@@ -22,9 +22,9 @@
  */
 package html2pdf.css.page.css.apply.impl;
 
-import main.groovy.html2pdf.util.TagProcessorMapping;
-import main.groovy.styledxmlparser.css.page.PageMarginBoxContextNode;
-import main.groovy.styledxmlparser.css.pseudo.CssPseudoElementUtil;
+import html2pdf.util.TagProcessorMapping;
+import styledxmlparser.css.page.PageMarginBoxContextNode;
+import styledxmlparser.css.pseudo.CssPseudoElementUtil;
 import html2pdf.css.page.css.CssConstants;
 import html2pdf.css.page.css.apply.ICssApplier;
 import html2pdf.css.page.css.resolve.func.counter.PageCountElementNode;

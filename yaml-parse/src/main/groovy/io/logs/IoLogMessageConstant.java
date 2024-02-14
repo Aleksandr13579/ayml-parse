@@ -56,12 +56,12 @@ public final class IoLogMessageConstant {
 
     public static final String CANNOT_ADD_FINISHED_HINT_AS_A_NEW_KID_HINT =
             "Layout tagging hints addition failed: cannot add a hint that is already marked as finished. Consider "
-                    + "using main.groovy.layout.tagging.LayoutTaggingHelper#moveKidHint method for moving already "
+                    + "using layout.tagging.LayoutTaggingHelper#moveKidHint method for moving already "
                     + "finished kid hint from not yet finished parent hint.";
 
     public static final String CANNOT_ADD_HINTS_TO_FINISHED_PARENT =
             "Layout tagging hints addition failed: cannot add new kid hints to a parent which hint is already marked "
-                    + "as finished. Consider using main.groovy.layout.tagging.LayoutTaggingHelper#replaceKidHint "
+                    + "as finished. Consider using layout.tagging.LayoutTaggingHelper#replaceKidHint "
                     + "method for replacing not yet finished kid hint of a finished parent hint.";
 
     public static final String CANNOT_MOVE_FINISHED_HINT =

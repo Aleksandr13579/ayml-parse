@@ -22,8 +22,8 @@
  */
 package kernel.pdf.filespec;
 
-import main.groovy.io.font.PdfEncodings;
-import main.groovy.io.util.UrlUtil;
+import io.font.PdfEncodings;
+import io.util.UrlUtil;
 import kernel.pdf.*;
 import kernel.pdf.collection.PdfCollectionItem;
 import kernel.pdf.xobject.PdfImageXObject;

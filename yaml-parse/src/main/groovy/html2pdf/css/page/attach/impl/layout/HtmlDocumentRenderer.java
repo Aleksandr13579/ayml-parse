@@ -22,30 +22,30 @@
  */
 package html2pdf.css.page.attach.impl.layout;
 
-import main.groovy.html2pdf.attach.impl.layout.HtmlBodyStylesApplierHandler.LowestAndHighest;
-import main.groovy.html2pdf.attach.impl.layout.HtmlBodyStylesApplierHandler.PageStylesProperties;
-import main.groovy.kernel.events.Event;
-import main.groovy.kernel.events.IEventHandler;
-import main.groovy.kernel.events.PdfDocumentEvent;
-import main.groovy.kernel.geom.PageSize;
-import main.groovy.kernel.geom.Rectangle;
-import main.groovy.kernel.pdf.PdfDocument;
-import main.groovy.kernel.pdf.PdfPage;
-import main.groovy.layout.Document;
-import main.groovy.layout.IPropertyContainer;
-import main.groovy.layout.element.AreaBreak;
-import main.groovy.layout.layout.LayoutArea;
-import main.groovy.layout.layout.LayoutPosition;
-import main.groovy.layout.layout.LayoutResult;
-import main.groovy.layout.properties.FloatPropertyValue;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.renderer.DocumentRenderer;
-import main.groovy.layout.renderer.IRenderer;
-import main.groovy.layout.renderer.ParagraphRenderer;
-import main.groovy.layout.renderer.TargetCounterHandler;
-import main.groovy.styledxmlparser.css.ICssResolver;
-import main.groovy.styledxmlparser.css.page.PageContextConstants;
-import main.groovy.styledxmlparser.node.INode;
+import html2pdf.attach.impl.layout.HtmlBodyStylesApplierHandler.LowestAndHighest;
+import html2pdf.attach.impl.layout.HtmlBodyStylesApplierHandler.PageStylesProperties;
+import kernel.events.Event;
+import kernel.events.IEventHandler;
+import kernel.events.PdfDocumentEvent;
+import kernel.geom.PageSize;
+import kernel.geom.Rectangle;
+import kernel.pdf.PdfDocument;
+import kernel.pdf.PdfPage;
+import layout.Document;
+import layout.IPropertyContainer;
+import layout.element.AreaBreak;
+import layout.layout.LayoutArea;
+import layout.layout.LayoutPosition;
+import layout.layout.LayoutResult;
+import layout.properties.FloatPropertyValue;
+import layout.properties.Property;
+import layout.renderer.DocumentRenderer;
+import layout.renderer.IRenderer;
+import layout.renderer.ParagraphRenderer;
+import layout.renderer.TargetCounterHandler;
+import styledxmlparser.css.ICssResolver;
+import styledxmlparser.css.page.PageContextConstants;
+import styledxmlparser.node.INode;
 import html2pdf.css.page.attach.ProcessorContext;
 
 import java.util.HashMap;
@@ -143,7 +143,7 @@ public class HtmlDocumentRenderer extends DocumentRenderer {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.layout.renderer.RootRenderer#addChild(main.groovy.layout.renderer.IRenderer)
+     * @see layout.renderer.RootRenderer#addChild(layout.renderer.IRenderer)
      */
     @Override
     public void addChild(IRenderer renderer) {
@@ -170,7 +170,7 @@ public class HtmlDocumentRenderer extends DocumentRenderer {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.layout.renderer.DocumentRenderer#close()
+     * @see layout.renderer.DocumentRenderer#close()
      */
     @Override
     public void close() {
@@ -198,7 +198,7 @@ public class HtmlDocumentRenderer extends DocumentRenderer {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.layout.renderer.DocumentRenderer#getNextRenderer()
+     * @see layout.renderer.DocumentRenderer#getNextRenderer()
      */
     @Override
     public IRenderer getNextRenderer() {
@@ -235,7 +235,7 @@ public class HtmlDocumentRenderer extends DocumentRenderer {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.layout.renderer.DocumentRenderer#updateCurrentArea(main.groovy.layout.layout.LayoutResult)
+     * @see layout.renderer.DocumentRenderer#updateCurrentArea(layout.layout.LayoutResult)
      */
     @Override
     protected LayoutArea updateCurrentArea(LayoutResult overflowResult) {
@@ -291,7 +291,7 @@ public class HtmlDocumentRenderer extends DocumentRenderer {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.layout.renderer.RootRenderer#shrinkCurrentAreaAndProcessRenderer(main.groovy.layout.renderer.IRenderer, java.util.List, main.groovy.layout.layout.LayoutResult)
+     * @see layout.renderer.RootRenderer#shrinkCurrentAreaAndProcessRenderer(layout.renderer.IRenderer, java.util.List, layout.layout.LayoutResult)
      */
     @Override
     protected void shrinkCurrentAreaAndProcessRenderer(IRenderer renderer, List<IRenderer> resultRenderers, LayoutResult result) {
@@ -311,7 +311,7 @@ public class HtmlDocumentRenderer extends DocumentRenderer {
     }
 
     /* (non-Javadoc)
-     * @see main.groovy.layout.renderer.DocumentRenderer#addNewPage(main.groovy.kernel.geom.PageSize)
+     * @see layout.renderer.DocumentRenderer#addNewPage(kernel.geom.PageSize)
      */
     @Override
     protected PageSize addNewPage(PageSize customPageSize) {

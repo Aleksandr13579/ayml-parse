@@ -22,7 +22,7 @@
  */
 package io.codec;
 
-import main.groovy.io.source.ByteBuffer;
+import io.source.ByteBuffer;
 
 /**
  * Encodes data in the CCITT G4 FAX format.

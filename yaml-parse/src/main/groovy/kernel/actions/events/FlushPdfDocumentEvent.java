@@ -22,17 +22,17 @@
  */
 package kernel.actions.events;
 
-import main.groovy.commons.actions.AbstractITextConfigurationEvent;
-import main.groovy.commons.actions.AbstractProductProcessITextEvent;
-import main.groovy.commons.actions.EventManager;
-import main.groovy.commons.actions.confirmations.ConfirmEvent;
-import main.groovy.commons.actions.confirmations.ConfirmedEventWrapper;
-import main.groovy.commons.actions.confirmations.EventConfirmationType;
-import main.groovy.commons.actions.data.ProductData;
-import main.groovy.commons.actions.processors.ITextProductEventProcessor;
-import main.groovy.commons.actions.producer.ProducerBuilder;
-import main.groovy.commons.actions.sequence.SequenceId;
-import main.groovy.commons.utils.MessageFormatUtil;
+import commons.actions.AbstractITextConfigurationEvent;
+import commons.actions.AbstractProductProcessITextEvent;
+import commons.actions.EventManager;
+import commons.actions.confirmations.ConfirmEvent;
+import commons.actions.confirmations.ConfirmedEventWrapper;
+import commons.actions.confirmations.EventConfirmationType;
+import commons.actions.data.ProductData;
+import commons.actions.processors.ITextProductEventProcessor;
+import commons.actions.producer.ProducerBuilder;
+import commons.actions.sequence.SequenceId;
+import commons.utils.MessageFormatUtil;
 import kernel.actions.data.ITextCoreProductData;
 import kernel.logs.KernelLogMessageConstant;
 import kernel.pdf.PdfDocument;

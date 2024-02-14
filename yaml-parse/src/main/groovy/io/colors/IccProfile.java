@@ -22,8 +22,8 @@
  */
 package io.colors;
 
-import main.groovy.io.source.RandomAccessFileOrArray;
-import main.groovy.io.source.RandomAccessSourceFactory;
+import io.source.RandomAccessFileOrArray;
+import io.source.RandomAccessSourceFactory;
 import io.exceptions.IOException;
 import io.exceptions.IoExceptionMessageConstant;
 

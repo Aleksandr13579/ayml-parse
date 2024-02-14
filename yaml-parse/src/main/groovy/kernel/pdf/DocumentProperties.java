@@ -22,7 +22,7 @@
  */
 package kernel.pdf;
 
-import main.groovy.commons.actions.contexts.IMetaInfo;
+import commons.actions.contexts.IMetaInfo;
 
 /**
  * Class with additional properties for {@link PdfDocument} processing.

@@ -22,20 +22,20 @@
  */
 package html2pdf.css.page;
 
-import main.groovy.commons.actions.contexts.IMetaInfo;
-import main.groovy.commons.utils.FileUtil;
-import main.groovy.html2pdf.attach.Attacher;
-import main.groovy.html2pdf.exceptions.Html2PdfException;
-import main.groovy.kernel.pdf.DocumentProperties;
-import main.groovy.kernel.pdf.PdfDocument;
-import main.groovy.kernel.pdf.PdfWriter;
-import main.groovy.layout.Document;
-import main.groovy.layout.element.IElement;
-import main.groovy.layout.properties.Property;
-import main.groovy.layout.renderer.MetaInfoContainer;
-import main.groovy.styledxmlparser.IXmlParser;
-import main.groovy.styledxmlparser.node.IDocumentNode;
-import main.groovy.styledxmlparser.node.impl.jsoup.JsoupHtmlParser;
+import commons.actions.contexts.IMetaInfo;
+import commons.utils.FileUtil;
+import html2pdf.attach.Attacher;
+import html2pdf.exceptions.Html2PdfException;
+import kernel.pdf.DocumentProperties;
+import kernel.pdf.PdfDocument;
+import kernel.pdf.PdfWriter;
+import layout.Document;
+import layout.element.IElement;
+import layout.properties.Property;
+import layout.renderer.MetaInfoContainer;
+import styledxmlparser.IXmlParser;
+import styledxmlparser.node.IDocumentNode;
+import styledxmlparser.node.impl.jsoup.JsoupHtmlParser;
 
 import java.io.*;
 import java.util.List;

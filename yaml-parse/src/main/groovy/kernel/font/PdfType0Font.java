@@ -22,18 +22,18 @@
  */
 package kernel.font;
 
-import main.groovy.commons.utils.MessageFormatUtil;
-import main.groovy.io.font.*;
-import main.groovy.io.font.cmap.CMapContentParser;
-import main.groovy.io.font.cmap.CMapToUnicode;
-import main.groovy.io.font.otf.Glyph;
-import main.groovy.io.font.otf.GlyphLine;
-import main.groovy.io.logs.IoLogMessageConstant;
-import main.groovy.io.source.ByteArrayOutputStream;
-import main.groovy.io.source.ByteBuffer;
-import main.groovy.io.source.OutputStream;
-import main.groovy.io.util.StreamUtil;
-import main.groovy.io.util.TextUtil;
+import commons.utils.MessageFormatUtil;
+import io.font.*;
+import io.font.cmap.CMapContentParser;
+import io.font.cmap.CMapToUnicode;
+import io.font.otf.Glyph;
+import io.font.otf.GlyphLine;
+import io.logs.IoLogMessageConstant;
+import io.source.ByteArrayOutputStream;
+import io.source.ByteBuffer;
+import io.source.OutputStream;
+import io.util.StreamUtil;
+import io.util.TextUtil;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;
@@ -737,7 +737,7 @@ public class PdfType0Font extends PdfFont {
                 if (subset || ttf.getDirectoryOffset() > 0) {
                     try {
                         ttfBytes = ttf.getSubset(usedGlyphs, subset);
-                    } catch (main.groovy.io.exceptions.IOException e) {
+                    } catch (io.exceptions.IOException e) {
                         Logger logger = LoggerFactory.getLogger(PdfType0Font.class);
                         logger.warn(IoLogMessageConstant.FONT_SUBSET_ISSUE);
                         ttfBytes = null;

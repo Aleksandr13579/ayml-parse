@@ -22,7 +22,7 @@
  */
 package html2pdf.css.page.attach;
 
-import main.groovy.styledxmlparser.node.IElementNode;
+import styledxmlparser.node.IElementNode;
 
 /**
  * {@link ITagWorkerFactory} interface is used for instantiating new {@link ITagWorker} objects.

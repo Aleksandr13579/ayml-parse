@@ -30,7 +30,7 @@ import kernel.pdf.canvas.PdfCanvas;
  * The {@link ILineDrawer} defines a drawing operation on a {@link PdfCanvas}
  * <br>
  * This interface allows to customize the 'empty' space in a
- * {@code main.groovy.layout.element.TabStop} through a Strategy design
+ * {@code layout.element.TabStop} through a Strategy design
  * pattern
  */
 public interface ILineDrawer {

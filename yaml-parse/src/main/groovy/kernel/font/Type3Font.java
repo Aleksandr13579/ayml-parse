@@ -22,12 +22,12 @@
  */
 package kernel.font;
 
-import main.groovy.io.font.FontNames;
-import main.groovy.io.font.FontProgram;
-import main.groovy.io.font.constants.FontDescriptorFlags;
-import main.groovy.io.font.constants.FontStretches;
-import main.groovy.io.font.constants.FontWeights;
-import main.groovy.io.font.otf.Glyph;
+import io.font.FontNames;
+import io.font.FontProgram;
+import io.font.constants.FontDescriptorFlags;
+import io.font.constants.FontStretches;
+import io.font.constants.FontWeights;
+import io.font.otf.Glyph;
 
 import java.util.HashMap;
 import java.util.Map;

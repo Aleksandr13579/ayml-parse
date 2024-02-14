@@ -22,9 +22,9 @@
  */
 package kernel.pdf.canvas.wmf;
 
-import main.groovy.io.image.ImageData;
-import main.groovy.io.image.ImageType;
-import main.groovy.io.util.UrlUtil;
+import io.image.ImageData;
+import io.image.ImageType;
+import io.util.UrlUtil;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 

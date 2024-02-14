@@ -22,12 +22,12 @@
  */
 package kernel.font;
 
-import main.groovy.io.font.*;
-import main.groovy.io.font.constants.FontDescriptorFlags;
-import main.groovy.io.font.constants.FontStretches;
-import main.groovy.io.font.constants.FontWeights;
-import main.groovy.io.font.otf.Glyph;
-import main.groovy.io.logs.IoLogMessageConstant;
+import io.font.*;
+import io.font.constants.FontDescriptorFlags;
+import io.font.constants.FontStretches;
+import io.font.constants.FontWeights;
+import io.font.otf.Glyph;
+import io.logs.IoLogMessageConstant;
 import kernel.exceptions.KernelExceptionMessageConstant;
 import kernel.exceptions.PdfException;
 import kernel.pdf.*;
