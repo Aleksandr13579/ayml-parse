@@ -92,8 +92,6 @@ class Compare {
         return allChanges
     }
 
-    private YamlFile firstYaml
-    private YamlFile secondYaml
     private LinkedHashMap<String, String> dataFromFirstFile
     private LinkedHashMap<String, String> dataFromSecondFile
 }
