@@ -6,9 +6,6 @@ import main.groovy.org.example.classes.PDFConverter
 def call() {
 
     node {
-        withGradle {
-            sh './${env.WORKSPACE}/gradlew :yaml-parse:tasks dependencies'
-        }
         timestamps {
             try {
 
