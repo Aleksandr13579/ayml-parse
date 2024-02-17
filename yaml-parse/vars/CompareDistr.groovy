@@ -44,10 +44,10 @@ def call() {
                     StringBuilder structNew = new StringBuilder()
 
                     def tree1 = sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/first", returnStdout: true).split('\n')
-                    tree1.each { structOld.append("${it}")}
+                    tree1.each { structOld.append("${it}<br>")}
 
                     def tree2 = sh (script:  "tree ${env.WORKSPACE}/yaml-parse/resources/second", returnStdout: true).split('\n')
-                    tree2.each { structNew.append("${it}")}
+                    tree2.each { structNew.append("${it}<br>")}
 
                     report.append("""
                             <table width = "100%" border = "1">
@@ -105,6 +105,8 @@ def call() {
 
                     files.each { key, value ->
                         def data1 = readYaml file: "${env.WORKSPACE}/yaml-parse/resources/first/${filesInFirstArchive.get(key)}${key}"
+
+                        echo "${data1.getClass().getSimpleName()}"
 
                         def data2 = readYaml file: "${env.WORKSPACE}/yaml-parse/resources/second/${value}${key}"
 
