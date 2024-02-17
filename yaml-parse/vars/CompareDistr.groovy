@@ -93,10 +93,10 @@ def call() {
                         }
                     }
 
-                    filesInFirstArchive.each {
-                        if (!filesInSecondArchive.containsKey(it)) {
-                            deletedFiles.add("${it}")
-                            report.append("Файл <font color=\"#158000\">${it}</font> удален из нового архива<br>")
+                    filesInFirstArchive.each { key, value ->
+                        if (!filesInSecondArchive.containsKey(key)) {
+                            deletedFiles.add("${key}")
+                            report.append("Файл <font color=\"#158000\">${key}</font> удален из нового архива<br>")
                         }
 
 
@@ -113,7 +113,7 @@ def call() {
 
                         Compare compare = new Compare(data1, data2)
                         def changes = compare.whatHasBeenAdded()
-                        report.append("<br><font color=\"#158000\">Файл: ${it}</font> ${changes}")
+                        report.append("<br><font color=\"#158000\">Файл: ${key}</font> ${changes}")
 
                     }
 
