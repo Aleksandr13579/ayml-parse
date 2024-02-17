@@ -61,7 +61,7 @@ def call() {
                                     Структура ${params.ARCHIVE_2}
                                 </font>
                             </th></tr>
-                            <tr><td><font size="1">${structOld}</font></td>
+                            <tr><td><font size="1">${structOld}</font></td></tr>
                             <tr><td><font size="1">${structNew}</font></td></tr>
                             </table><br><br>
                             """
@@ -71,13 +71,13 @@ def call() {
                     def secondArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"", returnStdout: true).split('\n')
 
                     firstArchiveUnzip.each { fileName ->
-                        def match = fileName =~ "/.*first/(.*)/(.*yaml)/"
+                        def match = fileName =~ /(.*)\/(.*yaml)/
                         if (match.find()) filesInFirstArchive.put(match.group(2),match.group(1) + "/")
 
                     }
 
                     secondArchiveUnzip.each { fileName ->
-                        def match = fileName =~ "/.*second/(.*)/(.*yaml)/"
+                        def match = fileName =~ /(.*)\/(.*yaml)/
                         if (match.find()) filesInSecondArchive.put(match.group(2),match.group(1) + "/")
                     }
 
@@ -105,11 +105,11 @@ def call() {
                 stage('Parse Yaml') {
 
                     files.each { key, value ->
-                        def data1 = readYaml file: "${env.WORKSPACE}/yaml-parse/resources/first/${filesInFirstArchive.get(key)}${key}"
+                        def data1 = readYaml file: "${filesInFirstArchive.get(key)}${key}"
 
                         echo "${data1.getClass().getSimpleName()}"
 
-                        def data2 = readYaml file: "${env.WORKSPACE}/yaml-parse/resources/second/${value}${key}"
+                        def data2 = readYaml file: "${value}${key}"
 
                         Compare compare = new Compare(data1, data2)
                         def changes = compare.whatHasBeenAdded()
