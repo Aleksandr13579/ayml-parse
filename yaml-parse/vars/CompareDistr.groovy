@@ -61,14 +61,17 @@ def call() {
                                     Структура ${params.ARCHIVE_2}
                                 </font>
                             </th></tr>
-                            <tr><td><font size="1">${structOld}</font></td></tr>
-                            <tr><td><font size="1">${structNew}</font></td></tr>
+                            <tr><td><font size="1">${structOld}</font></td>
+                            <td><font size="1">${structNew}</font></td></tr>
                             </table><br><br>
                             """
                     )
 
-                    def firstArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true).split('\n')
-                    def secondArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"", returnStdout: true).split('\n')
+//                    def firstArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true).split('\n')
+//                    def secondArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"", returnStdout: true).split('\n')
+
+                    def firstArchiveUnzip = findFiles(glob: '${env.WORKSPACE}/yaml-parse/resources/first/*.yaml')
+                    def secondArchiveUnzip = findFiles(glob: '${env.WORKSPACE}/yaml-parse/resources/second/*.yaml')
 
                     firstArchiveUnzip.each { fileName ->
                         def match = fileName =~ /(.*)\/(.*yaml)/
