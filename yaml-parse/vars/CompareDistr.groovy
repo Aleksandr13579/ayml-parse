@@ -62,7 +62,7 @@ def call() {
                                 </font>
                             </th></tr>
                             <tr><td><font size="1">${structOld}</font></td>
-                            <td><font size="1">${structNew}</font></td></tr>
+                            <tr><td><font size="1">${structNew}</font></td></tr>
                             </table><br><br>
                             """
                     )
@@ -85,6 +85,7 @@ def call() {
                     filesInSecondArchive.each { key, value ->
                         if (filesInFirstArchive.containsKey(key)) {
                             files.put(key, value)
+                            echo "${key}"
                             report.append("Файл <font color=\"#158000\">${key}</font> существует в двух архивах<br>")
                         } else {
                             newFiles.put(key, value)
