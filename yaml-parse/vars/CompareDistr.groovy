@@ -10,11 +10,11 @@ def call() {
         timestamps {
             try {
 
-                List<String> filesInFirstArchive = new ArrayList<>()
-                List<String> filesInSecondArchive = new ArrayList<>()
+                Map<String, String> filesInFirstArchive = new LinkedHashMap()
+                Map<String, String> filesInSecondArchive = new LinkedHashMap()
 
-                List<String> files = new ArrayList<>()
-                List<String> newFiles = new ArrayList<>()
+                Map<String, String> files = new LinkedHashMap()
+                Map<String, String> newFiles = new LinkedHashMap()
                 List<String> deletedFiles = new ArrayList<>()
 
                 StringBuilder report = new StringBuilder()
@@ -71,33 +71,30 @@ def call() {
                     def firstArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/first -name \"*.yaml\"", returnStdout: true).split('\n')
                     def secondArchiveUnzip = sh(script: "find ${env.WORKSPACE}/yaml-parse/resources/second -name \"*.yaml\"", returnStdout: true).split('\n')
 
-                    firstArchiveUnzip.each {
-                        def pattern = ~/.*first\/(.*yaml|.*yml)$/
+                    firstArchiveUnzip.each { fileName ->
+                        def match = fileName =~ "/.*first/(.*)/(.*yaml)/"
+                        if (match.find()) filesInFirstArchive.put(match.group(2),match.group(1) + "/")
 
-                        def match = pattern.matcher(it)
-                        if (match.find()) filesInFirstArchive.add(match.group(1))
                     }
 
-                    secondArchiveUnzip.each {
-                        def pattern = ~/.*second\/(.*yaml|.*yml)$/
-
-                        def match = pattern.matcher(it)
-                        if (match.find()) filesInSecondArchive.add(match.group(1))
+                    secondArchiveUnzip.each { fileName ->
+                        def match = fileName =~ "/.*second/(.*)/(.*yaml)/"
+                        if (match.find()) filesInSecondArchive.put(match.group(2),match.group(1) + "/")
                     }
 
 
-                    filesInSecondArchive.each {
-                        if (filesInFirstArchive.contains(it)) {
-                            files.add("${it}")
-                            report.append("Файл <font color=\"#158000\">${it}</font> существует в двух архивах<br>")
+                    filesInSecondArchive.each { key, value ->
+                        if (filesInFirstArchive.containsKey(key)) {
+                            files.put(key, value)
+                            report.append("Файл <font color=\"#158000\">${key}</font> существует в двух архивах<br>")
                         } else {
-                            newFiles.add("${it}")
-                            report.append("Файл <font color=\"#158000\">${it}</font> не существует в старой версии, добавлен в новой<br>")
+                            newFiles.put(key, value)
+                            report.append("Файл <font color=\"#158000\">${key}</font> не существует в старой версии, добавлен в новой<br>")
                         }
                     }
 
                     filesInFirstArchive.each {
-                        if (!filesInSecondArchive.contains(it)) {
+                        if (!filesInSecondArchive.containsKey(it)) {
                             deletedFiles.add("${it}")
                             report.append("Файл <font color=\"#158000\">${it}</font> удален из нового архива<br>")
                         }
@@ -107,17 +104,14 @@ def call() {
                 }
                 stage('Parse Yaml') {
 
-                    files.each {
-                        YamlFile yamlFileFirst = new YamlFile()
-                        yamlFileFirst.load("${env.WORKSPACE}/yaml-parse/resources/first/${it}")
+                    files.each { key, value ->
+                        def data1 = readYaml file: "${env.WORKSPACE}/yaml-parse/resources/first/${filesInFirstArchive.get(key)}${key}"
 
-                        YamlFile yamlFileSecond = new YamlFile()
-                        yamlFileSecond.load("${env.WORKSPACE}/yaml-parse/resources/second/${it}")
+                        def data2 = readYaml file: "${env.WORKSPACE}/yaml-parse/resources/second/${value}${key}"
 
-                        Compare compare = new Compare(yamlFileFirst, yamlFileSecond)
+                        Compare compare = new Compare(data1, data2)
                         def changes = compare.whatHasBeenAdded()
                         report.append("<br><font color=\"#158000\">Файл: ${it}</font> ${changes}")
-
 
                     }
 

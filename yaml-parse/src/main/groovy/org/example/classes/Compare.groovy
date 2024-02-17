@@ -6,43 +6,13 @@ class Compare {
 
     LinkedHashMap<String, String> mismatchedFields
 
-    Compare(YamlFile first, YamlFile second) {
-        this.firstYaml = first
-        this.secondYaml = second
+    Compare(Map<String, ?> first, Map<String, ?> second) {
 
         this.dataFromFirstFile = new LinkedHashMap<>()
-        converter(firstYaml.getData(), this.dataFromFirstFile)
+        converter(first, this.dataFromFirstFile)
 
         this.dataFromSecondFile = new LinkedHashMap<>()
-        converter(secondYaml.getData(), this.dataFromSecondFile)
-
-    }
-
-    Compare(File first, File second) {
-        this.firstYaml = new YamlFile()
-        firstYaml.load(first)
-        this.secondYaml = new YamlFile()
-        secondYaml.load(second)
-
-        this.dataFromFirstFile = new LinkedHashMap<>()
-        converter(firstYaml.getData(), this.dataFromFirstFile)
-
-        this.dataFromSecondFile = new LinkedHashMap<>()
-        converter(secondYaml.getData(), this.dataFromSecondFile)
-
-    }
-
-    Compare(String first, String second) {
-        this.firstYaml = new YamlFile()
-        firstYaml.load(first)
-        this.secondYaml = new YamlFile()
-        secondYaml.load(second)
-
-        this.dataFromFirstFile = new LinkedHashMap<>()
-        converter(firstYaml.getData(), this.dataFromFirstFile)
-
-        this.dataFromSecondFile = new LinkedHashMap<>()
-        converter(secondYaml.getData(), this.dataFromSecondFile)
+        converter(second, this.dataFromSecondFile)
     }
 
     /**
